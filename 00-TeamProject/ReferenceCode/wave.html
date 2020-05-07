@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .footer-wave,.footer-wave2 {
+            max-width: 102%;
+            width: 100%;
+            height: 187.8px;
+            left: 0;
+            z-index: 1;
+            /* bottom: -67px; */
+            background: url("./img/wave2.png") repeat-x;
+            background-size: contain;
+            animation: wave 10s cubic-bezier(0.44, 0.66, 0.67, 0.37) infinite;
+            /* background-color: rgb(52, 52, 199); */
+            color: black;
+            position: relative;
+        }
+        .footer-wave2{
+            position: absolute;
+            background: url("./img/wave2.png") repeat-x;
+            animation: wave 7s cubic-bezier(0.44, 0.66, 0.67, 0.37) infinite;
+            /* background-color: rgb(57, 128, 151); */
+        }
+        @keyframes wave {
+            0% {
+                background-position: 0;
+            }
+            100% {
+                background-position: 1440px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="footer-wave"><div class="footer-wave2"></div></div>
+    
+</body>
+
+</html>

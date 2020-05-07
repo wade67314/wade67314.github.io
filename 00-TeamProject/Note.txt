@@ -1,0 +1,11 @@
+point-event:none
+cursor:default
+
+
+
+js:mousein mouseout(沒有hover)   
+
+
+
+mouse move event
+get mouse position
