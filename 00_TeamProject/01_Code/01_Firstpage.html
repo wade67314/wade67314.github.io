@@ -18,14 +18,9 @@
         }
 
         #demo {
-            /* font-weight: 700; */
-            /* background-color: lightblue; */
             position: fixed;
             width: 100%;
-            /* height: auto; */
         }
-
-
         .test1_cover {
             clip-path: url(#svgPath);
         }
@@ -62,25 +57,77 @@
         }
         .navitems{
             position: absolute;
-            top: 80vh;
+            box-sizing: border-box;
+            width: 300px;
+            height: 100vh;
+            padding: 30px 0;
+        }
+        .navitems .logo{
+            width: 100%;
+            text-align: center;
+        }
+        .navitems .logo img{
+            width: 70%;
         }
         .navitems ul{
             list-style: none;
             padding: 0;
             margin: 0;
+            text-align: center;
+            margin-top: 350px;
+            display: block;
+        }
+        .navitems ul li{
+            margin-bottom: 2.5em;
         }
         .navitems ul li a{
             text-decoration: none;
             color: black;
+        }
+        .navitems ul li a .navitem{
             font-size: 24px;
+            font-weight: bold;
+        }
+        .navitem {
+            display: inline-block;
+            position: relative;
+        }
+        .navitem:after {
+            content: '';
+            display: block;
+            border-top: 1px solid black;
+        }
+        .navitem:before{
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            font-size: 12px;
+        }
+        .navitem.eng_navitem_contact:before{
+            content: "Contact us";
+        }
+        .navitem.eng_navitem_about:before{
+            content: "ABout us";
+        }
+        .navitem.eng_navitem_service:before{
+            content: "Service";
+        }
+        .navitem.eng_navitem_visit:before{
+            content: "Visit us";
+        }
+        .cover4 .baby_img{
+            width: 200px;
+            margin:400px 0 0 0;
         }
         
     </style>
 </head>
 
 <body>
+
     <div class="cover1">
-        <svg id="demo" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1920 1080">
+        <svg id="demo" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1920 1080">
             <image class="test1_cover" href="https://www.ecopetit.cat/wpic/mpic/83-835490_1920x1080-animal-dog-wallpaper-1920x1080-hd.jpg" x="0" y="0" width="100%" height="100%" />
             <clipPath id="svgPath">
                 <path id="path1"></path>
@@ -89,7 +136,7 @@
     </div>
 
     <div class="cover2">
-        <svg id="demo" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+        <svg id="demo" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
             <image class="test2_cover" href="https://www.ecopetit.cat/wpic/mpic/83-835490_1920x1080-animal-dog-wallpaper-1920x1080-hd.jpg" x="0" y="0" width="100%" height="100%" />
             <clipPath id="svgPath2">
                 <path id="path2"></path>
@@ -98,65 +145,78 @@
     </div>
 
     <div class="cover3">
-        <svg id="demo" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-
+        <svg id="demo" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
             <image class="test3_cover" href="https://www.ecopetit.cat/wpic/mpic/83-835490_1920x1080-animal-dog-wallpaper-1920x1080-hd.jpg" x="0" y="0" width="100%" height="100%" />
             <clipPath id="svgPath3">
                 <path id="path3"></path> 
             </clipPath>
-
-            
-
         </svg>
     </div>
 
-    
     <div class="cover4"> 
-        <svg id="demo" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+        <svg id="demo" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+
             <a href="">
-                <path id="path12" opacity="0"></path>
+                <path id="main_img_link" opacity="0"></path>
             </a> 
+
             <a href="" >
-                <path id="path4" fill="lightblue" opacity="0.5"></path>
-                <path id="path5" fill="lightblue" opacity="1"></path>
-                <text x="650" y="110" font-size="24" fill="black" >
-                    聯絡我們
-                </text> <!-- x-50   y+10  -->
+                <path id="contact_pathB" fill="lightblue" opacity="0.5"></path>
+                <path id="contact_pathT" fill="lightblue" opacity="1"></path>
+                <text id="contact_text" x="650" y="110" font-size="24" font-weight="bold" fill="black">聯絡我們</text> <!-- x-50   y+10  -->
             </a>
 
             <a href="">   
-                <path id="path6" fill="pink" opacity="0.5"></path>
-                <path id="path7" fill="pink" opacity="1"></path>
-                <text x="550" y="610" font-size="24" fill="black" >
-                    聯絡我們
-                </text>
+                <path id="about_pathB" fill="pink" opacity="0.5"></path>
+                <path id="about_pathT" fill="pink" opacity="1"></path>
+                <text id="about_text" x="550" y="610" font-size="24" font-weight="bold" fill="black">關於我們</text>
             </a>
             
             <a href="">
-                <path id="path8" fill="#F0C376" opacity="0.5"></path>
-                <path id="path9" fill="#F0C376" opacity="1"></path>
-                <text x="1650" y="210" font-size="24" fill="black" >
-                    聯絡我們
-                </text> 
+                <path id="service_pathB" fill="#F0C376" opacity="0.5"></path>
+                <path id="service_pathT" fill="#F0C376" opacity="1"></path>
+                <text id="service_text" x="1650" y="210" font-size="24" font-weight="bold" fill="black">服務項目</text> 
             </a>
 
             <a href="">
-                <path id="path10" fill="lightgreen" opacity="0.5"></path>
-                <path id="path11" fill="lightgreen" opacity="1"></path>
-                <text x="1550" y="710" font-size="24" fill="black" >
-                    聯絡我們
-                </text>
+                <path id="visit_pathB" fill="lightgreen" opacity="0.5"></path>
+                <path id="visit_pathT" fill="lightgreen" opacity="1"></path>
+                <text id="visit_text" x="1550" y="710" font-size="24" font-weight="bold" fill="black">預約參觀</text>
             </a> 
 
+            
         </svg>
+
+        <div >
+            <img class="baby_img" src="https://poppot.org/wp-content/uploads/2017/04/Child.png" alt="">
+        </div>
     </div>
 
     <nav class="navitems">
+        <div class="logo">
+            <img src="../02-Img/logo.jpg" alt="">
+        </div>
         <ul>
-            <li><a href="">聯絡我們</a></li>
-            <li><a href="">聯絡我們</a></li>
-            <li><a href="">聯絡我們</a></li>
-            <li><a href="">聯絡我們</a></li>
+            <li>
+                <a href="">
+                    <span class="navitem eng_navitem_contact">聯絡我們</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span class="navitem eng_navitem_about">關於我們</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span class="navitem eng_navitem_service">服務項目</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span class="navitem eng_navitem_visit">預約參觀</span>
+                </a>
+            </li>
         </ul>
     </nav>
 
@@ -164,33 +224,42 @@
 
     <script>
         
-        // var tl = gsap.timeline({repeat: -1, repeatDelay: 1});
-        //     tl.to("#path1", {x:100,scale:0.85,duration:5, transformOrigin:"center", ease: "power1.inOut" });
-        //     tl.to("#path1", {scale:1.05,duration:7, ease: "power1.inOut" });
-        //     tl.to("#path1", {x:0,scale:1,duration:5, ease: "power1.inOut" });
+        var tl = gsap.timeline({repeat: -1, repeatDelay: 1});
+            tl.to("#path1", {scale:0.9,duration:5,  ease: "power1.inOut" });
+            tl.to("#path1", {y:-80,scale:1.2,duration:7, ease: "power1.inOut" });
+            tl.to("#path1", {x:0,y:0,scale:1,duration:7, ease: "power1.inOut" });
             
-        // var t2 = gsap.timeline({repeat: -1, repeatDelay: 1});
-        //     t2.to("#path2", {x:100,scale:0.85,duration:5, transformOrigin:"center", ease: "power1.inOut" });
-        //     t2.to("#path2", {scale:1.05,duration:7, ease: "power1.inOut" });
-        //     t2.to("#path2", {x:0,scale:1,duration:5, ease: "power1.inOut" });
+        var t2 = gsap.timeline({repeat: -1, repeatDelay: 1});
+            t2.to("#path2", {scale:0.9,duration:5, ease: "power1.inOut" });
+            t2.to("#path2", {y:-80,scale:1.2,duration:7, ease: "power1.inOut" });
+            t2.to("#path2", {x:0,y:0,scale:1,duration:7, ease: "power1.inOut" });
 
-        // var t3 = gsap.timeline({repeat: -1, repeatDelay: 1});
-        //     t3.to("#path3", {x:100,scale:0.85,duration:5, transformOrigin:"center", ease: "power1.inOut" });
-        //     t3.to("#path3", {scale:1.05,duration:7, ease: "power1.inOut" });
-        //     t3.to("#path3", {x:0,scale:1,duration:5, ease: "power1.inOut" });
+        var t3 = gsap.timeline({repeat: -1, repeatDelay: 1});
+            t3.to("#path3", {scale:0.9,duration:5, ease: "power1.inOut" });
+            t3.to("#path3", {y:-80,scale:1.2,duration:7, ease: "power1.inOut" });
+            t3.to("#path3", {x:0,y:0,scale:1,duration:7, ease: "power1.inOut" });
+         
+        var t12 = gsap.timeline({repeat: -1, repeatDelay: 1});
+            t12.to("#main_img_link", {scale:0.9,duration:5,  ease: "power1.inOut" });
+            t12.to("#main_img_link", {y:-80,scale:1.2,duration:7, ease: "power1.inOut" });
+            t12.to("#main_img_link", {x:0,y:0,scale:1,duration:7, ease: "power1.inOut" });
+
+        var baby_img = gsap.timeline({repeat:-1});
+            // baby_img.to(".baby_img",{x:70,duration:1})
+            baby_img.to(".baby_img",{x:200,duration:6})
+            baby_img.to(".baby_img",{rotationY:180,duration:3})
+            baby_img.to(".baby_img",{x:0,duration:6})
+            baby_img.to(".baby_img",{rotationY:360,duration:3})
+
             
-        // var t12 = gsap.timeline({repeat: -1, repeatDelay: 1});
-        //     t12.to("#path12", {x:100,scale:0.85,duration:5, transformOrigin:"center", ease: "power1.inOut" });
-        //     t12.to("#path12", {scale:1.05,duration:7, ease: "power1.inOut" });
-        //     t12.to("#path12", {x:0,scale:1,duration:5, ease: "power1.inOut" });
-
+            
 
 
         var blob1 = createBlob({
             element: document.querySelector("#path1"),
             numPoints: 20,
             centerX: 1100,
-            centerY: 485,
+            centerY: 450,
             minRadius: 400,
             maxRadius: 420,
             minDuration: 1,
@@ -201,7 +270,7 @@
             element: document.querySelector("#path2"),
             numPoints: 19,
             centerX: 1100,
-            centerY: 485,
+            centerY: 450,
             minRadius: 370,
             maxRadius: 390,
  
@@ -213,7 +282,7 @@
             element: document.querySelector("#path3"),
             numPoints: 18,
             centerX: 1100,
-            centerY: 485,
+            centerY: 450,
             minRadius: 340,
             maxRadius: 360,
             minDuration: 1,
@@ -221,10 +290,10 @@
         });
 
         var blob12 = createBlob({
-            element: document.querySelector("#path12"),
+            element: document.querySelector("#main_img_link"),
             numPoints: 18,
             centerX: 1100,
-            centerY: 485,
+            centerY: 450,
             minRadius: 340,
             maxRadius: 360,
             minDuration: 1,
@@ -232,7 +301,7 @@
         });
 
         var blob4 = createBlob({
-            element: document.querySelector("#path4"),
+            element: document.querySelector("#contact_pathB"),
             numPoints: 18,
             centerX: 700,
             centerY: 100,
@@ -242,7 +311,7 @@
             maxDuration: 5
         });
         var blob5 = createBlob({
-            element: document.querySelector("#path5"),
+            element: document.querySelector("#contact_pathT"),
             numPoints: 18,
             centerX: 700,
             centerY: 100,
@@ -253,7 +322,7 @@
         });
 
         var blob6 = createBlob({
-            element: document.querySelector("#path6"),
+            element: document.querySelector("#about_pathB"),
             numPoints: 18,
             centerX: 600,
             centerY: 600,
@@ -263,7 +332,7 @@
             maxDuration: 5
         });
         var blob7 = createBlob({
-            element: document.querySelector("#path7"),
+            element: document.querySelector("#about_pathT"),
             numPoints: 18,
             centerX: 600,
             centerY: 600,
@@ -274,7 +343,7 @@
         });
 
         var blob8 = createBlob({
-            element: document.querySelector("#path8"),
+            element: document.querySelector("#service_pathB"),
             numPoints: 18,
             centerX: 1700,
             centerY: 200,
@@ -284,7 +353,7 @@
             maxDuration: 5
         });
         var blob9 = createBlob({
-            element: document.querySelector("#path9"),
+            element: document.querySelector("#service_pathT"),
             numPoints: 18,
             centerX: 1700,
             centerY: 200,
@@ -295,7 +364,7 @@
         });
 
         var blob10 = createBlob({
-            element: document.querySelector("#path10"),
+            element: document.querySelector("#visit_pathB"),
             numPoints: 18,
             centerX: 1600,
             centerY: 700,
@@ -305,7 +374,7 @@
             maxDuration: 5
         });
         var blob11 = createBlob({
-            element: document.querySelector("#path11"),
+            element: document.querySelector("#visit_pathT"),
             numPoints: 18,
             centerX: 1600,
             centerY: 700,
@@ -404,6 +473,14 @@
         }
 
         // TweenMax.to("#blobs", 3, {scale:1.5, repeat:-1, yoyo:true, transformOrigin:"center"})
+
+
+
+
+
+        //navpath float animation
+
+        
 
 
     </script>
