@@ -137,7 +137,20 @@
             top: 50%;
             margin: -10px 0 0 -10px;
             pointer-events: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: column;
         }
+        #outer_ball{
+            width: 70px;
+            height: 70px;
+            background: none;
+            border: 1px solid grey;
+            border-radius: 50%;
+            position: absolute;
+        } 
         
     </style>
 </head>
@@ -251,7 +264,12 @@
 
 
     <div class="wrap">
-        <div id="ball"></div>
+        <div id="ball">
+            <div id="outer_ball"></div>
+                <span>visit</span>
+                <span>+</span>
+            </div>
+        </div>
     </div>
     
 
