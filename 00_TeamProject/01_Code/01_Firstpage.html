@@ -74,11 +74,11 @@
             padding: 0;
             margin: 0;
             text-align: center;
-            margin-top: 350px;
+            margin-top: 300px;
             display: block;
         }
         .navitems ul li{
-            margin-bottom: 2.5em;
+            margin-bottom: 1.5em;
         }
         .navitems ul li a{
             text-decoration: none;
@@ -96,11 +96,13 @@
             content: '';
             display: block;
             border-top: 1px solid black;
+            margin-left:1em;
+            margin-right: 0.5em;
         }
         .navitem:before{
             display: block;
             position: absolute;
-            right: 0;
+            left: 25px;
             top: 100%;
             font-size: 12px;
         }
@@ -190,8 +192,8 @@
         <ul>
             <li>
                 <a href="">
-                    <span class="navitem eng_navitem_contact">聯絡我們
-                        <div class="navitem_aboutimg" style="display: inline-block;">
+                    <span class="navitem eng_navitem_contact">關於滿果
+                        <div style="display: inline-block;">
                             <img src="../02_Img/about.png" alt="">
                         </div>
                     </span>                    
@@ -199,17 +201,29 @@
             </li>
             <li>
                 <a href="">
-                    <span class="navitem eng_navitem_about">關於我們</span>
+                    <span class="navitem eng_navitem_about">服務項目
+                    <div style="display: inline-block;">
+                        <img src="../02_Img/service.png" alt="">
+                    </div>
+                    </span>
                 </a>
             </li>
             <li>
                 <a href="">
-                    <span class="navitem eng_navitem_service">服務項目</span>
+                    <span class="navitem eng_navitem_service">預約參觀
+                    <div style="display: inline-block;">
+                        <img src="../02_Img/visit.png" alt="">
+                    </div>
+                    </span>
                 </a>
             </li>
             <li>
                 <a href="">
-                    <span class="navitem eng_navitem_visit">預約參觀</span>
+                    <span class="navitem eng_navitem_visit">聯絡我們
+                    <div style="display: inline-block;">
+                        <img src="../02_Img/contact.png" alt="">
+                    </div>
+                    </span>
                 </a>
             </li>
         </ul>
