@@ -43,7 +43,7 @@
             width: 100%;
             height: 100vh;
             background-color: white;
-            opacity: 0.3;
+            opacity: 0.8;
             position: absolute;
         }
         .cover3{
@@ -87,7 +87,7 @@
         }
         .navitems ul li a .navitem{
             font-size: 24px;
-            font-weight: bold;
+            /* font-weight: bold; */
         }
         .navitem {
             display: inline-block;
@@ -107,18 +107,19 @@
             top: 100%;
             font-size: 12px;
         }
-        .navitem.eng_navitem_contact:before{
-            content: "Contact us";
-        }
         .navitem.eng_navitem_about:before{
-            content: "ABout us";
+            content: "about us";
         }
         .navitem.eng_navitem_service:before{
-            content: "Service";
+            content: "service items";
         }
         .navitem.eng_navitem_visit:before{
-            content: "Visit us";
+            content: "book a visit";
         }
+        .navitem.eng_navitem_contact:before{
+            content: "contact us";
+        }
+
         .wrap {
             position: absolute;
             top: -20px;
@@ -194,25 +195,25 @@
             <a href="" >
                 <path id="contact_pathB" fill="lightblue" opacity="0.5"></path>
                 <path id="contact_pathT" fill="lightblue" opacity="1"></path>
-                <text id="contact_text" x="650" y="110" font-size="24" font-weight="bold" fill="black">聯絡我們</text> <!-- x-50   y+10  -->
+                <text id="contact_text" x="650" y="110" font-size="24" fill="white">關於我們</text> <!-- x-50   y+10  -->
             </a>
 
             <a href="">   
                 <path id="about_pathB" fill="pink" opacity="0.5"></path>
                 <path id="about_pathT" fill="pink" opacity="1"></path>
-                <text id="about_text" x="550" y="610" font-size="24" font-weight="bold" fill="black">關於我們</text>
+                <text id="about_text" x="550" y="610" font-size="24" fill="white">聯絡我們</text>
             </a>
             
             <a href="">
                 <path id="service_pathB" fill="#F0C376" opacity="0.5"></path>
                 <path id="service_pathT" fill="#F0C376" opacity="1"></path>
-                <text id="service_text" x="1650" y="210" font-size="24" font-weight="bold" fill="black">服務項目</text> 
+                <text id="service_text" x="1650" y="210" font-size="24" fill="white">服務項目</text> 
             </a>
 
             <a href="">
                 <path id="visit_pathB" fill="lightgreen" opacity="0.5"></path>
                 <path id="visit_pathT" fill="lightgreen" opacity="1"></path>
-                <text id="visit_text" x="1550" y="710" font-size="24" font-weight="bold" fill="black">預約參觀</text>
+                <text id="visit_text" x="1550" y="710" font-size="24" fill="white">預約參觀</text>
             </a> 
         </svg>
         
@@ -225,7 +226,7 @@
         <ul>
             <li>
                 <a href="">
-                    <span class="navitem eng_navitem_contact">關於滿果
+                    <span class="navitem eng_navitem_about">關於滿果
                         <div style="display: inline-block;">
                             <img src="../02_Img/about.png" alt="">
                         </div>
@@ -234,7 +235,7 @@
             </li>
             <li>
                 <a href="">
-                    <span class="navitem eng_navitem_about">服務項目
+                    <span class="navitem eng_navitem_service">服務項目
                     <div style="display: inline-block;">
                         <img src="../02_Img/service.png" alt="">
                     </div>
@@ -243,7 +244,7 @@
             </li>
             <li>
                 <a href="">
-                    <span class="navitem eng_navitem_service">預約參觀
+                    <span class="navitem eng_navitem_visit">預約參觀
                     <div style="display: inline-block;">
                         <img src="../02_Img/visit.png" alt="">
                     </div>
@@ -252,7 +253,7 @@
             </li>
             <li>
                 <a href="">
-                    <span class="navitem eng_navitem_visit">聯絡我們
+                    <span class="navitem eng_navitem_contact">聯絡我們
                     <div style="display: inline-block;">
                         <img src="../02_Img/contact.png" alt="">
                     </div>
