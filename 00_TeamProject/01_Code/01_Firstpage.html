@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <style>
         *{
             font-family: "微軟正黑體";
@@ -17,36 +18,51 @@
             font-family: 'Source Sans Pro', sans-serif;
             position: relative;
         }
-
+        .display_none{
+            display: none;
+        }
+        .display_block{
+            display: block;
+        }
         #demo {
             position: fixed;
             width: 100%;
         }
-        .test1_cover {
-            clip-path: url(#svgPath);
+        .outside_img {
+            clip-path: url(#outside_mask);
         }
-        .test2_cover{
-            clip-path: url(#svgPath2);
+        .outside_img_mobile {
+            clip-path: url(#outside_mask_mobile);
         }
-        .test3_cover{
-            clip-path: url(#svgPath3);
+
+        .middle_img{
+            clip-path: url(#middle_mask);
+        }
+        .middle_img_mobile{
+            clip-path: url(#middle_mask_mobile);
+        }
+
+        .inside_img{
+            clip-path: url(#inside_mask);
+        }
+        .inside_img_mobile{
+            clip-path: url(#inside_mask_mobile);
         }
        
-        .cover1{
+        .outside_contain,.outside_contain_mobile{
             width: 100%;
             height: auto;
             background-color: #eee;
             position: absolute;
-
         }
-        .cover2{
+        .middle_contain,.middle_contain_mobile{
             width: 100%;
             height: 100vh;
             background-color: #eee;
             opacity: 0.8;
             position: absolute;
         }
-        .cover3{
+        .inside_contain,.inside_contain_mobile{
             width: 100%;
             height: 100vh;
             background-color: #eee;
@@ -59,27 +75,27 @@
         .navitems{
             position: absolute;
             box-sizing: border-box;
-            width: 300px;
             height: 100vh;
-            padding: 30px 0;
+            padding-left: 105px;
+
         }
         .navitems .logo{
             width: 100%;
-            text-align: center;
+            margin-top: 50vh;
         }
         .navitems .logo img{
-            width: 70%;
+            width: 135px;
+            display: block;
         }
         .navitems ul{
             list-style: none;
             padding: 0;
             margin: 0;
-            text-align: center;
-            margin-top: 300px;
+            margin-top: 23px;
             display: block;
         }
         .navitems ul li{
-            margin-bottom: 1.5em;
+            margin-bottom: 5px;
         }
         .navitems ul li a{
             text-decoration: none;
@@ -87,7 +103,6 @@
         }
         .navitems ul li a .navitem{
             font-size: 18px;
-            /* font-weight: bold; */
         }
         .navitem {
             display: inline-block;
@@ -122,12 +137,14 @@
 
         .wrap {
             position: absolute;
+            
             top: -20px;
             left: -20px;
             bottom: 0;
             right: 0;
         }
         #ball {
+            z-index: 99;
             width: 60px;
             height: 60px;
             background: none;
@@ -145,48 +162,70 @@
             flex-direction: column;
         }
         #outer_ball{
+            z-index: 99;
             width: 70px;
             height: 70px;
             background: none;
             border: 1px solid grey;
             border-radius: 50%;
             position: absolute;
-        } 
-        
+        }
+
+        @media(max-width: 768px){
+            .navitems{
+                width: 100%;
+                height: unset;
+                padding: 10px 15px;
+                text-align: left;
+                background-color: burlywood;
+            }
+            .navitems .logo{
+                text-align: unset;
+                margin-top: unset;
+            }
+
+            .navitems .logo img{
+                width: unset;
+                height: 80px;
+            }
+            .navitems ul{
+                display: none;
+            }
+        }
     </style>
 </head>
 
 <body onload = "followMouse();">
 
-    <div class="cover1">
-        <svg id="demo" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-            <image class="test1_cover" href="../02_Img/main_background.png" x="0" y="0" width="100%" height="100%" />
-            <clipPath id="svgPath">
-                <path id="path1"></path>
+    <div class="outside_contain">
+        <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+            <image class="outside_img" href="../02_Img/main_background.png" x="0" y="0" width="100%" height="100%" />
+            <clipPath id="outside_mask">
+                <path id="outside_path"></path>
             </clipPath>
         </svg>
     </div>
 
-    <div class="cover2">
-        <svg id="demo" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-            <image class="test2_cover" href="../02_Img/main_background.png" x="0" y="0" width="100%" height="100%" />
-            <clipPath id="svgPath2">
-                <path id="path2"></path>
+    <div class="middle_contain">
+        <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+            <image class="middle_img" href="../02_Img/main_background.png" x="0" y="0" width="100%" height="100%" />
+            <clipPath id="middle_mask">
+                <path id="middle_path"></path>
             </clipPath>
         </svg>
     </div>
 
-    <div class="cover3">
-        <svg id="demo" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-            <image class="test3_cover" href="../02_Img/main_background.png" x="0" y="0" width="100%" height="100%" />
-            <clipPath id="svgPath3">
-                <path id="path3"></path> 
+    <div class="inside_contain">
+        <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+            <image class="inside_img" href="../02_Img/main_background.png" x="0" y="0" width="100%" height="100%" />
+            <clipPath id="inside_mask">
+                <path id="inside_path"></path> 
             </clipPath>
         </svg>
     </div>
 
     <div class="cover4"> 
-        <svg id="demo" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+        <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
             <g font-weight="bold" letter-spacing="5">
                 <text x="890" y="360" fill="#77A600" font-size="42" >滿果<tspan fill="#186A85">托嬰中心</tspan></text>
                 <text x="858" y="400" fill="#eee" font-size="28"><tspan font-weight="normal">一</tspan>想給寶寶一個自然健康安全的環境<tspan font-weight="normal">一</tspan></text>
@@ -196,14 +235,14 @@
             </a> 
 
             <a href="" >
-                <path id="contact_pathB" fill="#49C0C4" opacity="0.5"></path>
-                <path id="contact_pathT" fill="#49C0C4" opacity="1"></path>
-                <text id="contact_text" x="650" y="110" font-size="24" fill="#eee">關於我們</text> <!-- x-50   y+10  -->
+                <path id="about_pathB" fill="#49C0C4" opacity="0.5"></path>
+                <path id="about_pathT" fill="#49C0C4" opacity="1"></path>
+                <text id="contact_text" x="650" y="110" font-size="24" fill="#eee">關於我們</text> 
             </a>
 
             <a href="">   
-                <path id="about_pathB" fill="#FF8686" opacity="0.5"></path>
-                <path id="about_pathT" fill="#FF8686" opacity="1"></path>
+                <path id="contact_pathB" fill="#FF8686" opacity="0.5"></path>
+                <path id="contact_pathT" fill="#FF8686" opacity="1"></path>
                 <text id="about_text" x="550" y="610" font-size="24" fill="#eee">聯絡我們</text>
             </a>
             
@@ -219,12 +258,11 @@
                 <text id="visit_text" x="1550" y="710" font-size="24" fill="#eee">預約參觀</text>
             </a> 
         </svg>
-        
     </div>
 
-    <nav class="navitems">
+    <nav class="navitems" style="z-index: 99;">
         <div class="logo">
-            <img src="../02_Img/logo.jpg" alt="">
+            <img src="../02_Img/logo.png" alt="">
         </div>
         <ul>
             <li>
@@ -266,8 +304,7 @@
         </ul>
     </nav>
 
-
-    <div class="wrap">
+    <div class="wrap" >
         <div id="ball">
             <div id="outer_ball"></div>
                 <span>visit</span>
@@ -277,26 +314,259 @@
     </div>
     
 
+    <!-- Swiper -->
+    <div class="swiper-container display_none">
+        <div class="swiper-wrapper">
+            <!-- slide1 -->
+            <div class="swiper-slide " style="height: 100vh;">
+                <div class="outside_contain_mobile">
+                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <image class="outside_img_mobile" href="../02_Img/main_background.png" x="0" y="0" width="100%" height="100%" />
+                        <clipPath id="outside_mask_mobile">
+                            <path id="outside_path_mobile"></path>
+                        </clipPath>
+                    </svg>
+                </div>
+                <div class="middle_contain_mobile">
+                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <image class="middle_img_mobile" href="../02_Img/main_background.png" x="0" y="0" width="100%" height="100%" />
+                        <clipPath id="middle_mask_mobile">
+                            <path id="middle_path_mobile"></path>
+                        </clipPath>
+                    </svg>
+                </div>
+                <div class="inside_contain_mobile">
+                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <image class="inside_img_mobile" href="../02_Img/main_background.png" x="0" y="0" width="100%" height="100%" />
+                        <clipPath id="inside_mask_mobile">
+                            <path id="inside_path_mobile"></path> 
+                        </clipPath>
+                    </svg>
+                </div>
+                <div class="">
+                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <a href="">
+                            <path id="main_img_link_mobile1" opacity="0.5"></path>
+                        </a> 
+                    </svg>
+                </div>
+            </div>
+            <!-- slide2 -->
+            <div class="swiper-slide">
+                <div class="outside_contain_mobile">
+                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <image class="outside_img_mobile" href="https://image.winudf.com/v2/image/Y29tLk1vYmlsZVN0cmFuZ2VyLmFwcDAwMzBfc2NyZWVuXzBfMTUzOTY1OTYwM18wNjE/screen-0.jpg?fakeurl=1&type=.jpg" x="0" y="0" width="100%" height="100%" />
+                        <clipPath id="outside_mask_mobile">
+                            <path id="outside_path_mobile"></path>
+                        </clipPath>
+                    </svg>
+                </div>
+                <div class="middle_contain_mobile">
+                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <image class="middle_img_mobile" href="https://image.winudf.com/v2/image/Y29tLk1vYmlsZVN0cmFuZ2VyLmFwcDAwMzBfc2NyZWVuXzBfMTUzOTY1OTYwM18wNjE/screen-0.jpg?fakeurl=1&type=.jpg" x="0" y="0" width="100%" height="100%" />
+                        <clipPath id="middle_mask_mobile">
+                            <path id="middle_path_mobile"></path>
+                        </clipPath>
+                    </svg>
+                </div>
+                <div class="inside_contain_mobile">
+                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <image class="inside_img_mobile" href="https://image.winudf.com/v2/image/Y29tLk1vYmlsZVN0cmFuZ2VyLmFwcDAwMzBfc2NyZWVuXzBfMTUzOTY1OTYwM18wNjE/screen-0.jpg?fakeurl=1&type=.jpg" x="0" y="0" width="100%" height="100%" />
+                        <clipPath id="inside_mask_mobile">
+                            <path id="inside_path_mobile"></path> 
+                        </clipPath>
+                    </svg>
+                </div>
+                <div class="">
+                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <a href="">
+                            <path id="main_img_link_mobile2" opacity="0.5"></path>
+                        </a> 
+                    </svg>
+                </div>
+            </div>
+            <!-- slide3 -->
+            <div class="swiper-slide">
+                <div class="outside_contain_mobile">
+                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <image class="outside_img_mobile" href="https://www.itl.cat/pngfile/big/12-126082_black-hd-wallpaper-1920x1080-2-background-wallpaper-cat.jpg" x="0" y="0" width="100%" height="100%" />
+                        <clipPath id="outside_mask_mobile">
+                            <path id="outside_path_mobile"></path>
+                        </clipPath>
+                    </svg>
+                </div>
+                <div class="middle_contain_mobile">
+                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <image class="middle_img_mobile" href="https://www.itl.cat/pngfile/big/12-126082_black-hd-wallpaper-1920x1080-2-background-wallpaper-cat.jpg" x="0" y="0" width="100%" height="100%" />
+                        <clipPath id="middle_mask_mobile">
+                            <path id="middle_path_mobile"></path>
+                        </clipPath>
+                    </svg>
+                </div>
+                <div class="inside_contain_mobile">
+                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <image class="inside_img_mobile" href="https://www.itl.cat/pngfile/big/12-126082_black-hd-wallpaper-1920x1080-2-background-wallpaper-cat.jpg" x="0" y="0" width="100%" height="100%" />
+                        <clipPath id="inside_mask_mobile">
+                            <path id="inside_path_mobile"></path> 
+                        </clipPath>
+                    </svg>
+                </div>
+                <div class="">
+                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <a href="">
+                            <path id="main_img_link_mobile3" opacity="0.5"></path>
+                        </a> 
+                    </svg>
+                </div>
+            </div>
+            <!-- slide4 -->
+            <div class="swiper-slide">
+                <div class="outside_contain_mobile">
+                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <image class="outside_img_mobile" href="https://i.pinimg.com/originals/c2/49/f1/c249f14eccea62157e7e65461cb15708.jpg" x="0" y="0" width="100%" height="100%" />
+                        <clipPath id="outside_mask_mobile">
+                            <path id="outside_path_mobile"></path>
+                        </clipPath>
+                    </svg>
+                </div>
+                <div class="middle_contain_mobile">
+                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <image class="middle_img_mobile" href="https://i.pinimg.com/originals/c2/49/f1/c249f14eccea62157e7e65461cb15708.jpg" x="0" y="0" width="100%" height="100%" />
+                        <clipPath id="middle_mask_mobile">
+                            <path id="middle_path_mobile"></path>
+                        </clipPath>
+                    </svg>
+                </div>
+                <div class="inside_contain_mobile">
+                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <image class="inside_img_mobile" href="https://i.pinimg.com/originals/c2/49/f1/c249f14eccea62157e7e65461cb15708.jpg" x="0" y="0" width="100%" height="100%" />
+                        <clipPath id="inside_mask_mobile">
+                            <path id="inside_path_mobile"></path> 
+                        </clipPath>
+                    </svg>
+                </div>
+                <div class="">
+                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <a href="">
+                            <path id="main_img_link_mobile4" opacity="0.5"></path>
+                        </a> 
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination" ></div>
+    </div>
+
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
 
     <script>
+        //swiper
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+                },
+            },
+        });
+     
+
+        
+        var blob_mobile = createBlob({
+            element: document.querySelector("#outside_path_mobile"),
+            numPoints: 20,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 360,
+            maxRadius: 390,
+            minDuration: 1,
+            maxDuration: 3
+        });
+        var blob_mobile = createBlob({
+            element: document.querySelector("#middle_path_mobile"),
+            numPoints: 20,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 320,
+            maxRadius: 350,
+            minDuration: 1,
+            maxDuration: 3
+        });
+        var blob_mobile = createBlob({
+            element: document.querySelector("#inside_path_mobile"),
+            numPoints: 20,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 290,
+            maxRadius: 310,
+            minDuration: 1,
+            maxDuration: 3
+        });
+
+        var blob_mobile = createBlob({
+            element: document.querySelector("#main_img_link_mobile1"),
+            numPoints: 20,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 290,
+            maxRadius: 310,
+            minDuration: 1,
+            maxDuration: 3
+        });
+        var blob_mobile = createBlob({
+            element: document.querySelector("#main_img_link_mobile2"),
+            numPoints: 20,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 290,
+            maxRadius: 310,
+            minDuration: 1,
+            maxDuration: 3
+        });
+        var blob_mobile = createBlob({
+            element: document.querySelector("#main_img_link_mobile3"),
+            numPoints: 20,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 290,
+            maxRadius: 310,
+            minDuration: 1,
+            maxDuration: 3
+        });
+        var blob_mobile = createBlob({
+            element: document.querySelector("#main_img_link_mobile4"),
+            numPoints: 20,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 300,
+            maxRadius: 330,
+            minDuration: 1,
+            maxDuration: 3
+        });
+        
+        
         
         // var tl = gsap.timeline({repeat: -1, repeatDelay: 1});
-        //     tl.to("#path1", {scale:0.9,duration:5,  ease: "power1.inOut" });
-        //     tl.to("#path1", {y:-40,scale:1.1,duration:7, ease: "power1.inOut" });
-        //     tl.to("#path1", {x:0,y:0,scale:1,duration:7, ease: "power1.inOut" });
+        //     tl.to("#outside_path", {scale:0.9,duration:5,  ease: "power1.inOut" });
+        //     tl.to("#outside_path", {y:-40,scale:1.1,duration:7, ease: "power1.inOut" });
+        //     tl.to("#outside_path", {x:0,y:0,scale:1,duration:7, ease: "power1.inOut" });
             
         // var t2 = gsap.timeline({repeat: -1, repeatDelay: 1});
-        //     t2.to("#path2", {scale:0.9,duration:5, ease: "power1.inOut" });
-        //     t2.to("#path2", {y:-40,scale:1.1,duration:7, ease: "power1.inOut" });
-        //     t2.to("#path2", {x:0,y:0,scale:1,duration:7, ease: "power1.inOut" });
+        //     t2.to("#middle_path", {scale:0.9,duration:5, ease: "power1.inOut" });
+        //     t2.to("#middle_path", {y:-40,scale:1.1,duration:7, ease: "power1.inOut" });
+        //     t2.to("#middle_path", {x:0,y:0,scale:1,duration:7, ease: "power1.inOut" });
 
         // var t3 = gsap.timeline({repeat: -1, repeatDelay: 1});
-        //     t3.to("#path3", {scale:0.9,duration:5, ease: "power1.inOut" });
-        //     t3.to("#path3", {y:-40,scale:1.1,duration:7, ease: "power1.inOut" });
-        //     t3.to("#path3", {x:0,y:0,scale:1,duration:7, ease: "power1.inOut" });
+        //     t3.to("#inside_path", {scale:0.9,duration:5, ease: "power1.inOut" });
+        //     t3.to("#inside_path", {y:-40,scale:1.1,duration:7, ease: "power1.inOut" });
+        //     t3.to("#inside_path", {x:0,y:0,scale:1,duration:7, ease: "power1.inOut" });
          
         // var t12 = gsap.timeline({repeat: -1, repeatDelay: 1});
         //     t12.to("#main_img_link", {scale:0.9,duration:5,  ease: "power1.inOut" });
@@ -305,39 +575,35 @@
 
         
 
-            
-            
-
-
         var blob1 = createBlob({
-            element: document.querySelector("#path1"),
+            element: document.querySelector("#outside_path"),
             numPoints: 20,
             centerX: 1200,
             centerY: 550,
-            minRadius: 520,
-            maxRadius: 550,
+            minRadius: 460,
+            maxRadius: 490,
             minDuration: 1,
             maxDuration: 3
         });
 
         var blob2 = createBlob({
-            element: document.querySelector("#path2"),
-            numPoints: 19,
+            element: document.querySelector("#middle_path"),
+            numPoints: 18,
             centerX: 1200,
             centerY: 550,
-            minRadius: 490,
-            maxRadius: 520,
+            minRadius: 430,
+            maxRadius: 460,
             minDuration: 1,
             maxDuration: 3
         });
         
         var blob3 = createBlob({
-            element: document.querySelector("#path3"),
-            numPoints: 18,
+            element: document.querySelector("#inside_path"),
+            numPoints: 16,
             centerX: 1200,
             centerY: 550,
-            minRadius: 460,
-            maxRadius: 490,
+            minRadius: 400,
+            maxRadius: 430,
             minDuration: 1,
             maxDuration: 3
         });
@@ -354,7 +620,7 @@
         });
 
         var blob4 = createBlob({
-            element: document.querySelector("#contact_pathB"),
+            element: document.querySelector("#about_pathB"),
             numPoints: 18,
             centerX: 700,
             centerY: 100,
@@ -364,7 +630,7 @@
             maxDuration: 5
         });
         var blob5 = createBlob({
-            element: document.querySelector("#contact_pathT"),
+            element: document.querySelector("#about_pathT"),
             numPoints: 18,
             centerX: 700,
             centerY: 100,
@@ -375,7 +641,7 @@
         });
 
         var blob6 = createBlob({
-            element: document.querySelector("#about_pathB"),
+            element: document.querySelector("#contact_pathB"),
             numPoints: 18,
             centerX: 600,
             centerY: 600,
@@ -385,7 +651,7 @@
             maxDuration: 5
         });
         var blob7 = createBlob({
-            element: document.querySelector("#about_pathT"),
+            element: document.querySelector("#contact_pathT"),
             numPoints: 18,
             centerX: 600,
             centerY: 600,
@@ -527,9 +793,6 @@
         // TweenMax.to("#blobs", 3, {scale:1.5, repeat:-1, yoyo:true, transformOrigin:"center"})
 
 
-
-
-
         //ball follow mouse
         var $ = document.querySelector.bind(document);
         var $on = document.addEventListener.bind(document);
@@ -555,7 +818,7 @@
         var followMouse = function followMouse() {
             key = requestAnimationFrame(followMouse);
 
-            console.log(x,y);
+            // console.log(x,y);
             
 
             if(!x || !y) {
@@ -576,9 +839,46 @@
             ball.style.top = y + 'px';
         };
 
+
+
+        //media queries
+
+        var w1300px = window.matchMedia("(max-width: 1300px)");
+        var w768px = window.matchMedia("(max-width: 768px)");
+        myFunction1(w1300px)
+        myFunction2(w768px) // Call listener function at run time
+        w1300px.addListener(myFunction1)
+        w768px.addListener(myFunction2)
+        // Attach listener function on state changes
+        function myFunction1(w1300px){
+            if (w1300px.matches) {
+                // document.body.style.backgroundColor = "green";
+
+            }
+            else{
+                // document.body.style.backgroundColor = "#eee";
+            }
+        }
+        function myFunction2(w768px) {
+            if (w768px.matches) { // If media query matches
+                // document.body.style.backgroundColor = "lightpink";
+                document.querySelector(".swiper-container").classList.add("display_block");
+                document.querySelector(".outside_contain").classList.add("display_none");
+                document.querySelector(".middle_contain").classList.add("display_none");
+                document.querySelector(".inside_contain").classList.add("display_none");
+                document.querySelector(".cover4").classList.add("display_none");
+                
+            }
+            else {
+                // document.body.style.backgroundColor = "#eee";
+                document.querySelector(".swiper-container").classList.remove("display_block");
+                document.querySelector(".outside_contain").classList.remove("display_none");
+                document.querySelector(".middle_contain").classList.remove("display_none");
+                document.querySelector(".inside_contain").classList.remove("display_none");
+                document.querySelector(".cover4").classList.remove("display_none");
+            } 
+        }
         
-
-
     </script>
 </body>
 
