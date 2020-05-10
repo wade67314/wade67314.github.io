@@ -14,8 +14,7 @@
             overflow: hidden;
             margin: 0;
             padding: 0;
-            /* background-color: lightyellow; */
-            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #eee;
             position: relative;
         }
         .display_none{
@@ -103,6 +102,7 @@
         }
         .navitems ul li a .navitem{
             font-size: 18px;
+            letter-spacing: 0.2em;
         }
         .navitem {
             display: inline-block;
@@ -112,15 +112,16 @@
             content: '';
             display: block;
             border-top: 1px solid black;
-            margin-left:1em;
+            margin-left:1.2em;
             margin-right: 0.8em;
         }
         .navitem:before{
             display: block;
             position: absolute;
-            left: 19px;
+            left: 21.5px;
             top: 100%;
             font-size: 12px;
+            letter-spacing: 0.05em;
         }
         .navitem.eng_navitem_about:before{
             content: "about us";
@@ -137,17 +138,16 @@
 
         .wrap {
             position: absolute;
-            
             top: -20px;
             left: -20px;
             bottom: 0;
             right: 0;
+
         }
-        #ball {
+        .ball {
             z-index: 99;
             width: 60px;
             height: 60px;
-            background: none;
             border: 1px solid grey;
             border-radius: 50%;
             position: absolute;
@@ -160,17 +160,22 @@
             align-items: center;
             flex-wrap: wrap;
             flex-direction: column;
+
         }
-        #outer_ball{
+        .outer_ball{
             z-index: 99;
-            width: 70px;
-            height: 70px;
+            width: 65px;
+            height: 65px;
             background: none;
             border: 1px solid grey;
             border-radius: 50%;
             position: absolute;
         }
-
+        @media(max-width: 1400px){
+            .navitems{
+                padding-left:30px
+            }
+        }
         @media(max-width: 768px){
             .navitems{
                 width: 100%;
@@ -234,29 +239,23 @@
                 <path id="main_img_link" opacity="0"></path>
             </a> 
 
-            <a href="" >
-                <path id="about_pathB" fill="#49C0C4" opacity="0.5"></path>
-                <path id="about_pathT" fill="#49C0C4" opacity="1"></path>
-                <text id="contact_text" x="650" y="110" font-size="24" fill="#eee">關於我們</text> 
-            </a>
-
-            <a href="">   
-                <path id="contact_pathB" fill="#FF8686" opacity="0.5"></path>
-                <path id="contact_pathT" fill="#FF8686" opacity="1"></path>
-                <text id="about_text" x="550" y="610" font-size="24" fill="#eee">聯絡我們</text>
-            </a>
-            
-            <a href="">
-                <path id="service_pathB" fill="#F0C376" opacity="0.5"></path>
-                <path id="service_pathT" fill="#F0C376" opacity="1"></path>
-                <text id="service_text" x="1650" y="210" font-size="24" fill="#eee">服務項目</text> 
-            </a>
-
-            <a href="">
-                <path id="visit_pathB" fill="#80AF44" opacity="0.5"></path>
-                <path id="visit_pathT" fill="#80AF44" opacity="1"></path>
-                <text id="visit_text" x="1550" y="710" font-size="24" fill="#eee">預約參觀</text>
-            </a> 
+            <g cursor="pointer">
+            <path id="about_pathB" fill="#49C0C4" opacity="0.5"></path>
+            <path id="about_pathT" fill="#49C0C4" opacity="1"></path>
+            <text id="about_text" x="475" y="190" font-size="25" fill="#eee" letter-spacing="0.075em">關於我們</text> 
+        
+            <path id="contact_pathB" fill="#FF8686" opacity="0.5"></path>
+            <path id="contact_pathT" fill="#FF8686" opacity="1"></path>
+            <text id="contact_text" x="445" y="850" font-size="25" fill="#eee" letter-spacing="0.075em">聯絡我們</text>
+        
+            <path id="service_pathB" fill="#F0C376" opacity="0.5"></path>
+            <path id="service_pathT" fill="#F0C376" opacity="1"></path>
+            <text id="service_text" x="1565" y="210" font-size="25" fill="#eee" letter-spacing="0.075em">服務項目</text> 
+        
+            <path id="visit_pathB" fill="#80AF44" opacity="0.5"></path>
+            <path id="visit_pathT" fill="#80AF44" opacity="1"></path>
+            <text id="visit_text" x="1680" y="825" font-size="25" fill="#eee" letter-spacing="0.075em">預約參觀</text>
+            </g>
         </svg>
     </div>
 
@@ -305,10 +304,10 @@
     </nav>
 
     <div class="wrap" >
-        <div id="ball">
-            <div id="outer_ball"></div>
-                <span>visit</span>
-                <span>+</span>
+        <div class="ball">
+            <div class="outer_ball"></div>
+                <span class="ball_text1">visit</span>
+                <span class="ball_text2">+</span>
             </div>
         </div>
     </div>
@@ -346,7 +345,7 @@
                 <div class="">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
                         <a href="">
-                            <path id="main_img_link_mobile1" opacity="0.5"></path>
+                            <path id="main_img_link_mobile1" opacity="0"></path>
                         </a> 
                     </svg>
                 </div>
@@ -380,7 +379,7 @@
                 <div class="">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
                         <a href="">
-                            <path id="main_img_link_mobile2" opacity="0.5"></path>
+                            <path id="main_img_link_mobile2" opacity="0"></path>
                         </a> 
                     </svg>
                 </div>
@@ -414,7 +413,7 @@
                 <div class="">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
                         <a href="">
-                            <path id="main_img_link_mobile3" opacity="0.5"></path>
+                            <path id="main_img_link_mobile3" opacity="0"></path>
                         </a> 
                     </svg>
                 </div>
@@ -448,7 +447,7 @@
                 <div class="">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
                         <a href="">
-                            <path id="main_img_link_mobile4" opacity="0.5"></path>
+                            <path id="main_img_link_mobile4" opacity="0"></path>
                         </a> 
                     </svg>
                 </div>
@@ -466,6 +465,79 @@
 
 
     <script>
+        //click to change middle img
+        document.querySelector("#about_pathT").addEventListener("click",function(){
+            document.querySelector(".inside_img").setAttribute("href","../02_Img/main_background.png")
+            document.querySelector(".middle_img").setAttribute("href","../02_Img/main_background.png")
+            document.querySelector(".outside_img").setAttribute("href","../02_Img/main_background.png")
+        })
+        document.querySelector("#contact_pathT").addEventListener("click",function(){
+            document.querySelector(".inside_img").setAttribute("href","https://wallpaperaccess.com/full/253660.jpg")
+            document.querySelector(".middle_img").setAttribute("href","https://wallpaperaccess.com/full/253660.jpg")
+            document.querySelector(".outside_img").setAttribute("href","https://wallpaperaccess.com/full/253660.jpg")
+        })
+        document.querySelector("#service_pathT").addEventListener("click",function(){
+            document.querySelector(".inside_img").setAttribute("href","https://i.imgur.com/4IzT2Kz.jpg")
+            document.querySelector(".middle_img").setAttribute("href","https://i.imgur.com/4IzT2Kz.jpg")
+            document.querySelector(".outside_img").setAttribute("href","https://i.imgur.com/4IzT2Kz.jpg")
+        })
+        document.querySelector("#visit_pathT").addEventListener("click",function(){
+            document.querySelector(".inside_img").setAttribute("href","https://s2.best-wallpaper.net/wallpaper/1920x1080/1202/Kitten-yawning-basket_1920x1080.jpg")
+            document.querySelector(".middle_img").setAttribute("href","https://s2.best-wallpaper.net/wallpaper/1920x1080/1202/Kitten-yawning-basket_1920x1080.jpg")
+            document.querySelector(".outside_img").setAttribute("href","https://s2.best-wallpaper.net/wallpaper/1920x1080/1202/Kitten-yawning-basket_1920x1080.jpg")
+        })
+
+
+        //change mouse style while the mouse is entering middle_img
+        document.querySelector("#main_img_link").onmouseenter = function () {
+            document.querySelector(".ball").style.color="black";
+            document.querySelector(".ball").style.backgroundColor="#eee"; 
+            document.querySelector(".ball_text1").style.display="block";
+            document.querySelector(".ball_text2").style.display="block";
+            document.querySelector(".ball").style.width="60px";
+            document.querySelector(".ball").style.height="60px";
+            document.querySelector(".outer_ball").style.width="65px";
+            document.querySelector(".outer_ball").style.height="65px";
+            document.querySelector(".ball").style.margin="-10px";
+        };
+        document.querySelector("#main_img_link").onmouseleave = function () {
+            document.querySelector(".ball").style.backgroundColor="black";
+            document.querySelector(".ball_text1").style.display="none";
+            document.querySelector(".ball_text2").style.display="none";
+            document.querySelector(".ball").style.width="15px";
+            document.querySelector(".ball").style.height="15px";
+            document.querySelector(".outer_ball").style.width="20px";
+            document.querySelector(".outer_ball").style.height="20px";
+            document.querySelector(".ball").style.margin="13px";            
+        };
+        // .ball {
+        //     z-index: 99;
+        //     width: 60px;
+        //     height: 60px;
+        //     background: none;
+        //     border: 1px solid grey;
+        //     border-radius: 50%;
+        //     position: absolute;
+        //     left: 50%;
+        //     top: 50%;
+        //     margin: -10px 0 0 -10px;
+        //     pointer-events: none;
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     flex-wrap: wrap;
+        //     flex-direction: column;
+        // }
+        // .outer_ball{
+        //     z-index: 99;
+        //     width: 65px;
+        //     height: 65px;
+        //     background: none;
+        //     border: 1px solid grey;
+        //     border-radius: 50%;
+        //     position: absolute;
+        // }
+
         //swiper
         var swiper = new Swiper('.swiper-container', {
             pagination: {
@@ -577,53 +649,53 @@
 
         var blob1 = createBlob({
             element: document.querySelector("#outside_path"),
-            numPoints: 20,
-            centerX: 1200,
+            numPoints: 12,
+            centerX: 1150,
             centerY: 550,
-            minRadius: 460,
-            maxRadius: 490,
-            minDuration: 1,
-            maxDuration: 3
+            minRadius: 480,
+            maxRadius: 530,
+            minDuration: 3,
+            maxDuration: 6
         });
 
         var blob2 = createBlob({
             element: document.querySelector("#middle_path"),
-            numPoints: 18,
-            centerX: 1200,
+            numPoints: 11,
+            centerX: 1150,
             centerY: 550,
             minRadius: 430,
-            maxRadius: 460,
-            minDuration: 1,
-            maxDuration: 3
+            maxRadius: 475,
+            minDuration: 3,
+            maxDuration: 6
         });
         
         var blob3 = createBlob({
             element: document.querySelector("#inside_path"),
-            numPoints: 16,
-            centerX: 1200,
+            numPoints: 10,
+            centerX: 1150,
             centerY: 550,
-            minRadius: 400,
-            maxRadius: 430,
-            minDuration: 1,
-            maxDuration: 3
+            minRadius: 370,
+            maxRadius: 425,
+            minDuration: 3,
+            maxDuration: 6
         });
 
         var blob12 = createBlob({
             element: document.querySelector("#main_img_link"),
-            numPoints: 18,
-            centerX: 1200,
+            numPoints: 10,
+            centerX: 1150,
             centerY: 550,
-            minRadius: 460,
-            maxRadius: 490,
-            minDuration: 1,
-            maxDuration: 3
+            minRadius: 370,
+            maxRadius: 425,
+            minDuration: 3,
+            maxDuration: 6
         });
 
         var blob4 = createBlob({
             element: document.querySelector("#about_pathB"),
             numPoints: 18,
-            centerX: 700,
-            centerY: 100,
+            centerX: 530,
+            centerY: 190,
             minRadius: 65,
             maxRadius: 68,
             minDuration: 1,
@@ -632,8 +704,8 @@
         var blob5 = createBlob({
             element: document.querySelector("#about_pathT"),
             numPoints: 18,
-            centerX: 700,
-            centerY: 100,
+            centerX: 530,
+            centerY: 190,
             minRadius: 58,
             maxRadius: 63,
             minDuration: 1,
@@ -643,8 +715,8 @@
         var blob6 = createBlob({
             element: document.querySelector("#contact_pathB"),
             numPoints: 18,
-            centerX: 600,
-            centerY: 600,
+            centerX: 500,
+            centerY: 840,
             minRadius: 65,
             maxRadius: 68,
             minDuration: 1,
@@ -653,8 +725,8 @@
         var blob7 = createBlob({
             element: document.querySelector("#contact_pathT"),
             numPoints: 18,
-            centerX: 600,
-            centerY: 600,
+            centerX: 500,
+            centerY: 840,
             minRadius: 58,
             maxRadius: 63,
             minDuration: 1,
@@ -664,7 +736,7 @@
         var blob8 = createBlob({
             element: document.querySelector("#service_pathB"),
             numPoints: 18,
-            centerX: 1700,
+            centerX: 1620,
             centerY: 200,
             minRadius: 65,
             maxRadius: 68,
@@ -674,7 +746,7 @@
         var blob9 = createBlob({
             element: document.querySelector("#service_pathT"),
             numPoints: 18,
-            centerX: 1700,
+            centerX: 1620,
             centerY: 200,
             minRadius: 58,
             maxRadius: 63,
@@ -685,8 +757,8 @@
         var blob10 = createBlob({
             element: document.querySelector("#visit_pathB"),
             numPoints: 18,
-            centerX: 1600,
-            centerY: 700,
+            centerX: 1735,
+            centerY: 815,
             minRadius: 65,
             maxRadius: 68,
             minDuration: 1,
@@ -695,8 +767,8 @@
         var blob11 = createBlob({
             element: document.querySelector("#visit_pathT"),
             numPoints: 18,
-            centerX: 1600,
-            centerY: 700,
+            centerX: 1735,
+            centerY: 815,
             minRadius: 58,
             maxRadius: 63,
             minDuration: 1,
@@ -805,7 +877,7 @@
         });
     
 
-        var ball = $('#ball');
+        var ball = $('.ball');
         var x = void 0,
             y = void 0,
             dx = void 0,
@@ -843,20 +915,193 @@
 
         //media queries
 
-        var w1300px = window.matchMedia("(max-width: 1300px)");
+        var w1400px = window.matchMedia("(max-width: 1400px)");
         var w768px = window.matchMedia("(max-width: 768px)");
-        myFunction1(w1300px)
+        myFunction1(w1400px)
         myFunction2(w768px) // Call listener function at run time
-        w1300px.addListener(myFunction1)
+        w1400px.addListener(myFunction1)
         w768px.addListener(myFunction2)
         // Attach listener function on state changes
-        function myFunction1(w1300px){
-            if (w1300px.matches) {
-                // document.body.style.backgroundColor = "green";
-
+        function myFunction1(w1400px){
+            if (w1400px.matches) {
+                document.querySelector("#about_text").setAttribute("x","795")
+                document.querySelector("#about_text").setAttribute("y","160")
+                var blob4 = createBlob({
+                    element: document.querySelector("#about_pathB"),
+                    numPoints: 18,
+                    centerX: 850,
+                    centerY: 150,
+                    minRadius: 65,
+                    maxRadius: 68,
+                    minDuration: 1,
+                    maxDuration: 5
+                });
+                var blob5 = createBlob({
+                    element: document.querySelector("#about_pathT"),
+                    numPoints: 18,
+                    centerX: 850,
+                    centerY: 150,
+                    minRadius: 58,
+                    maxRadius: 63,
+                    minDuration: 1,
+                    maxDuration: 5
+                });
+                document.querySelector("#contact_text").setAttribute("x","845")
+                document.querySelector("#contact_text").setAttribute("y","960")
+                var blob6 = createBlob({
+                    element: document.querySelector("#contact_pathB"),
+                    numPoints: 18,
+                    centerX: 900,
+                    centerY: 950,
+                    minRadius: 65,
+                    maxRadius: 68,
+                    minDuration: 1,
+                    maxDuration: 5
+                });
+                var blob7 = createBlob({
+                    element: document.querySelector("#contact_pathT"),
+                    numPoints: 18,
+                    centerX: 900,
+                    centerY: 950,
+                    minRadius: 58,
+                    maxRadius: 63,
+                    minDuration: 1,
+                    maxDuration: 5
+                });
+                document.querySelector("#service_text").setAttribute("x","1265")
+                document.querySelector("#service_text").setAttribute("y","110")
+                var blob8 = createBlob({
+                    element: document.querySelector("#service_pathB"),
+                    numPoints: 18,
+                    centerX: 1320,
+                    centerY: 100,
+                    minRadius: 65,
+                    maxRadius: 68,
+                    minDuration: 1,
+                    maxDuration: 5
+                });
+                var blob9 = createBlob({
+                    element: document.querySelector("#service_pathT"),
+                    numPoints: 18,
+                    centerX: 1320,
+                    centerY: 100,
+                    minRadius: 58,
+                    maxRadius: 63,
+                    minDuration: 1,
+                    maxDuration: 5
+                });
+                document.querySelector("#visit_text").setAttribute("x","1265")
+                document.querySelector("#visit_text").setAttribute("y","1010")
+                var blob10 = createBlob({
+                    element: document.querySelector("#visit_pathB"),
+                    numPoints: 18,
+                    centerX: 1320,
+                    centerY: 1000,
+                    minRadius: 65,
+                    maxRadius: 68,
+                    minDuration: 1,
+                    maxDuration: 5
+                });
+                var blob11 = createBlob({
+                    element: document.querySelector("#visit_pathT"),
+                    numPoints: 18,
+                    centerX: 1320,
+                    centerY: 1000,
+                    minRadius: 58,
+                    maxRadius: 63,
+                    minDuration: 1,
+                    maxDuration: 5
+                });
             }
             else{
-                // document.body.style.backgroundColor = "#eee";
+                document.querySelector("#about_text").setAttribute("x","475")
+                document.querySelector("#about_text").setAttribute("y","200")
+                var blob4 = createBlob({
+                    element: document.querySelector("#about_pathB"),
+                    numPoints: 18,
+                    centerX: 530,
+                    centerY: 190,
+                    minRadius: 65,
+                    maxRadius: 68,
+                    minDuration: 1,
+                    maxDuration: 5
+                });
+                var blob5 = createBlob({
+                    element: document.querySelector("#about_pathT"),
+                    numPoints: 18,
+                    centerX: 530,
+                    centerY: 190,
+                    minRadius: 58,
+                    maxRadius: 63,
+                    minDuration: 1,
+                    maxDuration: 5
+                });
+                document.querySelector("#contact_text").setAttribute("x","445")
+                document.querySelector("#contact_text").setAttribute("y","850")
+                var blob6 = createBlob({
+                    element: document.querySelector("#contact_pathB"),
+                    numPoints: 18,
+                    centerX: 500,
+                    centerY: 840,
+                    minRadius: 65,
+                    maxRadius: 68,
+                    minDuration: 1,
+                    maxDuration: 5
+                });
+                var blob7 = createBlob({
+                    element: document.querySelector("#contact_pathT"),
+                    numPoints: 18,
+                    centerX: 500,
+                    centerY: 840,
+                    minRadius: 58,
+                    maxRadius: 63,
+                    minDuration: 1,
+                    maxDuration: 5
+                });
+                document.querySelector("#service_text").setAttribute("x","1565")
+                document.querySelector("#service_text").setAttribute("y","210")
+                var blob8 = createBlob({
+                    element: document.querySelector("#service_pathB"),
+                    numPoints: 18,
+                    centerX: 1620,
+                    centerY: 200,
+                    minRadius: 65,
+                    maxRadius: 68,
+                    minDuration: 1,
+                    maxDuration: 5
+                });
+                var blob9 = createBlob({
+                    element: document.querySelector("#service_pathT"),
+                    numPoints: 18,
+                    centerX: 1620,
+                    centerY: 200,
+                    minRadius: 58,
+                    maxRadius: 63,
+                    minDuration: 1,
+                    maxDuration: 5
+                });
+                document.querySelector("#visit_text").setAttribute("x","1680")
+                document.querySelector("#visit_text").setAttribute("y","825")
+                var blob10 = createBlob({
+                    element: document.querySelector("#visit_pathB"),
+                    numPoints: 18,
+                    centerX: 1735,
+                    centerY: 815,
+                    minRadius: 65,
+                    maxRadius: 68,
+                    minDuration: 1,
+                    maxDuration: 5
+                });
+                var blob11 = createBlob({
+                    element: document.querySelector("#visit_pathT"),
+                    numPoints: 18,
+                    centerX: 1735,
+                    centerY: 815,
+                    minRadius: 58,
+                    maxRadius: 63,
+                    minDuration: 1,
+                    maxDuration: 5
+                });
             }
         }
         function myFunction2(w768px) {
@@ -866,8 +1111,7 @@
                 document.querySelector(".outside_contain").classList.add("display_none");
                 document.querySelector(".middle_contain").classList.add("display_none");
                 document.querySelector(".inside_contain").classList.add("display_none");
-                document.querySelector(".cover4").classList.add("display_none");
-                
+                document.querySelector(".cover4").classList.add("display_none")              
             }
             else {
                 // document.body.style.backgroundColor = "#eee";
