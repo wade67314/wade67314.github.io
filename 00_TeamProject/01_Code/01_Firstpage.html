@@ -217,7 +217,7 @@
 <body onload = "followMouse();">
 
     <div class="outside_contain">
-        <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+        <svg id="demo" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
             <image class="outside_img" href="../02_Img/main_background.png" x="0" y="0" width="100%" height="100%" />
             <clipPath id="outside_mask">
                 <path id="outside_path"></path>
@@ -226,7 +226,7 @@
     </div>
 
     <div class="middle_contain">
-        <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+        <svg id="demo" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
             <image class="middle_img" href="../02_Img/main_background.png" x="0" y="0" width="100%" height="100%" />
             <clipPath id="middle_mask">
                 <path id="middle_path"></path>
@@ -235,7 +235,7 @@
     </div>
 
     <div class="inside_contain">
-        <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+        <svg id="demo" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
             <image class="inside_img" href="../02_Img/main_background.png" x="0" y="0" width="100%" height="100%" />
             <clipPath id="inside_mask">
                 <path id="inside_path"></path> 
@@ -244,7 +244,7 @@
     </div>
 
     <div class="cover4"> 
-        <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+        <svg id="demo" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
             <g font-weight="bold" letter-spacing="5">
                 <text x="890" y="360" fill="#77A600" font-size="42" >滿果<tspan fill="#186A85">托嬰中心</tspan></text>
                 <text x="858" y="400" fill="#eee" font-size="28"><tspan font-weight="normal">一</tspan>想給寶寶一個自然健康安全的環境<tspan font-weight="normal">一</tspan></text>
@@ -254,21 +254,25 @@
             </a> 
 
             <g cursor="pointer">
-            <path id="about_pathB" fill="#49C0C4" opacity="0.5"></path>
+            <path id="about_pathB" fill="#49C0C4" opacity="0.3"></path>
+            <path id="about_pathM" fill="#49C0C4" opacity="0.6"></path>
             <path id="about_pathT" fill="#49C0C4" opacity="1"></path>
-            <text id="about_text" x="475" y="190" font-size="25" fill="#eee" letter-spacing="0.075em">關於我們</text> 
+            <text id="about_text" x="480" y="120" font-size="25" fill="#eee" letter-spacing="0.075em">關於我們</text> 
         
-            <path id="contact_pathB" fill="#FF8686" opacity="0.5"></path>
+            <path id="contact_pathB" fill="#FF8686" opacity="0.3"></path>
+            <path id="contact_pathM" fill="#FF8686" opacity="0.6"></path>
             <path id="contact_pathT" fill="#FF8686" opacity="1"></path>
-            <text id="contact_text" x="445" y="850" font-size="25" fill="#eee" letter-spacing="0.075em">聯絡我們</text>
+            <text id="contact_text" x="455" y="850" font-size="25" fill="#eee" letter-spacing="0.075em">聯絡我們</text>
         
-            <path id="service_pathB" fill="#F0C376" opacity="0.5"></path>
+            <path id="service_pathB" fill="#F0C376" opacity="0.3"></path>
+            <path id="service_pathM" fill="#F0C376" opacity="0.6"></path>
             <path id="service_pathT" fill="#F0C376" opacity="1"></path>
-            <text id="service_text" x="1565" y="210" font-size="25" fill="#eee" letter-spacing="0.075em">服務項目</text> 
+            <text id="service_text" x="1555" y="130" font-size="25" fill="#eee" letter-spacing="0.075em">服務項目</text> 
         
-            <path id="visit_pathB" fill="#80AF44" opacity="0.5"></path>
+            <path id="visit_pathB" fill="#80AF44" opacity="0.3"></path>
+            <path id="visit_pathM" fill="#80AF44" opacity="0.6"></path>
             <path id="visit_pathT" fill="#80AF44" opacity="1"></path>
-            <text id="visit_text" x="1680" y="825" font-size="25" fill="#eee" letter-spacing="0.075em">預約參觀</text>
+            <text id="visit_text" x="1700" y="825" font-size="25" fill="#eee" letter-spacing="0.075em">預約參觀</text>
             </g>
         </svg>
     </div>
@@ -334,7 +338,7 @@
             <div class="swiper-slide " style="height: 100vh;">
                 <div class="outside_contain_mobile">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="outside_img_mobile" href="../02_Img/main_background.png" x="0" y="0" width="100%" height="100%" />
+                        <image class="outside_img_mobile" href="../02_Img/background_mobile.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="outside_mask_mobile">
                             <path id="outside_path_mobile"></path>
                         </clipPath>
@@ -342,7 +346,7 @@
                 </div>
                 <div class="middle_contain_mobile">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="middle_img_mobile" href="../02_Img/main_background.png" x="0" y="0" width="100%" height="100%" />
+                        <image class="middle_img_mobile" href="../02_Img/background_mobile.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="middle_mask_mobile">
                             <path id="middle_path_mobile"></path>
                         </clipPath>
@@ -350,7 +354,7 @@
                 </div>
                 <div class="inside_contain_mobile">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="inside_img_mobile" href="../02_Img/main_background.png" x="0" y="0" width="100%" height="100%" />
+                        <image class="inside_img_mobile" href="../02_Img/background_mobile.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="inside_mask_mobile">
                             <path id="inside_path_mobile"></path> 
                         </clipPath>
@@ -555,8 +559,6 @@
             mouseout();           
         };
         
-    
-
         //swiper
         var swiper = new Swiper('.swiper-container', {
             pagination: {
@@ -566,9 +568,8 @@
             observer:true,
             observeParents:true,
         });
-     
-
         
+        // path style
         var blob_mobile = createBlob({
             element: document.querySelector("#outside_path_mobile"),
             numPoints: 20,
@@ -642,7 +643,7 @@
         });
         
         
-        
+        //animation area
         // var tl = gsap.timeline({repeat: -1, repeatDelay: 1});
         //     tl.to("#outside_path", {scale:0.9,duration:5,  ease: "power1.inOut" });
         //     tl.to("#outside_path", {y:-40,scale:1.1,duration:7, ease: "power1.inOut" });
@@ -670,8 +671,8 @@
             numPoints: 12,
             centerX: 1150,
             centerY: 550,
-            minRadius: 480,
-            maxRadius: 530,
+            minRadius: 530,
+            maxRadius: 560,
             minDuration: 3,
             maxDuration: 6
         });
@@ -681,8 +682,8 @@
             numPoints: 11,
             centerX: 1150,
             centerY: 550,
-            minRadius: 430,
-            maxRadius: 475,
+            minRadius: 490,
+            maxRadius: 525,
             minDuration: 3,
             maxDuration: 6
         });
@@ -692,8 +693,8 @@
             numPoints: 10,
             centerX: 1150,
             centerY: 550,
-            minRadius: 370,
-            maxRadius: 425,
+            minRadius: 430,
+            maxRadius: 485,
             minDuration: 3,
             maxDuration: 6
         });
@@ -703,59 +704,89 @@
             numPoints: 10,
             centerX: 1150,
             centerY: 550,
-            minRadius: 370,
-            maxRadius: 425,
+            minRadius: 430,
+            maxRadius: 485,
             minDuration: 3,
             maxDuration: 6
         });
 
         var blob4 = createBlob({
             element: document.querySelector("#about_pathB"),
-            numPoints: 18,
-            centerX: 530,
-            centerY: 190,
+            numPoints: 12,
+            centerX: 535,
+            centerY: 110,
+            minRadius: 75,
+            maxRadius: 80,
+            minDuration: 2,
+            maxDuration: 4
+        });
+        var blob4 = createBlob({
+            element: document.querySelector("#about_pathM"),
+            numPoints: 11,
+            centerX: 535,
+            centerY: 110,
             minRadius: 65,
             maxRadius: 68,
-            minDuration: 1,
-            maxDuration: 5
+            minDuration: 2,
+            maxDuration: 4
         });
         var blob5 = createBlob({
             element: document.querySelector("#about_pathT"),
-            numPoints: 18,
-            centerX: 530,
-            centerY: 190,
+            numPoints: 10,
+            centerX: 535,
+            centerY: 110,
             minRadius: 58,
             maxRadius: 63,
-            minDuration: 1,
-            maxDuration: 5
+            minDuration: 2,
+            maxDuration: 4
         });
 
         var blob6 = createBlob({
             element: document.querySelector("#contact_pathB"),
-            numPoints: 18,
-            centerX: 500,
+            numPoints: 12,
+            centerX: 510,
+            centerY: 840,
+            minRadius: 75,
+            maxRadius: 80,
+            minDuration: 2,
+            maxDuration: 4
+        });
+        var blob6 = createBlob({
+            element: document.querySelector("#contact_pathM"),
+            numPoints: 11,
+            centerX: 510,
             centerY: 840,
             minRadius: 65,
             maxRadius: 68,
-            minDuration: 1,
-            maxDuration: 5
+            minDuration: 2,
+            maxDuration: 4
         });
         var blob7 = createBlob({
             element: document.querySelector("#contact_pathT"),
-            numPoints: 18,
-            centerX: 500,
+            numPoints: 10,
+            centerX: 510,
             centerY: 840,
             minRadius: 58,
             maxRadius: 63,
-            minDuration: 1,
-            maxDuration: 5
+            minDuration: 2,
+            maxDuration: 4
         });
 
         var blob8 = createBlob({
             element: document.querySelector("#service_pathB"),
             numPoints: 18,
-            centerX: 1620,
-            centerY: 200,
+            centerX: 1610,
+            centerY: 120,
+            minRadius: 75,
+            maxRadius: 80,
+            minDuration: 1,
+            maxDuration: 5
+        });
+        var blob9 = createBlob({
+            element: document.querySelector("#service_pathM"),
+            numPoints: 18,
+            centerX: 1610,
+            centerY: 120,
             minRadius: 65,
             maxRadius: 68,
             minDuration: 1,
@@ -764,8 +795,8 @@
         var blob9 = createBlob({
             element: document.querySelector("#service_pathT"),
             numPoints: 18,
-            centerX: 1620,
-            centerY: 200,
+            centerX: 1610,
+            centerY: 120,
             minRadius: 58,
             maxRadius: 63,
             minDuration: 1,
@@ -775,7 +806,17 @@
         var blob10 = createBlob({
             element: document.querySelector("#visit_pathB"),
             numPoints: 18,
-            centerX: 1735,
+            centerX: 1755,
+            centerY: 815,
+            minRadius: 75,
+            maxRadius: 80,
+            minDuration: 1,
+            maxDuration: 5
+        });
+        var blob11 = createBlob({
+            element: document.querySelector("#visit_pathM"),
+            numPoints: 18,
+            centerX: 1755,
             centerY: 815,
             minRadius: 65,
             maxRadius: 68,
@@ -785,7 +826,7 @@
         var blob11 = createBlob({
             element: document.querySelector("#visit_pathT"),
             numPoints: 18,
-            centerX: 1735,
+            centerX: 1755,
             centerY: 815,
             minRadius: 58,
             maxRadius: 63,
@@ -797,7 +838,7 @@
 
             var points = [];
             var path = options.element;
-            var slice = (Math.PI * 2) / options.numPoints;
+            var meet = (Math.PI * 2) / options.numPoints;
             var startAngle = random(Math.PI * 2);
 
             var tl = new TimelineMax({
@@ -806,7 +847,7 @@
 
             for (var i = 0; i < options.numPoints; i++) {
 
-                var angle = startAngle + i * slice;
+                var angle = startAngle + i * meet;
                 var duration = random(options.minDuration, options.maxDuration);
 
                 var point = {
@@ -933,195 +974,195 @@
 
         //media queries
 
-        var w1400px = window.matchMedia("(max-width: 1400px)");       
+        // var w1400px = window.matchMedia("(max-width: 1400px)");       
         var w768px = window.matchMedia("(max-width: 768px)");
-        myFunction1(w1400px)
+        // myFunction1(w1400px)
         myFunction2(w768px) // Call listener function at run time
-        w1400px.addListener(myFunction1)
+        // w1400px.addListener(myFunction1)
         w768px.addListener(myFunction2)
         // Attach listener function on state changes
-        function myFunction1(w1400px){
-            if (w1400px.matches) {
-                document.querySelector("#about_text").setAttribute("x","795")
-                document.querySelector("#about_text").setAttribute("y","160")
-                var blob4 = createBlob({
-                    element: document.querySelector("#about_pathB"),
-                    numPoints: 18,
-                    centerX: 850,
-                    centerY: 150,
-                    minRadius: 65,
-                    maxRadius: 68,
-                    minDuration: 1,
-                    maxDuration: 5
-                });
-                var blob5 = createBlob({
-                    element: document.querySelector("#about_pathT"),
-                    numPoints: 18,
-                    centerX: 850,
-                    centerY: 150,
-                    minRadius: 58,
-                    maxRadius: 63,
-                    minDuration: 1,
-                    maxDuration: 5
-                });
-                document.querySelector("#contact_text").setAttribute("x","845")
-                document.querySelector("#contact_text").setAttribute("y","960")
-                var blob6 = createBlob({
-                    element: document.querySelector("#contact_pathB"),
-                    numPoints: 18,
-                    centerX: 900,
-                    centerY: 950,
-                    minRadius: 65,
-                    maxRadius: 68,
-                    minDuration: 1,
-                    maxDuration: 5
-                });
-                var blob7 = createBlob({
-                    element: document.querySelector("#contact_pathT"),
-                    numPoints: 18,
-                    centerX: 900,
-                    centerY: 950,
-                    minRadius: 58,
-                    maxRadius: 63,
-                    minDuration: 1,
-                    maxDuration: 5
-                });
-                document.querySelector("#service_text").setAttribute("x","1265")
-                document.querySelector("#service_text").setAttribute("y","110")
-                var blob8 = createBlob({
-                    element: document.querySelector("#service_pathB"),
-                    numPoints: 18,
-                    centerX: 1320,
-                    centerY: 100,
-                    minRadius: 65,
-                    maxRadius: 68,
-                    minDuration: 1,
-                    maxDuration: 5
-                });
-                var blob9 = createBlob({
-                    element: document.querySelector("#service_pathT"),
-                    numPoints: 18,
-                    centerX: 1320,
-                    centerY: 100,
-                    minRadius: 58,
-                    maxRadius: 63,
-                    minDuration: 1,
-                    maxDuration: 5
-                });
-                document.querySelector("#visit_text").setAttribute("x","1265")
-                document.querySelector("#visit_text").setAttribute("y","1010")
-                var blob10 = createBlob({
-                    element: document.querySelector("#visit_pathB"),
-                    numPoints: 18,
-                    centerX: 1320,
-                    centerY: 1000,
-                    minRadius: 65,
-                    maxRadius: 68,
-                    minDuration: 1,
-                    maxDuration: 5
-                });
-                var blob11 = createBlob({
-                    element: document.querySelector("#visit_pathT"),
-                    numPoints: 18,
-                    centerX: 1320,
-                    centerY: 1000,
-                    minRadius: 58,
-                    maxRadius: 63,
-                    minDuration: 1,
-                    maxDuration: 5
-                });
-            }
-            else{
-                document.querySelector("#about_text").setAttribute("x","475")
-                document.querySelector("#about_text").setAttribute("y","200")
-                var blob4 = createBlob({
-                    element: document.querySelector("#about_pathB"),
-                    numPoints: 18,
-                    centerX: 530,
-                    centerY: 190,
-                    minRadius: 65,
-                    maxRadius: 68,
-                    minDuration: 1,
-                    maxDuration: 5
-                });
-                var blob5 = createBlob({
-                    element: document.querySelector("#about_pathT"),
-                    numPoints: 18,
-                    centerX: 530,
-                    centerY: 190,
-                    minRadius: 58,
-                    maxRadius: 63,
-                    minDuration: 1,
-                    maxDuration: 5
-                });
-                document.querySelector("#contact_text").setAttribute("x","445")
-                document.querySelector("#contact_text").setAttribute("y","850")
-                var blob6 = createBlob({
-                    element: document.querySelector("#contact_pathB"),
-                    numPoints: 18,
-                    centerX: 500,
-                    centerY: 840,
-                    minRadius: 65,
-                    maxRadius: 68,
-                    minDuration: 1,
-                    maxDuration: 5
-                });
-                var blob7 = createBlob({
-                    element: document.querySelector("#contact_pathT"),
-                    numPoints: 18,
-                    centerX: 500,
-                    centerY: 840,
-                    minRadius: 58,
-                    maxRadius: 63,
-                    minDuration: 1,
-                    maxDuration: 5
-                });
-                document.querySelector("#service_text").setAttribute("x","1565")
-                document.querySelector("#service_text").setAttribute("y","210")
-                var blob8 = createBlob({
-                    element: document.querySelector("#service_pathB"),
-                    numPoints: 18,
-                    centerX: 1620,
-                    centerY: 200,
-                    minRadius: 65,
-                    maxRadius: 68,
-                    minDuration: 1,
-                    maxDuration: 5
-                });
-                var blob9 = createBlob({
-                    element: document.querySelector("#service_pathT"),
-                    numPoints: 18,
-                    centerX: 1620,
-                    centerY: 200,
-                    minRadius: 58,
-                    maxRadius: 63,
-                    minDuration: 1,
-                    maxDuration: 5
-                });
-                document.querySelector("#visit_text").setAttribute("x","1680")
-                document.querySelector("#visit_text").setAttribute("y","825")
-                var blob10 = createBlob({
-                    element: document.querySelector("#visit_pathB"),
-                    numPoints: 18,
-                    centerX: 1735,
-                    centerY: 815,
-                    minRadius: 65,
-                    maxRadius: 68,
-                    minDuration: 1,
-                    maxDuration: 5
-                });
-                var blob11 = createBlob({
-                    element: document.querySelector("#visit_pathT"),
-                    numPoints: 18,
-                    centerX: 1735,
-                    centerY: 815,
-                    minRadius: 58,
-                    maxRadius: 63,
-                    minDuration: 1,
-                    maxDuration: 5
-                });
-            }
-        }
+        // function myFunction1(w1400px){
+        //     if (w1400px.matches) {
+        //         document.querySelector("#about_text").setAttribute("x","795")
+        //         document.querySelector("#about_text").setAttribute("y","160")
+        //         var blob4 = createBlob({
+        //             element: document.querySelector("#about_pathB"),
+        //             numPoints: 18,
+        //             centerX: 850,
+        //             centerY: 150,
+        //             minRadius: 65,
+        //             maxRadius: 68,
+        //             minDuration: 1,
+        //             maxDuration: 5
+        //         });
+        //         var blob5 = createBlob({
+        //             element: document.querySelector("#about_pathT"),
+        //             numPoints: 18,
+        //             centerX: 850,
+        //             centerY: 150,
+        //             minRadius: 58,
+        //             maxRadius: 63,
+        //             minDuration: 1,
+        //             maxDuration: 5
+        //         });
+        //         document.querySelector("#contact_text").setAttribute("x","845")
+        //         document.querySelector("#contact_text").setAttribute("y","960")
+        //         var blob6 = createBlob({
+        //             element: document.querySelector("#contact_pathB"),
+        //             numPoints: 18,
+        //             centerX: 900,
+        //             centerY: 950,
+        //             minRadius: 65,
+        //             maxRadius: 68,
+        //             minDuration: 1,
+        //             maxDuration: 5
+        //         });
+        //         var blob7 = createBlob({
+        //             element: document.querySelector("#contact_pathT"),
+        //             numPoints: 18,
+        //             centerX: 900,
+        //             centerY: 950,
+        //             minRadius: 58,
+        //             maxRadius: 63,
+        //             minDuration: 1,
+        //             maxDuration: 5
+        //         });
+        //         document.querySelector("#service_text").setAttribute("x","1265")
+        //         document.querySelector("#service_text").setAttribute("y","110")
+        //         var blob8 = createBlob({
+        //             element: document.querySelector("#service_pathB"),
+        //             numPoints: 18,
+        //             centerX: 1320,
+        //             centerY: 100,
+        //             minRadius: 65,
+        //             maxRadius: 68,
+        //             minDuration: 1,
+        //             maxDuration: 5
+        //         });
+        //         var blob9 = createBlob({
+        //             element: document.querySelector("#service_pathT"),
+        //             numPoints: 18,
+        //             centerX: 1320,
+        //             centerY: 100,
+        //             minRadius: 58,
+        //             maxRadius: 63,
+        //             minDuration: 1,
+        //             maxDuration: 5
+        //         });
+        //         document.querySelector("#visit_text").setAttribute("x","1265")
+        //         document.querySelector("#visit_text").setAttribute("y","1010")
+        //         var blob10 = createBlob({
+        //             element: document.querySelector("#visit_pathB"),
+        //             numPoints: 18,
+        //             centerX: 1320,
+        //             centerY: 1000,
+        //             minRadius: 65,
+        //             maxRadius: 68,
+        //             minDuration: 1,
+        //             maxDuration: 5
+        //         });
+        //         var blob11 = createBlob({
+        //             element: document.querySelector("#visit_pathT"),
+        //             numPoints: 18,
+        //             centerX: 1320,
+        //             centerY: 1000,
+        //             minRadius: 58,
+        //             maxRadius: 63,
+        //             minDuration: 1,
+        //             maxDuration: 5
+        //         });
+        //     }
+        //     else{
+        //         document.querySelector("#about_text").setAttribute("x","475")
+        //         document.querySelector("#about_text").setAttribute("y","200")
+        //         var blob4 = createBlob({
+        //             element: document.querySelector("#about_pathB"),
+        //             numPoints: 18,
+        //             centerX: 530,
+        //             centerY: 190,
+        //             minRadius: 65,
+        //             maxRadius: 68,
+        //             minDuration: 1,
+        //             maxDuration: 5
+        //         });
+        //         var blob5 = createBlob({
+        //             element: document.querySelector("#about_pathT"),
+        //             numPoints: 18,
+        //             centerX: 530,
+        //             centerY: 190,
+        //             minRadius: 58,
+        //             maxRadius: 63,
+        //             minDuration: 1,
+        //             maxDuration: 5
+        //         });
+        //         document.querySelector("#contact_text").setAttribute("x","445")
+        //         document.querySelector("#contact_text").setAttribute("y","850")
+        //         var blob6 = createBlob({
+        //             element: document.querySelector("#contact_pathB"),
+        //             numPoints: 18,
+        //             centerX: 500,
+        //             centerY: 840,
+        //             minRadius: 65,
+        //             maxRadius: 68,
+        //             minDuration: 1,
+        //             maxDuration: 5
+        //         });
+        //         var blob7 = createBlob({
+        //             element: document.querySelector("#contact_pathT"),
+        //             numPoints: 18,
+        //             centerX: 500,
+        //             centerY: 840,
+        //             minRadius: 58,
+        //             maxRadius: 63,
+        //             minDuration: 1,
+        //             maxDuration: 5
+        //         });
+        //         document.querySelector("#service_text").setAttribute("x","1565")
+        //         document.querySelector("#service_text").setAttribute("y","210")
+        //         var blob8 = createBlob({
+        //             element: document.querySelector("#service_pathB"),
+        //             numPoints: 18,
+        //             centerX: 1620,
+        //             centerY: 200,
+        //             minRadius: 65,
+        //             maxRadius: 68,
+        //             minDuration: 1,
+        //             maxDuration: 5
+        //         });
+        //         var blob9 = createBlob({
+        //             element: document.querySelector("#service_pathT"),
+        //             numPoints: 18,
+        //             centerX: 1620,
+        //             centerY: 200,
+        //             minRadius: 58,
+        //             maxRadius: 63,
+        //             minDuration: 1,
+        //             maxDuration: 5
+        //         });
+        //         document.querySelector("#visit_text").setAttribute("x","1680")
+        //         document.querySelector("#visit_text").setAttribute("y","825")
+        //         var blob10 = createBlob({
+        //             element: document.querySelector("#visit_pathB"),
+        //             numPoints: 18,
+        //             centerX: 1735,
+        //             centerY: 815,
+        //             minRadius: 65,
+        //             maxRadius: 68,
+        //             minDuration: 1,
+        //             maxDuration: 5
+        //         });
+        //         var blob11 = createBlob({
+        //             element: document.querySelector("#visit_pathT"),
+        //             numPoints: 18,
+        //             centerX: 1735,
+        //             centerY: 815,
+        //             minRadius: 58,
+        //             maxRadius: 63,
+        //             minDuration: 1,
+        //             maxDuration: 5
+        //         });
+        //     }
+        // }
         function myFunction2(w768px) {
             if (w768px.matches) { // If media query matches
                 // document.body.style.backgroundColor = "lightpink";
