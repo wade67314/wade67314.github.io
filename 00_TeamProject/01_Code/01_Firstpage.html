@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <style>
         *{
             font-family: "微軟正黑體";
@@ -89,23 +90,24 @@
             position: absolute;
             box-sizing: border-box;
             height: 100vh;
-            padding-left: 105px;
-
+            /* width: 100%; */
+            padding:85px 0px 85px 105px ;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .navitems .logo{
             width: 100%;
-            margin-top: 50vh;
         }
         .navitems .logo img{
             width: 135px;
-            display: block;
+            float: left;
         }
         .navitems ul{
             list-style: none;
             padding: 0;
             margin: 0;
-            margin-top: 23px;
-            display: block;
         }
         .navitems ul li{
             margin-bottom: 5px;
@@ -149,17 +151,77 @@
         .navitem.eng_navitem_contact:before{
             content: "contact us";
         }
+        .mobile_bar{
+            font-size: 36px;
+            cursor: pointer;
+            position: absolute;
+            z-index: 99;
+            right: 105px;
+            top: 85px;
+            transition: 1.5s;
+        }
+        .mobile_bar.active{
+            transform: rotate(-90deg);
+        }
 
+        .navitems_insidebar{
+            position: absolute;
+            z-index: 9;
+            width: 100%;
+            height: 100vh;
+            background-color: #eee;
+            flex-direction: column;
+            justify-content: space-evenly;
+            display: none;
+            opacity: 0;
+            background-image: url("../02_Img/test3.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        .navitems_insidebar img{
+            width: 135px;
+            margin-left: 105px;
+            /* margin-top: 85px; */
+        }
+        .navitems_insidebar ul{
+            list-style:none;
+            width: 100%;
+            padding: 0;           
+        }
+        .navitems_insidebar ul li{
+            display: block;
+            
+            /* text-align: center; */
+            margin: 1.5em 0;
+        }
+        .navitems_insidebar ul li a{
+            text-decoration: none;
+            font-size: 38px;
+            font-weight: bold;
+            color: white;
+            margin-left: 500px;
+        }
+        .navitems_insidebar ul li a:hover{
+            color: #268BBF;
+        }
+        .navitems_insidebar .topbar{
+            width: 100%;
+        }
+        .navitems_insidebar footer{
+            width: 100%;
+            text-align: center;
+        }
+        /* .navitems_insidebar footer p {
+        } */
         .wrap {
             position: absolute;
             top: -20px;
             left: -20px;
             bottom: 0;
             right: 0;
-
         }
         .ball {
-            z-index: 99;
+            z-index: 9;
             width: 60px;
             height: 60px;
             border: 1px solid grey;
@@ -177,7 +239,7 @@
 
         }
         .outer_ball{
-            z-index: 99;
+            z-index: 9;
             width: 65px;
             height: 65px;
             background: none;
@@ -185,30 +247,36 @@
             border-radius: 50%;
             position: absolute;
         }
-        @media(max-width: 1400px){
+        @media(max-width: 1050px){
             .navitems{
                 padding-left:30px
+            }
+            .mobile_bar{
+                right: 30px;   
             }
         }
         @media(max-width: 768px){
             .navitems{
                 width: 100%;
                 height: unset;
-                padding: 10px 15px;
-                text-align: left;
-                background-color: burlywood;
+                padding: 40px 40px 40px 40px;
+                /* background-color: burlywood; */
             }
             .navitems .logo{
                 text-align: unset;
                 margin-top: unset;
+                /* align-items: center; */
             }
-
             .navitems .logo img{
                 width: unset;
-                height: 80px;
+                height: 100px;
             }
             .navitems ul{
                 display: none;
+            }
+            .mobile_bar{
+                top: 40px;
+                right: 40px;   
             }
         }
     </style>
@@ -218,7 +286,7 @@
 
     <div class="outside_contain">
         <svg id="demo" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-            <image class="outside_img" href="../02_Img/main_background.png" x="0" y="0" width="100%" height="100%" />
+            <image class="outside_img" href="../02_Img/main_background.jpg" x="0" y="0" width="100%" height="100%" />
             <clipPath id="outside_mask">
                 <path id="outside_path"></path>
             </clipPath>
@@ -227,7 +295,7 @@
 
     <div class="middle_contain">
         <svg id="demo" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-            <image class="middle_img" href="../02_Img/main_background.png" x="0" y="0" width="100%" height="100%" />
+            <image class="middle_img" href="../02_Img/main_background.jpg" x="0" y="0" width="100%" height="100%" />
             <clipPath id="middle_mask">
                 <path id="middle_path"></path>
             </clipPath>
@@ -236,48 +304,49 @@
 
     <div class="inside_contain">
         <svg id="demo" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-            <image class="inside_img" href="../02_Img/main_background.png" x="0" y="0" width="100%" height="100%" />
+            <image class="inside_img" href="../02_Img/main_background.jpg" x="0" y="0" width="100%" height="100%" />
             <clipPath id="inside_mask">
                 <path id="inside_path"></path> 
             </clipPath>
         </svg>
     </div>
 
-    <div class="cover4"> 
+    <div class="cover4" style="z-index: 2;"> 
         <svg id="demo" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-            <g font-weight="bold" letter-spacing="5">
+            <!-- <g font-weight="bold" letter-spacing="5">
                 <text x="890" y="360" fill="#77A600" font-size="42" >滿果<tspan fill="#186A85">托嬰中心</tspan></text>
                 <text x="858" y="400" fill="#eee" font-size="28"><tspan font-weight="normal">一</tspan>想給寶寶一個自然健康安全的環境<tspan font-weight="normal">一</tspan></text>
-            </g>
+            </g> -->
             <a href="">
                 <path id="main_img_link" opacity="0"></path>
             </a> 
 
             <g cursor="pointer">
-            <path id="about_pathB" fill="#49C0C4" opacity="0.3"></path>
-            <path id="about_pathM" fill="#49C0C4" opacity="0.6"></path>
+            <path id="about_pathB" fill="#c8e3e4" opacity="1"></path>
+            <path id="about_pathM" fill="#a3dbdc" opacity="1"></path>
             <path id="about_pathT" fill="#49C0C4" opacity="1"></path>
-            <text id="about_text" x="480" y="120" font-size="25" fill="#eee" letter-spacing="0.075em">關於我們</text> 
+            <text id="about_text" x="480" y="120" font-size="25" fill="#ffffff" letter-spacing="0.075em">關於我們</text> 
         
-            <path id="contact_pathB" fill="#FF8686" opacity="0.3"></path>
-            <path id="contact_pathM" fill="#FF8686" opacity="0.6"></path>
+            <path id="contact_pathB" fill="#ffd8d8" opacity="1"></path>
+            <path id="contact_pathM" fill="#ffafaf" opacity="1"></path>
             <path id="contact_pathT" fill="#FF8686" opacity="1"></path>
-            <text id="contact_text" x="455" y="850" font-size="25" fill="#eee" letter-spacing="0.075em">聯絡我們</text>
+            <text id="contact_text" x="455" y="850" font-size="25" fill="#ffffff" letter-spacing="0.075em">聯絡我們</text>
         
-            <path id="service_pathB" fill="#F0C376" opacity="0.3"></path>
-            <path id="service_pathM" fill="#F0C376" opacity="0.6"></path>
-            <path id="service_pathT" fill="#F0C376" opacity="1"></path>
-            <text id="service_text" x="1555" y="130" font-size="25" fill="#eee" letter-spacing="0.075em">服務項目</text> 
-        
-            <path id="visit_pathB" fill="#80AF44" opacity="0.3"></path>
-            <path id="visit_pathM" fill="#80AF44" opacity="0.6"></path>
-            <path id="visit_pathT" fill="#80AF44" opacity="1"></path>
-            <text id="visit_text" x="1700" y="825" font-size="25" fill="#eee" letter-spacing="0.075em">預約參觀</text>
+            <path id="service_pathB" fill="#ffebd9" opacity="1"></path>
+            <path id="service_pathM" fill="#fcd7a2" opacity="1"></path>
+            <path id="service_pathT" fill="#ffc364" opacity="1"></path>
+            <text id="service_text" x="1555" y="130" font-size="25" fill="#ffffff" letter-spacing="0.075em">服務項目</text> 
+            <a href="">    
+                <path id="visit_pathB" fill="#d6ffb4" opacity="1"></path>
+                <path id="visit_pathM" fill="#c7ff8f" opacity="1"></path>
+                <path id="visit_pathT" fill="#80af44" opacity="1"></path>
+                <text id="visit_text" x="1700" y="825" font-size="25" fill="#ffffff" letter-spacing="0.075em">預約參觀</text>
+            </a>
             </g>
         </svg>
     </div>
 
-    <nav class="navitems" style="z-index: 99;">
+    <nav class="navitems" style="z-index: 9;">
         <div class="logo">
             <img src="../02_Img/logo.png" alt="">
         </div>
@@ -321,6 +390,8 @@
         </ul>
     </nav>
 
+    <i class="fas fa-bars mobile_bar"></i>
+    
     <div class="wrap" >
         <div class="ball">
             <div class="outer_ball"></div>
@@ -332,7 +403,7 @@
     
 
     <!-- Swiper -->
-    <div class="swiper-container display_none">
+    <div class="swiper-container display_none" style="z-index: 8;">
         <div class="swiper-wrapper">
             <!-- slide1 -->
             <div class="swiper-slide " style="height: 100vh;">
@@ -476,6 +547,25 @@
     </div>
 
 
+    <!-- navitems_insidebar -->
+    <div class="navitems_insidebar">
+        <div class="topbar">
+            <img src="../02_Img/logo.png" alt="">
+        </div>
+        <ul>
+            <li class=""><a href="">首頁</a></li>
+            <li class=""><a href="">關於滿果</a></li>
+            <li class=""><a href="">服務項目</a></li>
+            <li class=""><a href="">預約參觀</a></li>
+            <li class=""><a href="">聯絡我們</a></li>
+        </ul>
+        <footer>
+            <p style="color: white;">臺中市豐原區北陽一街31號  04-25252785</p>   
+            <p></p>
+        </footer>
+    </div>
+
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
@@ -485,9 +575,9 @@
     <script>
         //click to change middle img
         document.querySelector("#about_pathT").addEventListener("click",function(){
-            document.querySelector(".inside_img").setAttribute("href","../02_Img/main_background.png")
-            document.querySelector(".middle_img").setAttribute("href","../02_Img/main_background.png")
-            document.querySelector(".outside_img").setAttribute("href","../02_Img/main_background.png")
+            document.querySelector(".inside_img").setAttribute("href","../02_Img/main_background.jpg")
+            document.querySelector(".middle_img").setAttribute("href","../02_Img/main_background.jpg")
+            document.querySelector(".outside_img").setAttribute("href","../02_Img/main_background.jpg")
         })
         document.querySelector("#contact_pathT").addEventListener("click",function(){
             document.querySelector(".inside_img").setAttribute("href","https://wallpaperaccess.com/full/253660.jpg")
@@ -495,15 +585,11 @@
             document.querySelector(".outside_img").setAttribute("href","https://wallpaperaccess.com/full/253660.jpg")
         })
         document.querySelector("#service_pathT").addEventListener("click",function(){
-            document.querySelector(".inside_img").setAttribute("href","https://images8.alphacoders.com/926/thumb-1920-926492.jpg")
-            document.querySelector(".middle_img").setAttribute("href","https://images8.alphacoders.com/926/thumb-1920-926492.jpg")
-            document.querySelector(".outside_img").setAttribute("href","https://images8.alphacoders.com/926/thumb-1920-926492.jpg")
+            document.querySelector(".inside_img").setAttribute("href","../02_Img/service_PC.jpg")
+            document.querySelector(".middle_img").setAttribute("href","../02_Img/service_PC.jpg")
+            document.querySelector(".outside_img").setAttribute("href","../02_Img/service_PC.jpg")
         })
-        document.querySelector("#visit_pathT").addEventListener("click",function(){
-            document.querySelector(".inside_img").setAttribute("href","https://i.pinimg.com/originals/86/ff/b8/86ffb87572d657f335cd7cd828c70de3.jpg")
-            document.querySelector(".middle_img").setAttribute("href","https://i.pinimg.com/originals/86/ff/b8/86ffb87572d657f335cd7cd828c70de3.jpg")
-            document.querySelector(".outside_img").setAttribute("href","https://i.pinimg.com/originals/86/ff/b8/86ffb87572d657f335cd7cd828c70de3.jpg")
-        })
+        
 
 
         //change mouse style while the mouse is entering middle_img
@@ -577,8 +663,8 @@
             centerY: 540,
             minRadius: 360,
             maxRadius: 390,
-            minDuration: 1,
-            maxDuration: 3
+            minDuration: 2,
+            maxDuration: 5
         });
         var blob_mobile = createBlob({
             element: document.querySelector("#middle_path_mobile"),
@@ -587,8 +673,8 @@
             centerY: 540,
             minRadius: 320,
             maxRadius: 350,
-            minDuration: 1,
-            maxDuration: 3
+            minDuration: 2,
+            maxDuration: 5
         });
         var blob_mobile = createBlob({
             element: document.querySelector("#inside_path_mobile"),
@@ -597,8 +683,8 @@
             centerY: 540,
             minRadius: 290,
             maxRadius: 310,
-            minDuration: 1,
-            maxDuration: 3
+            minDuration: 2,
+            maxDuration: 5
         });
 
         var blob_mobile = createBlob({
@@ -608,8 +694,8 @@
             centerY: 540,
             minRadius: 290,
             maxRadius: 310,
-            minDuration: 1,
-            maxDuration: 3
+            minDuration: 2,
+            maxDuration: 5
         });
         var blob_mobile = createBlob({
             element: document.querySelector("#main_img_link_mobile2"),
@@ -618,8 +704,8 @@
             centerY: 540,
             minRadius: 290,
             maxRadius: 310,
-            minDuration: 1,
-            maxDuration: 3
+            minDuration: 2,
+            maxDuration: 5
         });
         var blob_mobile = createBlob({
             element: document.querySelector("#main_img_link_mobile3"),
@@ -628,8 +714,8 @@
             centerY: 540,
             minRadius: 290,
             maxRadius: 310,
-            minDuration: 1,
-            maxDuration: 3
+            minDuration: 2,
+            maxDuration: 5
         });
         var blob_mobile = createBlob({
             element: document.querySelector("#main_img_link_mobile4"),
@@ -638,8 +724,8 @@
             centerY: 540,
             minRadius: 300,
             maxRadius: 330,
-            minDuration: 1,
-            maxDuration: 3
+            minDuration: 2,
+            maxDuration: 5
         });
         
         
@@ -774,64 +860,64 @@
 
         var blob8 = createBlob({
             element: document.querySelector("#service_pathB"),
-            numPoints: 18,
+            numPoints: 12,
             centerX: 1610,
             centerY: 120,
             minRadius: 75,
             maxRadius: 80,
-            minDuration: 1,
-            maxDuration: 5
+            minDuration: 2,
+            maxDuration: 4
         });
         var blob9 = createBlob({
             element: document.querySelector("#service_pathM"),
-            numPoints: 18,
+            numPoints: 11,
             centerX: 1610,
             centerY: 120,
             minRadius: 65,
             maxRadius: 68,
-            minDuration: 1,
-            maxDuration: 5
+            minDuration: 2,
+            maxDuration: 4
         });
         var blob9 = createBlob({
             element: document.querySelector("#service_pathT"),
-            numPoints: 18,
+            numPoints: 10,
             centerX: 1610,
             centerY: 120,
             minRadius: 58,
             maxRadius: 63,
-            minDuration: 1,
-            maxDuration: 5
+            minDuration: 2,
+            maxDuration: 4
         });
 
         var blob10 = createBlob({
             element: document.querySelector("#visit_pathB"),
-            numPoints: 18,
+            numPoints: 12,
             centerX: 1755,
             centerY: 815,
             minRadius: 75,
             maxRadius: 80,
-            minDuration: 1,
-            maxDuration: 5
+            minDuration: 2,
+            maxDuration: 4
         });
         var blob11 = createBlob({
             element: document.querySelector("#visit_pathM"),
-            numPoints: 18,
+            numPoints: 11,
             centerX: 1755,
             centerY: 815,
             minRadius: 65,
             maxRadius: 68,
-            minDuration: 1,
-            maxDuration: 5
+            minDuration: 2,
+            maxDuration: 4
         });
         var blob11 = createBlob({
             element: document.querySelector("#visit_pathT"),
-            numPoints: 18,
+            numPoints: 10,
             centerX: 1755,
             centerY: 815,
             minRadius: 58,
             maxRadius: 63,
-            minDuration: 1,
-            maxDuration: 5
+            minDuration: 2,
+            maxDuration: 4
         });
 
         function createBlob(options) {
@@ -974,198 +1060,12 @@
 
         //media queries
 
-        // var w1400px = window.matchMedia("(max-width: 1400px)");       
+     
         var w768px = window.matchMedia("(max-width: 768px)");
-        // myFunction1(w1400px)
         myFunction2(w768px) // Call listener function at run time
-        // w1400px.addListener(myFunction1)
         w768px.addListener(myFunction2)
-        // Attach listener function on state changes
-        // function myFunction1(w1400px){
-        //     if (w1400px.matches) {
-        //         document.querySelector("#about_text").setAttribute("x","795")
-        //         document.querySelector("#about_text").setAttribute("y","160")
-        //         var blob4 = createBlob({
-        //             element: document.querySelector("#about_pathB"),
-        //             numPoints: 18,
-        //             centerX: 850,
-        //             centerY: 150,
-        //             minRadius: 65,
-        //             maxRadius: 68,
-        //             minDuration: 1,
-        //             maxDuration: 5
-        //         });
-        //         var blob5 = createBlob({
-        //             element: document.querySelector("#about_pathT"),
-        //             numPoints: 18,
-        //             centerX: 850,
-        //             centerY: 150,
-        //             minRadius: 58,
-        //             maxRadius: 63,
-        //             minDuration: 1,
-        //             maxDuration: 5
-        //         });
-        //         document.querySelector("#contact_text").setAttribute("x","845")
-        //         document.querySelector("#contact_text").setAttribute("y","960")
-        //         var blob6 = createBlob({
-        //             element: document.querySelector("#contact_pathB"),
-        //             numPoints: 18,
-        //             centerX: 900,
-        //             centerY: 950,
-        //             minRadius: 65,
-        //             maxRadius: 68,
-        //             minDuration: 1,
-        //             maxDuration: 5
-        //         });
-        //         var blob7 = createBlob({
-        //             element: document.querySelector("#contact_pathT"),
-        //             numPoints: 18,
-        //             centerX: 900,
-        //             centerY: 950,
-        //             minRadius: 58,
-        //             maxRadius: 63,
-        //             minDuration: 1,
-        //             maxDuration: 5
-        //         });
-        //         document.querySelector("#service_text").setAttribute("x","1265")
-        //         document.querySelector("#service_text").setAttribute("y","110")
-        //         var blob8 = createBlob({
-        //             element: document.querySelector("#service_pathB"),
-        //             numPoints: 18,
-        //             centerX: 1320,
-        //             centerY: 100,
-        //             minRadius: 65,
-        //             maxRadius: 68,
-        //             minDuration: 1,
-        //             maxDuration: 5
-        //         });
-        //         var blob9 = createBlob({
-        //             element: document.querySelector("#service_pathT"),
-        //             numPoints: 18,
-        //             centerX: 1320,
-        //             centerY: 100,
-        //             minRadius: 58,
-        //             maxRadius: 63,
-        //             minDuration: 1,
-        //             maxDuration: 5
-        //         });
-        //         document.querySelector("#visit_text").setAttribute("x","1265")
-        //         document.querySelector("#visit_text").setAttribute("y","1010")
-        //         var blob10 = createBlob({
-        //             element: document.querySelector("#visit_pathB"),
-        //             numPoints: 18,
-        //             centerX: 1320,
-        //             centerY: 1000,
-        //             minRadius: 65,
-        //             maxRadius: 68,
-        //             minDuration: 1,
-        //             maxDuration: 5
-        //         });
-        //         var blob11 = createBlob({
-        //             element: document.querySelector("#visit_pathT"),
-        //             numPoints: 18,
-        //             centerX: 1320,
-        //             centerY: 1000,
-        //             minRadius: 58,
-        //             maxRadius: 63,
-        //             minDuration: 1,
-        //             maxDuration: 5
-        //         });
-        //     }
-        //     else{
-        //         document.querySelector("#about_text").setAttribute("x","475")
-        //         document.querySelector("#about_text").setAttribute("y","200")
-        //         var blob4 = createBlob({
-        //             element: document.querySelector("#about_pathB"),
-        //             numPoints: 18,
-        //             centerX: 530,
-        //             centerY: 190,
-        //             minRadius: 65,
-        //             maxRadius: 68,
-        //             minDuration: 1,
-        //             maxDuration: 5
-        //         });
-        //         var blob5 = createBlob({
-        //             element: document.querySelector("#about_pathT"),
-        //             numPoints: 18,
-        //             centerX: 530,
-        //             centerY: 190,
-        //             minRadius: 58,
-        //             maxRadius: 63,
-        //             minDuration: 1,
-        //             maxDuration: 5
-        //         });
-        //         document.querySelector("#contact_text").setAttribute("x","445")
-        //         document.querySelector("#contact_text").setAttribute("y","850")
-        //         var blob6 = createBlob({
-        //             element: document.querySelector("#contact_pathB"),
-        //             numPoints: 18,
-        //             centerX: 500,
-        //             centerY: 840,
-        //             minRadius: 65,
-        //             maxRadius: 68,
-        //             minDuration: 1,
-        //             maxDuration: 5
-        //         });
-        //         var blob7 = createBlob({
-        //             element: document.querySelector("#contact_pathT"),
-        //             numPoints: 18,
-        //             centerX: 500,
-        //             centerY: 840,
-        //             minRadius: 58,
-        //             maxRadius: 63,
-        //             minDuration: 1,
-        //             maxDuration: 5
-        //         });
-        //         document.querySelector("#service_text").setAttribute("x","1565")
-        //         document.querySelector("#service_text").setAttribute("y","210")
-        //         var blob8 = createBlob({
-        //             element: document.querySelector("#service_pathB"),
-        //             numPoints: 18,
-        //             centerX: 1620,
-        //             centerY: 200,
-        //             minRadius: 65,
-        //             maxRadius: 68,
-        //             minDuration: 1,
-        //             maxDuration: 5
-        //         });
-        //         var blob9 = createBlob({
-        //             element: document.querySelector("#service_pathT"),
-        //             numPoints: 18,
-        //             centerX: 1620,
-        //             centerY: 200,
-        //             minRadius: 58,
-        //             maxRadius: 63,
-        //             minDuration: 1,
-        //             maxDuration: 5
-        //         });
-        //         document.querySelector("#visit_text").setAttribute("x","1680")
-        //         document.querySelector("#visit_text").setAttribute("y","825")
-        //         var blob10 = createBlob({
-        //             element: document.querySelector("#visit_pathB"),
-        //             numPoints: 18,
-        //             centerX: 1735,
-        //             centerY: 815,
-        //             minRadius: 65,
-        //             maxRadius: 68,
-        //             minDuration: 1,
-        //             maxDuration: 5
-        //         });
-        //         var blob11 = createBlob({
-        //             element: document.querySelector("#visit_pathT"),
-        //             numPoints: 18,
-        //             centerX: 1735,
-        //             centerY: 815,
-        //             minRadius: 58,
-        //             maxRadius: 63,
-        //             minDuration: 1,
-        //             maxDuration: 5
-        //         });
-        //     }
-        // }
         function myFunction2(w768px) {
             if (w768px.matches) { // If media query matches
-                // document.body.style.backgroundColor = "lightpink";
                 document.querySelector(".swiper-container").classList.add("display_block");
                 document.querySelector(".outside_contain").classList.add("display_none");
                 document.querySelector(".middle_contain").classList.add("display_none");
@@ -1173,7 +1073,6 @@
                 document.querySelector(".cover4").classList.add("display_none")              
             }
             else {
-                // document.body.style.backgroundColor = "#eee";
                 document.querySelector(".swiper-container").classList.remove("display_block");
                 document.querySelector(".outside_contain").classList.remove("display_none");
                 document.querySelector(".middle_contain").classList.remove("display_none");
@@ -1181,6 +1080,15 @@
                 document.querySelector(".cover4").classList.remove("display_none");
             } 
         }
+
+
+
+        //mobile_bar clickevent
+        document.querySelector(".mobile_bar").addEventListener("click",function(){
+            document.querySelector(".mobile_bar").classList.add("active");
+            document.querySelector(".navitems_insidebar").style.display = 'flex';
+            gsap.to(".navitems_insidebar",{duration:1.5,opacity:1})
+        })
         
     </script>
 </body>
