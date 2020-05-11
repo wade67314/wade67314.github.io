@@ -99,10 +99,12 @@
         }
         .navitems .logo{
             width: 100%;
+            
         }
         .navitems .logo img{
             width: 135px;
             float: left;
+            
         }
         .navitems ul{
             list-style: none;
@@ -158,58 +160,62 @@
             z-index: 99;
             right: 105px;
             top: 85px;
-            transition: 1.5s;
+            transition: 1s;
         }
         .mobile_bar.active{
             transform: rotate(-90deg);
         }
+        .mobile_bar.active_recover{
+            transform: rotate(90deg);
+        }
 
         .navitems_insidebar{
             position: absolute;
+            top: 0;
             z-index: 9;
             width: 100%;
             height: 100vh;
             background-color: #eee;
-            flex-direction: column;
-            justify-content: space-evenly;
-            display: none;
-            opacity: 0;
-            background-image: url("../02_Img/test3.jpg");
+            /* opacity: 0; */
+        }
+        .navitems_insidebar .insidebar_background{
+            width: 100%;
+            height: 100vh;
             background-size: cover;
             background-position: center;
         }
+        
         .navitems_insidebar img{
             width: 135px;
+            margin-top: 85px;
             margin-left: 105px;
-            /* margin-top: 85px; */
+            transition: 1s ease-in-out;
         }
         .navitems_insidebar ul{
             list-style:none;
-            width: 100%;
-            padding: 0;           
+            padding: 0;     
+            margin-top: 5%;
+            transition: 1s ease-in-out;
         }
         .navitems_insidebar ul li{
             display: block;
-            
-            /* text-align: center; */
+            text-align: center;
             margin: 1.5em 0;
+            letter-spacing: 0.5em;
         }
         .navitems_insidebar ul li a{
             text-decoration: none;
             font-size: 38px;
             font-weight: bold;
             color: white;
-            margin-left: 500px;
         }
         .navitems_insidebar ul li a:hover{
+            transition: 0.5s;
             color: #268BBF;
         }
-        .navitems_insidebar .topbar{
-            width: 100%;
-        }
+        
         .navitems_insidebar footer{
             width: 100%;
-            text-align: center;
         }
         /* .navitems_insidebar footer p {
         } */
@@ -254,18 +260,22 @@
             .mobile_bar{
                 right: 30px;   
             }
+            .navitems_insidebar img{
+                margin-left: 30px;
+            }
+            .navitems_insidebar ul{   
+                margin-top: 10%;
+            }
         }
         @media(max-width: 768px){
             .navitems{
                 width: 100%;
                 height: unset;
                 padding: 40px 40px 40px 40px;
-                /* background-color: burlywood; */
             }
             .navitems .logo{
                 text-align: unset;
                 margin-top: unset;
-                /* align-items: center; */
             }
             .navitems .logo img{
                 width: unset;
@@ -273,6 +283,15 @@
             }
             .navitems ul{
                 display: none;
+            }
+            .navitems_insidebar img{
+                margin-top: 40px;
+                margin-left: 40px;
+                width: unset;
+                height: 100px;
+            }
+            .navitems_insidebar ul{   
+                margin-top: 20%;
             }
             .mobile_bar{
                 top: 40px;
@@ -336,7 +355,7 @@
             <path id="service_pathM" fill="#fcd7a2" opacity="1"></path>
             <path id="service_pathT" fill="#ffc364" opacity="1"></path>
             <text id="service_text" x="1555" y="130" font-size="25" fill="#ffffff" letter-spacing="0.075em">服務項目</text> 
-            <a href="">    
+            <a href="./test/index.html">    
                 <path id="visit_pathB" fill="#d6ffb4" opacity="1"></path>
                 <path id="visit_pathM" fill="#c7ff8f" opacity="1"></path>
                 <path id="visit_pathT" fill="#80af44" opacity="1"></path>
@@ -403,13 +422,13 @@
     
 
     <!-- Swiper -->
-    <div class="swiper-container display_none" style="z-index: 8;">
+    <div class="swiper-container display_none" style="z-index: 8 ">
         <div class="swiper-wrapper">
             <!-- slide1 -->
             <div class="swiper-slide " style="height: 100vh;">
                 <div class="outside_contain_mobile">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="outside_img_mobile" href="../02_Img/background_mobile.jpg" x="0" y="0" width="100%" height="100%" />
+                        <image class="outside_img_mobile" href="../02_Img/main_background_mobile.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="outside_mask_mobile">
                             <path id="outside_path_mobile"></path>
                         </clipPath>
@@ -417,7 +436,7 @@
                 </div>
                 <div class="middle_contain_mobile">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="middle_img_mobile" href="../02_Img/background_mobile.jpg" x="0" y="0" width="100%" height="100%" />
+                        <image class="middle_img_mobile" href="../02_Img/main_background_mobile.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="middle_mask_mobile">
                             <path id="middle_path_mobile"></path>
                         </clipPath>
@@ -425,7 +444,7 @@
                 </div>
                 <div class="inside_contain_mobile">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="inside_img_mobile" href="../02_Img/background_mobile.jpg" x="0" y="0" width="100%" height="100%" />
+                        <image class="inside_img_mobile" href="../02_Img/main_background_mobile.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="inside_mask_mobile">
                             <path id="inside_path_mobile"></path> 
                         </clipPath>
@@ -443,7 +462,7 @@
             <div class="swiper-slide">
                 <div class="outside_contain_mobile">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="outside_img_mobile" href="https://image.winudf.com/v2/image/Y29tLk1vYmlsZVN0cmFuZ2VyLmFwcDAwMzBfc2NyZWVuXzBfMTUzOTY1OTYwM18wNjE/screen-0.jpg?fakeurl=1&type=.jpg" x="0" y="0" width="100%" height="100%" />
+                        <image class="outside_img_mobile" href="../02_Img/service_MB.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="outside_mask_mobile">
                             <path id="outside_path_mobile"></path>
                         </clipPath>
@@ -451,7 +470,7 @@
                 </div>
                 <div class="middle_contain_mobile">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="middle_img_mobile" href="https://image.winudf.com/v2/image/Y29tLk1vYmlsZVN0cmFuZ2VyLmFwcDAwMzBfc2NyZWVuXzBfMTUzOTY1OTYwM18wNjE/screen-0.jpg?fakeurl=1&type=.jpg" x="0" y="0" width="100%" height="100%" />
+                        <image class="middle_img_mobile" href="../02_Img/service_MB.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="middle_mask_mobile">
                             <path id="middle_path_mobile"></path>
                         </clipPath>
@@ -459,7 +478,7 @@
                 </div>
                 <div class="inside_contain_mobile">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="inside_img_mobile" href="https://image.winudf.com/v2/image/Y29tLk1vYmlsZVN0cmFuZ2VyLmFwcDAwMzBfc2NyZWVuXzBfMTUzOTY1OTYwM18wNjE/screen-0.jpg?fakeurl=1&type=.jpg" x="0" y="0" width="100%" height="100%" />
+                        <image class="inside_img_mobile" href="../02_Img/service_MB.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="inside_mask_mobile">
                             <path id="inside_path_mobile"></path> 
                         </clipPath>
@@ -477,7 +496,7 @@
             <div class="swiper-slide">
                 <div class="outside_contain_mobile">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="outside_img_mobile" href="https://i.pinimg.com/originals/c2/49/f1/c249f14eccea62157e7e65461cb15708.jpg" x="0" y="0" width="100%" height="100%" />
+                        <image class="outside_img_mobile" href="../02_Img/about_mobile.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="outside_mask_mobile">
                             <path id="outside_path_mobile"></path>
                         </clipPath>
@@ -485,7 +504,7 @@
                 </div>
                 <div class="middle_contain_mobile">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="middle_img_mobile" href="https://i.pinimg.com/originals/c2/49/f1/c249f14eccea62157e7e65461cb15708.jpg" x="0" y="0" width="100%" height="100%" />
+                        <image class="middle_img_mobile" href="../02_Img/about_mobile.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="middle_mask_mobile">
                             <path id="middle_path_mobile"></path>
                         </clipPath>
@@ -493,7 +512,7 @@
                 </div>
                 <div class="inside_contain_mobile">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="inside_img_mobile" href="https://i.pinimg.com/originals/c2/49/f1/c249f14eccea62157e7e65461cb15708.jpg" x="0" y="0" width="100%" height="100%" />
+                        <image class="inside_img_mobile" href="../02_Img/about_mobile.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="inside_mask_mobile">
                             <path id="inside_path_mobile"></path> 
                         </clipPath>
@@ -511,7 +530,7 @@
             <div class="swiper-slide">
                 <div class="outside_contain_mobile"> 
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="outside_img_mobile" href="https://i.pinimg.com/originals/c2/49/f1/c249f14eccea62157e7e65461cb15708.jpg" x="0" y="0" width="100%" height="100%" />
+                        <image class="outside_img_mobile" href="../02_Img/contact_mobile.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="outside_mask_mobile">
                             <path id="outside_path_mobile"></path>
                         </clipPath>
@@ -519,7 +538,7 @@
                 </div>
                 <div class="middle_contain_mobile">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="middle_img_mobile" href="https://i.pinimg.com/originals/c2/49/f1/c249f14eccea62157e7e65461cb15708.jpg" x="0" y="0" width="100%" height="100%" />
+                        <image class="middle_img_mobile" href="../02_Img/contact_mobile.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="middle_mask_mobile">
                             <path id="middle_path_mobile"></path>
                         </clipPath>
@@ -527,7 +546,7 @@
                 </div>
                 <div class="inside_contain_mobile">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="inside_img_mobile" href="https://i.pinimg.com/originals/c2/49/f1/c249f14eccea62157e7e65461cb15708.jpg" x="0" y="0" width="100%" height="100%" />
+                        <image class="inside_img_mobile" href="../02_Img/contact_mobile.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="inside_mask_mobile">
                             <path id="inside_path_mobile"></path> 
                         </clipPath>
@@ -548,21 +567,23 @@
 
 
     <!-- navitems_insidebar -->
-    <div class="navitems_insidebar">
-        <div class="topbar">
+    <div class="navitems_insidebar display_none">
+        <div class="insidebar_background" style="background-image: url(../02_Img/test3.jpg)">
             <img src="../02_Img/logo.png" alt="">
+            <ul>
+                <li class=""><a href=""><i class="far fa-home-alt"></i>首頁</a></li>
+                <li class=""><a href=""><i class="far fa-person-sign"></i></i>關於滿果</a></li>
+                <li class=""><a href=""><i class="fal fa-baby"></i>服務項目</a></li>
+                <li class=""><a href=""><i class="fal fa-calendar-check"></i>預約參觀</a></li>
+                <li class=""><a href=""><i class="fal fa-phone-volume"></i>聯絡我們</a></li>
+            </ul>
+            <footer>
+                <p style="color: white;">臺中市豐原區北陽一街31號  04-25252785</p>   
+            </footer>
         </div>
-        <ul>
-            <li class=""><a href="">首頁</a></li>
-            <li class=""><a href="">關於滿果</a></li>
-            <li class=""><a href="">服務項目</a></li>
-            <li class=""><a href="">預約參觀</a></li>
-            <li class=""><a href="">聯絡我們</a></li>
-        </ul>
-        <footer>
-            <p style="color: white;">臺中市豐原區北陽一街31號  04-25252785</p>   
-            <p></p>
-        </footer>
+        
+        
+        
     </div>
 
 
@@ -570,6 +591,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
     <script>
@@ -578,16 +600,25 @@
             document.querySelector(".inside_img").setAttribute("href","../02_Img/main_background.jpg")
             document.querySelector(".middle_img").setAttribute("href","../02_Img/main_background.jpg")
             document.querySelector(".outside_img").setAttribute("href","../02_Img/main_background.jpg")
+            gsap.fromTo(".inside_img",{opacity:0},{opacity:1,duration:3})
+            gsap.fromTo(".middle_img",{opacity:0},{opacity:1,duration:3})
+            gsap.fromTo(".outside_img",{opacity:0},{opacity:1,duration:3})
         })
         document.querySelector("#contact_pathT").addEventListener("click",function(){
-            document.querySelector(".inside_img").setAttribute("href","https://wallpaperaccess.com/full/253660.jpg")
-            document.querySelector(".middle_img").setAttribute("href","https://wallpaperaccess.com/full/253660.jpg")
-            document.querySelector(".outside_img").setAttribute("href","https://wallpaperaccess.com/full/253660.jpg")
+            document.querySelector(".inside_img").setAttribute("href","../02_Img/contact_PC.jpg")
+            document.querySelector(".middle_img").setAttribute("href","../02_Img/contact_PC.jpg")
+            document.querySelector(".outside_img").setAttribute("href","../02_Img/contact_PC.jpg")
+            gsap.fromTo(".inside_img",{opacity:0},{opacity:1,duration:3})
+            gsap.fromTo(".middle_img",{opacity:0},{opacity:1,duration:3})
+            gsap.fromTo(".outside_img",{opacity:0},{opacity:1,duration:3})
         })
         document.querySelector("#service_pathT").addEventListener("click",function(){
             document.querySelector(".inside_img").setAttribute("href","../02_Img/service_PC.jpg")
             document.querySelector(".middle_img").setAttribute("href","../02_Img/service_PC.jpg")
             document.querySelector(".outside_img").setAttribute("href","../02_Img/service_PC.jpg")
+            gsap.fromTo(".inside_img",{opacity:0},{opacity:1,duration:3})
+            gsap.fromTo(".middle_img",{opacity:0},{opacity:1,duration:3})
+            gsap.fromTo(".outside_img",{opacity:0},{opacity:1,duration:3})
         })
         
 
@@ -653,7 +684,10 @@
             },
             observer:true,
             observeParents:true,
+            speed:1000,
+            shadow:false
         });
+        
         
         // path style
         var blob_mobile = createBlob({
@@ -779,7 +813,7 @@
             numPoints: 10,
             centerX: 1150,
             centerY: 550,
-            minRadius: 430,
+            minRadius: 460,
             maxRadius: 485,
             minDuration: 3,
             maxDuration: 6
@@ -1011,18 +1045,18 @@
 
 
         //ball follow mouse
-        var $ = document.querySelector.bind(document);
-        var $on = document.addEventListener.bind(document);
+        var _ = document.querySelector.bind(document);
+        var _on = document.addEventListener.bind(document);
 
         var xmouse, ymouse;
         
-        $on('mousemove', function (e) {
+        _on('mousemove', function (e) {
             xmouse = e.clientX || e.pageX;
             ymouse = e.clientY || e.pageY;
         });
     
 
-        var ball = $('.ball');
+        var ball = _('.ball');
         var x = void 0,
             y = void 0,
             dx = void 0,
@@ -1083,13 +1117,22 @@
 
 
 
-        //mobile_bar clickevent
-        document.querySelector(".mobile_bar").addEventListener("click",function(){
-            document.querySelector(".mobile_bar").classList.add("active");
-            document.querySelector(".navitems_insidebar").style.display = 'flex';
-            gsap.to(".navitems_insidebar",{duration:1.5,opacity:1})
-        })
-        
+        // mobile_bar clickevent
+        $(".mobile_bar").click(function(){
+            if($(".navitems_insidebar").hasClass("display_none")){
+                document.querySelector(".navitems_insidebar").classList.remove("display_none");
+                gsap.fromTo(".navitems_insidebar",{opacity:0},{opacity:1,duration:1.5});
+                gsap.to(".mobile_bar",{rotate:-90});
+            }
+            else{
+                setTimeout(function(){
+                    document.querySelector(".navitems_insidebar").classList.add("display_none");
+                },1500);
+                gsap.fromTo(".navitems_insidebar",{opacity:1},{opacity:0,duration:1.5});
+                gsap.to(".mobile_bar",{rotate:0});
+            }
+        });
+                
     </script>
 </body>
 
