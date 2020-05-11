@@ -16,6 +16,20 @@
             padding: 0;
             background-color: #eee;
             position: relative;
+            --swiper-theme-color:black;
+        }
+        .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+            margin: 0 10px;
+        }
+        .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+            bottom: 5%;
+            
+        }
+
+        .swiper-pagination-bullet{
+            width: 20px;
+            height: 20px;
+            margin-bottom: 20px;
         }
         .display_none{
             display: none;
@@ -265,7 +279,7 @@
         </div>
         <ul>
             <li>
-                <a href="">
+                <a href="./test/index.html#page2">
                     <span class="navitem eng_navitem_about">關於滿果
                         <div style="display: inline-block;">
                             <img src="../02_Img/about.png" alt="">
@@ -388,7 +402,7 @@
             <div class="swiper-slide">
                 <div class="outside_contain_mobile">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="outside_img_mobile" href="https://www.itl.cat/pngfile/big/12-126082_black-hd-wallpaper-1920x1080-2-background-wallpaper-cat.jpg" x="0" y="0" width="100%" height="100%" />
+                        <image class="outside_img_mobile" href="https://i.pinimg.com/originals/c2/49/f1/c249f14eccea62157e7e65461cb15708.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="outside_mask_mobile">
                             <path id="outside_path_mobile"></path>
                         </clipPath>
@@ -396,7 +410,7 @@
                 </div>
                 <div class="middle_contain_mobile">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="middle_img_mobile" href="https://www.itl.cat/pngfile/big/12-126082_black-hd-wallpaper-1920x1080-2-background-wallpaper-cat.jpg" x="0" y="0" width="100%" height="100%" />
+                        <image class="middle_img_mobile" href="https://i.pinimg.com/originals/c2/49/f1/c249f14eccea62157e7e65461cb15708.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="middle_mask_mobile">
                             <path id="middle_path_mobile"></path>
                         </clipPath>
@@ -404,7 +418,7 @@
                 </div>
                 <div class="inside_contain_mobile">
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="inside_img_mobile" href="https://www.itl.cat/pngfile/big/12-126082_black-hd-wallpaper-1920x1080-2-background-wallpaper-cat.jpg" x="0" y="0" width="100%" height="100%" />
+                        <image class="inside_img_mobile" href="https://i.pinimg.com/originals/c2/49/f1/c249f14eccea62157e7e65461cb15708.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="inside_mask_mobile">
                             <path id="inside_path_mobile"></path> 
                         </clipPath>
@@ -420,7 +434,7 @@
             </div>
             <!-- slide4 -->
             <div class="swiper-slide">
-                <div class="outside_contain_mobile">
+                <div class="outside_contain_mobile"> 
                     <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
                         <image class="outside_img_mobile" href="https://i.pinimg.com/originals/c2/49/f1/c249f14eccea62157e7e65461cb15708.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="outside_mask_mobile">
@@ -477,19 +491,19 @@
             document.querySelector(".outside_img").setAttribute("href","https://wallpaperaccess.com/full/253660.jpg")
         })
         document.querySelector("#service_pathT").addEventListener("click",function(){
-            document.querySelector(".inside_img").setAttribute("href","https://i.imgur.com/4IzT2Kz.jpg")
-            document.querySelector(".middle_img").setAttribute("href","https://i.imgur.com/4IzT2Kz.jpg")
-            document.querySelector(".outside_img").setAttribute("href","https://i.imgur.com/4IzT2Kz.jpg")
+            document.querySelector(".inside_img").setAttribute("href","https://images8.alphacoders.com/926/thumb-1920-926492.jpg")
+            document.querySelector(".middle_img").setAttribute("href","https://images8.alphacoders.com/926/thumb-1920-926492.jpg")
+            document.querySelector(".outside_img").setAttribute("href","https://images8.alphacoders.com/926/thumb-1920-926492.jpg")
         })
         document.querySelector("#visit_pathT").addEventListener("click",function(){
-            document.querySelector(".inside_img").setAttribute("href","https://s2.best-wallpaper.net/wallpaper/1920x1080/1202/Kitten-yawning-basket_1920x1080.jpg")
-            document.querySelector(".middle_img").setAttribute("href","https://s2.best-wallpaper.net/wallpaper/1920x1080/1202/Kitten-yawning-basket_1920x1080.jpg")
-            document.querySelector(".outside_img").setAttribute("href","https://s2.best-wallpaper.net/wallpaper/1920x1080/1202/Kitten-yawning-basket_1920x1080.jpg")
+            document.querySelector(".inside_img").setAttribute("href","https://i.pinimg.com/originals/86/ff/b8/86ffb87572d657f335cd7cd828c70de3.jpg")
+            document.querySelector(".middle_img").setAttribute("href","https://i.pinimg.com/originals/86/ff/b8/86ffb87572d657f335cd7cd828c70de3.jpg")
+            document.querySelector(".outside_img").setAttribute("href","https://i.pinimg.com/originals/86/ff/b8/86ffb87572d657f335cd7cd828c70de3.jpg")
         })
 
 
         //change mouse style while the mouse is entering middle_img
-        document.querySelector("#main_img_link").onmouseenter = function () {
+        function mousein(){
             document.querySelector(".ball").style.color="black";
             document.querySelector(".ball").style.backgroundColor="#eee"; 
             document.querySelector(".ball_text1").style.display="block";
@@ -499,8 +513,8 @@
             document.querySelector(".outer_ball").style.width="65px";
             document.querySelector(".outer_ball").style.height="65px";
             document.querySelector(".ball").style.margin="-10px";
-        };
-        document.querySelector("#main_img_link").onmouseleave = function () {
+        }
+        function mouseout(){
             document.querySelector(".ball").style.backgroundColor="black";
             document.querySelector(".ball_text1").style.display="none";
             document.querySelector(".ball_text2").style.display="none";
@@ -508,45 +522,49 @@
             document.querySelector(".ball").style.height="15px";
             document.querySelector(".outer_ball").style.width="20px";
             document.querySelector(".outer_ball").style.height="20px";
-            document.querySelector(".ball").style.margin="13px";            
+            document.querySelector(".ball").style.margin="13px";
+        }
+        document.querySelector("#main_img_link").onmouseenter = function () {
+            mousein();
         };
-        // .ball {
-        //     z-index: 99;
-        //     width: 60px;
-        //     height: 60px;
-        //     background: none;
-        //     border: 1px solid grey;
-        //     border-radius: 50%;
-        //     position: absolute;
-        //     left: 50%;
-        //     top: 50%;
-        //     margin: -10px 0 0 -10px;
-        //     pointer-events: none;
-        //     display: flex;
-        //     justify-content: center;
-        //     align-items: center;
-        //     flex-wrap: wrap;
-        //     flex-direction: column;
-        // }
-        // .outer_ball{
-        //     z-index: 99;
-        //     width: 65px;
-        //     height: 65px;
-        //     background: none;
-        //     border: 1px solid grey;
-        //     border-radius: 50%;
-        //     position: absolute;
-        // }
+        document.querySelector("#main_img_link").onmouseleave = function () {
+            mouseout();           
+        };
+        document.querySelector("#main_img_link_mobile1").onmouseenter = function () {
+            mousein();
+        };
+        document.querySelector("#main_img_link_mobile1").onmouseleave = function () {
+            mouseout();           
+        };
+        document.querySelector("#main_img_link_mobile2").onmouseenter = function () {
+            mousein();
+        };
+        document.querySelector("#main_img_link_mobile2").onmouseleave = function () {
+            mouseout();           
+        };
+        document.querySelector("#main_img_link_mobile3").onmouseenter = function () {
+            mousein();
+        };
+        document.querySelector("#main_img_link_mobile3").onmouseleave = function () {
+            mouseout();           
+        };
+        document.querySelector("#main_img_link_mobile4").onmouseenter = function () {
+            mousein();
+        };
+        document.querySelector("#main_img_link_mobile4").onmouseleave = function () {
+            mouseout();           
+        };
+        
+    
 
         //swiper
         var swiper = new Swiper('.swiper-container', {
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
-                renderBullet: function (index, className) {
-                return '<span class="' + className + '">' + (index + 1) + '</span>';
-                },
             },
+            observer:true,
+            observeParents:true,
         });
      
 
@@ -915,7 +933,7 @@
 
         //media queries
 
-        var w1400px = window.matchMedia("(max-width: 1400px)");
+        var w1400px = window.matchMedia("(max-width: 1400px)");       
         var w768px = window.matchMedia("(max-width: 768px)");
         myFunction1(w1400px)
         myFunction2(w768px) // Call listener function at run time
