@@ -40,8 +40,23 @@ body {
 }
 
 .outside_img_mobile {
-  -webkit-clip-path: url(#outside_mask_mobile);
-          clip-path: url(#outside_mask_mobile);
+  -webkit-clip-path: url(#outside_mask_mobile1);
+          clip-path: url(#outside_mask_mobile1);
+}
+
+.outside_img_mobile {
+  -webkit-clip-path: url(#outside_mask_mobile2);
+          clip-path: url(#outside_mask_mobile2);
+}
+
+.outside_img_mobile {
+  -webkit-clip-path: url(#outside_mask_mobile3);
+          clip-path: url(#outside_mask_mobile3);
+}
+
+.outside_img_mobile {
+  -webkit-clip-path: url(#outside_mask_mobile4);
+          clip-path: url(#outside_mask_mobile4);
 }
 
 .middle_img {
@@ -50,8 +65,23 @@ body {
 }
 
 .middle_img_mobile {
-  -webkit-clip-path: url(#middle_mask_mobile);
-          clip-path: url(#middle_mask_mobile);
+  -webkit-clip-path: url(#middle_mask_mobile1);
+          clip-path: url(#middle_mask_mobile1);
+}
+
+.middle_img_mobile {
+  -webkit-clip-path: url(#middle_mask_mobile2);
+          clip-path: url(#middle_mask_mobile2);
+}
+
+.middle_img_mobile {
+  -webkit-clip-path: url(#middle_mask_mobile3);
+          clip-path: url(#middle_mask_mobile3);
+}
+
+.middle_img_mobile {
+  -webkit-clip-path: url(#middle_mask_mobile4);
+          clip-path: url(#middle_mask_mobile4);
 }
 
 .inside_img {
@@ -60,8 +90,23 @@ body {
 }
 
 .inside_img_mobile {
-  -webkit-clip-path: url(#inside_mask_mobile);
-          clip-path: url(#inside_mask_mobile);
+  -webkit-clip-path: url(#inside_mask_mobile1);
+          clip-path: url(#inside_mask_mobile1);
+}
+
+.inside_img_mobile {
+  -webkit-clip-path: url(#inside_mask_mobile2);
+          clip-path: url(#inside_mask_mobile2);
+}
+
+.inside_img_mobile {
+  -webkit-clip-path: url(#inside_mask_mobile3);
+          clip-path: url(#inside_mask_mobile3);
+}
+
+.inside_img_mobile {
+  -webkit-clip-path: url(#inside_mask_mobile4);
+          clip-path: url(#inside_mask_mobile4);
 }
 
 .demo {
@@ -428,6 +473,9 @@ body {
   .mobile_bar {
     top: 40px;
     right: 40px;
+  }
+  .wrap {
+    display: none;
   }
 }
 /*# sourceMappingURL=firstpage_style.css.map */

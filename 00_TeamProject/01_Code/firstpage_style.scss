@@ -35,21 +35,48 @@ body {
     clip-path: url(#outside_mask);
 }
 .outside_img_mobile {
-    clip-path: url(#outside_mask_mobile);
+    clip-path: url(#outside_mask_mobile1);
+}
+.outside_img_mobile {
+    clip-path: url(#outside_mask_mobile2);
+}
+.outside_img_mobile {
+    clip-path: url(#outside_mask_mobile3);
+}
+.outside_img_mobile {
+    clip-path: url(#outside_mask_mobile4);
 }
 
 .middle_img{
     clip-path: url(#middle_mask);
 }
 .middle_img_mobile{
-    clip-path: url(#middle_mask_mobile);
+    clip-path: url(#middle_mask_mobile1);
+}
+.middle_img_mobile{
+    clip-path: url(#middle_mask_mobile2);
+}
+.middle_img_mobile{
+    clip-path: url(#middle_mask_mobile3);
+}
+.middle_img_mobile{
+    clip-path: url(#middle_mask_mobile4);
 }
 
 .inside_img{
     clip-path: url(#inside_mask);
 }
 .inside_img_mobile{
-    clip-path: url(#inside_mask_mobile);
+    clip-path: url(#inside_mask_mobile1);
+}
+.inside_img_mobile{
+    clip-path: url(#inside_mask_mobile2);
+}
+.inside_img_mobile{
+    clip-path: url(#inside_mask_mobile3);
+}
+.inside_img_mobile{
+    clip-path: url(#inside_mask_mobile4);
 }
 .demo {
     position: fixed;
@@ -356,4 +383,10 @@ body {
         top: 40px;
         right: 40px;   
     }
+    .wrap{
+        display: none;
+    }
+}
+@media(max-width:500px){
+
 }
