@@ -7,304 +7,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <style>
-        *{
-            font-family: "微軟正黑體";
-        }
-        body {
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
-            background-color: #eee;
-            position: relative;
-            --swiper-theme-color:black;
-        }
-        .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
-            margin: 0 10px;
-        }
-        .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
-            bottom: 5%;
-            
-        }
+    <link rel="stylesheet" href="./firstpage_style.css">
 
-        .swiper-pagination-bullet{
-            width: 20px;
-            height: 20px;
-            margin-bottom: 20px;
-        }
-        .display_none{
-            display: none;
-        }
-        .display_block{
-            display: block;
-        }
-        #demo {
-            position: fixed;
-            width: 100%;
-        }
-        .outside_img {
-            clip-path: url(#outside_mask);
-        }
-        .outside_img_mobile {
-            clip-path: url(#outside_mask_mobile);
-        }
-
-        .middle_img{
-            clip-path: url(#middle_mask);
-        }
-        .middle_img_mobile{
-            clip-path: url(#middle_mask_mobile);
-        }
-
-        .inside_img{
-            clip-path: url(#inside_mask);
-        }
-        .inside_img_mobile{
-            clip-path: url(#inside_mask_mobile);
-        }
-       
-        .outside_contain,.outside_contain_mobile{
-            width: 100%;
-            height: auto;
-            background-color: #eee;
-            position: absolute;
-        }
-        .middle_contain,.middle_contain_mobile{
-            width: 100%;
-            height: 100vh;
-            background-color: #eee;
-            opacity: 0.8;
-            position: absolute;
-        }
-        .inside_contain,.inside_contain_mobile{
-            width: 100%;
-            height: 100vh;
-            background-color: #eee;
-            opacity: 0.3;
-            position: absolute;
-        }
-        .cover4{
-            position: absolute;
-        }
-        .navitems{
-            position: absolute;
-            box-sizing: border-box;
-            height: 100vh;
-            /* width: 100%; */
-            padding:85px 0px 85px 105px ;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .navitems .logo{
-            width: 100%;
-            
-        }
-        .navitems .logo img{
-            width: 135px;
-            float: left;
-            
-        }
-        .navitems ul{
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .navitems ul li{
-            margin-bottom: 5px;
-        }
-        .navitems ul li a{
-            text-decoration: none;
-            color: black;
-        }
-        .navitems ul li a .navitem{
-            font-size: 18px;
-            letter-spacing: 0.2em;
-        }
-        .navitem {
-            display: inline-block;
-            position: relative;
-        }
-        .navitem:after {
-            content: '';
-            display: block;
-            border-top: 1px solid black;
-            margin-left:1.2em;
-            margin-right: 0.8em;
-        }
-        .navitem:before{
-            display: block;
-            position: absolute;
-            left: 21.5px;
-            top: 100%;
-            font-size: 12px;
-            letter-spacing: 0.05em;
-        }
-        .navitem.eng_navitem_about:before{
-            content: "about us";
-        }
-        .navitem.eng_navitem_service:before{
-            content: "service items";
-        }
-        .navitem.eng_navitem_visit:before{
-            content: "book a visit";
-        }
-        .navitem.eng_navitem_contact:before{
-            content: "contact us";
-        }
-        .mobile_bar{
-            font-size: 36px;
-            cursor: pointer;
-            position: absolute;
-            z-index: 99;
-            right: 105px;
-            top: 85px;
-            transition: 1s;
-        }
-        .mobile_bar.active{
-            transform: rotate(-90deg);
-        }
-        .mobile_bar.active_recover{
-            transform: rotate(90deg);
-        }
-
-        .navitems_insidebar{
-            position: absolute;
-            top: 0;
-            z-index: 9;
-            width: 100%;
-            height: 100vh;
-            background-color: #eee;
-            /* opacity: 0; */
-        }
-        .navitems_insidebar .insidebar_background{
-            width: 100%;
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .navitems_insidebar img{
-            width: 135px;
-            margin-top: 85px;
-            margin-left: 105px;
-            transition: 1s ease-in-out;
-        }
-        .navitems_insidebar ul{
-            list-style:none;
-            padding: 0;     
-            margin-top: 5%;
-            transition: 1s ease-in-out;
-        }
-        .navitems_insidebar ul li{
-            display: block;
-            text-align: center;
-            margin: 1.5em 0;
-            letter-spacing: 0.5em;
-        }
-        .navitems_insidebar ul li a{
-            text-decoration: none;
-            font-size: 38px;
-            font-weight: bold;
-            color: white;
-        }
-        .navitems_insidebar ul li a:hover{
-            transition: 0.5s;
-            color: #268BBF;
-        }
-        
-        .navitems_insidebar footer{
-            width: 100%;
-        }
-        /* .navitems_insidebar footer p {
-        } */
-        .wrap {
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            bottom: 0;
-            right: 0;
-        }
-        .ball {
-            z-index: 9;
-            width: 60px;
-            height: 60px;
-            border: 1px solid grey;
-            border-radius: 50%;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin: -10px 0 0 -10px;
-            pointer-events: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            flex-direction: column;
-
-        }
-        .outer_ball{
-            z-index: 9;
-            width: 65px;
-            height: 65px;
-            background: none;
-            border: 1px solid grey;
-            border-radius: 50%;
-            position: absolute;
-        }
-        @media(max-width: 1050px){
-            .navitems{
-                padding-left:30px
-            }
-            .mobile_bar{
-                right: 30px;   
-            }
-            .navitems_insidebar img{
-                margin-left: 30px;
-            }
-            .navitems_insidebar ul{   
-                margin-top: 10%;
-            }
-        }
-        @media(max-width: 768px){
-            .navitems{
-                width: 100%;
-                height: unset;
-                padding: 40px 40px 40px 40px;
-            }
-            .navitems .logo{
-                text-align: unset;
-                margin-top: unset;
-            }
-            .navitems .logo img{
-                width: unset;
-                height: 100px;
-            }
-            .navitems ul{
-                display: none;
-            }
-            .navitems_insidebar img{
-                margin-top: 40px;
-                margin-left: 40px;
-                width: unset;
-                height: 100px;
-            }
-            .navitems_insidebar ul{   
-                margin-top: 20%;
-            }
-            .mobile_bar{
-                top: 40px;
-                right: 40px;   
-            }
-        }
-    </style>
 </head>
 
 <body onload = "followMouse();">
 
     <div class="outside_contain">
-        <svg id="demo" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+        <svg class="demo" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
             <image class="outside_img" href="../02_Img/main_background.jpg" x="0" y="0" width="100%" height="100%" />
             <clipPath id="outside_mask">
                 <path id="outside_path"></path>
@@ -313,7 +23,7 @@
     </div>
 
     <div class="middle_contain">
-        <svg id="demo" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+        <svg class="demo" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
             <image class="middle_img" href="../02_Img/main_background.jpg" x="0" y="0" width="100%" height="100%" />
             <clipPath id="middle_mask">
                 <path id="middle_path"></path>
@@ -322,7 +32,7 @@
     </div>
 
     <div class="inside_contain">
-        <svg id="demo" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+        <svg class="demo" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
             <image class="inside_img" href="../02_Img/main_background.jpg" x="0" y="0" width="100%" height="100%" />
             <clipPath id="inside_mask">
                 <path id="inside_path"></path> 
@@ -331,7 +41,7 @@
     </div>
 
     <div class="cover4" style="z-index: 2;"> 
-        <svg id="demo" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+        <svg class="demo" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
             <!-- <g font-weight="bold" letter-spacing="5">
                 <text x="890" y="360" fill="#77A600" font-size="42" >滿果<tspan fill="#186A85">托嬰中心</tspan></text>
                 <text x="858" y="400" fill="#eee" font-size="28"><tspan font-weight="normal">一</tspan>想給寶寶一個自然健康安全的環境<tspan font-weight="normal">一</tspan></text>
@@ -354,7 +64,8 @@
             <path id="service_pathB" fill="#ffebd9" opacity="1"></path>
             <path id="service_pathM" fill="#fcd7a2" opacity="1"></path>
             <path id="service_pathT" fill="#ffc364" opacity="1"></path>
-            <text id="service_text" x="1555" y="130" font-size="25" fill="#ffffff" letter-spacing="0.075em">服務項目</text> 
+            <text id="service_text" x="1555" y="130" font-size="25" fill="#ffffff" letter-spacing="0.075em">服務項目</text>
+
             <a href="./test/index.html">    
                 <path id="visit_pathB" fill="#d6ffb4" opacity="1"></path>
                 <path id="visit_pathM" fill="#c7ff8f" opacity="1"></path>
@@ -427,31 +138,31 @@
             <!-- slide1 -->
             <div class="swiper-slide " style="height: 100vh;">
                 <div class="outside_contain_mobile">
-                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="outside_img_mobile" href="../02_Img/main_background_mobile.jpg" x="0" y="0" width="100%" height="100%" />
+                    <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <image class="outside_img_mobile" href="../02_Img/main_MB.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="outside_mask_mobile">
                             <path id="outside_path_mobile"></path>
                         </clipPath>
                     </svg>
                 </div>
                 <div class="middle_contain_mobile">
-                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="middle_img_mobile" href="../02_Img/main_background_mobile.jpg" x="0" y="0" width="100%" height="100%" />
+                    <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <image class="middle_img_mobile" href="../02_Img/main_MB.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="middle_mask_mobile">
                             <path id="middle_path_mobile"></path>
                         </clipPath>
                     </svg>
                 </div>
                 <div class="inside_contain_mobile">
-                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="inside_img_mobile" href="../02_Img/main_background_mobile.jpg" x="0" y="0" width="100%" height="100%" />
+                    <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <image class="inside_img_mobile" href="../02_Img/main_MB.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="inside_mask_mobile">
                             <path id="inside_path_mobile"></path> 
                         </clipPath>
                     </svg>
                 </div>
                 <div class="">
-                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                    <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
                         <a href="">
                             <path id="main_img_link_mobile1" opacity="0"></path>
                         </a> 
@@ -461,7 +172,7 @@
             <!-- slide2 -->
             <div class="swiper-slide">
                 <div class="outside_contain_mobile">
-                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                    <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
                         <image class="outside_img_mobile" href="../02_Img/service_MB.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="outside_mask_mobile">
                             <path id="outside_path_mobile"></path>
@@ -469,7 +180,7 @@
                     </svg>
                 </div>
                 <div class="middle_contain_mobile">
-                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                    <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
                         <image class="middle_img_mobile" href="../02_Img/service_MB.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="middle_mask_mobile">
                             <path id="middle_path_mobile"></path>
@@ -477,7 +188,7 @@
                     </svg>
                 </div>
                 <div class="inside_contain_mobile">
-                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                    <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
                         <image class="inside_img_mobile" href="../02_Img/service_MB.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="inside_mask_mobile">
                             <path id="inside_path_mobile"></path> 
@@ -485,7 +196,7 @@
                     </svg>
                 </div>
                 <div class="">
-                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                    <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
                         <a href="">
                             <path id="main_img_link_mobile2" opacity="0"></path>
                         </a> 
@@ -495,31 +206,31 @@
             <!-- slide3 -->
             <div class="swiper-slide">
                 <div class="outside_contain_mobile">
-                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="outside_img_mobile" href="../02_Img/about_mobile.jpg" x="0" y="0" width="100%" height="100%" />
+                    <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <image class="outside_img_mobile" href="../02_Img/contact_MB.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="outside_mask_mobile">
                             <path id="outside_path_mobile"></path>
                         </clipPath>
                     </svg>
                 </div>
                 <div class="middle_contain_mobile">
-                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="middle_img_mobile" href="../02_Img/about_mobile.jpg" x="0" y="0" width="100%" height="100%" />
+                    <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <image class="middle_img_mobile" href="../02_Img/contact_MB.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="middle_mask_mobile">
                             <path id="middle_path_mobile"></path>
                         </clipPath>
                     </svg>
                 </div>
                 <div class="inside_contain_mobile">
-                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
-                        <image class="inside_img_mobile" href="../02_Img/about_mobile.jpg" x="0" y="0" width="100%" height="100%" />
+                    <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                        <image class="inside_img_mobile" href="../02_Img/contact_MB.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="inside_mask_mobile">
                             <path id="inside_path_mobile"></path> 
                         </clipPath>
                     </svg>
                 </div>
                 <div class="">
-                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                    <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
                         <a href="">
                             <path id="main_img_link_mobile3" opacity="0"></path>
                         </a> 
@@ -529,7 +240,7 @@
             <!-- slide4 -->
             <div class="swiper-slide">
                 <div class="outside_contain_mobile"> 
-                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                    <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
                         <image class="outside_img_mobile" href="../02_Img/contact_mobile.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="outside_mask_mobile">
                             <path id="outside_path_mobile"></path>
@@ -537,7 +248,7 @@
                     </svg>
                 </div>
                 <div class="middle_contain_mobile">
-                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                    <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
                         <image class="middle_img_mobile" href="../02_Img/contact_mobile.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="middle_mask_mobile">
                             <path id="middle_path_mobile"></path>
@@ -545,7 +256,7 @@
                     </svg>
                 </div>
                 <div class="inside_contain_mobile">
-                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                    <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
                         <image class="inside_img_mobile" href="../02_Img/contact_mobile.jpg" x="0" y="0" width="100%" height="100%" />
                         <clipPath id="inside_mask_mobile">
                             <path id="inside_path_mobile"></path> 
@@ -553,7 +264,7 @@
                     </svg>
                 </div>
                 <div class="">
-                    <svg id="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
+                    <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
                         <a href="">
                             <path id="main_img_link_mobile4" opacity="0"></path>
                         </a> 
@@ -571,7 +282,7 @@
         <div class="insidebar_background" style="background-image: url(../02_Img/test3.jpg)">
             <img src="../02_Img/logo.png" alt="">
             <ul>
-                <li class=""><a href=""><i class="far fa-home-alt"></i>首頁</a></li>
+                <li class=""><a href="./firstpage.html"><i class="far fa-home-alt"></i>首頁</a></li>
                 <li class=""><a href=""><i class="far fa-person-sign"></i></i>關於滿果</a></li>
                 <li class=""><a href=""><i class="fal fa-baby"></i>服務項目</a></li>
                 <li class=""><a href=""><i class="fal fa-calendar-check"></i>預約參觀</a></li>
@@ -585,7 +296,6 @@
         
         
     </div>
-
 
 
 
