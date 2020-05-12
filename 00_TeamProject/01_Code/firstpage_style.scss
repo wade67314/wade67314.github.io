@@ -10,7 +10,6 @@ body {
     padding: 0;
     position: relative;
     background-color: $background_white;
-    --swiper-theme-color: black;
 }
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
     margin: 0 10px;
@@ -23,6 +22,22 @@ body {
     width: 20px;
     height: 20px;
     margin-bottom: 20px;
+
+    &:nth-child(1).swiper-pagination-bullet-active{
+        background-color: red;
+    }
+
+    &:nth-child(2).swiper-pagination-bullet-active{
+        background-color: green;
+    }
+
+    &:nth-child(3).swiper-pagination-bullet-active{
+        background-color: red;
+    }
+
+    &:nth-child(4).swiper-pagination-bullet-active{
+        background-color: green;
+    }
 }
 .display_none{
     display: none;
@@ -31,9 +46,7 @@ body {
     display: block;
 }
 
-.outside_img {
-    clip-path: url(#outside_mask);
-}
+
 .outside_img_mobile {
     clip-path: url(#outside_mask_mobile1);
 }
@@ -47,9 +60,7 @@ body {
     clip-path: url(#outside_mask_mobile4);
 }
 
-.middle_img{
-    clip-path: url(#middle_mask);
-}
+
 .middle_img_mobile{
     clip-path: url(#middle_mask_mobile1);
 }
@@ -63,9 +74,7 @@ body {
     clip-path: url(#middle_mask_mobile4);
 }
 
-.inside_img{
-    clip-path: url(#inside_mask);
-}
+
 .inside_img_mobile{
     clip-path: url(#inside_mask_mobile1);
 }
@@ -91,6 +100,9 @@ body {
     .demo {
         position: fixed;
         width: 100%;
+        .outside_img {
+            clip-path: url(#outside_mask);
+        }
     }
 }
 .middle_contain{
@@ -102,6 +114,9 @@ body {
     .demo {
         position: fixed;
         width: 100%;
+        .middle_img{
+            clip-path: url(#middle_mask);
+        }
     }
 }
 .inside_contain{
@@ -113,6 +128,9 @@ body {
     .demo {
         position: fixed;
         width: 100%;
+        .inside_img{
+            clip-path: url(#inside_mask);
+        }
     }
 }
 
@@ -223,38 +241,45 @@ body {
                     letter-spacing: 0.2em;
                     display: inline-block;
                     position: relative;
+                    &:after {
+                        content: '';
+                        display: block;
+                        border-top: 1px solid black;
+                        margin-left:1.2em;
+                        margin-right: 0.8em;
+                    }
+                    &:before{
+                        display: block;
+                        position: absolute;
+                        left: 21.5px;
+                        top: 100%;
+                        font-size: 12px;
+                        letter-spacing: 0.05em;
+                    }
+                }
+                .eng_navitem_about{
+                    &:before{
+                        content: "about us";
+                    }
+                }
+                .eng_navitem_service{
+                    &:before{
+                        content: "service items";
+                    }
+                }
+                .eng_navitem_visit{
+                    &:before{
+                        content: "book a visit";
+                    }
+                }
+                .eng_navitem_contact{
+                    &:before{
+                        content: "contact us";
+                    }
                 }
             }
         }
     }
-}
-
-.navitem:after {
-    content: '';
-    display: block;
-    border-top: 1px solid black;
-    margin-left:1.2em;
-    margin-right: 0.8em;
-}
-.navitem:before{
-    display: block;
-    position: absolute;
-    left: 21.5px;
-    top: 100%;
-    font-size: 12px;
-    letter-spacing: 0.05em;
-}
-.navitem.eng_navitem_about:before{
-    content: "about us";
-}
-.navitem.eng_navitem_service:before{
-    content: "service items";
-}
-.navitem.eng_navitem_visit:before{
-    content: "book a visit";
-}
-.navitem.eng_navitem_contact:before{
-    content: "contact us";
 }
 
 .mobile_bar{
@@ -265,12 +290,12 @@ body {
     right: 105px;
     top: 85px;
     transition: 1s;
-}
-.mobile_bar.active{
-    transform: rotate(-90deg);
-}
-.mobile_bar.active_recover{
-    transform: rotate(90deg);
+    &.active{
+        transform: rotate(-90deg);
+    }
+    &.active_recover{
+        transform: rotate(90deg);
+    }
 }
 
 .navitems_insidebar{
@@ -304,7 +329,10 @@ body {
                 font-size: 38px;
                 font-weight: bold;
                 color: white;
-                
+                &:hover{
+                    transition: 0.5s;
+                    color: #268BBF;
+                }
             }
         }
     }
@@ -313,10 +341,7 @@ body {
     }
 }
 
-.navitems_insidebar ul li a:hover{
-    transition: 0.5s;
-    color: #268BBF;
-}
+
 
  
 .wrap {
@@ -352,7 +377,6 @@ body {
         }
     }
 }
-
 
 @media(max-width: 1050px){
     .navitems{
