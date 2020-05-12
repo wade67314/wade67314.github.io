@@ -158,7 +158,7 @@
                         </clipPath>
                     </svg>
                 </div>
-                <div class="">
+                <div class="img_link_mobile">
                     <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
                         <a href="">
                             <path id="main_img_link_mobile1" opacity="0"></path>
@@ -192,7 +192,7 @@
                         </clipPath>
                     </svg>
                 </div>
-                <div class="">
+                <div class="img_link_mobile">
                     <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
                         <a href="">
                             <path id="main_img_link_mobile2" opacity="0"></path>
@@ -226,7 +226,7 @@
                         </clipPath>
                     </svg>
                 </div>
-                <div class="">
+                <div class="img_link_mobile">
                     <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
                         <a href="">
                             <path id="main_img_link_mobile3" opacity="0"></path>
@@ -260,7 +260,7 @@
                         </clipPath>
                     </svg>
                 </div>
-                <div class="">
+                <div class="img_link_mobile">
                     <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh" viewBox="0 0 1920 1080">
                         <a href="">
                             <path id="main_img_link_mobile4" opacity="0"></path>
@@ -289,9 +289,6 @@
                 <p style="color: white;">臺中市豐原區北陽一街31號  04-25252785</p>   
             </footer>
         </div>
-        
-        
-        
     </div>
 
 
@@ -891,16 +888,14 @@
 
         //media queries
 
-        var MB_check=$(window).width();
-        console.log(MB_check);
+        
         
         var w768px = window.matchMedia("(max-width: 768px)");
         myFunction2(w768px) // Call listener function at run time
         w768px.addListener(myFunction2)
-        var MB_check=$(window).width();
-        console.log(MB_check);
+        
         function myFunction2(w768px) {
-            if (w768px.matches || MB_check<=768) { // If media query matches
+            if (w768px.matches) { // If media query matches
                 document.querySelector(".swiper-container").classList.add("display_block");
                 document.querySelector(".outside_contain").classList.add("display_none");
                 document.querySelector(".middle_contain").classList.add("display_none");

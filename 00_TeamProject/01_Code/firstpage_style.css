@@ -189,6 +189,13 @@ body {
   width: 100%;
 }
 
+@media (max-width: 500px) {
+  .outside_contain_mobile .demo {
+    height: 65%;
+    top: 18%;
+  }
+}
+
 .middle_contain_mobile {
   width: 100%;
   height: 100vh;
@@ -200,6 +207,13 @@ body {
 .middle_contain_mobile .demo {
   position: fixed;
   width: 100%;
+}
+
+@media (max-width: 500px) {
+  .middle_contain_mobile .demo {
+    height: 65%;
+    top: 18%;
+  }
 }
 
 .inside_contain_mobile {
@@ -215,12 +229,30 @@ body {
   width: 100%;
 }
 
+@media (max-width: 500px) {
+  .inside_contain_mobile .demo {
+    height: 65%;
+    top: 18%;
+  }
+}
+
+.img_link_mobile .demo {
+  position: fixed;
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  .img_link_mobile .demo {
+    height: 65%;
+    top: 18%;
+  }
+}
+
 .navitems {
   position: absolute;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 100vh;
-  /* width: 100%; */
   padding: 85px 0px 85px 105px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -263,9 +295,6 @@ body {
 .navitems ul li a .navitem {
   font-size: 18px;
   letter-spacing: 0.2em;
-}
-
-.navitem {
   display: inline-block;
   position: relative;
 }
@@ -341,7 +370,7 @@ body {
   background-position: center;
 }
 
-.navitems_insidebar img {
+.navitems_insidebar .insidebar_background img {
   width: 135px;
   margin-top: 85px;
   margin-left: 105px;
@@ -349,7 +378,7 @@ body {
   transition: 1s ease-in-out;
 }
 
-.navitems_insidebar ul {
+.navitems_insidebar .insidebar_background ul {
   list-style: none;
   padding: 0;
   margin-top: 5%;
@@ -357,18 +386,22 @@ body {
   transition: 1s ease-in-out;
 }
 
-.navitems_insidebar ul li {
+.navitems_insidebar .insidebar_background ul li {
   display: block;
   text-align: center;
   margin: 1.5em 0;
   letter-spacing: 0.5em;
 }
 
-.navitems_insidebar ul li a {
+.navitems_insidebar .insidebar_background ul li a {
   text-decoration: none;
   font-size: 38px;
   font-weight: bold;
   color: white;
+}
+
+.navitems_insidebar .insidebar_background footer {
+  width: 100%;
 }
 
 .navitems_insidebar ul li a:hover {
@@ -377,12 +410,6 @@ body {
   color: #268BBF;
 }
 
-.navitems_insidebar footer {
-  width: 100%;
-}
-
-/* .navitems_insidebar footer p {
-} */
 .wrap {
   position: absolute;
   top: -20px;
@@ -391,7 +418,7 @@ body {
   right: 0;
 }
 
-.ball {
+.wrap .ball {
   z-index: 9;
   width: 60px;
   height: 60px;
@@ -419,7 +446,7 @@ body {
           flex-direction: column;
 }
 
-.outer_ball {
+.wrap .ball .outer_ball {
   z-index: 9;
   width: 65px;
   height: 65px;
