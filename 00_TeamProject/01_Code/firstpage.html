@@ -891,12 +891,16 @@
 
         //media queries
 
-     
+        var MB_check=$(window).width();
+        console.log(MB_check);
+        
         var w768px = window.matchMedia("(max-width: 768px)");
         myFunction2(w768px) // Call listener function at run time
         w768px.addListener(myFunction2)
+        var MB_check=$(window).width();
+        console.log(MB_check);
         function myFunction2(w768px) {
-            if (w768px.matches) { // If media query matches
+            if (w768px.matches || MB_check<=768) { // If media query matches
                 document.querySelector(".swiper-container").classList.add("display_block");
                 document.querySelector(".outside_contain").classList.add("display_none");
                 document.querySelector(".middle_contain").classList.add("display_none");
