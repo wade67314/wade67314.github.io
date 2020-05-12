@@ -46,28 +46,36 @@
                 <path id="main_img_link" opacity="0"></path>
             </a> 
 
-            <g cursor="pointer">
-            <path id="about_pathB" fill="#c8e3e4" opacity="1"></path>
-            <path id="about_pathM" fill="#a3dbdc" opacity="1"></path>
-            <path id="about_pathT" fill="#49C0C4" opacity="1"></path>
-            <text id="about_text" x="480" y="120" font-size="25" fill="#ffffff" letter-spacing="0.075em">關於我們</text> 
-        
-            <path id="contact_pathB" fill="#ffd8d8" opacity="1"></path>
-            <path id="contact_pathM" fill="#ffafaf" opacity="1"></path>
-            <path id="contact_pathT" fill="#FF8686" opacity="1"></path>
-            <text id="contact_text" x="455" y="850" font-size="25" fill="#ffffff" letter-spacing="0.075em">聯絡我們</text>
-        
-            <path id="service_pathB" fill="#ffebd9" opacity="1"></path>
-            <path id="service_pathM" fill="#fcd7a2" opacity="1"></path>
-            <path id="service_pathT" fill="#ffc364" opacity="1"></path>
-            <text id="service_text" x="1555" y="130" font-size="25" fill="#ffffff" letter-spacing="0.075em">服務項目</text>
-
-            <a href="./test/index.html">    
-                <path id="visit_pathB" fill="#d6ffb4" opacity="1"></path>
-                <path id="visit_pathM" fill="#c7ff8f" opacity="1"></path>
-                <path id="visit_pathT" fill="#80af44" opacity="1"></path>
-                <text id="visit_text" x="1700" y="825" font-size="25" fill="#ffffff" letter-spacing="0.075em">預約參觀</text>
-            </a>
+            <g class="small_path">
+                <g>
+                    <path id="about_pathB" fill="#c8e3e4" opacity="1"></path>
+                    <path id="about_pathM" fill="#a3dbdc" opacity="1"></path>
+                    <path id="about_pathT" fill="#49C0C4" opacity="1"></path>
+                    <text id="about_text" x="480" y="120" font-size="25" fill="#ffffff" letter-spacing="0.075em">關於我們</text>
+                </g>
+             
+                <g>
+                    <path id="contact_pathB" fill="#ffd8d8" opacity="1"></path>
+                    <path id="contact_pathM" fill="#ffafaf" opacity="1"></path>
+                    <path id="contact_pathT" fill="#FF8686" opacity="1"></path>
+                    <text id="contact_text" x="455" y="850" font-size="25" fill="#ffffff" letter-spacing="0.075em">聯絡我們</text>
+                </g>
+            
+                <g>
+                    <path id="service_pathB" fill="#ffebd9" opacity="1"></path>
+                    <path id="service_pathM" fill="#fcd7a2" opacity="1"></path>
+                    <path id="service_pathT" fill="#ffc364" opacity="1"></path>
+                    <text id="service_text" x="1555" y="130" font-size="25" fill="#ffffff" letter-spacing="0.075em">服務項目</text>
+                </g>
+            
+                <g>
+                    <a href="./test/index.html">    
+                        <path id="visit_pathB" fill="#d6ffb4" opacity="1"></path>
+                        <path id="visit_pathM" fill="#c7ff8f" opacity="1"></path>
+                        <path id="visit_pathT" fill="#80af44" opacity="1"></path>
+                        <text id="visit_text" x="1700" y="825" font-size="25" fill="#ffffff" letter-spacing="0.075em">預約參觀</text>
+                    </a>
+                </g>
             </g>
         </svg>
     </div>
@@ -76,7 +84,7 @@
         <div class="logo">
             <img src="../02_Img/logo.png" alt="">
         </div>
-        <ul>
+        <ul class="navitem_hover">
             <li>
                 <a href="./test/index.html#page2">
                     <span class="navitem eng_navitem_about">關於滿果
@@ -277,14 +285,22 @@
     <div class="navitems_insidebar display_none" style="background-image: url(../02_Img/test3.jpg)">
         <img src="../02_Img/logo.png" alt="">
         <ul>
-            <li class=""><a href="./firstpage.html"><i class="far fa-home-alt"></i>首頁</a></li>
-            <li class=""><a href=""><i class="far fa-person-sign"></i>關於滿果</a></li>
-            <li class=""><a href=""><i class="fal fa-baby"></i>服務項目</a></li>
-            <li class=""><a href=""><i class="fal fa-calendar-check"></i>預約參觀</a></li>
-            <li class=""><a href=""><i class="fal fa-phone-volume"></i>聯絡我們</a></li>
+            <li><a href="./firstpage.html">首頁</a></li>
+            <!-- <i class="far fa-home-alt"></i> -->
+            <li><a href="">關於滿果</a></li>
+            <!-- <i class="far fa-person-sign"></i> -->
+            <li><a href="">服務項目</a></li>
+            <!-- <i class="fal fa-baby"></i> -->
+            <li><a href="">預約參觀</a></li>
+            <!-- <i class="fal fa-calendar-check"></i> -->
+            <li><a href="">聯絡我們</a></li>
+            <!-- <i class="fal fa-phone-volume"></i> -->
         </ul>
         <footer>
-            <p style="color: white;">臺中市豐原區北陽一街31號  04-25252785</p>   
+            <p>
+                <i class="fas fa-phone-alt"></i>04-25252785<br>
+                <i class="fas fa-map-marker-alt"></i>臺中市豐原區北陽一街31號
+            </p>   
         </footer>
     </div>
 
@@ -301,25 +317,35 @@
             document.querySelector(".inside_img").setAttribute("href","../02_Img/main_background.jpg")
             document.querySelector(".middle_img").setAttribute("href","../02_Img/main_background.jpg")
             document.querySelector(".outside_img").setAttribute("href","../02_Img/main_background.jpg")
-            gsap.fromTo(".inside_img",{opacity:0},{opacity:1,duration:3})
-            gsap.fromTo(".middle_img",{opacity:0},{opacity:1,duration:3})
-            gsap.fromTo(".outside_img",{opacity:0},{opacity:1,duration:3})
+            gsap.fromTo(".inside_img",{y:-540,opacity:0,scale:0},{x:0,y:0,opacity:1,scale:1,duration:2})
+            gsap.fromTo(".middle_img",{y:-540,opacity:0,scale:0},{x:0,y:0,opacity:1,scale:1,duration:2})
+            gsap.fromTo(".outside_img",{y:-540,opacity:0,scale:0},{x:0,y:0,opacity:1,scale:1,duration:2})
+            gsap.fromTo("#main_img_link",{x:-770,y:-540,scale:0},{x:0,y:0,scale:1,duration:2})
+            
         })
         document.querySelector("#contact_pathT").addEventListener("click",function(){
             document.querySelector(".inside_img").setAttribute("href","../02_Img/contact_PC.jpg")
             document.querySelector(".middle_img").setAttribute("href","../02_Img/contact_PC.jpg")
             document.querySelector(".outside_img").setAttribute("href","../02_Img/contact_PC.jpg")
-            gsap.fromTo(".inside_img",{opacity:0},{opacity:1,duration:3})
-            gsap.fromTo(".middle_img",{opacity:0},{opacity:1,duration:3})
-            gsap.fromTo(".outside_img",{opacity:0},{opacity:1,duration:3})
+            gsap.fromTo(".inside_img",{opacity:0},{opacity:1,duration:2.5})
+            gsap.fromTo(".middle_img",{opacity:0},{opacity:1,duration:2.5})
+            gsap.fromTo(".outside_img",{opacity:0},{opacity:1,duration:2.5})
+            gsap.fromTo(".inside_img",{y:1620,opacity:0,scale:0},{x:0,y:0,opacity:1,scale:1,duration:2})
+            gsap.fromTo(".middle_img",{y:1620,opacity:0,scale:0},{x:0,y:0,opacity:1,scale:1,duration:2})
+            gsap.fromTo(".outside_img",{y:1620,opacity:0,scale:0},{x:0,y:0,opacity:1,scale:1,duration:2})
+            gsap.fromTo("#main_img_link",{x:-770,y:1620,scale:0},{x:0,y:0,scale:1,duration:2})
         })
         document.querySelector("#service_pathT").addEventListener("click",function(){
             document.querySelector(".inside_img").setAttribute("href","../02_Img/service_PC.jpg")
             document.querySelector(".middle_img").setAttribute("href","../02_Img/service_PC.jpg")
             document.querySelector(".outside_img").setAttribute("href","../02_Img/service_PC.jpg")
-            gsap.fromTo(".inside_img",{opacity:0},{opacity:1,duration:3})
-            gsap.fromTo(".middle_img",{opacity:0},{opacity:1,duration:3})
-            gsap.fromTo(".outside_img",{opacity:0},{opacity:1,duration:3})
+            gsap.fromTo(".inside_img",{opacity:0},{opacity:1,duration:2.5})
+            gsap.fromTo(".middle_img",{opacity:0},{opacity:1,duration:2.5})
+            gsap.fromTo(".outside_img",{opacity:0},{opacity:1,duration:2.5})
+            gsap.fromTo(".inside_img",{x:1920,y:-540,opacity:0,scale:0},{x:0,y:0,opacity:1,scale:1,duration:2})
+            gsap.fromTo(".middle_img",{x:1920,y:-540,opacity:0,scale:0},{x:0,y:0,opacity:1,scale:1,duration:2})
+            gsap.fromTo(".outside_img",{x:1920,y:-540,opacity:0,scale:0},{x:0,y:0,opacity:1,scale:1,duration:2})
+            gsap.fromTo("#main_img_link",{x:1150,y:-540,scale:0},{x:0,y:0,scale:1,duration:2})
         })
         
 
@@ -327,6 +353,7 @@
         //change mouse style while the mouse is entering middle_img
         function mousein(){
             document.querySelector(".ball").style.color="black";
+            document.querySelector(".ball").style.opacity="1";
             document.querySelector(".ball").style.backgroundColor="#eee"; 
             document.querySelector(".ball_text1").style.display="block";
             document.querySelector(".ball_text2").style.display="block";
@@ -336,8 +363,19 @@
             document.querySelector(".outer_ball").style.height="65px";
             document.querySelector(".ball").style.margin="-10px";
         }
+        function mousein2(){
+            document.querySelector(".ball").style.color="black";
+            document.querySelector(".ball").style.opacity="1";
+            document.querySelector(".ball").style.backgroundColor="transparent"; 
+            document.querySelector(".ball").style.width="60px";
+            document.querySelector(".ball").style.height="60px";
+            document.querySelector(".outer_ball").style.width="65px";
+            document.querySelector(".outer_ball").style.height="65px";
+            document.querySelector(".ball").style.margin="-10px";
+        }
         function mouseout(){
             document.querySelector(".ball").style.backgroundColor="black";
+            document.querySelector(".ball").style.opacity="0.6";
             document.querySelector(".ball_text1").style.display="none";
             document.querySelector(".ball_text2").style.display="none";
             document.querySelector(".ball").style.width="15px";
@@ -352,31 +390,20 @@
         document.querySelector("#main_img_link").onmouseleave = function () {
             mouseout();           
         };
-        document.querySelector("#main_img_link_mobile1").onmouseenter = function () {
-            mousein();
-        };
-        document.querySelector("#main_img_link_mobile1").onmouseleave = function () {
-            mouseout();           
-        };
-        document.querySelector("#main_img_link_mobile2").onmouseenter = function () {
-            mousein();
-        };
-        document.querySelector("#main_img_link_mobile2").onmouseleave = function () {
-            mouseout();           
-        };
-        document.querySelector("#main_img_link_mobile3").onmouseenter = function () {
-            mousein();
-        };
-        document.querySelector("#main_img_link_mobile3").onmouseleave = function () {
-            mouseout();           
-        };
-        document.querySelector("#main_img_link_mobile4").onmouseenter = function () {
-            mousein();
-        };
-        document.querySelector("#main_img_link_mobile4").onmouseleave = function () {
-            mouseout();           
-        };
+        document.querySelector(".mobile_bar").onmouseenter=function(){
+            mousein2();
+        }
+        document.querySelector(".mobile_bar").onmouseleave=function(){
+            mouseout();
+        }
+        document.querySelector(".navitem_hover").onmouseenter=function(){
+            mousein2();
+        }
+        document.querySelector(".navitem_hover").onmouseleave=function(){
+            mouseout();
+        }
         
+
         //swiper
         var swiper = new Swiper('.swiper-container', {
             pagination: {
@@ -390,192 +417,8 @@
         });
         
         
-        // path style
-        var blob_mobile = createBlob({
-            element: document.querySelector("#outside_path_mobile1"),
-            numPoints: 12,
-            centerX: 960,
-            centerY: 540,
-            minRadius: 360,
-            maxRadius: 390,
-            minDuration: 2,
-            maxDuration: 5
-        });
-        var blob_mobile = createBlob({
-            element: document.querySelector("#middle_path_mobile1"),
-            numPoints: 11,
-            centerX: 960,
-            centerY: 540,
-            minRadius: 320,
-            maxRadius: 350,
-            minDuration: 2,
-            maxDuration: 5
-        });
-        var blob_mobile = createBlob({
-            element: document.querySelector("#inside_path_mobile1"),
-            numPoints: 10,
-            centerX: 960,
-            centerY: 540,
-            minRadius: 290,
-            maxRadius: 310,
-            minDuration: 2,
-            maxDuration: 5
-        });
-
-        var blob_mobile = createBlob({
-            element: document.querySelector("#outside_path_mobile2"),
-            numPoints: 12,
-            centerX: 960,
-            centerY: 540,
-            minRadius: 360,
-            maxRadius: 390,
-            minDuration: 2,
-            maxDuration: 5
-        });
-        var blob_mobile = createBlob({
-            element: document.querySelector("#middle_path_mobile2"),
-            numPoints: 11,
-            centerX: 960,
-            centerY: 540,
-            minRadius: 320,
-            maxRadius: 350,
-            minDuration: 2,
-            maxDuration: 5
-        });
-        var blob_mobile = createBlob({
-            element: document.querySelector("#inside_path_mobile2"),
-            numPoints: 10,
-            centerX: 960,
-            centerY: 540,
-            minRadius: 290,
-            maxRadius: 310,
-            minDuration: 2,
-            maxDuration: 5
-        });
-        var blob_mobile = createBlob({
-            element: document.querySelector("#outside_path_mobile3"),
-            numPoints: 12,
-            centerX: 960,
-            centerY: 540,
-            minRadius: 360,
-            maxRadius: 390,
-            minDuration: 2,
-            maxDuration: 5
-        });
-        var blob_mobile = createBlob({
-            element: document.querySelector("#middle_path_mobile3"),
-            numPoints: 11,
-            centerX: 960,
-            centerY: 540,
-            minRadius: 320,
-            maxRadius: 350,
-            minDuration: 2,
-            maxDuration: 5
-        });
-        var blob_mobile = createBlob({
-            element: document.querySelector("#inside_path_mobile3"),
-            numPoints: 10,
-            centerX: 960,
-            centerY: 540,
-            minRadius: 290,
-            maxRadius: 310,
-            minDuration: 2,
-            maxDuration: 5
-        });
-        var blob_mobile = createBlob({
-            element: document.querySelector("#outside_path_mobile4"),
-            numPoints: 12,
-            centerX: 960,
-            centerY: 540,
-            minRadius: 360,
-            maxRadius: 390,
-            minDuration: 2,
-            maxDuration: 5
-        });
-        var blob_mobile = createBlob({
-            element: document.querySelector("#middle_path_mobile4"),
-            numPoints: 11,
-            centerX: 960,
-            centerY: 540,
-            minRadius: 320,
-            maxRadius: 350,
-            minDuration: 2,
-            maxDuration: 5
-        });
-        var blob_mobile = createBlob({
-            element: document.querySelector("#inside_path_mobile4"),
-            numPoints: 10,
-            centerX: 960,
-            centerY: 540,
-            minRadius: 290,
-            maxRadius: 310,
-            minDuration: 2,
-            maxDuration: 5
-        });
-        var blob_mobile = createBlob({
-            element: document.querySelector("#main_img_link_mobile1"),
-            numPoints: 10,
-            centerX: 960,
-            centerY: 540,
-            minRadius: 290,
-            maxRadius: 310,
-            minDuration: 2,
-            maxDuration: 5
-        });
-        var blob_mobile = createBlob({
-            element: document.querySelector("#main_img_link_mobile2"),
-            numPoints: 10,
-            centerX: 960,
-            centerY: 540,
-            minRadius: 290,
-            maxRadius: 310,
-            minDuration: 2,
-            maxDuration: 5
-        });
-        var blob_mobile = createBlob({
-            element: document.querySelector("#main_img_link_mobile3"),
-            numPoints: 10,
-            centerX: 960,
-            centerY: 540,
-            minRadius: 290,
-            maxRadius: 310,
-            minDuration: 2,
-            maxDuration: 5
-        });
-        var blob_mobile = createBlob({
-            element: document.querySelector("#main_img_link_mobile4"),
-            numPoints: 10,
-            centerX: 960,
-            centerY: 540,
-            minRadius: 300,
-            maxRadius: 330,
-            minDuration: 2,
-            maxDuration: 5
-        });
         
-        
-        //animation area
-        // var tl = gsap.timeline({repeat: -1, repeatDelay: 1});
-        //     tl.to("#outside_path", {x:-65,duration:5,  ease: "power1.inOut" });
-        //     tl.to("#outside_path", {x:0,duration:5,  ease: "power1.inOut" });
-        //     tl.to("#outside_path", {x:65,duration:5,  ease: "power1.inOut" });
-        //     tl.to("#outside_path", {x:0,duration:5,  ease: "power1.inOut" });
-        // var t2 = gsap.timeline({repeat: -1, repeatDelay: 1});
-        //     t2.to("#middle_path", {x:-65,duration:5,  ease: "power1.inOut" });
-        //     t2.to("#middle_path", {x:0,duration:5,  ease: "power1.inOut" });
-        //     t2.to("#middle_path", {x:65,duration:5,  ease: "power1.inOut" });
-        //     t2.to("#middle_path", {x:0,duration:5,  ease: "power1.inOut" });
-        // var t3 = gsap.timeline({repeat: -1, repeatDelay: 1});
-        //     t3.to("#inside_path", {x:-65,duration:5,  ease: "power1.inOut" });
-        //     t3.to("#inside_path", {x:0,duration:5,  ease: "power1.inOut" });
-        //     t3.to("#inside_path", {x:65,duration:5,  ease: "power1.inOut" });
-        //     t3.to("#inside_path", {x:0,duration:5,  ease: "power1.inOut" });
-        // var t4 = gsap.timeline({repeat: -1, repeatDelay: 1});
-        //     t4.to("#main_img_link", {x:-65,duration:5,  ease: "power1.inOut" });
-        //     t4.to("#main_img_link", {x:0,duration:5,  ease: "power1.inOut" });
-        //     t4.to("#main_img_link", {x:65,duration:5,  ease: "power1.inOut" });
-        //     t4.to("#main_img_link", {x:0,duration:5,  ease: "power1.inOut" });
-        
+                
         //PC path
         var blob1 = createBlob({
             element: document.querySelector("#outside_path"),
@@ -584,8 +427,8 @@
             centerY: 540,
             minRadius: 510,
             maxRadius: 540,
-            minDuration: 3,
-            maxDuration: 6
+            minDuration: 1,
+            maxDuration: 4
         });
 
         var blob2 = createBlob({
@@ -595,8 +438,8 @@
             centerY: 540,
             minRadius: 470,
             maxRadius: 505,
-            minDuration: 3,
-            maxDuration: 6
+            minDuration: 1,
+            maxDuration: 4
         });
         
         var blob3 = createBlob({
@@ -606,8 +449,8 @@
             centerY: 540,
             minRadius: 440,
             maxRadius: 465,
-            minDuration: 3,
-            maxDuration: 6
+            minDuration: 1,
+            maxDuration: 4
         });
 
         var blob12 = createBlob({
@@ -615,10 +458,10 @@
             numPoints: 10,
             centerX: 1150,
             centerY: 540,
-            minRadius: 410,
+            minRadius: 440,
             maxRadius: 465,
-            minDuration: 3,
-            maxDuration: 6
+            minDuration: 1,
+            maxDuration: 4
         });
 
         var blob4 = createBlob({
@@ -628,7 +471,7 @@
             centerY: 110,
             minRadius: 75,
             maxRadius: 80,
-            minDuration: 2,
+            minDuration: 1,
             maxDuration: 4
         });
         var blob4 = createBlob({
@@ -638,7 +481,7 @@
             centerY: 110,
             minRadius: 65,
             maxRadius: 68,
-            minDuration: 2,
+            minDuration: 1,
             maxDuration: 4
         });
         var blob5 = createBlob({
@@ -648,7 +491,7 @@
             centerY: 110,
             minRadius: 58,
             maxRadius: 63,
-            minDuration: 2,
+            minDuration: 1,
             maxDuration: 4
         });
 
@@ -659,7 +502,7 @@
             centerY: 840,
             minRadius: 75,
             maxRadius: 80,
-            minDuration: 2,
+            minDuration: 1,
             maxDuration: 4
         });
         var blob6 = createBlob({
@@ -669,7 +512,7 @@
             centerY: 840,
             minRadius: 65,
             maxRadius: 68,
-            minDuration: 2,
+            minDuration: 1,
             maxDuration: 4
         });
         var blob7 = createBlob({
@@ -679,7 +522,7 @@
             centerY: 840,
             minRadius: 58,
             maxRadius: 63,
-            minDuration: 2,
+            minDuration: 1,
             maxDuration: 4
         });
 
@@ -690,7 +533,7 @@
             centerY: 120,
             minRadius: 75,
             maxRadius: 80,
-            minDuration: 2,
+            minDuration: 1,
             maxDuration: 4
         });
         var blob9 = createBlob({
@@ -700,7 +543,7 @@
             centerY: 120,
             minRadius: 65,
             maxRadius: 68,
-            minDuration: 2,
+            minDuration: 1,
             maxDuration: 4
         });
         var blob9 = createBlob({
@@ -710,7 +553,7 @@
             centerY: 120,
             minRadius: 58,
             maxRadius: 63,
-            minDuration: 2,
+            minDuration: 1,
             maxDuration: 4
         });
 
@@ -721,7 +564,7 @@
             centerY: 815,
             minRadius: 75,
             maxRadius: 80,
-            minDuration: 2,
+            minDuration: 1,
             maxDuration: 4
         });
         var blob11 = createBlob({
@@ -731,7 +574,7 @@
             centerY: 815,
             minRadius: 65,
             maxRadius: 68,
-            minDuration: 2,
+            minDuration: 1,
             maxDuration: 4
         });
         var blob11 = createBlob({
@@ -741,8 +584,173 @@
             centerY: 815,
             minRadius: 58,
             maxRadius: 63,
-            minDuration: 2,
+            minDuration: 1,
             maxDuration: 4
+        });
+
+
+
+        // mobile path 
+        var blob_mobile = createBlob({
+            element: document.querySelector("#outside_path_mobile1"),
+            numPoints: 12,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 360,
+            maxRadius: 390,
+            minDuration: 1,
+            maxDuration: 5
+        });
+        var blob_mobile = createBlob({
+            element: document.querySelector("#middle_path_mobile1"),
+            numPoints: 11,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 320,
+            maxRadius: 350,
+            minDuration: 1,
+            maxDuration: 5
+        });
+        var blob_mobile = createBlob({
+            element: document.querySelector("#inside_path_mobile1"),
+            numPoints: 10,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 290,
+            maxRadius: 310,
+            minDuration: 1,
+            maxDuration: 5
+        });
+
+        var blob_mobile = createBlob({
+            element: document.querySelector("#outside_path_mobile2"),
+            numPoints: 12,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 360,
+            maxRadius: 390,
+            minDuration: 1,
+            maxDuration: 5
+        });
+        var blob_mobile = createBlob({
+            element: document.querySelector("#middle_path_mobile2"),
+            numPoints: 11,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 320,
+            maxRadius: 350,
+            minDuration: 1,
+            maxDuration: 5
+        });
+        var blob_mobile = createBlob({
+            element: document.querySelector("#inside_path_mobile2"),
+            numPoints: 10,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 290,
+            maxRadius: 310,
+            minDuration: 1,
+            maxDuration: 5
+        });
+        var blob_mobile = createBlob({
+            element: document.querySelector("#outside_path_mobile3"),
+            numPoints: 12,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 360,
+            maxRadius: 390,
+            minDuration: 1,
+            maxDuration: 5
+        });
+        var blob_mobile = createBlob({
+            element: document.querySelector("#middle_path_mobile3"),
+            numPoints: 11,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 320,
+            maxRadius: 350,
+            minDuration: 1,
+            maxDuration: 5
+        });
+        var blob_mobile = createBlob({
+            element: document.querySelector("#inside_path_mobile3"),
+            numPoints: 10,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 290,
+            maxRadius: 310,
+            minDuration: 1,
+            maxDuration: 5
+        });
+        var blob_mobile = createBlob({
+            element: document.querySelector("#outside_path_mobile4"),
+            numPoints: 12,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 360,
+            maxRadius: 390,
+            minDuration: 1,
+            maxDuration: 5
+        });
+        var blob_mobile = createBlob({
+            element: document.querySelector("#middle_path_mobile4"),
+            numPoints: 11,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 320,
+            maxRadius: 350,
+            minDuration: 1,
+            maxDuration: 5
+        });
+        var blob_mobile = createBlob({
+            element: document.querySelector("#inside_path_mobile4"),
+            numPoints: 10,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 290,
+            maxRadius: 310,
+            minDuration: 1,
+            maxDuration: 5
+        });
+        var blob_mobile = createBlob({
+            element: document.querySelector("#main_img_link_mobile1"),
+            numPoints: 10,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 290,
+            maxRadius: 310,
+            minDuration: 1,
+            maxDuration: 5
+        });
+        var blob_mobile = createBlob({
+            element: document.querySelector("#main_img_link_mobile2"),
+            numPoints: 10,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 290,
+            maxRadius: 310,
+            minDuration: 1,
+            maxDuration: 5
+        });
+        var blob_mobile = createBlob({
+            element: document.querySelector("#main_img_link_mobile3"),
+            numPoints: 10,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 290,
+            maxRadius: 310,
+            minDuration: 1,
+            maxDuration: 5
+        });
+        var blob_mobile = createBlob({
+            element: document.querySelector("#main_img_link_mobile4"),
+            numPoints: 10,
+            centerX: 960,
+            centerY: 540,
+            minRadius: 300,
+            maxRadius: 330,
+            minDuration: 1,
+            maxDuration: 5
         });
 
         function createBlob(options) {
@@ -846,7 +854,6 @@
             ymouse = e.clientY || e.pageY;
         });
     
-
         var ball = _('.ball');
         var x = void 0,
             y = void 0,
@@ -856,13 +863,8 @@
             ty = 0,
             key = -1;
 
-        
         var followMouse = function followMouse() {
             key = requestAnimationFrame(followMouse);
-
-            // console.log(x,y);
-            
-
             if(!x || !y) {
                 x = xmouse;
                 y = ymouse;
@@ -914,17 +916,21 @@
         $(".mobile_bar").click(function(){
             if($(".navitems_insidebar").hasClass("display_none")){
                 document.querySelector(".navitems_insidebar").classList.remove("display_none");
-                gsap.fromTo(".navitems_insidebar",{opacity:0},{opacity:1,duration:1.5});
-                gsap.to(".mobile_bar",{rotate:-90});
+                gsap.to(".mobile_bar",{rotate:-90,duration:0.5});
+                gsap.fromTo(".navitems_insidebar",{opacity:0},{opacity:1,duration:1});
             }
             else{
                 setTimeout(function(){
                     document.querySelector(".navitems_insidebar").classList.add("display_none");
                 },1500);
-                gsap.fromTo(".navitems_insidebar",{opacity:1},{opacity:0,duration:1.5});
-                gsap.to(".mobile_bar",{rotate:0});
+                gsap.to(".mobile_bar",{rotate:0,duration:0.5});
+                gsap.fromTo(".navitems_insidebar",{opacity:1},{opacity:0,duration:1}); 
             }
         });
+
+
+        
+        
           
     </script>
 </body>
