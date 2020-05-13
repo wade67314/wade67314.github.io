@@ -545,7 +545,7 @@ body {
 }
 
 .navitems_insidebar footer {
-  text-align: center;
+  margin-left: 30%;
   letter-spacing: 0.3em;
   line-height: 2em;
   margin-top: 5%;
@@ -573,12 +573,6 @@ body {
 
 .navitems_insidebar footer p {
   margin: 0;
-}
-
-.navitems_insidebar footer p:hover {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  color: #268BBF;
 }
 
 .wrap {

@@ -408,7 +408,8 @@ body {
         }
     }
     footer{
-        text-align: center;
+        // text-align: center;
+        margin-left: 30%;
         letter-spacing: 0.3em;
         line-height: 2em;
         margin-top:5%;
@@ -425,10 +426,6 @@ body {
         }
         p{
             margin: 0;
-            &:hover{
-                transition: 0.5s;
-                color: #268BBF;
-            }
         }
     }
 }
