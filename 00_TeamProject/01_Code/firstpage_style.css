@@ -23,7 +23,9 @@ body {
   margin: 0 10px;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
   bottom: 5%;
 }
 
@@ -393,7 +395,7 @@ body {
 }
 
 .navitems ul li a .navitem:after {
-  content: '';
+  content: "";
   display: block;
   border-top: 1px solid black;
   margin-left: 1.2em;
@@ -535,7 +537,7 @@ body {
 .navitems_insidebar ul li a:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  color: #268BBF;
+  color: #268bbf;
 }
 
 @media (max-width: 320px) {
@@ -556,6 +558,8 @@ body {
 @media (max-width: 414px) {
   .navitems_insidebar footer {
     font-size: 20px;
+    margin-left: 0;
+    text-align: center;
   }
 }
 

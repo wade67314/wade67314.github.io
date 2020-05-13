@@ -1,7 +1,7 @@
-$background_white:#eee;
+$background_white: #eee;
 // $swiperdot_black:black;
 
-*{
+* {
     font-family: "微軟正黑體";
 }
 body {
@@ -11,42 +11,43 @@ body {
     position: relative;
     background-color: $background_white;
 }
-.display_none{
+.display_none {
     display: none;
 }
-.display_block{
+.display_block {
     display: block;
 }
-.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 10px;
 }
-.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
     bottom: 5%;
-    
 }
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
     width: 15px;
     height: 15px;
     margin-bottom: 20px;
-    &:nth-child(1).swiper-pagination-bullet-active{
+    &:nth-child(1).swiper-pagination-bullet-active {
         background-color: red;
         width: 25px;
         height: 25px;
     }
 
-    &:nth-child(2).swiper-pagination-bullet-active{
+    &:nth-child(2).swiper-pagination-bullet-active {
         background-color: green;
         width: 25px;
         height: 25px;
     }
 
-    &:nth-child(3).swiper-pagination-bullet-active{
+    &:nth-child(3).swiper-pagination-bullet-active {
         background-color: red;
         width: 25px;
         height: 25px;
     }
 
-    &:nth-child(4).swiper-pagination-bullet-active{
+    &:nth-child(4).swiper-pagination-bullet-active {
         background-color: green;
         width: 25px;
         height: 25px;
@@ -65,31 +66,29 @@ body {
     clip-path: url(#outside_mask_mobile4);
 }
 
-
-.middle_img_mobile{
+.middle_img_mobile {
     clip-path: url(#middle_mask_mobile1);
 }
-.middle_img_mobile{
+.middle_img_mobile {
     clip-path: url(#middle_mask_mobile2);
 }
-.middle_img_mobile{
+.middle_img_mobile {
     clip-path: url(#middle_mask_mobile3);
 }
-.middle_img_mobile{
+.middle_img_mobile {
     clip-path: url(#middle_mask_mobile4);
 }
 
-
-.inside_img_mobile{
+.inside_img_mobile {
     clip-path: url(#inside_mask_mobile1);
 }
-.inside_img_mobile{
+.inside_img_mobile {
     clip-path: url(#inside_mask_mobile2);
 }
-.inside_img_mobile{
+.inside_img_mobile {
     clip-path: url(#inside_mask_mobile3);
 }
-.inside_img_mobile{
+.inside_img_mobile {
     clip-path: url(#inside_mask_mobile4);
 }
 
@@ -111,7 +110,7 @@ body {
         }
     }
 }
-.middle_contain{
+.middle_contain {
     width: 100%;
     height: 100vh;
     background-color: #eee;
@@ -120,12 +119,12 @@ body {
     .demo {
         position: fixed;
         width: 100%;
-        .middle_img{
+        .middle_img {
             clip-path: url(#middle_mask);
         }
     }
 }
-.inside_contain{
+.inside_contain {
     width: 100%;
     height: 100vh;
     background-color: #eee;
@@ -134,49 +133,48 @@ body {
     .demo {
         position: fixed;
         width: 100%;
-        .inside_img{
+        .inside_img {
             clip-path: url(#inside_mask);
         }
     }
 }
 
-.cover4{
+.cover4 {
     position: absolute;
     .demo {
         position: fixed;
         width: 100%;
-        .small_path{
+        .small_path {
             cursor: pointer;
             animation: float 4s ease-in-out infinite;
             @keyframes float {
                 0% {
-                  transform: translateY(0px);
+                    transform: translateY(0px);
                 }
                 50% {
-                  transform: translateY(-20px);
+                    transform: translateY(-20px);
                 }
                 100% {
-                  transform: translateY(0px);
+                    transform: translateY(0px);
                 }
             }
-            #about_text{
+            #about_text {
                 pointer-events: none;
             }
-            #contact_text{
+            #contact_text {
                 pointer-events: none;
             }
-            #service_text{
+            #service_text {
                 pointer-events: none;
             }
-            #visit_text{
+            #visit_text {
                 pointer-events: none;
             }
         }
-        
     }
 }
 
-.outside_contain_mobile{
+.outside_contain_mobile {
     width: 100%;
     height: auto;
     background-color: #eee;
@@ -184,14 +182,14 @@ body {
     .demo {
         position: fixed;
         width: 100%;
-        @media(max-width:500px){
+        @media (max-width: 500px) {
             height: 65%;
             top: 18%;
         }
     }
 }
 
-.middle_contain_mobile{
+.middle_contain_mobile {
     width: 100%;
     height: 100vh;
     background-color: #eee;
@@ -200,14 +198,14 @@ body {
     .demo {
         position: fixed;
         width: 100%;
-        @media(max-width:500px){
+        @media (max-width: 500px) {
             height: 65%;
             top: 18%;
         }
     }
 }
 
-.inside_contain_mobile{
+.inside_contain_mobile {
     width: 100%;
     height: 100vh;
     background-color: #eee;
@@ -216,80 +214,80 @@ body {
     .demo {
         position: fixed;
         width: 100%;
-        @media(max-width:500px){
+        @media (max-width: 500px) {
             height: 65%;
             top: 18%;
         }
     }
 }
-.img_link_mobile{
+.img_link_mobile {
     .demo {
         position: fixed;
         width: 100%;
-        @media(max-width:500px){
+        @media (max-width: 500px) {
             height: 65%;
             top: 18%;
         }
     }
 }
 
-.navitems{
+.navitems {
     position: absolute;
     box-sizing: border-box;
     height: 100vh;
-    padding:85px 0px 85px 105px ;
+    padding: 85px 0px 85px 105px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
-    @media(max-width: 1050px){
-        padding-left:30px
+    @media (max-width: 1050px) {
+        padding-left: 30px;
     }
-    @media(max-width: 768px){
+    @media (max-width: 768px) {
         width: 100%;
         height: unset;
         padding: 40px 40px 40px 40px;
     }
-    .logo{
+    .logo {
         width: 100%;
-        @media(max-width: 768px){
+        @media (max-width: 768px) {
             text-align: unset;
             margin-top: unset;
         }
-        img{
+        img {
             width: 135px;
             float: left;
-            @media(max-width: 768px){
+            @media (max-width: 768px) {
                 width: unset;
                 height: 100px;
             }
         }
     }
-    ul{
+    ul {
         list-style: none;
         padding: 0;
         margin: 0;
-        @media(max-width: 768px){
+        @media (max-width: 768px) {
             display: none;
         }
-        li{
+        li {
             margin-bottom: 5px;
-            a{
+            a {
                 text-decoration: none;
                 color: black;
-                .navitem{
+                .navitem {
                     font-size: 18px;
                     letter-spacing: 0.2em;
                     display: inline-block;
                     position: relative;
                     &:after {
-                        content: '';
+                        content: "";
                         display: block;
                         border-top: 1px solid black;
-                        margin-left:1.2em;
+                        margin-left: 1.2em;
                         margin-right: 0.8em;
                     }
-                    &:before{
+                    &:before {
                         display: block;
                         position: absolute;
                         left: 21.5px;
@@ -298,23 +296,23 @@ body {
                         letter-spacing: 0.05em;
                     }
                 }
-                .eng_navitem_about{
-                    &:before{
+                .eng_navitem_about {
+                    &:before {
                         content: "about us";
                     }
                 }
-                .eng_navitem_service{
-                    &:before{
+                .eng_navitem_service {
+                    &:before {
                         content: "service items";
                     }
                 }
-                .eng_navitem_visit{
-                    &:before{
+                .eng_navitem_visit {
+                    &:before {
                         content: "book a visit";
                     }
                 }
-                .eng_navitem_contact{
-                    &:before{
+                .eng_navitem_contact {
+                    &:before {
                         content: "contact us";
                     }
                 }
@@ -323,7 +321,7 @@ body {
     }
 }
 
-.mobile_bar{
+.mobile_bar {
     font-size: 36px;
     cursor: pointer;
     position: absolute;
@@ -331,16 +329,16 @@ body {
     right: 105px;
     top: 85px;
     transition: 1s;
-    @media(max-width: 1050px){
-        right:30px;
+    @media (max-width: 1050px) {
+        right: 30px;
     }
-    @media(max-width: 768px){
+    @media (max-width: 768px) {
         top: 40px;
-        right: 40px; 
+        right: 40px;
     }
 }
 
-.navitems_insidebar{
+.navitems_insidebar {
     position: absolute;
     top: 0;
     z-index: 9;
@@ -349,82 +347,83 @@ body {
     background-color: #eee;
     background-size: cover;
     background-position: center;
-    img{
+    img {
         width: 135px;
         margin-top: 85px;
         margin-left: 105px;
         transition: 1s ease-in-out;
-        @media(max-width: 1050px){
+        @media (max-width: 1050px) {
             margin-left: 30px;
         }
-        @media(max-width: 768px){
+        @media (max-width: 768px) {
             margin-top: 40px;
             margin-left: 40px;
             width: unset;
             height: 100px;
         }
     }
-    ul{
+    ul {
         margin: 0;
-        list-style:none;
-        padding: 0;     
+        list-style: none;
+        padding: 0;
         margin-top: 5%;
         margin-left: 30%;
         transition: 1s ease-in-out;
         // @media(max-width: 1050px){
         //     margin-top: 10%;
         // }
-        @media(max-width: 768px){
+        @media (max-width: 768px) {
             margin-top: 25%;
         }
-        @media(max-width:414px){
+        @media (max-width: 414px) {
             margin-top: 15%;
             margin-left: 25%;
         }
-        @media(max-width: 375px){
+        @media (max-width: 375px) {
             margin-top: 5%;
             margin-left: 20%;
         }
-        @media(max-width: 320px){
+        @media (max-width: 320px) {
             margin-top: 0;
         }
-        li{
+        li {
             display: block;
             margin-top: 1.5em;
             letter-spacing: 0.3em;
-            a{
+            a {
                 text-decoration: none;
                 font-size: 38px;
                 font-weight: bold;
                 color: white;
-                &:hover{
+                &:hover {
                     transition: 0.5s;
-                    color: #268BBF;
+                    color: #268bbf;
                 }
-                @media(max-width: 320px){
+                @media (max-width: 320px) {
                     font-size: 30px;
                 }
             }
         }
     }
-    footer{
-        // text-align: center;
+    footer {
         margin-left: 30%;
         letter-spacing: 0.3em;
         line-height: 2em;
-        margin-top:5%;
+        margin-top: 5%;
         font-size: 22px;
         color: white;
-        @media(max-width:414px){
+        @media (max-width: 414px) {
             font-size: 20px;
+            margin-left: 0;
+            text-align: center;
         }
-        @media(max-width:375px){
+        @media (max-width: 375px) {
             font-size: 18px;
         }
-        @media(max-width:320px){
+        @media (max-width: 320px) {
             font-size: 16px;
         }
-        p{
+        p {
             margin: 0;
         }
     }
@@ -437,7 +436,7 @@ body {
     left: -20px;
     bottom: 0;
     right: 0;
-    @media(max-width: 768px){
+    @media (max-width: 768px) {
         display: none;
     }
     .ball {
@@ -456,7 +455,7 @@ body {
         align-items: center;
         flex-wrap: wrap;
         flex-direction: column;
-        .outer_ball{
+        .outer_ball {
             z-index: 99;
             width: 65px;
             height: 65px;
