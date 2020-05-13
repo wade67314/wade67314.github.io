@@ -56,33 +56,34 @@
                     <path id="about_pathB" fill="#c8e3e4" opacity="1"></path>
                     <path id="about_pathM" fill="#a3dbdc" opacity="1"></path>
                     <path id="about_pathT" fill="#49C0C4" opacity="1"></path>
-                    <text id="about_text" x="480" y="120" font-size="25" fill="#ffffff"
-                        letter-spacing="0.075em">關於我們</text>
+                    <text id="about_text" x="480" y="111" font-size="25" fill="#ffffff" letter-spacing="0.075em">關於我們
+                        <tspan x="497" dy="1.3em" font-size="17" letter-spacing="0.030em">about us</tspan></text>
                 </g>
 
                 <g class="small_path2">
                     <path id="contact_pathB" fill="#ffd8d8" opacity="1"></path>
                     <path id="contact_pathM" fill="#ffafaf" opacity="1"></path>
                     <path id="contact_pathT" fill="#FF8686" opacity="1"></path>
-                    <text id="contact_text" x="455" y="850" font-size="25" fill="#ffffff"
-                        letter-spacing="0.075em">聯絡我們</text>
+                    <text id="contact_text" x="455" y="841" font-size="25" fill="#ffffff" letter-spacing="0.075em">聯絡我們
+                        <tspan x="465" dy="1.3em" font-size="17" letter-spacing="0.030em">contact us</tspan></text>
                 </g>
 
                 <g class="small_path3">
-                    <path id="service_pathB" fill="#ffebd9" opacity="1"></path>
-                    <path id="service_pathM" fill="#fcd7a2" opacity="1"></path>
-                    <path id="service_pathT" fill="#ffc364" opacity="1"></path>
-                    <text id="service_text" x="1555" y="130" font-size="25" fill="#ffffff"
-                        letter-spacing="0.075em">服務項目</text>
+                    <path id="service_pathB" fill="#FFEBC2" opacity="1"></path>
+                    <path id="service_pathM" fill="#FFC789" opacity="1"></path>
+                    <path id="service_pathT" fill="#FF9F57" opacity="1"></path>
+                    <text id="service_text" x="1555" y="120" font-size="25" fill="#ffffff" letter-spacing="0.075em">服務項目
+                        <tspan x="1554" dy="1.3em" font-size="17" letter-spacing="0.030em">service items</tspan></text>
                 </g>
 
                 <g class="small_path4">
                     <a href="./test/index.html">
-                        <path id="visit_pathB" fill="#d6ffb4" opacity="1"></path>
-                        <path id="visit_pathM" fill="#c7ff8f" opacity="1"></path>
+                        <path id="visit_pathB" fill="#C8EA7D" opacity="1"></path>
+                        <path id="visit_pathM" fill="#A5D650" opacity="1"></path>
                         <path id="visit_pathT" fill="#80af44" opacity="1"></path>
-                        <text id="visit_text" x="1700" y="825" font-size="25" fill="#ffffff"
-                            letter-spacing="0.075em">預約參觀</text>
+                        <text id="visit_text" x="1700" y="815" font-size="25" fill="#ffffff"
+                            letter-spacing="0.075em">預約參觀<tspan x="1705" dy="1.3em" font-size="17"
+                                letter-spacing="0.030em">book a visit</tspan></text>
                     </a>
                 </g>
             </g>
@@ -136,7 +137,7 @@
     <div class="mobile_bar">
         <div class="lineT"></div>
         <div class="lineB"></div>
-        <p>Menu</p>
+        <p class="bar_text">Menu</p>
     </div>
     <!-- <i class="fas fa-bars mobile_bar"></i> -->
 
@@ -208,7 +209,7 @@
                             <path id="outside_path_mobile2"></path>
                         </clipPath>
                     </svg>
-                    
+
                 </div>
                 <div class="middle_contain_mobile">
                     <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"
@@ -971,30 +972,36 @@
 
 
 
-        // mobile_bar clickevent
+        // mobile_bar clickevent & animation
         $(".mobile_bar").click(function () {
             if ($(".navitems_insidebar").hasClass("display_none")) {
-                // setTimeout(function () {},1500);
+                gsap.to(".lineT", { backgroundColor: "#eee", duration: 0.5 })
+                gsap.to(".lineB", { backgroundColor: "#eee", duration: 0.5 })
+                // gsap.to(".bar_text",{color:"#49c0c4",duration:0.5})
                 document.querySelector(".navitems_insidebar").classList.remove("display_none");
-                gsap.to(".mobile_bar", { rotate: -90,duration:0.5});
+                gsap.to(".mobile_bar", { rotate: -90, duration: 0.5 });
                 gsap.fromTo(".navitems_insidebar", { opacity: 0 }, { opacity: 1, duration: 0.5 });
-                
+
             }
             else {
                 setTimeout(function () {
                     document.querySelector(".navitems_insidebar").classList.add("display_none");
                 }, 1000);
-                gsap.to(".mobile_bar", { rotate: 0});
-                gsap.fromTo(".navitems_insidebar", { opacity: 0.5}, { opacity: 0, duration: 1 });
-                
+                gsap.to(".lineT", { backgroundColor: "#49c0c4", duration: 0.5 })
+                gsap.to(".lineB", { backgroundColor: "#49c0c4", duration: 0.5 })
+                // gsap.to(".bar_text",{color:"black",duration:0.5})
+                gsap.to(".mobile_bar", { rotate: 0, duration: 0.5 });
+                gsap.fromTo(".navitems_insidebar", { opacity: 1 }, { opacity: 0, duration: 1 });
+
             }
         });
+        var line = gsap.timeline({ repeat: -1 });
+        line.fromTo(".lineT", { width: 45 }, { width: 0, duration: 0.8, delay: 1 });
+        line.fromTo(".lineB", { width: 27 }, { width: 0, duration: 0.3 });
+        line.fromTo(".lineT", { width: 0 }, { width: 45, duration: 0.8, delay: 1 });
+        line.fromTo(".lineB", { width: 0 }, { width: 27, duration: 0.3 });
 
-        var line=gsap.timeline({repeat:-1});
-            line.fromTo(".lineT",{width:45},{width:0,duration:0.8});
-            line.fromTo(".lineB",{width:27},{width:0,duration:0.3});
-            line.fromTo(".lineT",{width:0},{width:45,duration:0.8});
-            line.fromTo(".lineB",{width:0},{width:27,duration:0.3});
+
         //ripple hover
         window.addEventListener('load', () => {
             const nodes = document.querySelectorAll('.ripple');
@@ -1010,7 +1017,7 @@
             }
         })
 
-        
+
 
     </script>
 </body>

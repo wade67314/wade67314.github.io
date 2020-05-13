@@ -426,7 +426,7 @@ body {
 @media (max-width: 768px) {
   .navitems .logo img {
     width: unset;
-    height: 100px;
+    height: 96px;
   }
 }
 
@@ -508,6 +508,7 @@ body {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  width: 45px;
 }
 
 @media (max-width: 1050px) {
@@ -543,8 +544,10 @@ body {
   background-color: #49c0c4;
 }
 
-.mobile_bar p {
+.mobile_bar .bar_text {
   margin: 0;
+  font-weight: bold;
+  font-size: 10.7px;
 }
 
 .navitems_insidebar {
@@ -577,7 +580,7 @@ body {
     margin-top: 40px;
     margin-left: 40px;
     width: unset;
-    height: 100px;
+    height: 96px;
   }
 }
 
