@@ -993,6 +993,8 @@
         var line=gsap.timeline({repeat:-1});
             line.fromTo(".lineT",{width:45},{width:0,duration:0.8});
             line.fromTo(".lineB",{width:27},{width:0,duration:0.3});
+            line.fromTo(".lineT",{width:0},{width:45,duration:0.8});
+            line.fromTo(".lineB",{width:0},{width:27,duration:0.3});
         //ripple hover
         window.addEventListener('load', () => {
             const nodes = document.querySelectorAll('.ripple');
