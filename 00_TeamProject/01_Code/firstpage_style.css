@@ -534,12 +534,6 @@ body {
   color: white;
 }
 
-.navitems_insidebar ul li a:hover {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  color: #268bbf;
-}
-
 @media (max-width: 320px) {
   .navitems_insidebar ul li a {
     font-size: 30px;
@@ -630,5 +624,48 @@ body {
   border: 1px solid grey;
   border-radius: 50%;
   position: absolute;
+}
+
+.ripple * {
+  display: inline-block;
+  text-shadow: 0 0 0 #fff;
+  color: transparent;
+}
+
+.ripple:hover * {
+  -webkit-animation: rippleEffect 2s infinite;
+          animation: rippleEffect 2s infinite;
+}
+
+@-webkit-keyframes rippleEffect {
+  40% {
+  }
+  50% {
+    -webkit-transform: translate3d(0.5em, 0, 0) scale(1.1);
+            transform: translate3d(0.5em, 0, 0) scale(1.1);
+    text-shadow: 0 0 20px #fff;
+    color: #268BBF;
+  }
+  75% {
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+            transform: translate3d(0, 0, 0) scale(1);
+    text-shadow: 0 0 0 #fff;
+  }
+}
+
+@keyframes rippleEffect {
+  40% {
+  }
+  50% {
+    -webkit-transform: translate3d(0.5em, 0, 0) scale(1.1);
+            transform: translate3d(0.5em, 0, 0) scale(1.1);
+    text-shadow: 0 0 20px #fff;
+    color: #268BBF;
+  }
+  75% {
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+            transform: translate3d(0, 0, 0) scale(1);
+    text-shadow: 0 0 0 #fff;
+  }
 }
 /*# sourceMappingURL=firstpage_style.css.map */

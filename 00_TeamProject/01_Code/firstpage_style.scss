@@ -395,13 +395,30 @@ body {
                 font-size: 38px;
                 font-weight: bold;
                 color: white;
-                &:hover {
-                    transition: 0.5s;
-                    color: #268bbf;
-                }
+                // &:hover {
+                //     transition: 0.5s;
+                //     color: #268bbf;
+                // }
                 @media (max-width: 320px) {
                     font-size: 30px;
                 }
+                // &:hover {
+                //     animation: rippleEffect 3s infinite;
+                //     @keyframes rippleEffect {
+                //         40% {
+                //             opacity: .35;
+                //         }
+                //         50% {
+                //             transform: translate3d(.5em, 0, 0) scale(1.1);
+                //             text-shadow: 0 0 20px #fff;
+                //         }
+                //         75% {
+                //             transform: translate3d(0, 0, 0) scale(1);
+                //             text-shadow: 0 0 0 #fff;
+                //             opacity: 1;
+                //         }
+                //     }
+                // }
             }
         }
     }
@@ -466,3 +483,33 @@ body {
         }
     }
 }
+
+.ripple {
+    * {
+        display: inline-block;
+        text-shadow: 0 0 0 #fff;
+        color: transparent;
+    }
+    &:hover {
+        * {
+            animation: rippleEffect 2s infinite;
+        }
+        @keyframes rippleEffect {
+            40% {
+                // opacity: .35;
+            }
+            50% {
+                transform: translate3d(.5em, 0, 0) scale(1.1);
+                text-shadow: 0 0 20px #fff;
+                color: #268BBF;
+                // opacity: 1;
+            }
+            75% {
+                transform: translate3d(0, 0, 0) scale(1);
+                text-shadow: 0 0 0 #fff;
+                // opacity: 1;
+            }
+        }
+    }
+}
+
