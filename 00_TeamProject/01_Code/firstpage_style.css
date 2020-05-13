@@ -19,44 +19,70 @@ body {
   display: block;
 }
 
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 36px;
+}
+
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 10px;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
-  bottom: 5%;
+.swiper-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.swiper-pagination-bullet {
-  width: 15px;
-  height: 15px;
+.swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
   margin-bottom: 20px;
 }
 
-.swiper-pagination-bullet:nth-child(1).swiper-pagination-bullet-active {
-  background-color: red;
-  width: 25px;
-  height: 25px;
+.swiper-pagination .swiper-pagination-bullet:nth-child(1) {
+  opacity: 1;
+  background: #a3dbdc;
 }
 
-.swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active {
-  background-color: green;
-  width: 25px;
-  height: 25px;
+.swiper-pagination .swiper-pagination-bullet:nth-child(1).swiper-pagination-bullet-active {
+  width: 17px;
+  height: 17px;
 }
 
-.swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active {
-  background-color: red;
-  width: 25px;
-  height: 25px;
+.swiper-pagination .swiper-pagination-bullet:nth-child(2) {
+  opacity: 1;
+  background: #ffafaf;
 }
 
-.swiper-pagination-bullet:nth-child(4).swiper-pagination-bullet-active {
-  background-color: green;
-  width: 25px;
-  height: 25px;
+.swiper-pagination .swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active {
+  width: 17px;
+  height: 17px;
+}
+
+.swiper-pagination .swiper-pagination-bullet:nth-child(3) {
+  opacity: 1;
+  background: #9acc52;
+}
+
+.swiper-pagination .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active {
+  width: 17px;
+  height: 17px;
+}
+
+.swiper-pagination .swiper-pagination-bullet:nth-child(4) {
+  opacity: 1;
+  background: #ffc789;
+}
+
+.swiper-pagination .swiper-pagination-bullet:nth-child(4).swiper-pagination-bullet-active {
+  width: 17px;
+  height: 17px;
 }
 
 .outside_img_mobile {
@@ -186,55 +212,23 @@ body {
   width: 100%;
 }
 
-.cover4 .demo .small_path {
+.cover4 .demo .small_paths {
   cursor: pointer;
-  -webkit-animation: float 4s ease-in-out infinite;
-          animation: float 4s ease-in-out infinite;
 }
 
-@-webkit-keyframes float {
-  0% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  50% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-}
-
-@keyframes float {
-  0% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  50% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-}
-
-.cover4 .demo .small_path #about_text {
+.cover4 .demo .small_paths #about_text {
   pointer-events: none;
 }
 
-.cover4 .demo .small_path #contact_text {
+.cover4 .demo .small_paths #contact_text {
   pointer-events: none;
 }
 
-.cover4 .demo .small_path #service_text {
+.cover4 .demo .small_paths #service_text {
   pointer-events: none;
 }
 
-.cover4 .demo .small_path #visit_text {
+.cover4 .demo .small_paths #visit_text {
   pointer-events: none;
 }
 
@@ -307,6 +301,76 @@ body {
     height: 65%;
     top: 18%;
   }
+}
+
+.swiper-slide {
+  height: 100vh;
+}
+
+.swiper-slide:nth-child(1) p:before {
+  content: "about us";
+}
+
+.swiper-slide:nth-child(2) p:before {
+  content: "about us";
+}
+
+.swiper-slide:nth-child(3) p:before {
+  content: "service items";
+}
+
+.swiper-slide:nth-child(4) p:before {
+  content: "contact us";
+}
+
+.mobile_title_main {
+  position: absolute;
+  top: 79%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #606060;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .mobile_title_main {
+    top: 88%;
+  }
+}
+
+@media (max-width: 500px) {
+  .mobile_title_main {
+    top: 79%;
+  }
+}
+
+.mobile_title_main p {
+  margin: 0;
+  position: relative;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.mobile_title_main p:after {
+  margin-left: -5px;
+  margin-right: -5px;
+  margin-top: 1.2em;
+  content: "";
+  display: block;
+  border-top: 2px #49c0c4 solid;
+}
+
+.mobile_title_main p:before {
+  display: block;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 1.7em;
+  font-size: 12px;
+  letter-spacing: 0;
+  width: 110px;
 }
 
 .navitems {
@@ -428,14 +492,22 @@ body {
 }
 
 .mobile_bar {
-  font-size: 36px;
   cursor: pointer;
+  font-size: 11px;
   position: absolute;
   z-index: 99;
-  right: 105px;
   top: 85px;
-  -webkit-transition: 1s;
-  transition: 1s;
+  right: 105px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 @media (max-width: 1050px) {
@@ -449,6 +521,30 @@ body {
     top: 40px;
     right: 40px;
   }
+}
+
+.mobile_bar .lineT {
+  width: 45px;
+  height: 4px;
+  margin-bottom: 5px;
+  background-color: #49c0c4;
+}
+
+@media (max-width: 768px) {
+  .mobile_bar .lineT {
+    margin-top: 33px;
+  }
+}
+
+.mobile_bar .lineB {
+  width: 27px;
+  height: 4px;
+  margin-bottom: 5px;
+  background-color: #49c0c4;
+}
+
+.mobile_bar p {
+  margin: 0;
 }
 
 .navitems_insidebar {
@@ -549,11 +645,16 @@ body {
   color: white;
 }
 
+@media (max-width: 540px) {
+  .navitems_insidebar footer {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
 @media (max-width: 414px) {
   .navitems_insidebar footer {
     font-size: 20px;
-    margin-left: 0;
-    text-align: center;
   }
 }
 

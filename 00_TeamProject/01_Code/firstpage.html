@@ -51,8 +51,8 @@
                 <path id="main_img_link" opacity="0"></path>
             </a>
 
-            <g class="small_path">
-                <g>
+            <g class="small_paths">
+                <g class="small_path1">
                     <path id="about_pathB" fill="#c8e3e4" opacity="1"></path>
                     <path id="about_pathM" fill="#a3dbdc" opacity="1"></path>
                     <path id="about_pathT" fill="#49C0C4" opacity="1"></path>
@@ -60,7 +60,7 @@
                         letter-spacing="0.075em">關於我們</text>
                 </g>
 
-                <g>
+                <g class="small_path2">
                     <path id="contact_pathB" fill="#ffd8d8" opacity="1"></path>
                     <path id="contact_pathM" fill="#ffafaf" opacity="1"></path>
                     <path id="contact_pathT" fill="#FF8686" opacity="1"></path>
@@ -68,7 +68,7 @@
                         letter-spacing="0.075em">聯絡我們</text>
                 </g>
 
-                <g>
+                <g class="small_path3">
                     <path id="service_pathB" fill="#ffebd9" opacity="1"></path>
                     <path id="service_pathM" fill="#fcd7a2" opacity="1"></path>
                     <path id="service_pathT" fill="#ffc364" opacity="1"></path>
@@ -76,7 +76,7 @@
                         letter-spacing="0.075em">服務項目</text>
                 </g>
 
-                <g>
+                <g class="small_path4">
                     <a href="./test/index.html">
                         <path id="visit_pathB" fill="#d6ffb4" opacity="1"></path>
                         <path id="visit_pathM" fill="#c7ff8f" opacity="1"></path>
@@ -133,7 +133,12 @@
         </ul>
     </nav>
 
-    <i class="fas fa-bars mobile_bar"></i>
+    <div class="mobile_bar">
+        <div class="lineT"></div>
+        <div class="lineB"></div>
+        <p>Menu</p>
+    </div>
+    <!-- <i class="fas fa-bars mobile_bar"></i> -->
 
     <div class="wrap">
         <div class="ball">
@@ -188,6 +193,9 @@
                         </a>
                     </svg>
                 </div>
+                <div class="mobile_title_main">
+                    <p>關於滿果</p>
+                </div>
             </div>
             <!-- slide2 -->
             <div class="swiper-slide">
@@ -200,6 +208,7 @@
                             <path id="outside_path_mobile2"></path>
                         </clipPath>
                     </svg>
+                    
                 </div>
                 <div class="middle_contain_mobile">
                     <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"
@@ -228,6 +237,9 @@
                             <path id="main_img_link_mobile2" opacity="0"></path>
                         </a>
                     </svg>
+                </div>
+                <div class="mobile_title_main">
+                    <p>關於滿果</p>
                 </div>
             </div>
             <!-- slide3 -->
@@ -270,6 +282,9 @@
                         </a>
                     </svg>
                 </div>
+                <div class="mobile_title_main">
+                    <p>服務項目</p>
+                </div>
             </div>
             <!-- slide4 -->
             <div class="swiper-slide">
@@ -311,6 +326,9 @@
                         </a>
                     </svg>
                 </div>
+                <div class="mobile_title_main">
+                    <p>聯絡我們</p>
+                </div>
             </div>
         </div>
         <!-- Add Pagination -->
@@ -343,9 +361,13 @@
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script type="text/javascript" src="./float_animation.js"></script>
+
 
 
     <script>
@@ -952,21 +974,25 @@
         // mobile_bar clickevent
         $(".mobile_bar").click(function () {
             if ($(".navitems_insidebar").hasClass("display_none")) {
+                // setTimeout(function () {},1500);
                 document.querySelector(".navitems_insidebar").classList.remove("display_none");
-                gsap.to(".mobile_bar", { rotate: -90, duration: 0.5 });
-                gsap.fromTo(".navitems_insidebar", { opacity: 0 }, { opacity: 1, duration: 1 });
+                gsap.to(".mobile_bar", { rotate: -90,duration:0.5});
+                gsap.fromTo(".navitems_insidebar", { opacity: 0 }, { opacity: 1, duration: 0.5 });
+                
             }
             else {
                 setTimeout(function () {
                     document.querySelector(".navitems_insidebar").classList.add("display_none");
-                }, 1500);
-                gsap.to(".mobile_bar", { rotate: 0, duration: 0.5 });
-                gsap.fromTo(".navitems_insidebar", { opacity: 1 }, { opacity: 0, duration: 1 });
+                }, 1000);
+                gsap.to(".mobile_bar", { rotate: 0});
+                gsap.fromTo(".navitems_insidebar", { opacity: 0.5}, { opacity: 0, duration: 1 });
+                
             }
         });
 
-
-
+        var line=gsap.timeline({repeat:-1});
+            line.fromTo(".lineT",{width:45},{width:0,duration:0.8});
+            line.fromTo(".lineB",{width:27},{width:0,duration:0.3});
         //ripple hover
         window.addEventListener('load', () => {
             const nodes = document.querySelectorAll('.ripple');
@@ -981,6 +1007,8 @@
                 }
             }
         })
+
+        
 
     </script>
 </body>
