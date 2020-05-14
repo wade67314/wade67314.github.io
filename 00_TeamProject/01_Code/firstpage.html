@@ -377,10 +377,10 @@
             document.querySelector(".inside_img").setAttribute("href", "../02_Img/main_background.jpg")
             document.querySelector(".middle_img").setAttribute("href", "../02_Img/main_background.jpg")
             document.querySelector(".outside_img").setAttribute("href", "../02_Img/main_background.jpg")
-            gsap.fromTo(".inside_img", {  opacity: 0}, { opacity: 1, duration: 2 })
-            gsap.fromTo(".middle_img", {  opacity: 0}, { opacity: 1, duration: 2 })
-            gsap.fromTo(".outside_img", {  opacity: 0}, { opacity: 1, duration: 2 })
-            gsap.fromTo("#main_img_link", {  scale: 0 }, { scale: 1, duration: 2 })
+            gsap.fromTo(".inside_img", { opacity: 0 }, { opacity: 1, duration: 2 })
+            gsap.fromTo(".middle_img", { opacity: 0 }, { opacity: 1, duration: 2 })
+            gsap.fromTo(".outside_img", { opacity: 0 }, { opacity: 1, duration: 2 })
+            gsap.fromTo("#main_img_link", { scale: 0 }, { scale: 1, duration: 2 })
 
         })
         document.querySelector("#contact_pathT").addEventListener("click", function () {
@@ -390,10 +390,10 @@
             gsap.fromTo(".inside_img", { opacity: 0 }, { opacity: 1, duration: 2.5 })
             gsap.fromTo(".middle_img", { opacity: 0 }, { opacity: 1, duration: 2.5 })
             gsap.fromTo(".outside_img", { opacity: 0 }, { opacity: 1, duration: 2.5 })
-            gsap.fromTo(".inside_img", {  opacity: 0}, { opacity: 1, duration: 2 })
-            gsap.fromTo(".middle_img", {  opacity: 0}, { opacity: 1, duration: 2 })
-            gsap.fromTo(".outside_img", {  opacity: 0}, { opacity: 1, duration: 2 })
-            gsap.fromTo("#main_img_link", {  scale: 0 }, { scale: 1, duration: 2 })
+            gsap.fromTo(".inside_img", { opacity: 0 }, { opacity: 1, duration: 2 })
+            gsap.fromTo(".middle_img", { opacity: 0 }, { opacity: 1, duration: 2 })
+            gsap.fromTo(".outside_img", { opacity: 0 }, { opacity: 1, duration: 2 })
+            gsap.fromTo("#main_img_link", { scale: 0 }, { scale: 1, duration: 2 })
         })
         document.querySelector("#service_pathT").addEventListener("click", function () {
             document.querySelector(".inside_img").setAttribute("href", "../02_Img/service_PC.jpg")
@@ -402,10 +402,10 @@
             gsap.fromTo(".inside_img", { opacity: 0 }, { opacity: 1, duration: 2.5 })
             gsap.fromTo(".middle_img", { opacity: 0 }, { opacity: 1, duration: 2.5 })
             gsap.fromTo(".outside_img", { opacity: 0 }, { opacity: 1, duration: 2.5 })
-            gsap.fromTo(".inside_img", {  opacity: 0}, { opacity: 1, duration: 2 })
-            gsap.fromTo(".middle_img", {  opacity: 0}, { opacity: 1, duration: 2 })
-            gsap.fromTo(".outside_img", {  opacity: 0}, { opacity: 1, duration: 2 })
-            gsap.fromTo("#main_img_link", {  scale: 0 }, { scale: 1, duration: 2 })
+            gsap.fromTo(".inside_img", { opacity: 0 }, { opacity: 1, duration: 2 })
+            gsap.fromTo(".middle_img", { opacity: 0 }, { opacity: 1, duration: 2 })
+            gsap.fromTo(".outside_img", { opacity: 0 }, { opacity: 1, duration: 2 })
+            gsap.fromTo("#main_img_link", { scale: 0 }, { scale: 1, duration: 2 })
         })
 
 
@@ -900,7 +900,7 @@
             return min + (max - min) * Math.random();
         }
 
-       
+
 
 
         //ball follow mouse
@@ -973,27 +973,27 @@
 
 
         // mobile_bar clickevent & animation
-    
-        $(".mobile_bar").click(function () {
-        if ($(".navitems_insidebar").hasClass("display_none")) {
-            document.querySelector(".navitems_insidebar").classList.remove("display_none");
-            gsap.to(".lineT", { backgroundColor: "#eee", duration: 0.5 })
-            gsap.to(".lineB", { backgroundColor: "#eee", duration: 0.5 })
-            gsap.to(".mobile_bar", { rotate: -90, duration: 0.5 });
-            gsap.fromTo(".navitems_insidebar", { opacity: 0 }, { opacity: 1, duration: 0.5 });
 
-        }
-        else {
-            setTimeout(function () {
-                document.querySelector(".navitems_insidebar").classList.add("display_none");
-            }, 1000);
-            gsap.to(".lineT", { backgroundColor: "#49c0c4", duration: 0.5 })
-            gsap.to(".lineB", { backgroundColor: "#49c0c4", duration: 0.5 })
-            gsap.to(".mobile_bar", { rotate: 0, duration: 0.5 });
-            gsap.fromTo(".navitems_insidebar", { opacity: 1 }, { opacity: 0, duration: 1 });
-        }
+        $(".mobile_bar").click(function () {
+            if ($(".navitems_insidebar").hasClass("display_none")) {
+                document.querySelector(".navitems_insidebar").classList.remove("display_none");
+                gsap.to(".lineT", { backgroundColor: "#eee", duration: 0.5 })
+                gsap.to(".lineB", { backgroundColor: "#eee", duration: 0.5 })
+                gsap.to(".mobile_bar", { rotate: -90, duration: 0.5 });
+                gsap.fromTo(".navitems_insidebar", { opacity: 0 }, { opacity: 1, duration: 0.5 });
+
+            }
+            else {
+                setTimeout(function () {
+                    document.querySelector(".navitems_insidebar").classList.add("display_none");
+                }, 1000);
+                gsap.to(".lineT", { backgroundColor: "#49c0c4", duration: 0.5 })
+                gsap.to(".lineB", { backgroundColor: "#49c0c4", duration: 0.5 })
+                gsap.to(".mobile_bar", { rotate: 0, duration: 0.5 });
+                gsap.fromTo(".navitems_insidebar", { opacity: 1 }, { opacity: 0, duration: 1 });
+            }
         })
-        
+
         var line = gsap.timeline({ repeat: -1 });
         line.fromTo(".lineT", { width: 45 }, { width: 0, duration: 0.8, delay: 1 });
         line.fromTo(".lineB", { width: 27 }, { width: 0, duration: 0.3 });

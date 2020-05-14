@@ -25,7 +25,9 @@ body {
 }
 .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: 36px;
-    
+    @media(min-width:640px){
+        bottom: 48px;
+    }
 }
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 10px;
@@ -34,6 +36,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    // z-index: 1;
     .swiper-pagination-bullet {
         width: 12px;
         height: 12px;
@@ -258,6 +261,7 @@ body {
     position: absolute;
     top: 79%;
     left: 50%;
+    // z-index: 99;
     transform: translateX(-50%);
     color: $mobile_title_color;
     text-align: center;
