@@ -321,12 +321,24 @@ body {
   content: "about us";
 }
 
+.swiper-slide:nth-child(2) p:after {
+  border-color: #ffafaf;
+}
+
 .swiper-slide:nth-child(3) p:before {
   content: "service items";
 }
 
+.swiper-slide:nth-child(3) p:after {
+  border-color: #9acc52;
+}
+
 .swiper-slide:nth-child(4) p:before {
   content: "contact us";
+}
+
+.swiper-slide:nth-child(4) p:after {
+  border-color: #ffc789;
 }
 
 .mobile_title_main {

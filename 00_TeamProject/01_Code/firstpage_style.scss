@@ -250,11 +250,20 @@ body {
     &:nth-child(2) p:before{
         content: "about us";
     }
+    &:nth-child(2) p:after{
+        border-color: $bullet_pink;
+    }
     &:nth-child(3) p:before{
         content: "service items";
     }
+    &:nth-child(3) p:after{
+        border-color: $bullet_green;
+    }
     &:nth-child(4) p:before{
         content: "contact us";
+    }
+    &:nth-child(4) p:after{
+        border-color: $bullet_orange;
     }
 }
 .mobile_title_main{
@@ -282,8 +291,7 @@ body {
             margin-top: 1.4em;
             content: "";
             display: block;
-            border-top: 2px $mobile_title_border_blue solid;
-                        
+            border-top: 2px $mobile_title_border_blue solid;      
         }
         &:before{
             display: block;
