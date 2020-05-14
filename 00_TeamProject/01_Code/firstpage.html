@@ -342,15 +342,10 @@
         <img src="../02_Img/logo.png" alt="">
         <ul>
             <li><a class="ripple" href="./firstpage.html">首頁</a></li>
-            <!-- <i class="far fa-home-alt"></i> -->
             <li><a class="ripple" href="">關於滿果</a></li>
-            <!-- <i class="far fa-person-sign"></i> -->
             <li><a class="ripple" href="">服務項目</a></li>
-            <!-- <i class="fal fa-baby"></i> -->
             <li><a class="ripple" href="">預約參觀</a></li>
-            <!-- <i class="fal fa-calendar-check"></i> -->
             <li><a class="ripple" href="">聯絡我們</a></li>
-            <!-- <i class="fal fa-phone-volume"></i> -->
         </ul>
         <footer>
             <p content="telephone=no">
@@ -360,16 +355,11 @@
         </footer>
     </div>
 
-
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script type="text/javascript" src="./float_animation.js"></script>
-
-
 
     <script>
         //click to change middle img
@@ -463,7 +453,6 @@
             mouseout();
         }
 
-
         //swiper
         var swiper = new Swiper('.swiper-container', {
             pagination: {
@@ -475,9 +464,6 @@
             speed: 1000,
             shadow: false
         });
-
-
-
 
         //PC path
         var blob1 = createBlob({
@@ -970,8 +956,6 @@
             }
         }
 
-
-
         // mobile_bar clickevent & animation
 
         $(".mobile_bar").click(function () {
@@ -1000,7 +984,6 @@
         line.fromTo(".lineT", { width: 0 }, { width: 45, duration: 0.8, delay: 1 });
         line.fromTo(".lineB", { width: 0 }, { width: 27, duration: 0.3 });
 
-
         //ripple hover
         window.addEventListener('load', () => {
             const nodes = document.querySelectorAll('.ripple');
@@ -1015,8 +998,6 @@
                 }
             }
         })
-
-
 
     </script>
 </body>
