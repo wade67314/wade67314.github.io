@@ -438,6 +438,9 @@ body {
     background-color: #eee;
     background-size: cover;
     background-position: center;
+    @media(max-height: 414px){
+        height: auto;
+    }
     img {
         width: 135px;
         margin-top: 85px;
