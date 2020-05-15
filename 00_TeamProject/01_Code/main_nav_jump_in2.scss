@@ -13,7 +13,8 @@
     background-color: rgb(92, 224, 222);
     position: fixed;
     z-index: 99;
-    display: flex;
+    display: none;
+    
     .logo {
         height: 110px;
         padding: 20px 60px 20px 200px;

@@ -4,9 +4,7 @@
   background-color: #5ce0de;
   position: fixed;
   z-index: 99;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
 }
 
 .nav_jump-in .logo {
@@ -119,4 +117,4 @@
 .nav_jump-in .nav_button .button .button_img_contact {
   background-image: url(./img/nav_img_batton_contact.svg);
 }
-/*# sourceMappingURL=main_nav_jump_in.css.map */
+/*# sourceMappingURL=main_nav_jump_in2.css.map */
