@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./boxshadow.css">
+</head>
+<body>
+    <div class="bg ui-content">
+        <div class="">
+            <div class="block buttom"></div>
+            <div class="block middle"></div>
+            <div class="block top"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+    
+    <script>
+        var mx, my, timer;
+        var z = 2;
+        // $(document).on('click', function (e) {
+        $('.ui-content').on('click', function (e) {
+            // mx = e.pageX;
+            // my = e.pageY;
+            mx = e.offsetX;
+            my = e.offsetY;
+            z = z + 1;
+            _wave(mx, my, z);
+        });
+
+        function _wave(i, j, k) {
+            $('.ui-content').prepend(
+                '<div class="wave-position water' + k + '" style="z-index:' + k + ';top:' + (j - 150) + 'px;left:' + (i - 150) + 'px;">' +
+                '<div class="wave-body">' +
+                '<div class="wave wave5"></div>' +
+                '<div class="wave wave4"></div>' +
+                '<div class="wave wave3"></div>' +
+                '<div class="wave wave2"></div>' +
+                '<div class="wave wave1"></div>' +
+                '<div class="wave wave0"></div>' +
+                '</div>' +
+                '</div>'
+            );
+            setTimeout(function () {
+                $('.water' + k).remove();
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle{
+        width: 200px;
+        height: 200px;
+        border-radius: 48%;
+        /* border-top-left-radius : 48%;
+        border-top-right-radius : 48%;
+        border-bottom-left-radius : 48%;
+        border-bottom-right-radius : 48%; */
+        background: #27a9e1;
+        position: absolute;
+        }
+
+        .circle2{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        /* border-top-left-radius : 50%;
+        border-top-right-radius : 50%;
+        border-bottom-left-radius : 50%;
+        border-bottom-right-radius : 50%; */
+        background: #27a9e1;
+        position: absolute;
+        }
+
+        @keyframes rotating {
+            from{
+                -webkit-transform: rotate(0deg);
+            }
+            to{
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        .rotating {
+            animation: rotating 2s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="circle rotating">
+        <div class="circle2"></div>
+    </div>
+</body>
+</html>
