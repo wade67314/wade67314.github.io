@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>左右浮動-img</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .footer {
+            /* width: 100%; */
+            /* height: 300px; */
+
+            overflow-x: hidden;
+        }
+
+        .footer_content {
+
+            position: relative;
+        }
+
+        .updown_1 {
+            position: absolute;
+            animation: Updown 4s infinite alternate;
+            z-index: 3;
+        }
+
+        .updown_2 {
+            position: absolute;
+            animation: Updown 3s infinite alternate;
+            z-index: 2;
+        }
+
+        .updown_3 {
+            position: absolute;
+            animation: Updown 6s infinite alternate;
+            z-index: 1;
+
+
+
+        }
+
+
+        @keyframes Updown {
+            from {
+                margin-left: -60px;
+            }
+
+            to {
+                margin-left: -0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="footer">
+
+        <div class="footer_content">
+
+            <div class="updown_1">
+                <img src="./img/grass01.png" />
+            </div>
+
+            <div class="updown_2">
+                <img src="./img/grass02.png" />
+            </div>
+
+            <div class="updown_3">
+                <img src="./img/grass03.png" />
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
+
+
+
+
+<!doctype html>
+<html>
