@@ -1,0 +1,91 @@
+// page_one_content
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: auto;
+}
+
+@media screen and (max-width:1280px) {
+    .park_features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nursery_room_features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.page_one_content {
+    background-image: url(./img/page_one_content_bg_img.svg);
+    width: 100%;
+
+    .park_features {
+        display: flex;
+        padding-bottom: 150px;
+
+        .park_features_left {
+            width: 570px;
+        }
+
+        .park_features_right {
+            width: 570px;
+        }
+        
+    }
+
+    .nursery_room_features {
+        display: flex;
+        padding-bottom: 150px;
+
+        .nursery_room_features_left {
+            width: 584px;
+        }
+
+        .nursery_room_features_right {
+            width: 555PX;
+        }
+    }
+
+    .toddler_daily {
+        padding-bottom: 150px;
+
+        .title_box {
+            display: flex;
+            justify-content: center;
+
+            .toddler_daily_title {
+                width: 360px;
+            }
+        }
+        
+        .photo {
+            display: flex;
+
+            .toddler_daily_left {
+                width: 550px;
+            }
+
+            .toddler_daily_right {
+                width: 589px;
+            }
+        }
+    }
+
+    .book {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 150px;
+
+        .page_one_button_book {
+            width: 424px;
+        }
+    }
+}

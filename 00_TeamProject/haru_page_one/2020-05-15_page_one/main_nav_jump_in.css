@@ -1,0 +1,123 @@
+@charset "UTF-8";
+.nav_jump-in {
+  width: 100%;
+  background-color: #5ce0de;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  z-index: 99;
+  display: none;
+}
+
+.nav_jump-in .logo {
+  height: 110px;
+  padding: 20px 60px 20px 200px;
+  margin: 0;
+}
+
+.nav_jump-in .nav_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.nav_jump-in .nav_button .button {
+  padding: 45px 0px 40px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.nav_jump-in .nav_button .button:hover {
+  color: #686869;
+  cursor: pointer;
+}
+
+.nav_jump-in .nav_button .button:hover .button_img {
+  -webkit-animation: button_img 2.5s infinite;
+          animation: button_img 2.5s infinite;
+}
+
+@-webkit-keyframes button_img {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+  50% {
+    top: 10px;
+    left: 0px;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+  }
+}
+
+@keyframes button_img {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+  50% {
+    top: 10px;
+    left: 0px;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+  }
+}
+
+.nav_jump-in .nav_button .button .button_text {
+  text-align: center;
+}
+
+.nav_jump-in .nav_button .button .button_text h1 {
+  font-size: 22px;
+  margin: 0;
+  padding-top: 20px;
+  font-family: "微軟正黑體";
+  letter-spacing: 6px;
+  font-weight: lighter;
+}
+
+.nav_jump-in .nav_button .button .button_text h2 {
+  font-size: 15px;
+  margin: 0;
+  font-family: "Arial";
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+.nav_jump-in .nav_button .button .button_img {
+  width: 50px;
+  height: 66px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+}
+
+.nav_jump-in .nav_button .button .button_img_about {
+  background-image: url(./img/nav_img_batton_about.svg);
+}
+
+.nav_jump-in .nav_button .button .button_img_service {
+  background-image: url(./img/nav_img_batton_service.svg);
+}
+
+.nav_jump-in .nav_button .button .button_img_book {
+  background-image: url(./img/nav_img_batton_book.svg);
+}
+
+.nav_jump-in .nav_button .button .button_img_contact {
+  background-image: url(./img/nav_img_batton_contact.svg);
+}
+/*# sourceMappingURL=main_nav_jump_in.css.map */
