@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAWI,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EADvC,AAAA,YAAY,CAAC;IAEL,SAAS,EAAE,IAAI;GAEtB",
+    "sources": [
+        "phone_style.scss"
+    ],
+    "names": [],
+    "file": "phone_style.css"
+}

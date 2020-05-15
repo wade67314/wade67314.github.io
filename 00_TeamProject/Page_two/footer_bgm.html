@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>左右浮動</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .footer {
+            width: 100%;
+            height: 100px;
+
+            overflow-x: hidden;
+            border: 2px solid;
+        }
+
+        .footer_content {
+
+            position: relative;
+        }
+
+        .updown_1 {
+            background-image: url('./img/grass-04.svg');
+            background-size: 60% auto;
+            padding: 100% 100%;
+            position: absolute;
+            animation: Updown 6s infinite alternate;
+            z-index: 3;
+            top: 60%;
+            background-repeat: no-repeat;
+            /* background-size:initial */
+        }
+
+        .updown_2 {
+            
+            background-image: url('./img/grass-05.svg');
+            background-size: 60% auto;
+            background-repeat: no-repeat;
+            position: absolute;
+            animation: Updown1 4s infinite alternate;
+            z-index: 2;
+            padding: 100%;
+            /* top: 20px; */
+            
+        }
+
+        .updown_3 {
+            
+            background-image: url('./img/grass-06.svg');
+            background-size: 60% auto;
+            background-repeat: no-repeat;
+            position: absolute;
+            animation: Updown 3s infinite ;
+            z-index: 1;
+            top: 0;
+            float: left;
+            padding: 100%;
+           
+        }
+
+
+        @keyframes Updown1 {
+            from {
+                margin-top: 40px;
+            }
+
+            to {
+                margin-top: 0px;
+            }
+        }
+        
+
+.footer_bottom_bgc{
+    background-color: #46c134;
+    padding: 32% 50%;
+}
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="footer">
+        <div class="footer_content">
+
+            <div class="updown_1">
+                <!-- <img src="./img/grass01.png" /> -->
+            </div>
+
+            <div class="updown_2">
+                <!-- <img src="./img/grass02.png" /> -->
+            </div>
+
+            <div class="updown_3">
+                <!-- <img src="./img/grass03.png" /> -->
+            </div>
+
+        </div>
+    </div>
+<div class="footer_bottom">
+    <div class="footer_bottom_bgc"></div>
+</div>
+
+</body>
+
+</html>
+
+
+
+
+<!doctype html>
+<html>

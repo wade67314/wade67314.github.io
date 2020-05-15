@@ -1,0 +1,119 @@
+@import'_style-guild';
+
+body {
+    margin: 0;
+}
+
+
+//navbar_滿果_nav_jump-in -->
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: auto;
+}
+
+
+.nav_jump-in {
+    width: 100%;
+    background-color: #FCB465;
+    display: flex;
+    position: sticky;
+    top: 0px;
+    z-index: 20;
+
+           .logo {
+        height: 110px;
+        position: absolute;
+        padding: 20px 0px 20px 200px;
+        margin: 0;
+    }
+
+    .nav_button {
+        display: flex;
+        justify-content: space-around;
+
+        .button {
+            padding: 40px 0px 40px 0px;
+            display: flex;
+            color: #fff;
+            transition: 0.5s;
+            
+
+            &:hover {
+                color: rgb(104, 104, 105);
+                cursor: pointer;
+
+                .button_img {
+                    animation: button_img 2.5s infinite;
+                }
+
+                @keyframes button_img {
+                    0%   {top: 0px; left: 0px;}
+                    50%  {top: 10px; left: 0px;;}
+                    100%  {top: 0px; left: 0px;;}
+                }
+
+                // .button_img_about{               background-image: url(./img/nav_img_batton_about_black.svg);
+                // }
+
+                // .button_img_service {
+                //     background-image: url(./img/nav_img_batton_service_black.svg);
+                // }
+
+                // .button_img_book {
+                //     background-image: url(./img/nav_img_batton_book_black.svg);
+                // }
+
+                // .button_img_contact {
+                //     background-image: url(./img/nav_img_batton_contact_black.svg);
+                // }
+            }
+          
+            .button_text {
+                text-align: center;
+                
+                h1 {
+                    font-size: 22px;
+                    margin: 0;
+                    padding-top: 20px;
+                    font-family: "微軟正黑體";
+                    letter-spacing: 6px;
+
+                }
+    
+                h2 {
+                    font-size: 15px;
+                    margin: 0;
+                    font-family: "Arial";
+                    letter-spacing: 1px;
+
+                }
+            }
+
+            .button_img {
+                width: 155px;
+                height: 66px;
+                transition: 0.5s;
+                position: relative;
+                background-repeat: no-repeat;
+                margin-left: 10px;
+            }
+
+            .button_img_about {
+                background-image: url(./img/nav_img_batton_about.svg);
+            }
+            
+            .button_img_service {
+                background-image: url(./img/nav_img_batton_service.svg);
+            }
+
+            .button_img_book {
+                background-image: url(./img/nav_img_batton_book.svg);
+            }
+
+            .button_img_contact {
+                background-image: url(./img/nav_img_batton_contact.svg);
+            }
+        }
+    }
+}

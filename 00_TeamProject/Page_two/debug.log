@@ -1,0 +1,3 @@
+[0513/172348.842:ERROR:scoped_process_suspend.cc(31)] NtSuspendProcess: 嘗試存取現有的處理程序。 (0xc000010a)
+[0513/172348.906:ERROR:process_info.cc(118)] ReadProcessMemory bool __cdecl crashpad::(anonymous namespace)::ReadStruct(HANDLE, crashpad::WinVMAddress, T *) [T = crashpad::process_types::PEB<crashpad::process_types::internal::Traits64>]: 僅完成部分的 ReadProcessMemory 或 WriteProcessMemory 要求。 (0x12B)
+[0513/172348.906:ERROR:process_info.cc(551)] ReadProcessData failed

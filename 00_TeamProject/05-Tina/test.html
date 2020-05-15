@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body{
+            height: 3000px;
+        }
+
+        .box{
+            width:50px;
+            height:50px;
+            background-color: red;
+            position: fixed;
+            right:30px;
+            bottom:30px;
+        }
+
+        #navbar {
+            width: 100%;
+            position: fixed;
+            z-index: 99;
+            background-color: rgba(245, 245, 245, 0.5);
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin-left: 100px;
+            float: left;
+        }
+
+        .box2{
+            width:50px;
+            height:50px;
+            background-color:blue;
+            position: fixed;
+            margin-left: 800px;
+            float: left;
+        }
+
+        #navbar2 {
+            width: 100%;
+            position: fixed;
+            z-index: 99;
+            background-color:royalblue
+        }
+
+    </style>
+
+</head>
+<body>
+    <a class="BTT1" href="#" >
+        <div id="navbar" class="navbar">
+            <img class="logo" src="https://pbs.twimg.com/profile_images/1182550617350230017/mmR6LIAl_400x400.jpg" alt="">
+        <div class="box2"></div>
+        </div>
+    </a>
+
+    <a class="BTT2" href="#" hidden>
+        <div id="navbar2" class="navbar2">
+            <img class="logo" src="https://stickershop.line-scdn.net/stickershop/v1/sticker/5459902/android/sticker.png" alt="">
+        </div>
+    </a>
+
+
+
+    <!-- <a class="BTT" href="#" hidden>
+        <div class="box"></div>
+    </a> -->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+    <script>
+
+        //JQ
+        $(window).scroll(function () {
+            var scrollVal = $(this).scrollTop();
+
+            if(scrollVal <= 500){
+                $(".BTT1").show() //JQ才有的函式,顯示標籤
+                $(".BTT2").hide()
+            }else{
+                $(".BTT1").hide() //JQ才有的函式,顯示標籤
+                $(".BTT2").show()
+            }
+        });
+
+        // $('') <-html標籤
+        // $(window) <-瀏覽器
+        
+
+    </script>
+</body>
+</html>
