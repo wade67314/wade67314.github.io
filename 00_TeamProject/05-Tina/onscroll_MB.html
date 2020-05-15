@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body{
+            height: 3000px;
+            margin: 0;
+            font-family: "微軟正黑體";
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(74, 209, 207);
+            color: #eee;
+        }
+
+        .text {
+            display: flex;
+        }
+
+
+        .icon_A {
+            font-size: 21px;
+            margin: 12px 10px;
+            /* padding: 10px; */
+        }
+        
+        .icon_p {
+            font-size: 18px;
+            margin-top: 16px;
+            margin-left: 20px;
+            margin-right: 8px;
+
+
+            /* padding: 10px; */
+        }
+
+        .box{
+            width:50px;
+            height:50px;
+            background-color: rgb(74, 209, 207);
+            position: fixed;
+            right:0px;
+            bottom:500px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+    
+    <a class="BTT" href="#" hidden><div class="box"></div></a>
+    <div class="content">
+        <div class="text">
+        <i class="fas fa-map-marked-alt icon_A"></i><p>臺中市豐原區北陽一街31號</p>
+        <i class="fas fa-phone-alt icon_p"></i><p>04-25252785</p>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script>
+
+        //JQ
+        $(window).scroll(function () {
+            var scrollVal = $(this).scrollTop();
+
+            if(scrollVal >= 1000){
+                $('a').show() //JQ才有的函式,顯示標籤
+            }else{
+                $('a').hide() //JQ才有的函式,隱藏標籤
+            }
+
+        });
+
+        // $('') <-html標籤
+        // $(window) <-瀏覽器
+        
+
+    </script>
+</body>
+</html>
