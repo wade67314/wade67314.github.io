@@ -77,6 +77,12 @@
             top: unset;
             left: unset;
             transform: unset;
+            padding-top: 150px;
+            padding-bottom: 150px;
+            
+            .title {
+                justify-content: center;
+            }
         }
     }
 }

@@ -79,6 +79,13 @@
     left: unset;
     -webkit-transform: unset;
             transform: unset;
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  .page_one_banner .banner_text_all_box .title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /*# sourceMappingURL=page_one_banner.css.map */
