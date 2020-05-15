@@ -1,13 +1,4 @@
 //navbar_滿果_nav_jump-in -->
-
-@media screen and (max-width:1280px) {
-    // .park_features {
-    //     flex-direction: column;
-    //     align-items: center;
-    // }
-}
-
-
 .nav_jump-in {
     width: 100%;
     background-color: rgb(92, 224, 222);
@@ -111,4 +102,11 @@
             }
         }
     }
+}
+
+@media screen and (max-width:1280px) {
+    // .park_features {
+    //     flex-direction: column;
+    //     align-items: center;
+    // }
 }
