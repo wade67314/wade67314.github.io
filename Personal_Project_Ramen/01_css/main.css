@@ -253,6 +253,12 @@ body {
   width: 100%;
 }
 
+#p3 .frame {
+  max-width: 100%;
+  width: 1140px;
+  margin: 0 auto;
+}
+
 #p3 .frame .title_limit {
   text-align: center;
   margin-top: 200px;
@@ -276,5 +282,20 @@ body {
 
 #p3 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 17px;
+}
+
+#p4 {
+  width: 100%;
+}
+
+#p4 .frame {
+  max-width: 100%;
+  width: 1140px;
+  margin: 0 auto;
+}
+
+#p4 .frame .title_menu {
+  text-align: center;
+  margin-top: 200px;
 }
 /*# sourceMappingURL=main.css.map */

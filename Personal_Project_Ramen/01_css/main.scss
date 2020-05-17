@@ -211,6 +211,9 @@ body{
     width: 100%;
     // position: relative;
     .frame{
+        max-width: 100%;
+        width: 1140px;
+        margin: 0 auto;
         .title_limit{
             text-align: center;
             margin-top: 200px;
@@ -235,4 +238,17 @@ body{
         margin: 0 17px;
     }
     
+}
+
+#p4{
+    width: 100%;
+    .frame{
+        max-width: 100%;
+        width: 1140px;
+        margin: 0 auto;
+        .title_menu{
+            text-align: center;
+            margin-top: 200px;
+        }
+    }
 }
