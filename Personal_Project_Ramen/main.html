@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./01_css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 </head>
 <body style="background-image: url(./03_img/bg.jpg);">
     <section id="p1">
@@ -44,8 +45,8 @@
             <img src="./03_img/p1/ramen.png" alt="">
         </div>
     </section>
+
     <section id="p2">
-        
         <div  class="big_title" >
             <img src="./03_img/p2/big_title.png" alt="">
         </div>
@@ -59,11 +60,79 @@
                 <img src="./03_img/p2/soup_kindR.png" alt="" class="">
             </div>
         </div>
+
+        <div class="parallax-window" data-parallax="scroll" data-image-src="./03_img/p2/empty_bowl.png"></div>
+
+        <div class="frame">
+            <div class="noodle_texts">
+                <span class="noodle_textL">杜蘭小麥的蛋白質含量比一般麵粉高，由杜蘭小麥磨製的麵粉顆粒要比普通麵粉粗。此外杜蘭小麥麵粉含較多的黃色素，如芸香素約是一般小麥的2~3倍，所以杜蘭小麥麵粉的外觀呈金黃色澤。</span>
+                <img class="noodle" src="./03_img/p2/noodle.png" alt="">
+                <div class="noodle_textR">
+                    <span class=noodle_title>杜蘭小麥製麵</title></span>
+                    <br>
+                    <span class="noodle_titleB">杜蘭小麥製麵，比一般日本拉麵更有麥香，麵體細長、口感硬Q，搭配濃郁湯頭不顯油膩，細麵含水量較少，易吸附湯汁及香氣，更能凸顯豚骨湯頭的濃郁厚實。
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="parallax-window" data-parallax="scroll" data-image-src="./03_img/p2/empty_bowl.png"></div>
+
+        <div class="frame">
+            <div class="meat_texts">
+                <div class="meat_textL">
+                    <span class=meat_title>台灣黑豬叉燒</title></span>
+                    <br>
+                    <span class="meat_titleB">採用台灣在地優良黑豬，飼料中添加益生菌及酵素，使肉質粗、脂肪霜降度提高；瘦肉部分有嚼勁，肉質滑嫩但不會失去韌性，而肥肉部分經過咀嚼就會融化。
+                    </span>
+                </div>
+                <img class="meat" src="./03_img/p2/meat.png" alt="">
+                <span class="meat_textR">選用優質豬五花肉，人工逐片檢查，去除過肥過瘦的部份，用綿繩將整片叉燒綁成一捲，使五花肉在滷製過程中保持緊實，再經川燙及滷製切成片狀。某些限定拉麵的叉燒還要經過乾煎及火烤的過程才能出餐。
+                </span>
+            </div>
+        </div>
+
+        <div class="parallax-window" data-parallax="scroll" data-image-src="./03_img/p2/empty_bowl.png"></div>
+
+        <div class="frame">
+            <div class="complete_ramen">
+                <img src="./03_img/p2/complete_ramen.png" alt="">
+            </div>
+            
+        </div>
     </section>
+
+    <section id="p3">
+        <div class="frame">
+            <div class="title_limit">
+                <img src="./03_img/p3/title_limit.png" alt="">
+            </div>         
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./03_img/p3/ramenM.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./03_img/p3/ramenM.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./03_img/p3/ramenM.png" alt="">
+                </div>
+            </div>
+   
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        
+    </section>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="./02_js/main.js"></script>
 
 </body>
 </html>

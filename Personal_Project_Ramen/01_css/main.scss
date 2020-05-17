@@ -11,18 +11,55 @@ body{
     height: auto;
     background-image: url("../02-Material/bg.jpg");
     background-size: cover;
+    // --swiper-theme-color: #FFFF00;
 }
 
 .parallax-mirror:first-child {
     width:1140px !important;
-    left: 50% !important;
-    // transform: translate3d(-50% ,316px ,0px) !important;
+    // left: 50% !important;
+    // transform: translate3d(-50% ,auto,0) !important;
     .parallax-slider {
         width: 100% !important;
         height: 100% !important;
+        left: 38%;
+        // transform: translate3d(-50% ,auto,0) !important;
     }
 }
 
+.parallax-mirror:nth-child(2) {
+    width:1140px !important;
+    // left: 50% !important;
+    // transform: translate3d(-50% ,auto,0) !important;
+    .parallax-slider {
+        width: 100% !important;
+        height: 100% !important;
+        left: 38%;
+        // transform: translate3d(-50% ,auto,0) !important;
+    }
+}
+
+.parallax-mirror:nth-child(3) {
+    width:1140px !important;
+    // left: 50% !important;
+    // transform: translate3d(-50% ,auto,0) !important;
+    .parallax-slider {
+        width: 100% !important;
+        height: 100% !important;
+        left: 38%;
+        // transform: translate3d(-50% ,auto,0) !important;
+    }
+}
+.parallax-mirror:nth-child(4) {
+    width:1140px !important;
+    // left: 50% !important;
+    // transform: translate3d(-50% ,auto,0) !important;
+    .parallax-slider {
+        width: 100% !important;
+        height: 100% !important;
+        left: 38%;
+        // transform: translate3d(-50% ,auto,0) !important;
+    }
+}
 
 
 #p1{
@@ -91,10 +128,11 @@ body{
 
 #p2{
     width: 100%;
+    position: relative;
     .big_title{
         // width: 100%;
         text-align: center;
-        margin-top: 170px;
+        margin-top: 200px;
     }
 
     .parallax-window {
@@ -106,10 +144,95 @@ body{
         max-width: 100%;
         width: 1140px;
         margin: 0 auto;
+        box-sizing: border-box;
+        padding: 0 15px;
+        position: relative;
         .soup_kinds{
             width: 100%;
             display: flex;
             justify-content: space-between;
         }
+        .noodle_texts{
+            display: flex;
+            justify-content: space-between;
+            letter-spacing: 0.25em;
+            text-align: justify;
+            font-weight: lighter;
+            .noodle_textL{
+                width: 30%;
+                font-size: 18px;
+                line-height: 30px;
+                align-self: flex-end;
+            }
+            .noodle_textR{
+                width: 30%;
+                font-size: 18px;
+                .noodle_title{
+                    font-family: "新細明體";
+                    font-size: 36px;
+                    font-weight: bold;
+                }
+                .noodle_titleB{
+                    line-height: 30px;
+                }
+            }
+        }
+        .meat_texts{
+            display: flex;
+            justify-content: space-between;
+            letter-spacing: 0.25em;
+            text-align: justify;
+            font-weight: lighter;
+            .meat_textL{
+                width: 30%;
+                font-size: 18px;
+                line-height: 30px;
+                .meat_title{
+                    font-family: "新細明體";
+                    font-size: 36px;
+                    font-weight: bold;
+                }
+            }
+            .meat_textR{
+                width: 30%;
+                font-size: 18px;
+                line-height: 30px;
+                align-self: flex-end;
+            }
+        }
+        .complete_ramen{
+            display: flex;
+            justify-content: center;
+        }
     } 
+}
+
+#p3{
+    width: 100%;
+    // position: relative;
+    .frame{
+        .title_limit{
+            text-align: center;
+            margin-top: 200px;
+        }
+    }
+    .swiper-container{
+        width: 100%;
+        margin-top: 100px;         
+        // --swiper-theme-color: #FFFF00;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+        bottom: 65px;
+    }
+    .swiper-pagination-bullet{
+        width: 30px;
+        height: 8px;
+        border-radius: 3px;
+        background-color: #D2D2D2;
+    }
+    
+    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+        margin: 0 17px;
+    }
+    
 }

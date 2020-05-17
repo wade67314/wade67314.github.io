@@ -9,17 +9,48 @@ body {
   margin: 0;
   padding: 0;
   height: auto;
+  background-image: url("../02-Material/bg.jpg");
   background-size: cover;
 }
 
 .parallax-mirror:first-child {
   width: 1140px !important;
-  left: 50% !important;
 }
 
 .parallax-mirror:first-child .parallax-slider {
   width: 100% !important;
   height: 100% !important;
+  left: 38%;
+}
+
+.parallax-mirror:nth-child(2) {
+  width: 1140px !important;
+}
+
+.parallax-mirror:nth-child(2) .parallax-slider {
+  width: 100% !important;
+  height: 100% !important;
+  left: 38%;
+}
+
+.parallax-mirror:nth-child(3) {
+  width: 1140px !important;
+}
+
+.parallax-mirror:nth-child(3) .parallax-slider {
+  width: 100% !important;
+  height: 100% !important;
+  left: 38%;
+}
+
+.parallax-mirror:nth-child(4) {
+  width: 1140px !important;
+}
+
+.parallax-mirror:nth-child(4) .parallax-slider {
+  width: 100% !important;
+  height: 100% !important;
+  left: 38%;
 }
 
 #p1 {
@@ -109,11 +140,12 @@ body {
 
 #p2 {
   width: 100%;
+  position: relative;
 }
 
 #p2 .big_title {
   text-align: center;
-  margin-top: 170px;
+  margin-top: 200px;
 }
 
 #p2 .parallax-window {
@@ -125,6 +157,10 @@ body {
   max-width: 100%;
   width: 1140px;
   margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 15px;
+  position: relative;
 }
 
 #p2 .frame .soup_kinds {
@@ -135,5 +171,110 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+#p2 .frame .noodle_texts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  letter-spacing: 0.25em;
+  text-align: justify;
+  font-weight: lighter;
+}
+
+#p2 .frame .noodle_texts .noodle_textL {
+  width: 30%;
+  font-size: 18px;
+  line-height: 30px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+#p2 .frame .noodle_texts .noodle_textR {
+  width: 30%;
+  font-size: 18px;
+}
+
+#p2 .frame .noodle_texts .noodle_textR .noodle_title {
+  font-family: "新細明體";
+  font-size: 36px;
+  font-weight: bold;
+}
+
+#p2 .frame .noodle_texts .noodle_textR .noodle_titleB {
+  line-height: 30px;
+}
+
+#p2 .frame .meat_texts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  letter-spacing: 0.25em;
+  text-align: justify;
+  font-weight: lighter;
+}
+
+#p2 .frame .meat_texts .meat_textL {
+  width: 30%;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+#p2 .frame .meat_texts .meat_textL .meat_title {
+  font-family: "新細明體";
+  font-size: 36px;
+  font-weight: bold;
+}
+
+#p2 .frame .meat_texts .meat_textR {
+  width: 30%;
+  font-size: 18px;
+  line-height: 30px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+#p2 .frame .complete_ramen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#p3 {
+  width: 100%;
+}
+
+#p3 .frame .title_limit {
+  text-align: center;
+  margin-top: 200px;
+}
+
+#p3 .swiper-container {
+  width: 100%;
+  margin-top: 100px;
+}
+
+#p3 .swiper-container-horizontal > .swiper-pagination-bullets, #p3 .swiper-pagination-custom, #p3 .swiper-pagination-fraction {
+  bottom: 65px;
+}
+
+#p3 .swiper-pagination-bullet {
+  width: 30px;
+  height: 8px;
+  border-radius: 3px;
+  background-color: #D2D2D2;
+}
+
+#p3 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 17px;
 }
 /*# sourceMappingURL=main.css.map */
