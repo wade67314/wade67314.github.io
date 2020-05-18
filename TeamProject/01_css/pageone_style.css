@@ -1029,6 +1029,7 @@ footer .roate_windmill .windmill_stick {
   }
   .page_one_content .toddler_daily .toddler_daily_cut {
     display: block;
+    height: auto;
   }
 }
 
