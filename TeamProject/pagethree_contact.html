@@ -15,8 +15,10 @@
     <!-- <link rel="stylesheet" href="main_nav_jump_in2.css"> -->
     <!-- footer -->
     <!-- <link rel="stylesheet" href="footer.css">  -->
-
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="./01_css/pagethree_style.css">
+    <link rel="stylesheet" href="./01_css/mobilebar_insidenav.css">
     <style>
 
 
@@ -25,6 +27,28 @@
 
 <body>
     <div id="top" style="width: 100%;"></div>
+    <div class="mobile_bar">
+        <div class="lineT"></div>
+        <div class="lineB"></div>
+        <p class="bar_text">Menu</p>
+    </div>
+    <!-- navitems_insidebar -->
+    <div class="navitems_insidebar display_none" style="background-image: url(./03_img/00_homepage/bg_insidenavbar.jpg)">
+        <img src="./03_img/00_homepage/logo.png" alt="">
+        <ul>
+            <li><a class="ripple" href="./homepage.html">首頁</a></li>
+            <li><a class="ripple" href="./pageone_about.html">關於滿果</a></li>
+            <li><a class="ripple" href="./pagetwo_service.html">服務項目</a></li>
+            <li><a class="ripple" href="./pagethree_contact.html#sec_3">預約參觀</a></li>
+            <li><a class="ripple" href="./pagethree_contact.html">聯絡我們</a></li>
+        </ul>
+        <footer>
+            <p content="telephone=no">
+                <i class="fas fa-phone-alt"></i>04-25252785<br>
+                <i class="fas fa-map-marker-alt"></i>臺中市豐原區北陽一街31號
+            </p>
+        </footer>
+    </div>
     <nav class="page_one_nav">
         <div class="navbar01" style="background-image: url(../03_img/03_p3/nav.jpg);">
             <a href="./homepage.html">
@@ -56,30 +80,7 @@
         </div>
     </nav>
 
-    <!-- 波浪navbar -->
-    <!-- <section class="navbar01" style="background-image: url(../03_img/03_p3/P3-nav.svg);">
-        <div class="logo" style="background-image: url(../03_img/03_p3/logo.svg);"></div>
 
-        <div class="circles">
-            <div class="circle_01">
-                <div class="img_text " style="background-image: url('./03_img/03_p3/nav-c1.svg');">
-                    <div class="text">
-                        <h1>關於滿果</h1>
-                        <h2>about us</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="circle_02">
-                <div class="img_text" style="background-image: url('./03_img/03_p3/nav-c2.svg');">
-                    <div class="text">
-                        <h1>服務項目</h1>
-                        <h2>service items</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
     
     <!-- navbar_nav_jump-in -->
     <nav class="nav_jump-in">
@@ -133,48 +134,7 @@
             </a>
         </div>
     </nav>
-    <!-- 長條navbar -->
-    <!-- <nav class="nav_jump-in">   
-        <img class="logo" src="./03_img/03_p3/nav_logo.svg" alt="">
-
-        <div class="nav_button container">
-            <div class="button">
-                <div class="button_text ">
-                    <h1>關於滿果</h1>
-                    <h2>about us</h2>
-                </div>
-                
-                <div class="button_img button_img_about" alt="" style="background-image: url(../03_img/03_p3/nav_img_batton_about.svg);"></div>
-            </div>
     
-            <div class="button">
-                <div class="button_text">
-                    <h1>服務項目</h1>
-                    <h2>service items</h2>
-                </div>
-                
-                <div class="button_img button_img_service" alt="" style="background-image: url(../03_img/03_p3/nav_img_batton_service.svg);"></div>
-            </div>
-    
-            <div class="button">
-                <div class="button_text">
-                    <h1>預約參觀</h1>
-                    <h2>book a visit</h2>
-                </div>
-                
-                <div class="button_img button_img_book" alt="" style="background-image:url(../03_img/03_p3/nav_img_batton_book.svg);"></div>
-            </div>
-    
-            <div class="button">
-                <div class="button_text">
-                    <h1>聯絡我們</h1>
-                    <h2>contact us</h2>
-                </div>
-                
-                <div class="button_img button_img_contact" alt="" style="background-image: url(../03_img/03_p3/nav_img_batton_contact.svg);"></div>
-            </div>
-        </div>
-    </nav> -->
 
     <!-- 連絡我們內容區 -->
     <div id="sec_1">
@@ -212,8 +172,7 @@
     <div id="sec_3">
         <div class="container">
             <div class="form_area">
-
-                <form style="padding:50px">
+                <form >
                     <div class="form_row1" style="text-align:center">
                         <label for="title">
                             <h2>請填寫以下表單內容</h2><br>
@@ -317,6 +276,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="./02_js/mobilebar_insidenav.js"></script>
 
     <script> //滾輪下滑顯示長條navbar
         $(window).scroll(function () {

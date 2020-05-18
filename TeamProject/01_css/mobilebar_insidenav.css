@@ -1,0 +1,256 @@
+.display_none {
+  display: none;
+}
+
+.display_block {
+  display: block;
+}
+
+.mobile_bar {
+  cursor: pointer;
+  font-size: 11px;
+  position: fixed;
+  z-index: 100;
+  top: 85px;
+  right: 105px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 45px;
+}
+
+@media (max-width: 1740px) {
+  .mobile_bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width: 1050px) {
+  .mobile_bar {
+    right: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .mobile_bar {
+    top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile_bar {
+    top: 5px;
+    right: 40px;
+  }
+}
+
+.mobile_bar .lineT {
+  width: 45px;
+  height: 4px;
+  margin-bottom: 5px;
+  background-color: #49c0c4;
+}
+
+@media (max-width: 768px) {
+  .mobile_bar .lineT {
+    margin-top: 33px;
+  }
+}
+
+.mobile_bar .lineB {
+  width: 27px;
+  height: 4px;
+  margin-bottom: 5px;
+  background-color: #49c0c4;
+}
+
+.mobile_bar .bar_text {
+  margin: 0;
+  font-weight: bold;
+  font-size: 10.7px;
+}
+
+.navitems_insidebar {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100vh;
+  background-color: #eee;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-height: 414px) {
+  .navitems_insidebar {
+    height: auto;
+  }
+}
+
+.navitems_insidebar img {
+  width: 135px;
+  margin-top: 85px;
+  margin-left: 105px;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+@media (max-width: 1050px) {
+  .navitems_insidebar img {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navitems_insidebar img {
+    margin-top: 40px;
+    margin-left: 40px;
+    width: unset;
+    height: 96px;
+  }
+}
+
+.navitems_insidebar ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  margin-top: 5%;
+  margin-left: 30%;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .navitems_insidebar ul {
+    margin-top: 25%;
+  }
+}
+
+@media (max-width: 414px) {
+  .navitems_insidebar ul {
+    margin-top: 15%;
+    margin-left: 25%;
+  }
+}
+
+@media (max-width: 375px) {
+  .navitems_insidebar ul {
+    margin-top: 5%;
+    margin-left: 20%;
+  }
+}
+
+@media (max-width: 320px) {
+  .navitems_insidebar ul {
+    margin-top: 0;
+  }
+}
+
+.navitems_insidebar ul li {
+  display: block;
+  margin-top: 1.5em;
+  letter-spacing: 0.3em;
+}
+
+.navitems_insidebar ul li a {
+  text-decoration: none;
+  font-size: 38px;
+  font-weight: bold;
+  color: white;
+}
+
+@media (max-width: 320px) {
+  .navitems_insidebar ul li a {
+    font-size: 30px;
+  }
+}
+
+.navitems_insidebar footer {
+  margin-left: 30%;
+  letter-spacing: 0.3em;
+  line-height: 2em;
+  margin-top: 5%;
+  font-size: 22px;
+  color: white;
+  padding: 0;
+}
+
+@media (max-width: 540px) {
+  .navitems_insidebar footer {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 414px) {
+  .navitems_insidebar footer {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .navitems_insidebar footer {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 320px) {
+  .navitems_insidebar footer {
+    font-size: 16px;
+  }
+}
+
+.navitems_insidebar footer p {
+  margin: 0;
+}
+
+.ripple * {
+  display: inline-block;
+  text-shadow: 0 0 0 #fff;
+  color: transparent;
+}
+
+.ripple:hover * {
+  -webkit-animation: rippleEffect 2s infinite;
+          animation: rippleEffect 2s infinite;
+}
+
+@-webkit-keyframes rippleEffect {
+  40% {
+  }
+  50% {
+    -webkit-transform: translate3d(0.5em, 0, 0) scale(1.1);
+            transform: translate3d(0.5em, 0, 0) scale(1.1);
+    text-shadow: 0 0 20px #fff;
+    color: #268BBF;
+  }
+  75% {
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+            transform: translate3d(0, 0, 0) scale(1);
+    text-shadow: 0 0 0 #fff;
+  }
+}
+
+@keyframes rippleEffect {
+  40% {
+  }
+  50% {
+    -webkit-transform: translate3d(0.5em, 0, 0) scale(1.1);
+            transform: translate3d(0.5em, 0, 0) scale(1.1);
+    text-shadow: 0 0 20px #fff;
+    color: #268BBF;
+  }
+  75% {
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+            transform: translate3d(0, 0, 0) scale(1);
+    text-shadow: 0 0 0 #fff;
+  }
+}
+/*# sourceMappingURL=mobilebar_insidenav.css.map */

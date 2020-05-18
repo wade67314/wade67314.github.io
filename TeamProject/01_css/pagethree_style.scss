@@ -10,6 +10,13 @@ body{
     margin:0;
 }
 
+
+form{
+    padding: 50px;
+    @media(max-width: 400px){
+        padding: 25px;
+    }
+}
 #sec_1{
     width:100%;
     margin:auto;
@@ -42,14 +49,37 @@ body{
     align-items: center;
     justify-content:left;
     z-index: 2;
-    padding: 80px;    
+    padding: 80px;
+    @media(max-width:580px){
+        padding: 40px;
+    }
+    @media(max-width:480px){
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    @media(max-width:440px){
+        padding-right: 0px;
+        padding-left: 0px;
+    }   
 }
 
 .text {
     width: 80%;
     margin-left: 100px;
+    @media(max-width: 1600px){
+        margin-left: 40px;
+    }
+    
 }
 
+.h2, h2{
+    @media(max-width:515px){
+        font-size: 24px;
+    }
+    @media(max-width:420px){
+        font-size: 20px;
+    }
+}
 .block {
         z-index: -1;
         position: absolute;
@@ -143,34 +173,51 @@ body{
 
     .con_right .text {
     padding:100px;
-    margin-left: 0px;
+    margin:auto;
+        @media(max-width: 930px){
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        @media(max-width: 780px){
+            padding-left: 0;
+            padding-right:0;
+        }
     }
 }
 
 @media screen and (max-width: 680px) {
-#sec_1 .row{
-    padding:80px;
-}
-    
-.icon_A, .icon_B{
-    display: none;
-}
+    #sec_1 .row{
+        padding:80px;
+    }
+        
+    .icon_AA, .icon_BB{
+        display: none;
+    }
 
-.con_right .text{
-    padding:0px;
-    margin:30px;
-}
-.text_35{
-    font-size:18px;
-}
+    .con_right .text{
+        padding:0px;
+        margin:30px;
+    }
+    .text_35{
+        font-size:24px;
+        @media(max-width:400px){
+            font-size:20px;
+        }
+    }
 
-.text_20{
-    font-size:12px;
-}
+    .text_20{
+        font-size:18px;
+        @media(max-width:400px){
+            font-size:14px;
+        }
+    }
 
-.text_22{
-    font-size:12px;
-}   
+    .text_22{
+        font-size:18px;
+        @media(max-width:400px){
+            font-size:14px;
+        }
+    }   
 } 
 
 #sec_2 {
@@ -189,6 +236,9 @@ body{
 
 #sec_3 .container{
     padding:80px;
+    @media(max-width: 768px){
+        padding: 50px;
+    }
 }
 
 #sec_3 .container h2{

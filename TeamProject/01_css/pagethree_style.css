@@ -11,6 +11,16 @@ body {
   margin: 0;
 }
 
+form {
+  padding: 50px;
+}
+
+@media (max-width: 400px) {
+  form {
+    padding: 25px;
+  }
+}
+
 #sec_1 {
   width: 100%;
   margin: auto;
@@ -52,9 +62,47 @@ body {
   padding: 80px;
 }
 
+@media (max-width: 580px) {
+  #sec_1 .con_right {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  #sec_1 .con_right {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 440px) {
+  #sec_1 .con_right {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+
 .text {
   width: 80%;
   margin-left: 100px;
+}
+
+@media (max-width: 1600px) {
+  .text {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 515px) {
+  .h2, h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 420px) {
+  .h2, h2 {
+    font-size: 20px;
+  }
 }
 
 .block {
@@ -149,7 +197,21 @@ body {
   }
   .con_right .text {
     padding: 100px;
-    margin-left: 0px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 1280px) and (max-width: 930px) {
+  .con_right .text {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 1280px) and (max-width: 780px) {
+  .con_right .text {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -157,7 +219,7 @@ body {
   #sec_1 .row {
     padding: 80px;
   }
-  .icon_A, .icon_B {
+  .icon_AA, .icon_BB {
     display: none;
   }
   .con_right .text {
@@ -165,13 +227,37 @@ body {
     margin: 30px;
   }
   .text_35 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 680px) and (max-width: 400px) {
+  .text_35 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .text_20 {
     font-size: 18px;
   }
+}
+
+@media screen and (max-width: 680px) and (max-width: 400px) {
   .text_20 {
-    font-size: 12px;
+    font-size: 14px;
   }
+}
+
+@media screen and (max-width: 680px) {
   .text_22 {
-    font-size: 12px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 680px) and (max-width: 400px) {
+  .text_22 {
+    font-size: 14px;
   }
 }
 
@@ -191,6 +277,12 @@ body {
 
 #sec_3 .container {
   padding: 80px;
+}
+
+@media (max-width: 768px) {
+  #sec_3 .container {
+    padding: 50px;
+  }
 }
 
 #sec_3 .container h2 {
