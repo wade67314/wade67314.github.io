@@ -9,58 +9,9 @@ body{
     margin: 0;
     padding: 0;
     height: auto;
-    background-image: url("../02-Material/bg.jpg");
     background-size: contain;
     // --swiper-theme-color: #FFFF00;
 }
-
-.parallax-mirror:first-child {
-    width:1140px !important;
-    // left: 50% !important;
-    // transform: translate3d(-50% ,auto,0) !important;
-    .parallax-slider {
-        width: 100% !important;
-        height: 100% !important;
-        // left: 38%;
-        // transform: translate3d(-50% ,auto,0) !important;
-    }
-}
-
-.parallax-mirror:nth-child(2) {
-    width:1140px !important;
-    // left: 50% !important;
-    // transform: translate3d(-50% ,auto,0) !important;
-    .parallax-slider {
-        width: 100% !important;
-        height: 100% !important;
-        // left: 38%;
-        // transform: translate3d(-50% ,auto,0) !important;
-    }
-}
-
-.parallax-mirror:nth-child(3) {
-    width:1140px !important;
-    // left: 50% !important;
-    // transform: translate3d(-50% ,auto,0) !important;
-    .parallax-slider {
-        width: 100% !important;
-        height: 100% !important;
-        // left: 38%;
-        // transform: translate3d(-50% ,auto,0) !important;
-    }
-}
-.parallax-mirror:nth-child(4) {
-    width:1140px !important;
-    // left: 40% !important;
-    // transform: translate3d(-50% ,auto,0) ;
-    .parallax-slider {
-        width: 100% !important;
-        height: 100% !important;
-        // left: 5%;
-        // transform: translate3d(-50% ,auto,0) !important;
-    }
-}
-
 
 #p1{
     width: 100%;
@@ -134,12 +85,14 @@ body{
         text-align: center;
         margin-top: 200px;
     }
-
-    .parallax-window {
-        min-height: 310px;
-        background: transparent;
-    }
-    
+    .parallax{
+        background-attachment: fixed;
+        width: 100%;
+        max-width: 1140px;
+        height: 310px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }    
     .frame{
         max-width: 100%;
         width: 1140px;
@@ -458,7 +411,7 @@ body{
                 position: relative;
                 font-size: 24px;
                 font-weight: lighter;
-                line-height: 72px;
+                line-height: 3em;
                 margin-bottom: 45px;
                 margin-top: 45px;
                 &:before{
@@ -485,7 +438,7 @@ body{
                 position: relative;
                 font-size: 24px;
                 font-weight: lighter;
-                line-height: 72px;
+                line-height: 3em;
                 margin-top: 45px;
                 &:before{
                     content: "";
@@ -521,7 +474,7 @@ body{
                 position: relative;
                 font-size: 24px;
                 font-weight: lighter;
-                line-height: 72px;
+                line-height: 3em;
                 // margin-bottom: 45px;
                 margin-top: 45px;
                 &:before{
@@ -549,7 +502,7 @@ body{
                 position: relative;
                 font-size: 24px;
                 font-weight: lighter;
-                line-height: 72px;
+                line-height: 3em;
                 margin-top: 45px;
                 padding-left: 32px;
                 &:before{
@@ -621,6 +574,23 @@ body{
                     left:410px
                 }
             }
+        }
+    }
+}
+#p6{
+    width: 100%;
+    .frame{
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+        .title_contact{
+            width: 100%;
+            margin-top: 200px;
+            text-align: center;
+        }
+        .line_p6{
+            width: 100%;
+            max-width: ;
         }
     }
 }
