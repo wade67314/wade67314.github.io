@@ -250,7 +250,7 @@ body {
 }
 
 .outside_contain_mobile {
-  width: 100%;
+  width: 99%;
   height: auto;
   background-color: #eee;
   position: absolute;
@@ -269,7 +269,7 @@ body {
 }
 
 .middle_contain_mobile {
-  width: 100%;
+  width: 99%;
   height: 100vh;
   background-color: #eee;
   opacity: 0.8;
@@ -289,7 +289,7 @@ body {
 }
 
 .inside_contain_mobile {
-  width: 100%;
+  width: 99%;
   height: 100vh;
   background-color: #eee;
   opacity: 0.3;
