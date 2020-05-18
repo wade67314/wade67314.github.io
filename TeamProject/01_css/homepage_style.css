@@ -262,9 +262,6 @@ body {
   height: auto;
   background-color: #eee;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .outside_contain_mobile .demo {
@@ -285,9 +282,6 @@ body {
   background-color: #eee;
   opacity: 0.8;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .middle_contain_mobile .demo {
@@ -308,9 +302,6 @@ body {
   background-color: #eee;
   opacity: 0.3;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .inside_contain_mobile .demo {
@@ -323,12 +314,6 @@ body {
     height: 65%;
     top: 18%;
   }
-}
-
-.img_link_mobile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .img_link_mobile .demo {
@@ -344,7 +329,6 @@ body {
 }
 
 .swiper-slide {
-  width: 100vw;
   height: 100vh;
 }
 

@@ -206,7 +206,7 @@ body {
     height: auto;
     background-color: #eee;
     position: absolute;
-    display: flex;
+    // display: flex;
     .demo {
         position: fixed;
         width: 100%;
@@ -223,7 +223,7 @@ body {
     background-color: #eee;
     opacity: 0.8;
     position: absolute;
-    display: flex;
+    // display: flex;
     .demo {
         position: fixed;
         width: 100%;
@@ -240,7 +240,7 @@ body {
     background-color: #eee;
     opacity: 0.3;
     position: absolute;
-    display: flex;
+    // display: flex;
     .demo {
         position: fixed;
         width: 100%;
@@ -251,7 +251,7 @@ body {
     }
 }
 .img_link_mobile {
-    display: flex;
+    // display: flex;
     .demo {
         position: fixed;
         width: 100%;
@@ -263,7 +263,7 @@ body {
 }
 
 .swiper-slide{
-    width: 100vw;
+    // width: 100vw;
     height: 100vh;
     &:nth-child(1) p:before{
         content: "Mango International";
