@@ -11,6 +11,187 @@ html {
   font-family: 微軟正黑體;
 }
 
+.page_one_nav {
+  width: 100%;
+  margin: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 20;
+}
+
+@media (max-width: 1740px) {
+  .page_one_nav {
+    display: none;
+  }
+}
+
+.page_one_nav .navbar01 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 320px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.page_one_nav .navbar01 .logo {
+  width: 130px;
+  height: 110px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 20px;
+  left: 200px;
+  z-index: 10;
+}
+
+.page_one_nav .navbar01 .circles {
+  width: 50%;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  color: #fff;
+}
+
+.page_one_nav .navbar01 .circles .circle_01 {
+  position: relative;
+  top: 50px;
+  left: 100px;
+}
+
+.page_one_nav .navbar01 .circles .circle_01:hover {
+  color: #686869;
+  cursor: pointer;
+}
+
+.page_one_nav .navbar01 .circles .circle_01 .img_text {
+  width: 170px;
+  height: 170px;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.page_one_nav .navbar01 .circles .circle_01 .img_text .text h1 {
+  font-size: 22px;
+  margin: 0;
+  padding-top: 20px;
+  font-family: "微軟正黑體";
+  letter-spacing: 6px;
+  font-weight: lighter;
+}
+
+.page_one_nav .navbar01 .circles .circle_01 .img_text .text h2 {
+  font-size: 15px;
+  margin: 0;
+  font-family: "Arial";
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+.page_one_nav .navbar01 .circles .circle_02 {
+  position: absolute;
+  right: calc(45% - 85px);
+  top: 150px;
+}
+
+.page_one_nav .navbar01 .circles .circle_02:hover {
+  color: #686869;
+  cursor: pointer;
+}
+
+.page_one_nav .navbar01 .circles .circle_02 .img_text {
+  width: 170px;
+  height: 170px;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.page_one_nav .navbar01 .circles .circle_02 .img_text .text h1 {
+  font-size: 22px;
+  margin: 0;
+  padding-top: 20px;
+  font-family: "微軟正黑體";
+  letter-spacing: 6px;
+  font-weight: lighter;
+}
+
+.page_one_nav .navbar01 .circles .circle_02 .img_text .text h2 {
+  font-size: 15px;
+  margin: 0;
+  font-family: "Arial";
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+.page_one_nav .navbar01 .circles .circle_03 {
+  position: absolute;
+  right: 20px;
+  top: 200px;
+}
+
+.page_one_nav .navbar01 .circles .circle_03:hover {
+  color: #686869;
+  cursor: pointer;
+}
+
+.page_one_nav .navbar01 .circles .circle_03 .img_text {
+  width: 170px;
+  height: 170px;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.page_one_nav .navbar01 .circles .circle_03 .img_text .text h1 {
+  font-size: 22px;
+  margin: 0;
+  padding-top: 20px;
+  font-family: "微軟正黑體";
+  letter-spacing: 6px;
+  font-weight: lighter;
+}
+
+.page_one_nav .navbar01 .circles .circle_03 .img_text .text h2 {
+  font-size: 15px;
+  margin: 0;
+  font-family: "Arial";
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
 .container {
   width: 100%;
   max-width: 1140px;
@@ -20,26 +201,24 @@ html {
 .nav_jump-in {
   width: 100%;
   background-color: #FCB465;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   position: -webkit-sticky;
   position: sticky;
-  top: 0px;
-  z-index: 20;
+  top: 0;
+  z-index: 99;
 }
 
 @media (max-width: 1740px) {
   .nav_jump-in {
-    display: none;
+    display: none !important;
   }
 }
 
 .nav_jump-in .logo {
   height: 110px;
-  position: absolute;
-  padding: 20px 0px 20px 200px;
+  padding: 20px 60px 20px 200px;
   margin: 0;
+  float: left;
 }
 
 .nav_jump-in .nav_button {
@@ -48,10 +227,11 @@ html {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  float: left;
 }
 
 .nav_jump-in .nav_button .button {
-  padding: 40px 0px 40px 0px;
+  padding: 45px 0px 40px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,6 +290,7 @@ html {
   padding-top: 20px;
   font-family: "微軟正黑體";
   letter-spacing: 6px;
+  font-weight: lighter;
 }
 
 .nav_jump-in .nav_button .button .button_text h2 {
@@ -117,32 +298,17 @@ html {
   margin: 0;
   font-family: "Arial";
   letter-spacing: 1px;
+  font-weight: lighter;
 }
 
 .nav_jump-in .nav_button .button .button_img {
-  width: 155px;
+  width: 50px;
   height: 66px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   position: relative;
   background-repeat: no-repeat;
   margin-left: 10px;
-}
-
-.nav_jump-in .nav_button .button .button_img_about {
-  background-image: url(../03_img/02_p2/nav_img_batton_about.svg);
-}
-
-.nav_jump-in .nav_button .button .button_img_service {
-  background-image: url(../03_img/02_p2/nav_img_batton_service.svg);
-}
-
-.nav_jump-in .nav_button .button .button_img_book {
-  background-image: url(../03_img/02_p2/nav_img_batton_book.svg);
-}
-
-.nav_jump-in .nav_button .button .button_img_contact {
-  background-image: url(../03_img/02_p2/nav_img_batton_contact.svg);
 }
 
 #section01 #big_picture {
@@ -155,8 +321,9 @@ html {
 
 #section01 .banner_text_all_box {
   position: absolute;
-  top: 15%;
+  top: 18%;
   left: 50%;
+  z-index: 21;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: #686869;

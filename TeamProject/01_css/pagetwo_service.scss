@@ -7,47 +7,209 @@ html {
 }
 
 *{
-    font-family: 微軟正黑體;}
+    font-family: 微軟正黑體;
+}
 
 
 //釘住的navbar(涵茹製-原檔名main_nav_jump_in.scss)1740px以下跳成漢堡條
-@import'_style-guild';
+
+.page_one_nav {
+    width: 100%;
+    margin: 0;
+    position: sticky;
+    z-index: 20;
+    @media(max-width:1740px){
+        display: none;
+    }
+    .navbar01 {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 320px;
+        
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .logo {
+            width: 130px;
+            height: 110px;
+            
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 20px;
+            left: 200px;
+            z-index: 10;
+        }
+    
+        .circles {
+            width: 50%;
+            margin-left: auto;
+            display: flex;
+            position: relative;
+            color: #fff;
+    
+            .circle_01 {
+                position: relative;
+                top: 50px;
+                left: 100px;
+    
+                &:hover {
+                    color: rgb(104, 104, 105);
+                    cursor: pointer;
+                }
+    
+                .img_text {
+                    width: 170px;
+                    height: 170px;
+                    background-position: center;
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+    
+                    .text {
+                        h1 {
+                            font-size: 22px;
+                            margin: 0;
+                            padding-top: 20px;
+                            font-family: "微軟正黑體";
+                            letter-spacing: 6px;
+                            font-weight: lighter;
+                        }
+            
+                        h2 {
+                            font-size: 15px;
+                            margin: 0;
+                            font-family: "Arial";
+                            letter-spacing: 1px;
+                            font-weight: lighter;
+                        }
+                    }
+                }
+            }
+    
+            .circle_02 {
+                position: absolute;
+                right: calc(45% - 85px);
+                top: 150px;
+    
+                &:hover {
+                    color: rgb(104, 104, 105);
+                    cursor: pointer;
+                }
+    
+                .img_text {
+                    width: 170px;
+                    height: 170px;
+                    background-position: center;
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+    
+                    .text {
+                        h1 {
+                            font-size: 22px;
+                            margin: 0;
+                            padding-top: 20px;
+                            font-family: "微軟正黑體";
+                            letter-spacing: 6px;
+                            font-weight: lighter;
+                        }
+            
+                        h2 {
+                            font-size: 15px;
+                            margin: 0;
+                            font-family: "Arial";
+                            letter-spacing: 1px;
+                            font-weight: lighter;
+                        }
+                    }
+                }
+            }
+    
+            .circle_03 {
+                position: absolute;
+                right: 20px;
+                top: 200px;
+    
+                &:hover {
+                    color: rgb(104, 104, 105);
+                    cursor: pointer;
+                }
+    
+                .img_text {
+                    width: 170px;
+                    height: 170px;
+                    background-position: center;
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+    
+                    .text {
+                        h1 {
+                            font-size: 22px;
+                            margin: 0;
+                            padding-top: 20px;
+                            font-family: "微軟正黑體";
+                            letter-spacing: 6px;
+                            font-weight: lighter;
+                        }
+            
+                        h2 {
+                            font-size: 15px;
+                            margin: 0;
+                            font-family: "Arial";
+                            letter-spacing: 1px;
+                            font-weight: lighter;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 .container {
     width: 100%;
     max-width: 1140px;
     margin: auto;
 }
-
+//navbar_滿果_nav_jump-in -->
 .nav_jump-in {
     width: 100%;
     background-color: #FCB465;
-    display: flex;
+    display: none;
     position: sticky;
-    top: 0px;
-    z-index: 20;
+    top: 0;
+    z-index: 99;
     @media (max-width: 1740px){
-        display: none;
+        display: none !important;
     }
-    
-           .logo {
+    .logo {
         height: 110px;
-        position: absolute;
-        padding: 20px 0px 20px 200px;
+        padding: 20px 60px 20px 200px;
         margin: 0;
+        float: left;
     }
 
     .nav_button {
         display: flex;
         justify-content: space-around;
-
+        float: left;
         .button {
-            padding: 40px 0px 40px 0px;
+            padding: 45px 0px 40px 0px;
             display: flex;
             color: #fff;
             transition: 0.5s;
             
-
             &:hover {
                 color: rgb(104, 104, 105);
                 cursor: pointer;
@@ -61,8 +223,6 @@ html {
                     50%  {top: 10px; left: 0px;;}
                     100%  {top: 0px; left: 0px;;}
                 }
-
-                
             }
           
             .button_text {
@@ -74,7 +234,7 @@ html {
                     padding-top: 20px;
                     font-family: "微軟正黑體";
                     letter-spacing: 6px;
-
+                    font-weight: lighter;
                 }
     
                 h2 {
@@ -82,12 +242,12 @@ html {
                     margin: 0;
                     font-family: "Arial";
                     letter-spacing: 1px;
-
+                    font-weight: lighter;
                 }
             }
 
             .button_img {
-                width: 155px;
+                width: 50px;
                 height: 66px;
                 transition: 0.5s;
                 position: relative;
@@ -95,24 +255,10 @@ html {
                 margin-left: 10px;
             }
 
-            .button_img_about {
-                background-image: url(../03_img/02_p2/nav_img_batton_about.svg);
-            }
-            
-            .button_img_service {
-                background-image: url(../03_img/02_p2/nav_img_batton_service.svg);
-            }
-
-            .button_img_book {
-                background-image: url(../03_img/02_p2/nav_img_batton_book.svg);
-            }
-
-            .button_img_contact {
-                background-image: url(../03_img/02_p2/nav_img_batton_contact.svg);
-            }
         }
     }
 }
+
 
 // 手機版漢堡條(還沒放)
   
@@ -130,15 +276,14 @@ html {
     // 電腦版，服務相務文字排在banner裡面
     .banner_text_all_box {
             position: absolute;
-            top: 15%;
+            top: 18%;
             left: 50%;
+            z-index: 21;
             transform: translate(-50%, -50%);
             color: rgb(104, 104, 105);
             @media (max-width: 768px){
                display: none;
             }
-            
-    
             .banner_text_box {
                 .title {
                     text-align: center;

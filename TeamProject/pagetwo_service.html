@@ -8,11 +8,65 @@
     <link rel="stylesheet" href="./01_css/pagetwo_service.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- 手機版navbar -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 </head>
 
 <body>
+    <div id="top" style="width: 100%;"></div>
+    <!-- navbar_nav_jump-in -->
     <nav class="nav_jump-in">
+        <a href="./homepage.html">
+        <img class="logo" src="./03_img/02_p2/nav_logo.svg" alt=""></a>
+         </a>   
+        <div class="nav_button container">
+            <a href="./pageone_about.html" style="text-decoration: none;">
+                <div class="button">
+                    <div class="button_text ">
+                        <h1>關於滿果</h1>
+                        <h2>about us</h2>
+                    </div>
+                    
+                    <div class="button_img button_img_about" alt=""
+                        style="background-image: url(../03_img/02_p2/nav_img_batton_about.svg);"></div>
+                </div>
+            </a>
+            <a href="./pagetwo_service.html" style="text-decoration: none;">
+                <div class="button">
+                    <div class="button_text">
+                        <h1>服務項目</h1>
+                        <h2>service items</h2>
+                    </div>
+
+                    <div class="button_img button_img_service" alt=""
+                        style="background-image: url(../03_img/02_p2/nav_img_batton_service.svg);"></div>
+                </div>
+            </a>
+            <a href="./pagethree_contact.html#sec_3" style="text-decoration: none;">
+                <div class="button">
+                    <div class="button_text">
+                        <h1>預約參觀</h1>
+                        <h2>book a visit</h2>
+                    </div>
+
+                    <div class="button_img button_img_book" alt=""
+                        style="background-image: url(../03_img/02_p2/nav_img_batton_book.svg);"></div>
+                </div>
+            </a>
+            <a href="./pagethree_contact.html" style="text-decoration: none;">
+                <div class="button">
+                    <div class="button_text">
+                        <h1>聯絡我們</h1>
+                        <h2>contact us</h2>
+                    </div>
+
+                    <div class="button_img button_img_contact" alt=""
+                        style="background-image: url(../03_img/02_p2/nav_img_batton_contact.svg);"></div>
+                </div>
+            </a>
+        </div>
+    </nav>
+    <!-- <nav class="nav_jump-in">
         <img class="logo" src="./03_img/02_p2/nav_logo.svg" alt="">
         <div class="nav_button container">
             <div class="button">
@@ -51,7 +105,50 @@
                 <div class="button_img button_img_contact" alt=""></div>
             </div>
         </div>
+    </nav> -->
+
+
+    <nav class="page_one_nav">
+        <div class="navbar01" style="background-image: url(../03_img/02_p2/navbar.png);">
+            <a href="./homepage.html">
+                <div class="logo" style="background-image: url(../03_img/02_p2/logo.png);"></div>
+            </a>
+
+            <div class="circles">
+                <a href="./pageone_about.html" style="text-decoration: none;color: #fff;">
+                    <div class="circle_01">
+                        <div class="img_text " style="background-image: url('./03_img/02_p2/circle01.png');">
+                            <div class="text">
+                                <h1>關於我們</h1>
+                                <h2>about us</h2>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="./pagethree_contact.html" style="text-decoration: none;color: #fff;">
+                    <div class="circle_02">
+                        <div class="img_text" style="background-image: url('./03_img/02_p2/circle02.png');">
+                            <div class="text">
+                                <h1>聯絡我們</h1>
+                                <h2>contace us</h2>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="./pagethree_contact.html#sec_3" style="text-decoration: none;color: #fff;">
+                    <div class="circle_03">
+                        <div class="img_text" style="background-image: url('./03_img/02_p2/circle03.png');">
+                            <div class="text">
+                                <h1>預約參觀</h1>
+                                <h2>book a visit</h2>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
     </nav>
+
 
     <!-- section1 -banner-->
     <section id="section01">
@@ -142,7 +239,7 @@
 
     <!-- parallax -->
     <div class="picture_parallax">
-        <a class="picture_parallax_text" href="這裡放聯絡我們連結">
+        <a class="picture_parallax_text" href="./pagethree_contact.html">
             <img src="./03_img/02_p2/parallax_text.png" alt="">
         </a>
     </div>
@@ -182,8 +279,8 @@
                     <img src="./03_img/02_p2/illstration10.png" alt="" class="illstration_picture">
                 </div>
 
-                <a href="這裡放預約參觀連結"></a><img class="title_visit" src="./03_img/02_p2/title_visit.png" alt="" data-aos="flip-left"
-                    data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <a href="./pagethree_contact.html#sec_3"><img class="title_visit" src="./03_img/02_p2/title_visit.png" alt=""
+                    data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"></a>
 
             </div>
         </div>
@@ -213,26 +310,27 @@
         </div>
 
         <div class="footer_text">
-                    <a href="./homepage.html">
-                        <img src="./03_img/02_p2/logo-footer.png" alt="" class="footer_logo_icon">
-                    </a><br>
+            <a href="./homepage.html">
+                <img src="./03_img/02_p2/logo-footer.png" alt="" class="footer_logo_icon">
+            </a><br>
 
-                    <p class="company_name">台中市滿果國際托嬰中心</p>
-                    <div class="footer_bottom_line"></div>
-                    
-                    <div class="line_icon">
-                        <div class="footer_bottom_line"></div>
-                        <!-- <img src="./03_img/02_p2/footer_bottom_line.png" alt="" class="footer_bottom_line"> -->
-                        <a href="https://zh-tw.facebook.com/滿果國際托嬰中心-2257007647673667/"><img src="./03_img/02_p2/fb-footer.png" alt="" class="footer_fb_icon"></a>
-                    </div>
-                    
-                    
+            <p class="company_name">台中市滿果國際托嬰中心</p>
+            <div class="footer_bottom_line"></div>
 
-                    <p class="phone_number"><i class="fas fa-phone-alt icon_B"></i>04-25252785
-                        <i class="fas fa-map-marked-alt icon_A"></i>臺中市豐原區北陽一街31號</p>
-                    <p class="copyright">Copyright &copy 滿果國際托嬰中心 All Rights Reserved. Design by give me 5</p>
+            <div class="line_icon">
+                <div class="footer_bottom_line"></div>
+                <!-- <img src="./03_img/02_p2/footer_bottom_line.png" alt="" class="footer_bottom_line"> -->
+                <a href="https://zh-tw.facebook.com/滿果國際托嬰中心-2257007647673667/"><img src="./03_img/02_p2/fb-footer.png"
+                        alt="" class="footer_fb_icon"></a>
+            </div>
 
-                </div>
+
+
+            <p class="phone_number"><i class="fas fa-phone-alt icon_B"></i>04-25252785
+                <i class="fas fa-map-marked-alt icon_A"></i>臺中市豐原區北陽一街31號</p>
+            <p class="copyright">Copyright &copy 滿果國際托嬰中心 All Rights Reserved. Design by give me 5</p>
+
+        </div>
 
 
     </footer>
@@ -240,13 +338,13 @@
 
 
     <!-- fixed-button -->
-    <a class="butoon_fixed" href="#big_picture">
+    <a class="butoon_fixed" href="#top">
         <img src="./03_img/02_p2/backtotop.png" alt="" class="btt">
     </a>
 
     <div class="button_map_add_contact">
 
-        <a class="butoon_fixed" href="" >
+        <a class="butoon_fixed" href="./pagethree_contact.html#sec_2">
             <img src="./03_img/02_p2/illstration_map.png" alt="" class="illstration_map">
         </a>
 
@@ -267,12 +365,27 @@
         AOS.init();
     </script>
     <script>
-
-
-        // console.log("AA");
-
-
-
+        
+        $(window).scroll(function () {
+            // $(window).resize();
+            var scrollVal = $(window).scrollTop();
+            if (scrollVal > 300 && $(window).width() > 1740) {
+                document.querySelector(".nav_jump-in").style.display="flex";
+                document.querySelector(".page_one_nav").style.display="none";
+                // $(".page_one_nav").hide();
+            }
+            else if($(window).width() < 1740){
+                // $(".page_one_nav").hide();
+                document.querySelector(".page_one_nav").style.display="none";
+                document.querySelector(".nav_jump-in").style.display="none";
+            }
+            else {
+                document.querySelector(".nav_jump-in").style.display="none";
+                document.querySelector(".page_one_nav").style.display="block";
+            }
+            // $(window).resize();
+        });
+    
         var scrollTop = $(window).scrollTop()
 
         if (scrollTop >= 1500) {
