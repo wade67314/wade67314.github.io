@@ -3,19 +3,19 @@ body {
     margin: 0;
 }
 
-// .nav_jump-in {
-//     display: none;
-// }
+.nav_jump-in {
+    display: none;
+}
 
 
 //navbar_滿果_nav_jump-in -->
 .nav_jump-in {
     width: 100%;
     background-color: rgb(92, 224, 222);
-    // display: flex;
+    display: flex;
     position: fixed;
     z-index: 99;
-    display: none;
+    // display: none;
     display: inline-flex;
 
     .logo {
@@ -29,7 +29,6 @@ body {
         display: flex;
         justify-content: space-around;
         float: left;
-
         .button {
             padding: 45px 0px 40px 0px;
             display: flex;

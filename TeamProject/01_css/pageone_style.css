@@ -4,11 +4,17 @@ body {
 }
 
 .nav_jump-in {
+  display: none;
+}
+
+.nav_jump-in {
   width: 100%;
   background-color: #5ce0de;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: fixed;
   z-index: 99;
-  display: none;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;

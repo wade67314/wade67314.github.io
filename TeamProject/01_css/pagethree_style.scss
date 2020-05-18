@@ -1,0 +1,436 @@
+*{
+    font-family:"微軟正黑體";
+    }
+
+html{
+    scroll-behavior: smooth;
+    }
+
+body{
+    margin:0;
+}
+
+#sec_1{
+    width:100%;
+    margin:auto;
+    padding: 208px;  
+    padding-top: 528px;   
+}
+
+#sec_1 .row .title{
+    max-width:100%;
+    height:100px;
+    margin:auto;
+}
+
+#sec_1 .con_left{
+    width:50%;
+    z-index:10;
+    position: relative;
+    left: 100px;    
+}
+
+#sec_1 .con_left img{
+    right: -100px;
+    width: 100%;
+}
+
+#sec_1 .con_right{
+    width:50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    z-index: 2;
+    padding: 80px;    
+}
+
+.text {
+    width: 80%;
+    margin-left: 100px;
+}
+
+.block {
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+}
+
+.icon_A {
+        float: left;
+        font-size: 35px;
+        margin-right: 15px;
+        color: #FF8686;
+}
+
+.icon_B {
+        float: left;
+        font-size: 33px;
+        margin-right: 23px;
+        color: #FF8686;
+}
+
+.row{
+    margin-bottom: 30px;
+}
+
+.row1{
+    max-width:100%;
+    display:flex;
+} 
+
+.color{
+    color:#FF8686;
+}
+
+.color_2{
+    color:#5B5B5B;
+}
+
+.text_35{
+    font-size:35px;
+}
+
+.text_20{
+    font-size:20px;
+}
+
+.text_22{
+    font-size:22px;
+}
+
+/* 長條navbar隱藏-scroll */
+.nav_jump-in{
+    display: none;
+    }
+
+/* @media screen and (max-width: 1700px) {
+    .navbar01{
+      display: none;
+  } 
+
+    .nav_jump-in{
+      display: flex;
+  }
+  
+} */
+
+@media screen and (max-width: 1280px) { 
+    #sec_1{
+    padding:50px;
+    }
+
+    #sec_1 .row{
+    padding:120px;
+    }
+
+    #sec_1 .row1{
+    flex-direction:column;
+    }
+
+    #sec_1 .con_left{
+        width: 100%;
+        left: 0;
+    }
+    
+    #sec_1 .con_right{
+    width: 100%;
+    margin-top: 20px;     
+    }
+
+    .con_right .text {
+    padding:100px;
+    margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+#sec_1 .row{
+    padding:80px;
+}
+    
+.icon_A, .icon_B{
+    display: none;
+}
+
+.con_right .text{
+    padding:0px;
+    margin:30px;
+}
+.text_35{
+    font-size:18px;
+}
+
+.text_20{
+    font-size:12px;
+}
+
+.text_22{
+    font-size:12px;
+}   
+} 
+
+#sec_2 {
+    width: 100%;
+    height: 500px;
+    }
+
+#sec_2 iframe{
+    border: 0;
+    }
+
+#sec_3{
+    margin-top: 100px;
+    position: relative;
+    }
+
+#sec_3 .container{
+    padding:80px;
+}
+
+#sec_3 .container h2{
+    color:white;
+}
+
+#sec_3 img{
+    width: 87%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+  //navbar_滿果navbar初始版面(波浪) -->
+
+  .navbar01 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 320px;
+    // background-image: url('../03_img/03_p3/P3-nav.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .logo {
+        width: 130px;
+        height: 110px;
+        // background-image: url('../03_img/03_p3/logo.svg');
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 20px;
+        left: 200px;
+        z-index: 99;
+    }
+
+    .circles {
+        width: 50%;
+        margin-left: auto;
+        display: flex;
+        position: relative;
+        color: #fff;
+
+
+        .circle_01 {
+            position: relative;
+            top: 50px;
+            left: 100px;
+
+            &:hover {
+                color: rgb(104, 104, 105);
+                cursor: pointer;
+            }
+
+            .img_text {
+                width: 170px;
+                height: 170px;
+                background-position: center;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                .text {
+                    margin-left: 0px;
+                    h1 {
+                        font-size: 22px;
+                        margin: 0;
+                        padding-top: 10px;
+                        font-family: "微軟正黑體";
+                        letter-spacing: 6px;
+                        font-weight: lighter;
+                    }
+        
+                    h2 {
+                        font-size: 15px;
+                        margin: 0;
+                        font-family: "Arial";
+                        letter-spacing: 1px;
+                        font-weight: lighter;
+                    }
+                }
+            }
+
+
+        }
+
+        .circle_02 {
+            position: absolute;
+            right: calc(45% - 85px);
+            top: 150px;
+
+            &:hover {
+                color: rgb(104, 104, 105);
+                cursor: pointer;
+            }
+
+            .img_text {
+                width: 170px;
+                height: 170px;
+                background-position: center;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+
+                .text {
+                    margin-left: 0px;
+                    h1 {
+                        font-size: 22px;
+                        margin: 0;
+                        padding-top: 20px;
+                        font-family: "微軟正黑體";
+                        letter-spacing: 6px;
+                        font-weight: lighter;
+                    }
+        
+                    h2 {
+                        font-size: 15px;
+                        margin: 0;
+                        font-family: "Arial";
+                        letter-spacing: 1px;
+                        font-weight: lighter;
+                    }
+                }
+            }
+        }           
+}
+}
+
+
+
+
+//navbar_滿果_nav_jump-in (長條navbar) --> 
+
+// @media screen and (max-width:1280px) {
+//     .park_features {
+//         flex-direction: column;
+//         align-items: center;
+//     }
+// }
+
+
+.nav_jump-in {
+    top: 0%;
+    width: 100%;
+    background-color: rgb(92, 224, 222);
+    position: fixed;
+    z-index: 99;
+    display: inline-flex;
+    // display: none;
+    
+    .logo {
+        height: 110px;
+        padding: 20px 60px 20px 200px;
+        margin: 0;
+    }
+    .nav_button {
+        // display: flex;
+        display: inline-flex;
+        justify-content: space-around;
+
+        .button {
+            padding: 40px 0px 40px 0px;
+            display: flex;
+            color: #fff;
+            transition: 0.5s;
+            
+
+            &:hover {
+                color: rgb(104, 104, 105);
+                cursor: pointer;
+
+                .button_img {
+                    animation: button_img 2.5s infinite;
+                }
+
+                @keyframes button_img {
+                    0%   {top: 0px; left: 0px;}
+                    50%  {top: 10px; left: 0px;;}
+                    100%  {top: 0px; left: 0px;;}
+                }
+
+            }
+          
+            .button_text {
+                text-align: center;
+                
+                h1 {
+                    font-size: 22px;
+                    margin: 0;
+                    padding-top: 20px;
+                    font-family: "微軟正黑體";
+                    letter-spacing: 6px;
+                    font-weight: lighter;
+                }
+    
+                h2 {
+                    font-size: 15px;
+                    margin: 0;
+                    font-family: "Arial";
+                    letter-spacing: 1px;
+                    font-weight: lighter;
+
+                }
+            }
+
+            .button_img {
+                width: 50px;
+                height: 66px;
+                transition: 0.5s;
+                position: relative;
+                background-repeat: no-repeat;
+                margin-left: 10px;
+            }
+
+            // .button_img_about {
+            //     background-image: url(../03_img/03_p3/nav_img_batton_about.svg);
+            // }
+            
+            // .button_img_service {
+            //     background-image: url(../03_img/03_p3/nav_img_batton_service.svg);
+            // }
+
+            // .button_img_book {
+            //     background-image: url(../03_img/03_p3/nav_img_batton_book.svg);
+            // }
+
+            // .button_img_contact {
+            //     background-image: url(../03_img/03_p3/nav_img_batton_contact.svg);
+            // }
+        }
+    }
+}
