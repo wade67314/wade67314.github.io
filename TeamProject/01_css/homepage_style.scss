@@ -46,7 +46,9 @@ body {
     margin: 0 10px;
     
 }
-
+.swiper-container{
+    overflow-y: unset;
+}
 .swiper-pagination{
     display: flex;
     justify-content: center;

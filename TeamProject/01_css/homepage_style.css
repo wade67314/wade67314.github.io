@@ -52,6 +52,10 @@ body {
   margin: 0 10px;
 }
 
+.swiper-container {
+  overflow-y: unset;
+}
+
 .swiper-pagination {
   display: -webkit-box;
   display: -ms-flexbox;
