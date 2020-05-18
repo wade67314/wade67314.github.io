@@ -30,12 +30,7 @@ body {
 .display_block {
     display: block;
 }
-.vis_hidden{
-    visibility: hidden;
-}
-.vis_visible{
-    visibility: visible;
-}
+
 .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: 36px;
     @media(min-width:640px){
@@ -46,9 +41,7 @@ body {
     margin: 0 10px;
     
 }
-.swiper-container{
-    overflow-y: unset;
-}
+
 .swiper-pagination{
     display: flex;
     justify-content: center;
@@ -214,7 +207,7 @@ body {
         width: 100%;
         @media (max-width: 500px) {
             height: 65%;
-            top: 18%;
+            top: 17%;
         }
     }
 }
@@ -231,7 +224,7 @@ body {
         width: 100%;
         @media (max-width: 500px) {
             height: 65%;
-            top: 18%;
+            top: 17%;
         }
     }
 }
@@ -248,7 +241,7 @@ body {
         width: 100%;
         @media (max-width: 500px) {
             height: 65%;
-            top: 18%;
+            top: 17%;
         }
     }
 }
@@ -259,7 +252,7 @@ body {
         width: 100%;
         @media (max-width: 500px) {
             height: 65%;
-            top: 18%;
+            top: 17%;
         }
     }
 }
