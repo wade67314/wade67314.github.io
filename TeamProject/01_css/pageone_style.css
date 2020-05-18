@@ -18,7 +18,7 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 99;
 }
 
 @media (max-width: 1740px) {
@@ -1028,9 +1028,7 @@ footer .roate_windmill .windmill_stick {
     display: none;
   }
   .page_one_content .toddler_daily .toddler_daily_cut {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
   }
 }
 
