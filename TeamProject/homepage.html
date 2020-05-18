@@ -376,11 +376,12 @@
         //loading animation
         $(window).on("load", function () {
             $(".loader-wrapper").delay(2000).fadeOut("slow");
-        });
-        window.addEventListener('load', () => {
-            // Resize refreshes sliders
             $(window).resize();
-        }, false);
+        });
+        // window.addEventListener('load', () => {
+        //     // Resize refreshes sliders
+        //     $(window).resize();
+        // }, false);
 
         //click to change middle img
         document.querySelector("#about_pathT").addEventListener("click", function () {
