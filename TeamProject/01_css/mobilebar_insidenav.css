@@ -88,6 +88,12 @@
   background-position: center;
 }
 
+@media (min-width: 1740px) {
+  .navitems_insidebar {
+    display: none;
+  }
+}
+
 @media (max-height: 414px) {
   .navitems_insidebar {
     height: auto;
