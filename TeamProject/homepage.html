@@ -158,10 +158,10 @@
 
 
     <!-- Swiper -->
-    <div class="swiper-container display_none" style="z-index: 8" removeClippedSubviews={false}>
+    <div class="swiper-container display_none" style="z-index: 8" >
         <div class="swiper-wrapper">
             <!-- slide1 -->
-            <div class="swiper-slide " style="height: 100vh;" removeClippedSubviews={false}>
+            <div class="swiper-slide " style="height: 100vh;" >
                 <div class="outside_contain_mobile">
                     <svg class="demo" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"
                         width="100%" height="100vh" viewBox="0 0 1920 1080">
@@ -486,38 +486,6 @@
         document.querySelector(".navitem_hover").onmouseleave = function () {
             mouseout();
         }
-
-        //swiper
-        // var swiper = new Swiper('.swiper-container', {
-        //     pagination: {
-        //         el: '.swiper-pagination',
-        //         clickable: true,
-        //     },
-        //     observer: true,
-        //     observeParents: true,
-        //     speed: 1000,
-        //     shadow: false
-        // });
-        // var startScroll, touchStart, touchCurrent;
-        // swiper.slides.on('touchstart', function (e) {
-        //     startScroll = this.scrollTop;
-        //     touchStart = e.targetTouches[0].pageY;
-        // }, true);
-        // swiper.slides.on('touchmove', function (e) {
-        //     touchCurrent = e.targetTouches[0].pageY;
-        //     var touchesDiff = touchCurrent - touchStart;
-        //     var slide = this;
-        //     var onlyScrolling = 
-        //             ( slide.scrollHeight > slide.offsetHeight ) && //allow only when slide is scrollable
-        //             (
-        //                 ( touchesDiff < 0 && startScroll === 0 ) || //start from top edge to scroll bottom
-        //                 ( touchesDiff > 0 && startScroll === ( slide.scrollHeight - slide.offsetHeight ) ) || //start from bottom edge to scroll top
-        //                 ( startScroll > 0 && startScroll < ( slide.scrollHeight - slide.offsetHeight ) ) //start from the middle
-        //             );
-        //     if (onlyScrolling) {
-        //         e.stopPropagation();
-        //     }
-        // }, true);
 
         //PC path
         var blob1 = createBlob({
@@ -995,6 +963,7 @@
 
         function myFunction2(w768px) {
             if (w768px.matches) { // If media query matches
+                $(window).resize();
                 document.querySelector(".swiper-container").classList.add("display_block");
                 document.querySelector(".outside_contain").classList.add("display_none");
                 document.querySelector(".middle_contain").classList.add("display_none");
