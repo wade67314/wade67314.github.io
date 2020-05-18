@@ -588,10 +588,72 @@ body{
             margin-top: 200px;
             text-align: center;
         }
-        .line_p6{
+        .inputs{
             width: 100%;
-            max-width: ;
-        }
+            text-align: center;
+            .line_p6{
+                width: 100%;
+                max-width: 540px;
+                border: 1px black solid;
+                margin: 0 auto;
+            }
+            .contact_text{
+                width: 100%;  
+                font-size: 24px;
+                line-height: 2em;
+            }
+            .input_blocks{
+                width: 100%;
+                max-width: 540px;
+                border: 1px solid black;
+                border-radius: 0.25em;
+                background-color: transparent;
+                font-size: 24px;
+                line-height: 2em;
+                box-sizing: border-box;
+                padding:0 0.5em;  
+            }
+            .form-control{
+                background-color: transparent;
+                max-width: 540px;
+                border: 1px solid black;
+                background-color: transparent;
+                font-size: 24px;
+                line-height: 2em;
+                box-sizing: border-box;
+                padding:0 0.2em;
+                margin: auto;
+            }
+            .input_blockB{
+                height: 260px;
+                border-radius: 0.25em;
+                padding:0 0.5em;
+            }
+            .buttons{
+                display: flex;
+                justify-content: center;
+                line-height: 1.5em;
+                letter-spacing: 0.1em;
+                font-size: 24px;
+                margin-top: 1.5em;
+                font-weight: bold;
+                .send{
+                    background-color: transparent;
+                    border: 1px solid black;
+                    margin-right: 40px;
+                    padding: 0 10px;
+                    cursor: pointer;
+                }
+                .cancel{
+                    background-color: transparent;
+                    border: 1px solid black;
+                    margin-left: 40px;
+                    padding: 0 10px;
+                    cursor: pointer;
+                }
+            }
+              
+        }  
     }
 }
 
