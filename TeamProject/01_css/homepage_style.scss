@@ -263,7 +263,8 @@ body {
 }
 
 .swiper-slide{
-    height: auto;
+    width: 100vw;
+    height: 100vh;
     &:nth-child(1) p:before{
         content: "Mango International";
     }
