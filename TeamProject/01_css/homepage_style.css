@@ -3,6 +3,16 @@
   font-family: "微軟正黑體";
 }
 
+html {
+  margin: 0;
+  padding: 0;
+}
+
+embed {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   overflow: hidden;
   margin: 0;
@@ -11,12 +21,26 @@ body {
   background-color: #eee;
 }
 
+@media (max-width: 414px) {
+  body {
+    overflow: unset;
+  }
+}
+
 .display_none {
   display: none;
 }
 
 .display_block {
   display: block;
+}
+
+.vis_hidden {
+  visibility: hidden;
+}
+
+.vis_visible {
+  visibility: visible;
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
