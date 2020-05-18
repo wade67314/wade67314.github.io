@@ -1,0 +1,603 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+}
+
+.nav_jump-in {
+  width: 100%;
+  background-color: #5ce0de;
+  position: fixed;
+  z-index: 99;
+  display: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.nav_jump-in .logo {
+  height: 110px;
+  padding: 20px 60px 20px 200px;
+  margin: 0;
+  float: left;
+}
+
+.nav_jump-in .nav_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  float: left;
+}
+
+.nav_jump-in .nav_button .button {
+  padding: 45px 0px 40px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.nav_jump-in .nav_button .button:hover {
+  color: #686869;
+  cursor: pointer;
+}
+
+.nav_jump-in .nav_button .button:hover .button_img {
+  -webkit-animation: button_img 2.5s infinite;
+          animation: button_img 2.5s infinite;
+}
+
+@-webkit-keyframes button_img {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+  50% {
+    top: 10px;
+    left: 0px;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+  }
+}
+
+@keyframes button_img {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+  50% {
+    top: 10px;
+    left: 0px;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+  }
+}
+
+.nav_jump-in .nav_button .button .button_text {
+  text-align: center;
+}
+
+.nav_jump-in .nav_button .button .button_text h1 {
+  font-size: 22px;
+  margin: 0;
+  padding-top: 20px;
+  font-family: "微軟正黑體";
+  letter-spacing: 6px;
+  font-weight: lighter;
+}
+
+.nav_jump-in .nav_button .button .button_text h2 {
+  font-size: 15px;
+  margin: 0;
+  font-family: "Arial";
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+.nav_jump-in .nav_button .button .button_img {
+  width: 50px;
+  height: 66px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+}
+
+.page_one_nav {
+  width: 100%;
+  margin: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 99;
+}
+
+.page_one_nav .navbar01 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 320px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.page_one_nav .navbar01 .logo {
+  width: 130px;
+  height: 110px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 20px;
+  left: 200px;
+  z-index: 10;
+}
+
+.page_one_nav .navbar01 .circles {
+  width: 50%;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  color: #fff;
+}
+
+.page_one_nav .navbar01 .circles .circle_01 {
+  position: relative;
+  top: 50px;
+  left: 100px;
+}
+
+.page_one_nav .navbar01 .circles .circle_01:hover {
+  color: #686869;
+  cursor: pointer;
+}
+
+.page_one_nav .navbar01 .circles .circle_01 .img_text {
+  width: 170px;
+  height: 170px;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.page_one_nav .navbar01 .circles .circle_01 .img_text .text h1 {
+  font-size: 22px;
+  margin: 0;
+  padding-top: 20px;
+  font-family: "微軟正黑體";
+  letter-spacing: 6px;
+  font-weight: lighter;
+}
+
+.page_one_nav .navbar01 .circles .circle_01 .img_text .text h2 {
+  font-size: 15px;
+  margin: 0;
+  font-family: "Arial";
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+.page_one_nav .navbar01 .circles .circle_02 {
+  position: absolute;
+  right: calc(45% - 85px);
+  top: 150px;
+}
+
+.page_one_nav .navbar01 .circles .circle_02:hover {
+  color: #686869;
+  cursor: pointer;
+}
+
+.page_one_nav .navbar01 .circles .circle_02 .img_text {
+  width: 170px;
+  height: 170px;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.page_one_nav .navbar01 .circles .circle_02 .img_text .text h1 {
+  font-size: 22px;
+  margin: 0;
+  padding-top: 20px;
+  font-family: "微軟正黑體";
+  letter-spacing: 6px;
+  font-weight: lighter;
+}
+
+.page_one_nav .navbar01 .circles .circle_02 .img_text .text h2 {
+  font-size: 15px;
+  margin: 0;
+  font-family: "Arial";
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+.page_one_nav .navbar01 .circles .circle_03 {
+  position: absolute;
+  right: 20px;
+  top: 200px;
+}
+
+.page_one_nav .navbar01 .circles .circle_03:hover {
+  color: #686869;
+  cursor: pointer;
+}
+
+.page_one_nav .navbar01 .circles .circle_03 .img_text {
+  width: 170px;
+  height: 170px;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.page_one_nav .navbar01 .circles .circle_03 .img_text .text h1 {
+  font-size: 22px;
+  margin: 0;
+  padding-top: 20px;
+  font-family: "微軟正黑體";
+  letter-spacing: 6px;
+  font-weight: lighter;
+}
+
+.page_one_nav .navbar01 .circles .circle_03 .img_text .text h2 {
+  font-size: 15px;
+  margin: 0;
+  font-family: "Arial";
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+.page_one_banner {
+  width: 100%;
+  position: relative;
+}
+
+.page_one_banner .page_one_img_banner {
+  width: 100%;
+}
+
+.page_one_banner .banner_text_all_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-5%, -150%);
+          transform: translate(-5%, -150%);
+  color: #686869;
+}
+
+.page_one_banner .banner_text_all_box .banner_text_box {
+  padding-bottom: 30px;
+}
+
+.page_one_banner .banner_text_all_box .banner_text_box .title {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.page_one_banner .banner_text_all_box .banner_text_box .title .box {
+  padding-top: 35px;
+  width: 200px;
+}
+
+.page_one_banner .banner_text_all_box .banner_text_box .title .box h1 {
+  margin: 0;
+  font-family: "微軟正黑體";
+  font-size: 30px;
+  letter-spacing: 5px;
+  border-bottom: solid #686869 1px;
+  padding-bottom: 5px;
+  font-weight: lighter;
+}
+
+.page_one_banner .banner_text_all_box .banner_text_box .title .box h2 {
+  margin: 0;
+  padding-top: 5px;
+  font-size: 30px;
+  font-family: "Arial";
+  font-weight: lighter;
+}
+
+.page_one_banner .banner_text_all_box .banner_text_box .title img {
+  height: 115px;
+}
+
+.page_one_banner .banner_text_all_box .text p {
+  margin: 0;
+  font-family: "微軟正黑體";
+  font-size: 25px;
+  letter-spacing: 5px;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: auto;
+}
+
+.page_one_content {
+  width: 100%;
+}
+
+.page_one_content .park_features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 150px;
+}
+
+.page_one_content .park_features .park_features_left {
+  width: 570px;
+}
+
+.page_one_content .park_features .park_features_right {
+  width: 570px;
+}
+
+.page_one_content .park_features .park_features_cut {
+  width: 466px;
+  display: none;
+}
+
+.page_one_content .nursery_room_features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 150px;
+}
+
+.page_one_content .nursery_room_features .nursery_room_features_left {
+  width: 584px;
+}
+
+.page_one_content .nursery_room_features .nursery_room_features_right {
+  width: 555PX;
+}
+
+.page_one_content .nursery_room_features .nursery_room_features_cut {
+  width: 466px;
+  display: none;
+}
+
+.page_one_content .toddler_daily {
+  padding-bottom: 150px;
+}
+
+.page_one_content .toddler_daily .title_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page_one_content .toddler_daily .title_box .toddler_daily_title {
+  width: 360px;
+}
+
+.page_one_content .toddler_daily .photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.page_one_content .toddler_daily .photo .toddler_daily_left {
+  width: 550px;
+}
+
+.page_one_content .toddler_daily .photo .toddler_daily_right {
+  width: 589px;
+}
+
+.page_one_content .toddler_daily .toddler_daily_cut {
+  width: 480px;
+  display: none;
+}
+
+.page_one_content .book {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 150px;
+}
+
+.page_one_content .book .page_one_button_book {
+  width: 424px;
+}
+
+@media screen and (max-width: 1700px) {
+  .page_one_nav {
+    display: none;
+  }
+  .nav_jump-in {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .page_one_banner .banner_text_all_box {
+    position: unset;
+    top: unset;
+    left: unset;
+    -webkit-transform: unset;
+            transform: unset;
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  .page_one_banner .banner_text_all_box .title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .page_one_content .park_features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .page_one_content .park_features .park_features_left {
+    display: none;
+  }
+  .page_one_content .park_features .park_features_right {
+    display: none;
+  }
+  .page_one_content .park_features .park_features_cut {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .page_one_content .nursery_room_features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .page_one_content .nursery_room_features .nursery_room_features_left {
+    display: none;
+  }
+  .page_one_content .nursery_room_features .nursery_room_features_right {
+    display: none;
+  }
+  .page_one_content .nursery_room_features .nursery_room_features_cut {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .page_one_content .toddler_daily {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .page_one_content .toddler_daily .title_box {
+    display: none;
+  }
+  .page_one_content .toddler_daily .photo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: none;
+  }
+  .page_one_content .toddler_daily .toddler_daily_cut {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page_one_content .park_features .park_features_cut {
+    width: 366px;
+  }
+  .page_one_content .nursery_room_features .nursery_room_features_cut {
+    width: 366px;
+  }
+  .page_one_content .toddler_daily .toddler_daily_cut {
+    width: 366px;
+  }
+  .page_one_content .book .page_one_button_book {
+    width: 269px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .page_one_banner .banner_text_all_box {
+    position: unset;
+    top: unset;
+    left: unset;
+    -webkit-transform: unset;
+            transform: unset;
+    padding-top: 50px;
+    padding-bottom: 150px;
+  }
+  .page_one_banner .banner_text_all_box .banner_text_box .title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .page_one_banner .banner_text_all_box .banner_text_box .title .box {
+    width: 150px;
+  }
+  .page_one_banner .banner_text_all_box .banner_text_box .title .box h1 {
+    font-size: 20px;
+  }
+  .page_one_banner .banner_text_all_box .banner_text_box .title .box h2 {
+    font-size: 20px;
+  }
+  .page_one_banner .banner_text_all_box .banner_text_box .title img {
+    height: 100px;
+  }
+  .page_one_banner .banner_text_all_box .text p {
+    font-size: 20px;
+  }
+  .page_one_content .toddler_daily {
+    padding-bottom: 50px;
+  }
+  .page_one_content .book {
+    padding-bottom: 50px;
+  }
+  .page_one_content .book .page_one_button_book {
+    width: 169px;
+  }
+}
+/*# sourceMappingURL=pageone_style.css.map */

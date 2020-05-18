@@ -1,0 +1,576 @@
+
+body {
+    margin: 0;
+}
+
+// .nav_jump-in {
+//     display: none;
+// }
+
+
+//navbar_滿果_nav_jump-in -->
+.nav_jump-in {
+    width: 100%;
+    background-color: rgb(92, 224, 222);
+    // display: flex;
+    position: fixed;
+    z-index: 99;
+    display: none;
+    display: inline-flex;
+
+    .logo {
+        height: 110px;
+        padding: 20px 60px 20px 200px;
+        margin: 0;
+        float: left;
+    }
+
+    .nav_button {
+        display: flex;
+        justify-content: space-around;
+        float: left;
+
+        .button {
+            padding: 45px 0px 40px 0px;
+            display: flex;
+            color: #fff;
+            transition: 0.5s;
+            
+            &:hover {
+                color: rgb(104, 104, 105);
+                cursor: pointer;
+
+                .button_img {
+                    animation: button_img 2.5s infinite;
+                }
+
+                @keyframes button_img {
+                    0%   {top: 0px; left: 0px;}
+                    50%  {top: 10px; left: 0px;;}
+                    100%  {top: 0px; left: 0px;;}
+                }
+            }
+          
+            .button_text {
+                text-align: center;
+                
+                h1 {
+                    font-size: 22px;
+                    margin: 0;
+                    padding-top: 20px;
+                    font-family: "微軟正黑體";
+                    letter-spacing: 6px;
+                    font-weight: lighter;
+                }
+    
+                h2 {
+                    font-size: 15px;
+                    margin: 0;
+                    font-family: "Arial";
+                    letter-spacing: 1px;
+                    font-weight: lighter;
+                }
+            }
+
+            .button_img {
+                width: 50px;
+                height: 66px;
+                transition: 0.5s;
+                position: relative;
+                background-repeat: no-repeat;
+                margin-left: 10px;
+            }
+
+        }
+    }
+}
+
+
+
+// page_one_nav
+.page_one_nav {
+    width: 100%;
+    margin: 0;
+    position: sticky;
+    z-index: 99;
+
+    .navbar01 {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 320px;
+        
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .logo {
+            width: 130px;
+            height: 110px;
+            
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 20px;
+            left: 200px;
+            z-index: 10;
+        }
+    
+        .circles {
+            width: 50%;
+            margin-left: auto;
+            display: flex;
+            position: relative;
+            color: #fff;
+    
+            .circle_01 {
+                position: relative;
+                top: 50px;
+                left: 100px;
+    
+                &:hover {
+                    color: rgb(104, 104, 105);
+                    cursor: pointer;
+                }
+    
+                .img_text {
+                    width: 170px;
+                    height: 170px;
+                    background-position: center;
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+    
+                    .text {
+                        h1 {
+                            font-size: 22px;
+                            margin: 0;
+                            padding-top: 20px;
+                            font-family: "微軟正黑體";
+                            letter-spacing: 6px;
+                            font-weight: lighter;
+                        }
+            
+                        h2 {
+                            font-size: 15px;
+                            margin: 0;
+                            font-family: "Arial";
+                            letter-spacing: 1px;
+                            font-weight: lighter;
+                        }
+                    }
+                }
+            }
+    
+            .circle_02 {
+                position: absolute;
+                right: calc(45% - 85px);
+                top: 150px;
+    
+                &:hover {
+                    color: rgb(104, 104, 105);
+                    cursor: pointer;
+                }
+    
+                .img_text {
+                    width: 170px;
+                    height: 170px;
+                    background-position: center;
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+    
+                    .text {
+                        h1 {
+                            font-size: 22px;
+                            margin: 0;
+                            padding-top: 20px;
+                            font-family: "微軟正黑體";
+                            letter-spacing: 6px;
+                            font-weight: lighter;
+                        }
+            
+                        h2 {
+                            font-size: 15px;
+                            margin: 0;
+                            font-family: "Arial";
+                            letter-spacing: 1px;
+                            font-weight: lighter;
+                        }
+                    }
+                }
+            }
+    
+            .circle_03 {
+                position: absolute;
+                right: 20px;
+                top: 200px;
+    
+                &:hover {
+                    color: rgb(104, 104, 105);
+                    cursor: pointer;
+                }
+    
+                .img_text {
+                    width: 170px;
+                    height: 170px;
+                    background-position: center;
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+    
+                    .text {
+                        h1 {
+                            font-size: 22px;
+                            margin: 0;
+                            padding-top: 20px;
+                            font-family: "微軟正黑體";
+                            letter-spacing: 6px;
+                            font-weight: lighter;
+                        }
+            
+                        h2 {
+                            font-size: 15px;
+                            margin: 0;
+                            font-family: "Arial";
+                            letter-spacing: 1px;
+                            font-weight: lighter;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// page_one_nav_and_banner
+.page_one_banner {
+    width: 100%;
+    position: relative;
+
+    .page_one_img_banner {
+        width: 100%;
+    }
+
+    //banner_text
+    .banner_text_all_box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-5%, -150%);
+        color: rgb(104, 104, 105);
+
+        .banner_text_box {
+            padding-bottom: 30px;
+
+            .title {
+                text-align: center;
+                display: flex;
+    
+                .box {
+                    padding-top: 35px;
+                    width: 200px;
+
+                    h1 {
+                        margin: 0;
+                        font-family: "微軟正黑體";
+                        font-size: 30px;
+                        letter-spacing: 5px;
+                        border-bottom: solid rgb(104, 104, 105) 1px;
+                        padding-bottom: 5px;
+                        font-weight: lighter;
+                    }
+        
+                    h2 {
+                        margin: 0;
+                        padding-top: 5px;
+                        font-size: 30px;
+                        font-family: "Arial";
+                        font-weight: lighter;
+                    }
+                }
+                
+                img {
+                    height: 115px;
+                }
+            }
+        }
+        
+        .text {
+            p {
+                margin: 0;
+                font-family: "微軟正黑體";
+                font-size: 25px;
+                letter-spacing: 5px;
+                text-align: center;
+                font-weight: lighter;
+            }
+        }
+    }
+}
+
+
+// page_one_content
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: auto;
+}
+
+
+.page_one_content {
+
+    width: 100%;
+
+    .park_features {
+        display: flex;
+        padding-bottom: 150px;
+
+        .park_features_left {
+            width: 570px;
+        }
+
+        .park_features_right {
+            width: 570px;
+        }
+
+        .park_features_cut {
+            width: 466px;
+            display: none;
+        }        
+    }
+
+    .nursery_room_features {
+        display: flex;
+        padding-bottom: 150px;
+
+        .nursery_room_features_left {
+            width: 584px;
+        }
+
+        .nursery_room_features_right {
+            width: 555PX;
+        }
+
+        .nursery_room_features_cut {
+            width: 466px;
+            display: none;
+        }
+    }
+
+    .toddler_daily {
+        padding-bottom: 150px;
+
+        .title_box {
+            display: flex;
+            justify-content: center;
+
+            .toddler_daily_title {
+                width: 360px;
+            }
+        }
+        
+        .photo {
+            display: flex;
+
+            .toddler_daily_left {
+                width: 550px;
+            }
+
+            .toddler_daily_right {
+                width: 589px;
+            }
+        }
+
+        .toddler_daily_cut {
+            width: 480px;
+            display: none;
+        }
+    }
+
+    .book {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 150px;
+
+        .page_one_button_book {
+            width: 424px;
+        }
+    }
+}
+
+
+
+
+// page_one_media
+@media screen and (max-width:1700px) {
+    .page_one_nav {
+        display: none;
+    }
+
+    .nav_jump-in {
+        display: flex;
+    }
+    .page_one_banner {
+        .banner_text_all_box {
+            position: unset;
+            top: unset;
+            left: unset;
+            transform: unset;
+            padding-top: 150px;
+            padding-bottom: 150px;
+            
+            .title {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1280px) {
+    .page_one_content {
+        .park_features {
+            flex-direction: column;
+            align-items: center;
+
+            .park_features_left {
+                display: none;
+            }
+
+            .park_features_right {
+                display: none;
+            }
+
+            .park_features_cut {
+                display: flex;
+            }
+        }
+
+        .nursery_room_features {
+            flex-direction: column;
+            align-items: center;
+            
+            .nursery_room_features_left {
+                display: none;
+            }
+
+            .nursery_room_features_right {
+                display: none;
+            }
+
+            .nursery_room_features_cut {
+                display: flex;
+            }
+        }
+
+        .toddler_daily{
+            display: flex;
+            justify-content: center;
+
+            .title_box {
+                display: none;
+            }
+
+            .photo {
+                flex-direction: column;
+                align-items: center;
+                display: none;
+            }
+
+            .toddler_daily_cut {
+                display: flex;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .page_one_content {
+        .park_features {
+            .park_features_cut {
+                width: 366px;
+            }
+        }
+
+        .nursery_room_features {
+            .nursery_room_features_cut {
+                width: 366px;
+            }
+        }
+
+        .toddler_daily{
+            .toddler_daily_cut {
+                width: 366px;
+            }
+        }
+
+        .book {
+            .page_one_button_book {
+                width: 269px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:375px) {
+    .page_one_banner {
+        .banner_text_all_box {
+            position: unset;
+            top: unset;
+            left: unset;
+            transform: unset;
+            padding-top: 50px;
+            padding-bottom: 150px;
+            
+            .banner_text_box {
+                .title {
+                    justify-content: center;
+
+                    .box {
+                        width: 150px;
+
+                        h1 {
+                            font-size: 20px;
+                        }
+
+                        h2 {
+                            font-size: 20px;
+                        }
+                    }
+
+                    img {
+                        height: 100px;
+                    }
+                }
+            }
+
+            .text {
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .page_one_content {
+        .toddler_daily{
+            padding-bottom: 50px;
+        }
+
+        .book {
+            padding-bottom: 50px;
+
+            .page_one_button_book {
+                width: 169px;
+            }
+        }
+    }
+}
