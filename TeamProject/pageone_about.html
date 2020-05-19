@@ -23,10 +23,14 @@
     <link rel="stylesheet" href="./01_css/pageone_style.css">
     <link rel="stylesheet" href="./01_css/mobilebar_insidenav.css">
     <link rel="stylesheet" href="./01_css/topfixed_address.css">
+    <link rel="stylesheet" href="./01_css/loader.css">
     
 </head>
 
 <body>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
     <!-- topfixed_address -->
     <div class="contentT">
         <div class="textT">
@@ -296,6 +300,11 @@
 
 
     <script>
+        $(window).on("load", function () {
+            $(window).resize();
+            $(".loader-wrapper").delay(0500).fadeOut("slow");
+        });
+        
         $(window).scroll(function () {
             // $(window).resize();
             var scrollVal = $(window).scrollTop();
