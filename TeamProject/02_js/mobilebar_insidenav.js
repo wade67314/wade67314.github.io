@@ -2,6 +2,7 @@
 
 $(".mobile_bar").click(function () {
     if ($(".navitems_insidebar").hasClass("display_none")) {
+        document.querySelector("body").classList.add("overflow_hidden")
         document.querySelector(".navitems_insidebar").classList.remove("display_none");
         gsap.to(".lineT", { backgroundColor: "#eee", duration: 0.5 })
         gsap.to(".lineB", { backgroundColor: "#eee", duration: 0.5 })
@@ -10,6 +11,7 @@ $(".mobile_bar").click(function () {
 
     }
     else {
+        document.querySelector("body").classList.remove("overflow_hidden")
         setTimeout(function () {
             document.querySelector(".navitems_insidebar").classList.add("display_none");
         }, 1000);

@@ -20,12 +20,16 @@
     <link rel="stylesheet" href="./01_css/pagethree_style.css">
     <link rel="stylesheet" href="./01_css/mobilebar_insidenav.css">
     <link rel="stylesheet" href="./01_css/topfixed_address.css">
+    <link rel="stylesheet" href="./01_css/loader.css">
+
     
 </head>
 
 <body>
     <div id="top" style="width: 100%;"></div>
-
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
     <!-- topfixed_address -->
     <div class="contentT">
         <div class="textT">
@@ -288,6 +292,10 @@
     <script src="./02_js/mobilebar_insidenav.js"></script>
 
     <script> //滾輪下滑顯示長條navbar
+        $(window).on("load", function () {
+            $(window).resize();
+            $(".loader-wrapper").delay(1000).fadeOut("slow");
+        });
         $(window).scroll(function () {
             // $(window).resize();
             var scrollVal = $(window).scrollTop();
@@ -336,6 +344,7 @@
             var page = path.split("/").pop();
             console.log( page );
             if(page=="pagethree_contact.html"){
+                document.querySelector("body").classList.remove("overflow_hidden")
                 setTimeout(function () {
                     document.querySelector(".navitems_insidebar").classList.add("display_none");
                 }, 1000);

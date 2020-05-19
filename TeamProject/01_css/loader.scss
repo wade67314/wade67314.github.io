@@ -19,6 +19,7 @@ $loading_color:#49c0c4;
     position: relative;
     border: 4px solid $loading_color;
     animation: loader 2s infinite ease;
+    box-sizing: unset;
   }
   .loader-inner {
     vertical-align: top;
