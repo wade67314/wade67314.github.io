@@ -10,6 +10,13 @@ html {
     font-family: 微軟正黑體;
 }
 
+[data-aos] {
+    pointer-events: none;
+    &.aos-animate {
+      pointer-events: auto;
+    }
+}
+
 .page_one_nav {
     width: 100%;
     margin: 0;
