@@ -1,0 +1,62 @@
+.contentT {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #4ad1cf;
+  color: #eee;
+  position: fixed;
+  top: 0;
+  z-index: 98;
+  display: none;
+}
+
+@media (max-width: 1740px) {
+  .contentT {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.textT {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.textT p {
+  margin: 0;
+}
+
+@media (max-width: 400px) {
+  .textT p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .textT p {
+    font-size: 12px;
+  }
+}
+
+.icon_AT {
+  font-size: 21px;
+  margin: 12px 10px;
+  /* padding: 10px; */
+}
+
+.icon_pT {
+  font-size: 18px;
+  margin-left: 20px;
+  margin-right: 8px;
+  /* padding: 10px; */
+}
+/*# sourceMappingURL=topfixed_address.css.map */

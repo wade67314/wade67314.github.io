@@ -1,0 +1,45 @@
+.contentT {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(74, 209, 207);
+    color: #eee;
+    position: fixed;
+    top: 0;
+    z-index: 98;
+    display: none;
+    @media(max-width: 1740px){
+        display: flex;
+    }
+}
+
+.textT {
+    display: flex;
+    align-items: center;
+    p{
+        margin: 0;
+        @media(max-width:400px){
+            font-size: 14px;
+        }
+        @media(max-width:320px){
+            font-size: 12px;
+        }
+    }
+}
+
+
+.icon_AT {
+    font-size: 21px;
+    margin: 12px 10px;
+    /* padding: 10px; */
+}
+
+.icon_pT {
+    font-size: 18px;
+    // margin-top: 16px;
+    margin-left: 20px;
+    margin-right: 8px;
+
+
+    /* padding: 10px; */
+}

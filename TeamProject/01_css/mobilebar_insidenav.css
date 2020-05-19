@@ -38,16 +38,10 @@
   }
 }
 
-@media (max-width: 900px) {
-  .mobile_bar {
-    top: 60px;
-  }
-}
-
 @media (max-width: 768px) {
   .mobile_bar {
-    top: 5px;
-    right: 40px;
+    top: 30px;
+    right: 30px;
   }
 }
 

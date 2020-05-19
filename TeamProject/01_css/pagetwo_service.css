@@ -329,6 +329,12 @@ html {
   color: #686869;
 }
 
+@media (max-width: 1000px) {
+  #section01 .banner_text_all_box {
+    top: 21%;
+  }
+}
+
 @media (max-width: 768px) {
   #section01 .banner_text_all_box {
     display: none;
@@ -364,40 +370,22 @@ html {
   font-size: 30px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 375px) {
   #section01 .banner_text_all_box .banner_text_box .title .box h1 {
-    font-size: 22px;
-  }
-}
-
-@media (max-width: 768px) {
-  #section01 .banner_text_all_box .banner_text_box .title .box h1 {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
 #section01 .banner_text_all_box .banner_text_box .title .box h2 {
   margin: 0;
   padding-top: 5px;
+  font-size: 30px;
+  font-weight: normal;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 375px) {
   #section01 .banner_text_all_box .banner_text_box .title .box h2 {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  #section01 .banner_text_all_box .banner_text_box .title .box h2 {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 1100px) {
-  #section01 .banner_text_all_box .banner_text_box .title img {
-    width: 44px;
-    height: 62px;
-    padding-top: 20px;
+    font-size: 20px;
   }
 }
 
@@ -412,6 +400,16 @@ html {
 #section01 .banner_text_all_box .text p {
   text-align: center;
   padding-right: 70px;
+  font-size: 25px;
+}
+
+@media (max-width: 1000px) {
+  #section01 .banner_text_all_box .text p {
+    font-size: 20px;
+    padding-right: 0px;
+    margin-top: 4px;
+    letter-spacing: 5px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -456,7 +454,7 @@ html {
   margin: 0px;
   font-family: "微軟正黑體";
   letter-spacing: 5px;
-  font-weight: lighter;
+  font-weight: normal;
   font-size: 30px;
   border-bottom: solid #686869 1px;
   padding-bottom: 5px;
@@ -470,8 +468,9 @@ html {
 
 #section01 .mobile_banner_text_all_box .banner_text_box .title .box h2 {
   margin: 0px;
-  font-size: 18px;
+  font-size: 30px;
   padding-top: 5px;
+  font-weight: lighter;
 }
 
 @media (max-width: 375px) {
