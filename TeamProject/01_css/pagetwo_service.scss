@@ -186,6 +186,7 @@ html {
     width: 100%;
     background-color: #FCB465;
     display: none;
+    position: fixed;
     position: sticky;
     top: 0;
     z-index: 99;
@@ -1062,8 +1063,8 @@ footer {
         right: 29px;
     } 
     &:hover{
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-transition: 0.3s;
+        // box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
     }
 }
 

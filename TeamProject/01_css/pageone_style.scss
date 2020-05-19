@@ -14,6 +14,7 @@ body {
     width: 100%;
     background-color: rgb(92, 224, 222);
     display: none;
+    position: fixed;
     position: sticky;
     top: 0;
     z-index: 99;
@@ -684,6 +685,10 @@ footer {
 
 }
 
+.butoon_fixed{
+    text-decoration: none;
+    list-style: none;
+}
 /* button-_fixed */
 .btt {
     position: fixed;
@@ -704,8 +709,10 @@ footer {
         right: 29px;
     } 
     &:hover{
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-transition: 0.3s;
+
+        // box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+
     }
 }
 

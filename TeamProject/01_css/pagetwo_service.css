@@ -202,6 +202,7 @@ html {
   width: 100%;
   background-color: #FCB465;
   display: none;
+  position: fixed;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -1291,8 +1292,6 @@ footer .roate_windmill .windmill_stick {
 }
 
 .btt:hover {
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }

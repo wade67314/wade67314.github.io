@@ -15,6 +15,7 @@ body {
   width: 100%;
   background-color: #5ce0de;
   display: none;
+  position: fixed;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -816,6 +817,11 @@ footer .roate_windmill .windmill_stick {
   }
 }
 
+.butoon_fixed {
+  text-decoration: none;
+  list-style: none;
+}
+
 /* button-_fixed */
 .btt {
   position: fixed;
@@ -847,8 +853,6 @@ footer .roate_windmill .windmill_stick {
 }
 
 .btt:hover {
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
