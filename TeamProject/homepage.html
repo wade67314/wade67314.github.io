@@ -13,7 +13,7 @@
 
 </head>
 
-<body onload="followMouse() ;window.scroll(0, 40)">
+<body onload="followMouse() ;window.scroll(30, 30)">
 
     <div class="loader-wrapper">
         <span class="loader"><span class="loader-inner"></span></span>
@@ -375,9 +375,14 @@
 
         //loading animation
         $(window).on("load", function () {
-            $(window).delay(1000).resize();
+            // $(window).resize();
             $(".loader-wrapper").delay(1000).fadeOut("slow");
         });
+        // function listener(e){
+        //     e.preventDefault();
+        //     // $(window).resize();
+        // }
+        // $(window).resize(listener);
         // window.addEventListener('load', () => {
         //     // Resize refreshes sliders
         //     $(window).resize();
