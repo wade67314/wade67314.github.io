@@ -68,7 +68,7 @@ $mobile_bar_color:#49c0c4;
         display: none ;
     }
     @media(max-height: 414px){
-        height: auto;
+        height: 100vh;
     }
     img {
         width: 135px;

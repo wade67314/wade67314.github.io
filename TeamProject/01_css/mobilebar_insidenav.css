@@ -94,7 +94,7 @@
 
 @media (max-height: 414px) {
   .navitems_insidebar {
-    height: auto;
+    height: 100vh;
   }
 }
 
