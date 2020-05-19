@@ -1,8 +1,5 @@
 .contentT {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -12,8 +9,10 @@
   top: 0;
   z-index: 98;
   display: none;
-  -webkit-transform: translate3d(auto, auto, 2501px);
-          transform: translate3d(auto, auto, 2501px);
+  -webkit-perspective: 2600px;
+          perspective: 2600px;
+  -webkit-transform: perspective(2600px);
+          transform: perspective(2600px);
 }
 
 @media (max-width: 1740px) {

@@ -1,6 +1,6 @@
 .contentT {
     width: 100%;
-    display: flex;
+    // display: flex;
     justify-content: center;
     background-color: rgb(74, 209, 207);
     color: #eee;
@@ -8,7 +8,9 @@
     top: 0;
     z-index: 98;
     display: none;
-    transform: translate3d(auto,auto,2501px);
+    perspective: 2600px;
+    transform: perspective(2600px);
+    // transform: translate3d(auto,auto,2501px);
     @media(max-width: 1740px){
         display: flex;
     }
