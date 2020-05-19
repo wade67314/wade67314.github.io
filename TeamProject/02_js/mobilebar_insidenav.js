@@ -29,7 +29,7 @@ line.fromTo(".lineT", { width: 0 }, { width: 45, duration: 0.8, delay: 1 });
 line.fromTo(".lineB", { width: 0 }, { width: 27, duration: 0.3 });
 
 //ripple hover
-window.addEventListener('load', () => {
+window.addEventListener('load', function() {
     const nodes = document.querySelectorAll('.ripple');
     for (let i = 0; i < nodes.length; i++) {
         let letters = nodes[i].innerText.split('').join('</span><span>');
@@ -41,4 +41,4 @@ window.addEventListener('load', () => {
             children[j].style.animationDelay = (j / 10) + 's';
         }
     }
-})
+});
