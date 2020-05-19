@@ -21,7 +21,8 @@ form{
     width:100%;
     margin:auto;
     padding: 208px;  
-    padding-top: 528px;   
+    padding-top: 528px;
+       
 }
 
 #sec_1 .row .title{
@@ -147,7 +148,14 @@ form{
   }
   
 } */
-
+@media screen and (max-width: 1740px) {
+    #sec_1{
+        padding:50px;
+    }
+    #sec_1 .row{
+        padding:120px;
+    }
+}
 @media screen and (max-width: 1280px) { 
     #sec_1{
     padding:50px;
