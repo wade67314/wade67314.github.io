@@ -7,7 +7,7 @@
   color: #eee;
   position: fixed;
   top: 0;
-  z-index: 98;
+  z-index: 98 !important;
   display: none;
   -webkit-perspective: -2600px;
           perspective: -2600px;

@@ -6,7 +6,7 @@
     color: #eee;
     position: fixed;
     top: 0;
-    z-index: 98;
+    z-index: 98 !important;
     display: none;
     perspective: -2600px;
     transform: perspective(-2600px);
