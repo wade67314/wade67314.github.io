@@ -12,6 +12,8 @@
   top: 0;
   z-index: 98;
   display: none;
+  -webkit-transform: translate3d(auto, auto, 99);
+          transform: translate3d(auto, auto, 99);
 }
 
 @media (max-width: 1740px) {
