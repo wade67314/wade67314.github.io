@@ -665,6 +665,7 @@ footer {
 .copyright {
     font-size: 19px;
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 3em;
     letter-spacing: 0.025em;
     color: white;
     
@@ -718,7 +719,7 @@ transition: 0.3s;
     }
     @media (max-width: 768px){
         width: 40px;
-        bottom: 196px;                       
+        bottom: 215px;                       
     } 
     // @media (max-width: 375px){
     //     width: 40px;
@@ -748,7 +749,7 @@ transition: 0.3s;
         bottom: 140px;                       
     }
     @media (max-width: 375px){
-        bottom: 145px;                       
+        bottom: 165px;                       
     }
     &:hover{
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);

@@ -793,6 +793,7 @@ footer .roate_windmill .windmill_stick {
 .footer_text .copyright {
   font-size: 19px;
   font-family: Arial, Helvetica, sans-serif;
+  line-height: 3em;
   letter-spacing: 0.025em;
   color: white;
 }
@@ -869,7 +870,7 @@ footer .roate_windmill .windmill_stick {
 @media (max-width: 768px) {
   .illstration_map {
     width: 40px;
-    bottom: 196px;
+    bottom: 215px;
   }
 }
 
@@ -914,7 +915,7 @@ footer .roate_windmill .windmill_stick {
 
 @media (max-width: 375px) {
   .illstration_contact {
-    bottom: 145px;
+    bottom: 165px;
   }
 }
 
