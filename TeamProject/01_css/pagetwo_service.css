@@ -462,7 +462,7 @@ html {
 
 @media (max-width: 375px) {
   #section01 .mobile_banner_text_all_box .banner_text_box .title .box h1 {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 
@@ -475,7 +475,7 @@ html {
 
 @media (max-width: 375px) {
   #section01 .mobile_banner_text_all_box .banner_text_box .title .box h2 {
-    font-size: 20px;
+    font-size: 30px;
     font-family: Arial;
     font-weight: lighter;
   }
@@ -509,7 +509,7 @@ html {
 
 @media (max-width: 375px) {
   #section01 .mobile_banner_text_all_box .text p {
-    font-size: 13px;
+    font-size: 20px;
   }
 }
 
