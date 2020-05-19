@@ -288,30 +288,12 @@
 
 
     <script>
+        
         $(window).on("load", function () {
             $(window).resize();
             $(".loader-wrapper").delay(1000).fadeOut("slow");
         });
-        
-        // $(window).scroll(function () {
-        //     // $(window).resize();
-        //     var scrollVal = $(window).scrollTop();
-        //     if (scrollVal > 300 && $(window).width() > 1740) {
-        //         document.querySelector(".nav_jump-in").style.display="flex";
-        //         document.querySelector(".page_one_nav").style.display="none";
-        //         // $(".page_one_nav").hide();
-        //     }
-        //     else if($(window).width() < 1740){
-        //         // $(".page_one_nav").hide();
-        //         document.querySelector(".page_one_nav").style.display="none";
-        //         document.querySelector(".nav_jump-in").style.display="none";
-        //     }
-        //     else {
-        //         document.querySelector(".nav_jump-in").style.display="none";
-        //         document.querySelector(".page_one_nav").style.display="block";
-        //     }
-        //     // $(window).resize();
-        // });
+    
 
         function listener (e) {
             e.preventDefault();
