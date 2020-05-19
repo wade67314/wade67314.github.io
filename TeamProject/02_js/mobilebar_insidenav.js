@@ -2,7 +2,7 @@
 
 $(".mobile_bar").click(function () {
     if ($(".navitems_insidebar").hasClass("display_none")) {
-        document.querySelector("body").classList.add("overflow_hidden")
+        document.querySelector("body").classList.add("overflow_hidden");
         document.querySelector(".navitems_insidebar").classList.remove("display_none");
         gsap.to(".lineT", { backgroundColor: "#eee", duration: 0.5 })
         gsap.to(".lineB", { backgroundColor: "#eee", duration: 0.5 })
