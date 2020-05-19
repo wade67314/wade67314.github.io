@@ -4,20 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>關於我們-滿果托嬰中心</title>
-    <!-- navbar_nav_jump-in -->
-    <!-- <link rel="stylesheet" href="main_nav_jump_in.css"> -->
-    <!-- page_one_nav -->
-    <!-- <link rel="stylesheet" href="page_one_nav.css"> -->
-    <!-- page_one_banner -->
-    <!-- <link rel="stylesheet" href="page_one_banner.css"> -->
-    <!-- page_one_content -->
-    <!-- <link rel="stylesheet" href="page_one_content.css"> -->
-    <!-- footer_grass -->
-    <!-- <link rel="stylesheet" href="footer_grass.css"> -->
-
-    <!-- page_one_media -->
-    <!-- <link rel="stylesheet" href="page_one_media.css"> -->
+    <title>關於我們-滿果國際托嬰中心</title>
+    
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="./01_css/pageone_style.css">
@@ -305,25 +293,43 @@
             $(".loader-wrapper").delay(1000).fadeOut("slow");
         });
         
-        $(window).scroll(function () {
-            // $(window).resize();
-            var scrollVal = $(window).scrollTop();
-            if (scrollVal > 300 && $(window).width() > 1740) {
+        // $(window).scroll(function () {
+        //     // $(window).resize();
+        //     var scrollVal = $(window).scrollTop();
+        //     if (scrollVal > 300 && $(window).width() > 1740) {
+        //         document.querySelector(".nav_jump-in").style.display="flex";
+        //         document.querySelector(".page_one_nav").style.display="none";
+        //         // $(".page_one_nav").hide();
+        //     }
+        //     else if($(window).width() < 1740){
+        //         // $(".page_one_nav").hide();
+        //         document.querySelector(".page_one_nav").style.display="none";
+        //         document.querySelector(".nav_jump-in").style.display="none";
+        //     }
+        //     else {
+        //         document.querySelector(".nav_jump-in").style.display="none";
+        //         document.querySelector(".page_one_nav").style.display="block";
+        //     }
+        //     // $(window).resize();
+        // });
+
+        function listener (e) {
+            e.preventDefault();
+            if ($(window).scrollTop() > 300 && window.innerWidth > 1740) {
                 document.querySelector(".nav_jump-in").style.display="flex";
                 document.querySelector(".page_one_nav").style.display="none";
-                // $(".page_one_nav").hide();
             }
-            else if($(window).width() < 1740){
-                // $(".page_one_nav").hide();
+            else if(window.innerWidth < 1740){
                 document.querySelector(".page_one_nav").style.display="none";
                 document.querySelector(".nav_jump-in").style.display="none";
-            }
+            }   
             else {
                 document.querySelector(".nav_jump-in").style.display="none";
                 document.querySelector(".page_one_nav").style.display="block";
             }
-            // $(window).resize();
-        });
+        }
+        $(window).scroll(listener);
+        $(window).resize(listener);
         
 
 

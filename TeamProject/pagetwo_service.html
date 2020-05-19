@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>服務項目-滿果托嬰中心</title>
+    <title>服務項目-滿果國際托嬰中心</title>
     <link rel="stylesheet" href="./01_css/pagetwo_service.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- 手機版navbar -->
@@ -364,26 +364,24 @@
             $(window).resize();
             $(".loader-wrapper").delay(1000).fadeOut("slow");
         });
-        
-        $(window).scroll(function () {
-            // $(window).resize();
-            var scrollVal = $(window).scrollTop();
-            if (scrollVal > 300 && $(window).width() > 1740) {
+
+        function listener (e) {
+            e.preventDefault();
+            if ($(window).scrollTop() > 300 && window.innerWidth > 1740) {
                 document.querySelector(".nav_jump-in").style.display="flex";
                 document.querySelector(".page_one_nav").style.display="none";
-                // $(".page_one_nav").hide();
             }
-            else if($(window).width() < 1740){
-                // $(".page_one_nav").hide();
+            else if(window.innerWidth < 1740){
                 document.querySelector(".page_one_nav").style.display="none";
                 document.querySelector(".nav_jump-in").style.display="none";
-            }
+            }   
             else {
                 document.querySelector(".nav_jump-in").style.display="none";
                 document.querySelector(".page_one_nav").style.display="block";
             }
-            // $(window).resize();
-        });
+        }
+        $(window).scroll(listener);
+        $(window).resize(listener);
     
         var scrollTop = $(window).scrollTop()
 

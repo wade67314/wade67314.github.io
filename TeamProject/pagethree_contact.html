@@ -4,17 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>聯絡我們-滿果托嬰中心</title>
+    <title>聯絡我們-滿果國際托嬰中心</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
-    <!-- 波浪navbar -->
-    <!-- <link rel="stylesheet" href="page_one_nav_banner2.css"> -->
-    <!-- 長條navbar -->
-    <!-- <link rel="stylesheet" href="main_nav_jump_in2.css"> -->
-    <!-- footer -->
-    <!-- <link rel="stylesheet" href="footer.css">  -->
+
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="./01_css/pagethree_style.css">
@@ -296,25 +291,24 @@
             $(window).resize();
             $(".loader-wrapper").delay(1000).fadeOut("slow");
         });
-        $(window).scroll(function () {
-            // $(window).resize();
-            var scrollVal = $(window).scrollTop();
-            if (scrollVal > 300 && $(window).width() > 1740) {
-                document.querySelector(".nav_jump-in").style.display = "flex";
-                document.querySelector(".page_one_nav").style.display = "none";
-                // $(".page_one_nav").hide();
+
+        function listener (e) {
+            e.preventDefault();
+            if ($(window).scrollTop() > 300 && window.innerWidth > 1740) {
+                document.querySelector(".nav_jump-in").style.display="flex";
+                document.querySelector(".page_one_nav").style.display="none";
             }
-            else if ($(window).width() < 1740) {
-                // $(".page_one_nav").hide();
-                document.querySelector(".page_one_nav").style.display = "none";
-                document.querySelector(".nav_jump-in").style.display = "none";
-            }
+            else if(window.innerWidth < 1740){
+                document.querySelector(".page_one_nav").style.display="none";
+                document.querySelector(".nav_jump-in").style.display="none";
+            }   
             else {
-                document.querySelector(".nav_jump-in").style.display = "none";
-                document.querySelector(".page_one_nav").style.display = "block";
+                document.querySelector(".nav_jump-in").style.display="none";
+                document.querySelector(".page_one_nav").style.display="block";
             }
-            // $(window).resize();
-        });
+        }
+        $(window).scroll(listener);
+        $(window).resize(listener);
 
         var scrollTop = $(window).scrollTop()
 
