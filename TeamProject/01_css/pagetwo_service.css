@@ -1304,16 +1304,16 @@ footer .roate_windmill .windmill_stick {
   width: 5%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .illstration_map {
-    width: 6%;
-    bottom: 196px;
+    width: 50px;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .illstration_map {
-    width: 7%;
+    width: 50px;
+    bottom: 196px;
   }
 }
 
@@ -1338,22 +1338,27 @@ footer .roate_windmill .windmill_stick {
   }
 }
 
+@media (max-width: 1000px) {
+  .illstration_contact {
+    width: 50px;
+  }
+}
+
 @media (max-width: 768px) {
   .illstration_contact {
-    width: 6%;
+    width: 40px;
   }
 }
 
 @media (max-width: 520px) {
   .illstration_contact {
-    bottom: 159px;
+    bottom: 140px;
   }
 }
 
 @media (max-width: 375px) {
   .illstration_contact {
-    width: 7%;
-    bottom: 165px;
+    bottom: 145px;
   }
 }
 
