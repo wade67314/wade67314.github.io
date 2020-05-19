@@ -84,8 +84,8 @@
   background-color: #eee;
   background-size: cover;
   background-position: center;
-  -webkit-transform: translate3d(auto, auto, 99);
-          transform: translate3d(auto, auto, 99);
+  -webkit-transform: translate3d(auto, auto, 2501px);
+          transform: translate3d(auto, auto, 2501px);
 }
 
 @media (min-width: 1740px) {
