@@ -46,7 +46,7 @@
             <li><a class="ripple" href="./homepage.html">首頁</a></li>
             <li><a class="ripple" href="./pageone_about.html">關於滿果</a></li>
             <li><a class="ripple" href="./pagetwo_service.html">服務項目</a></li>
-            <li><a id="checkweb" class="ripple" href="./pagethree_contact.html#sec_3">預約參觀</a></li>
+            <li><a class="ripple checkweb" href="./pagethree_contact.html#sec_3">預約參觀</a></li>
             <li><a class="ripple" href="./pagethree_contact.html">聯絡我們</a></li>
         </ul>
         <footer>
@@ -331,7 +331,7 @@
         });
 
         
-        $("#checkweb").click(function(){
+        $(".checkweb").click(function(){
             var path = window.location.pathname;
             var page = path.split("/").pop();
             console.log( page );
