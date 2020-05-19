@@ -13,8 +13,8 @@
           perspective: -2600px;
   -webkit-transform: perspective(-2600px);
           transform: perspective(-2600px);
-  -webkit-transform: translate3d(auto, auto, -2600px);
-          transform: translate3d(auto, auto, -2600px);
+  -webkit-transform: translate3d(auto, auto, 2600px);
+          transform: translate3d(auto, auto, 2600px);
 }
 
 @media (max-width: 1740px) {
