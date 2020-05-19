@@ -617,28 +617,10 @@ footer .grass_group .updown_bottom {
 footer .roate_windmill {
   position: relative;
   position: absolute;
-  top: -7%;
+  top: -70%;
   right: 21%;
   width: 10%;
   z-index: 3;
-}
-
-@media (max-width: 768px) {
-  footer .roate_windmill {
-    top: -4%;
-  }
-}
-
-@media (max-width: 500px) {
-  footer .roate_windmill {
-    top: -3%;
-  }
-}
-
-@media (max-width: 375px) {
-  footer .roate_windmill {
-    top: -5%;
-  }
 }
 
 footer .roate_windmill .windmill {
