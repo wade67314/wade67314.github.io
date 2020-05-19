@@ -132,6 +132,12 @@ form {
   margin-bottom: 30px;
 }
 
+@media (max-width: 1740px) {
+  .row {
+    margin-bottom: 0;
+  }
+}
+
 .row1 {
   max-width: 100%;
   display: -webkit-box;
@@ -228,6 +234,21 @@ form {
   #sec_1 .row {
     padding: 80px;
   }
+}
+
+@media screen and (max-width: 680px) and (max-width: 500px) {
+  #sec_1 .row {
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 680px) and (max-width: 375px) {
+  #sec_1 .row {
+    padding-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 680px) {
   .icon_AA, .icon_BB {
     display: none;
   }
@@ -705,6 +726,45 @@ footer .grass_group .updown_bottom {
   top: 16vw;
 }
 
+footer .ball {
+  position: absolute;
+  z-index: 3;
+  top: -130%;
+  left: 21%;
+  width: 10%;
+}
+
+footer .ball img {
+  width: 80%;
+  /* width: 10vw; */
+  -webkit-animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+          animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-animation: ball_updown_roate 3s infinite alternate;
+          animation: ball_updown_roate 3s infinite alternate;
+}
+
+@-webkit-keyframes ball_updown_roate {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(0deg);
+            transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(10px, 50px) rotate(50deg);
+            transform: translate(10px, 50px) rotate(50deg);
+  }
+}
+
+@keyframes ball_updown_roate {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(0deg);
+            transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(10px, 50px) rotate(50deg);
+            transform: translate(10px, 50px) rotate(50deg);
+  }
+}
+
 footer .roate_windmill {
   position: relative;
   position: absolute;
@@ -761,6 +821,33 @@ footer .roate_windmill .windmill_stick {
 
 .footer_text .footer_logo_icon {
   width: 11%;
+}
+
+@media (max-width: 768px) {
+  .footer_text .footer_logo_icon {
+    width: 15%;
+  }
+}
+
+.footer_text .footer_logo_icon:hover {
+  -webkit-animation: beat .25s infinite alternate;
+          animation: beat .25s infinite alternate;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+@-webkit-keyframes beat {
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes beat {
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 
 .footer_text .company_name {
@@ -836,6 +923,20 @@ footer .roate_windmill .windmill_stick {
 
 .footer_text .line_icon .footer_fb_icon {
   width: 9vw;
+}
+
+.footer_text .line_icon .footer_fb_icon:hover {
+  -webkit-animation: beat .25s infinite alternate;
+          animation: beat .25s infinite alternate;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+@keyframes beat {
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 
 .footer_text .phone_number {
@@ -964,10 +1065,17 @@ footer .roate_windmill .windmill_stick {
 }
 
 .illstration_map:hover {
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-animation: beat .25s infinite alternate;
+          animation: beat .25s infinite alternate;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+@keyframes beat {
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 
 .illstration_contact {
@@ -1009,9 +1117,18 @@ footer .roate_windmill .windmill_stick {
 }
 
 .illstration_contact:hover {
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  -webkit-animation: beat .25s infinite alternate;
+          animation: beat .25s infinite alternate;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+@keyframes beat {
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 /*# sourceMappingURL=pagethree_style.css.map */

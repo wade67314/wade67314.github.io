@@ -46,3 +46,22 @@
 
     /* padding: 10px; */
 }
+.contentT2{
+    width: 100%;
+    position: fixed;
+    top: 45px;
+    z-index: 90;
+    display: none;
+    padding: 7px 0;
+    background-color: #FFFCF8;
+    @media(max-width: 1740px){
+        display: block;
+    }
+    img{
+        margin-left: 105px;
+        @media(max-width: 1050px){
+            margin-left: 30px;
+        }
+        
+    }
+}

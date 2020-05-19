@@ -106,11 +106,15 @@ form{
 
 .row{
     margin-bottom: 30px;
+    @media(max-width: 1740px){
+        margin-bottom: 0;
+    }
 }
 
 .row1{
     max-width:100%;
     display:flex;
+    
 } 
 
 .color{
@@ -196,6 +200,12 @@ form{
 @media screen and (max-width: 680px) {
     #sec_1 .row{
         padding:80px;
+        @media(max-width: 500px){
+            padding-bottom: 40px;
+        }
+        @media(max-width: 375px){
+            padding-bottom: 0px;
+        }
     }
         
     .icon_AA, .icon_BB{
@@ -571,25 +581,35 @@ footer {
             
         }
 
-       
+        .ball{
+            position: absolute;
+            z-index: 3;
+            top: -130%;
+            left: 21%;
+            width: 10%;
+            img {
+                width: 80%;
+                /* width: 10vw; */
+                animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+                animation: ball_updown_roate 3s infinite alternate;
+            }
+            @keyframes ball_updown_roate{
+                0% {
+                    transform: translate(0,0) rotate(0deg);
+                }
+                100% {
+                   transform:translate(10px,50px) rotate(50deg);
+                }
+            }
+        }
 
         .roate_windmill {
-
             position: relative;
             position: absolute;
             top: -70%;
             right: 21%;
             width: 10%;
             z-index: 3;
-            // @media (max-width: 768px){
-            //     top: -50%;                        
-            // } 
-            // @media (max-width: 500px){
-            //     top: -50%;                        
-            // }
-            // @media (max-width: 375px){
-            //     top: -50%;                        
-            // }
             .windmill {     
                 width: 50%;           
                 animation: Roate 2s infinite ;
@@ -619,8 +639,17 @@ footer {
     padding: 2%;
     text-align: center;
 .footer_logo_icon{
-   width: 11%;
-   
+    width: 11%;
+    @media(max-width:768px){
+        width: 15%;
+    }
+    &:hover{
+        animation: beat .25s infinite alternate;
+        transform-origin: center;
+        @keyframes beat{
+            to { transform: scale(1.1); }
+        }
+    }
 }    
 .company_name{
     font-size: 32px;
@@ -678,6 +707,13 @@ footer {
         @media (max-width: 375px){
             // width: 11%;                        
         } 
+        &:hover{
+            animation: beat .25s infinite alternate;
+            transform-origin: center;
+            @keyframes beat{
+                to { transform: scale(1.1); }
+            }
+        }
     }
  
 }    
@@ -789,8 +825,13 @@ footer {
     //     width: 40px;
     // }
     &:hover{
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-transition: 0.3s;
+        // box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        // transition: 0.3s;
+        animation: beat .25s infinite alternate;
+        transform-origin: center;
+        @keyframes beat{
+            to { transform: scale(1.1); }
+        }
     }
 }
 
@@ -816,7 +857,12 @@ transition: 0.3s;
         bottom: 165px;                       
     }
     &:hover{
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-transition: 0.3s;
+        // box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        animation: beat .25s infinite alternate;
+        transform-origin: center;
+        @keyframes beat{
+            to { transform: scale(1.1); }
+        }
     }
 }

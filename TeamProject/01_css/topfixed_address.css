@@ -56,4 +56,30 @@
   margin-right: 8px;
   /* padding: 10px; */
 }
+
+.contentT2 {
+  width: 100%;
+  position: fixed;
+  top: 45px;
+  z-index: 90;
+  display: none;
+  padding: 7px 0;
+  background-color: #FFFCF8;
+}
+
+@media (max-width: 1740px) {
+  .contentT2 {
+    display: block;
+  }
+}
+
+.contentT2 img {
+  margin-left: 105px;
+}
+
+@media (max-width: 1050px) {
+  .contentT2 img {
+    margin-left: 30px;
+  }
+}
 /*# sourceMappingURL=topfixed_address.css.map */

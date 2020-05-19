@@ -300,43 +300,23 @@ html {
                         }
                         h1 {
                             margin: 0;
-                            width: 200px;
                             font-family: "微軟正黑體";
                             letter-spacing: 5px;
-                            font-weight: lighter;
                             border-bottom: solid rgb(104, 104, 105) 1px;
                             padding-bottom: 5px;
                             font-size: 30px;
-                            // @media (max-width: 1100px){
-                            //     font-size:22px ;
-                            // }
-                            // @media (max-width: 768px){
-                            //     font-size:18px ;
-                            // }
                             @media (max-width: 375px){
                                 font-size:20px ;
                             }
                         }
-    
-                        // p {
-                        //     border-bottom: solid rgb(104, 104, 105) 1px;
-                        //     @media (max-width: 1100px){
-                        //         margin:5px 20px;
-                        //         width: 150px;
-                        //     }
-                        // }
-    
+        
                         h2 {
                             margin: 0;
                             padding-top: 5px;
                             font-size: 30px;
-                            font-weight: normal;
-                            // @media (max-width: 1100px){
-                            //     font-size:16px ;
-                            // }
-                            // @media (max-width: 768px){
-                            //     font-size:12px ;
-                            // }
+                            font-family: "Arial";
+                            font-weight: lighter;
+                            
                             @media (max-width: 375px){
                                 font-size:20px ;
                             }
@@ -385,6 +365,8 @@ html {
             display: flex;
             flex-direction: column;
             align-items: center;
+            color: rgb(104, 104, 105);
+            margin-top: 13px;
             .banner_text_box {
                 display:none;
                 @media (max-width: 768px){
@@ -395,38 +377,25 @@ html {
                     text-align: center;
                     .box {
                         h1 {
-                            margin: 0px;
+                            margin: 0;
                             font-family: "微軟正黑體";
                             letter-spacing: 5px;
-                            font-weight: normal;
-                            font-size:30px ;
                             border-bottom: solid rgb(104, 104, 105) 1px;
                             padding-bottom: 5px;
+                            font-size: 30px;
                             @media (max-width: 375px){
-                                font-size: 30px;
+                                font-size: 20px;
                             }
                         }
-    
-                        // p {
-                        //     margin:5px;
-                        //     border-bottom: solid  1px;
-                        //     width: 150px;
-                        //     display:inline-block;
-                        //     @media (max-width: 375px){
-                        //         width: 100px;
-                        //     }
-                        // }
-                        
-    
+       
                         h2 {
-                            margin:0px;
-                            font-size:30px ;
+                            margin: 0;
                             padding-top: 5px;
+                            font-size: 30px;
+                            font-family: "Arial";
                             font-weight: lighter;
                             @media (max-width: 375px){
-                                font-size: 30px;
-                                font-family: Arial;
-                                font-weight: lighter;
+                                font-size:20px ;
                             }
                         }
                     }
@@ -557,6 +526,12 @@ html {
                         right: 22%;
                         top: 65%;
                     }
+                    // animation: shake 2s infinite;
+                    // @keyframes shake{
+                    //     0%{rotate:0deg}
+                    //     50%{rotate:45deg}
+                    //     100%{rotate:0deg}
+                    // }
                 }
             }
         }
@@ -684,8 +659,8 @@ html {
                 .text_grow_bgimg{
                     width: 100%;
                     // @media (max-width: 768px){
-                    //     width: 70%;
-                    //     padding:0 77px;
+                    //     width: 90%;
+                    //     // padding:0 77px;
                     // }
                 }
                 .text_grow{
@@ -760,7 +735,7 @@ html {
             .title_visit{
                 margin-top: 10%;
                 @media (max-width: 768px){
-                    width: 40%;                        
+                    width: 60%;                        
                 }  
                 
             }
@@ -868,7 +843,27 @@ footer {
         }
 
        
-
+        .ball{
+            position: absolute;
+            z-index: 3;
+            top: -130%;
+            left: 21%;
+            width: 10%;
+            img {
+                width: 80%;
+                /* width: 10vw; */
+                animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+                animation: ball_updown_roate 3s infinite alternate;
+            }
+            @keyframes ball_updown_roate{
+                0% {
+                    transform: translate(0,0) rotate(0deg);
+                }
+                100% {
+                   transform:translate(10px,50px) rotate(50deg);
+                }
+            }
+        }
         .roate_windmill {
 
             position: relative;
@@ -915,8 +910,17 @@ footer {
     padding: 2%;
     text-align: center;
 .footer_logo_icon{
-   width: 11%;
-   
+    width: 11%;
+    @media(max-width:768px){
+        width: 15%;
+    }
+    &:hover{
+        animation: beat .25s infinite alternate;
+        transform-origin: center;
+        @keyframes beat{
+            to { transform: scale(1.1); }
+        }
+    }
 }    
 .company_name{
     font-size: 32px;
@@ -974,6 +978,13 @@ footer {
         @media (max-width: 375px){
             // width: 11%;                        
         } 
+        &:hover{
+            animation: beat .25s infinite alternate;
+            transform-origin: center;
+            @keyframes beat{
+                to { transform: scale(1.1); }
+            }
+        }
     }
  
 }    
@@ -1085,8 +1096,13 @@ footer {
     //     width: 40px;
     // }
     &:hover{
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-transition: 0.3s;
+        // box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        // transition: 0.3s;
+        animation: beat .25s infinite alternate;
+        transform-origin: center;
+        @keyframes beat{
+            to { transform: scale(1.1); }
+        }
     }
 }
 
@@ -1112,8 +1128,13 @@ transition: 0.3s;
         bottom: 165px;                       
     }
     &:hover{
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-transition: 0.3s;
+        // box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        animation: beat .25s infinite alternate;
+        transform-origin: center;
+        @keyframes beat{
+            to { transform: scale(1.1); }
+        }
     }
 }
 

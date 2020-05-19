@@ -28,6 +28,11 @@
         <i class="fas fa-phone-alt icon_pT"></i><p>04-25252785</p>
         </div>
     </div>
+
+    <div class="contentT2">
+        <a href="./homepage.html" style="text-decoration: none;"><img src="./03_img/01_p1/logo2.png" alt=""></a>
+    </div>
+
     <div class="mobile_bar">
         <div class="lineT"></div>
         <div class="lineB"></div>
@@ -293,6 +298,9 @@
             <img src="./03_img/02_p2/grass-15.png" alt="" class="updown_3">
             <div class="updown_bottom"></div>
 
+            <div class="ball">
+                <img src="./03_img/01_p1/ball.png" alt="">
+            </div>
             <div class="roate_windmill">
                 <img class="windmill" src="./03_img/02_p2/windmill.png" alt="">
 
@@ -358,7 +366,9 @@
 
 
     <script>
-        AOS.init();
+        AOS.init({
+            disable: "mobile"  // accepts following values: 'phone', 'tablet', 'mobile
+        });
 
         $(window).on("load", function () {
             $(window).resize();

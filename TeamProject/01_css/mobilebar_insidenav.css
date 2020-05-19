@@ -30,6 +30,7 @@
 
 @media (max-width: 1740px) {
   .mobile_bar {
+    top: 60px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -45,7 +46,6 @@
 @media (max-width: 768px) {
   .mobile_bar {
     top: 30px;
-    right: 30px;
   }
 }
 

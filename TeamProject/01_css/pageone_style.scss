@@ -280,7 +280,6 @@ body {
             .title {
                 text-align: center;
                 display: flex;
-    
                 .box {
                     padding-top: 35px;
                     width: 200px;
@@ -510,8 +509,28 @@ footer {
             }
             
         }
-
-       
+        .ball{
+            position: absolute;
+            z-index: 3;
+            top: -130%;
+            left: 21%;
+            width: 10%;
+            img {
+                width: 80%;
+                /* width: 10vw; */
+                animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+                animation: ball_updown_roate 3s infinite alternate;
+            }
+            @keyframes ball_updown_roate{
+                0% {
+                    transform: translate(0,0) rotate(0deg);
+                }
+                100% {
+                   transform:translate(10px,50px) rotate(50deg);
+                }
+            }
+        }
+        
 
         .roate_windmill {
 
@@ -559,8 +578,17 @@ footer {
     padding: 2%;
     text-align: center;
 .footer_logo_icon{
-   width: 11%;
-   
+    width: 11%;
+    @media(max-width:768px){
+        width: 15%;
+    }
+    &:hover{
+        animation: beat .25s infinite alternate;
+        transform-origin: center;
+        @keyframes beat{
+            to { transform: scale(1.1); }
+        }
+    }
 }    
 .company_name{
     font-size: 32px;
@@ -618,6 +646,13 @@ footer {
         @media (max-width: 375px){
             // width: 11%;                        
         } 
+        &:hover{
+            animation: beat .25s infinite alternate;
+            transform-origin: center;
+            @keyframes beat{
+                to { transform: scale(1.1); }
+            }
+        }
     }
  
 }    
@@ -734,8 +769,13 @@ footer {
     //     width: 40px;
     // }
     &:hover{
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-        transition: 0.3s;
+        // box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        // transition: 0.3s;
+        animation: beat .25s infinite alternate;
+        transform-origin: center;
+        @keyframes beat{
+            to { transform: scale(1.1); }
+        }
     }
 }
 
@@ -761,8 +801,13 @@ footer {
         bottom: 165px;                       
     }
     &:hover{
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-transition: 0.3s;
+        // box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        // transition: 0.3s;
+        animation: beat .25s infinite alternate;
+        transform-origin: center;
+        @keyframes beat{
+            to { transform: scale(1.1); }
+        }
     }
 }
 
@@ -878,6 +923,11 @@ transition: 0.3s;
             }
         }
     }
+    .page_one_banner {
+        .banner_text_all_box {
+            padding-bottom: 50px;
+        }
+    }
 }
 
 @media screen and (max-width:375px) {
@@ -888,7 +938,6 @@ transition: 0.3s;
             left: unset;
             transform: unset;
             padding-top: 50px;
-            padding-bottom: 150px;
             
             .banner_text_box {
                 .title {
@@ -928,9 +977,9 @@ transition: 0.3s;
         .book {
             padding-bottom: 50px;
 
-            .page_one_button_book {
-                width: 169px;
-            }
+            // .page_one_button_book {
+            //     width: 169px;
+            // }
         }
     }
 }
