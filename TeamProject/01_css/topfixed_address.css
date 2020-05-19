@@ -9,10 +9,10 @@
   top: 0;
   z-index: 98;
   display: none;
-  -webkit-perspective: 10px;
-          perspective: 10px;
-  -webkit-transform: perspective(10px);
-          transform: perspective(10px);
+  -webkit-perspective: -2600px;
+          perspective: -2600px;
+  -webkit-transform: perspective(-2600px);
+          transform: perspective(-2600px);
 }
 
 @media (max-width: 1740px) {
