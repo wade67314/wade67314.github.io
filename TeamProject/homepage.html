@@ -53,7 +53,7 @@
         <svg class="demo" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="100%"
          viewBox="0 0 1920 1080">
 
-            <a href="">
+            <a href="" class="path_click_change_href">
                 <path id="main_img_link" opacity="0"></path>
             </a>
 
@@ -398,6 +398,7 @@
 
         //click to change middle img
         document.querySelector("#about_pathT").addEventListener("click", function () {
+            document.querySelector(".path_click_change_href").setAttribute("href", "./pageone_about.html")
             document.querySelector(".inside_img").setAttribute("href", "./03_img/00_homepage/main_background.jpg")
             document.querySelector(".middle_img").setAttribute("href", "./03_img/00_homepage/main_background.jpg")
             document.querySelector(".outside_img").setAttribute("href", "./03_img/00_homepage/main_background.jpg")
@@ -408,6 +409,7 @@
 
         })
         document.querySelector("#contact_pathT").addEventListener("click", function () {
+            document.querySelector(".path_click_change_href").setAttribute("href", "./pagethree_contact.html")
             document.querySelector(".inside_img").setAttribute("href", "./03_img/00_homepage/contact_PC.jpg")
             document.querySelector(".middle_img").setAttribute("href", "./03_img/00_homepage/contact_PC.jpg")
             document.querySelector(".outside_img").setAttribute("href", "./03_img/00_homepage/contact_PC.jpg")
@@ -420,6 +422,7 @@
             gsap.fromTo("#main_img_link", { scale: 0 }, { scale: 1, duration: 2 })
         })
         document.querySelector("#service_pathT").addEventListener("click", function () {
+            document.querySelector(".path_click_change_href").setAttribute("href", "./pagetwo_service.html")
             document.querySelector(".inside_img").setAttribute("href", "./03_img/00_homepage/service_PC.jpg")
             document.querySelector(".middle_img").setAttribute("href", "./03_img/00_homepage/service_PC.jpg")
             document.querySelector(".outside_img").setAttribute("href", "./03_img/00_homepage/service_PC.jpg")
@@ -1021,6 +1024,8 @@
                 }
             }
         })
+
+        
 
 
     </script>
