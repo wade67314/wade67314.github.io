@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-family: "微軟正黑體";
+    padding: 0 1%;
+}
+
+.message_contain {
+    width: 50%;
+    background-color: black;
+    padding: 5% 7.5% 1.5% 7.5%;
+    margin: 0 auto;
+}
+
+.title {
+    color: gold;
+}
+
+.form_subarea {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: gold;
+    background-color: transparent;
+    margin-bottom: 1%;
+}
+
+.form_subarea .label_style {
+    margin-bottom: 1%;
+    font-size: 20px;
+}
+
+.form_subarea .input_style {
+    background-color: transparent;
+    border: 1px solid gold;
+    border-radius: 10px;
+    padding: 1%;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 8px;
+    outline: none;
+}
+
+.form_subarea .input_style::placeholder {
+    color: gray;
+    font-size: 16px;
+}
+
+input.input_style:focus::placeholder,
+textarea.input_style:focus::placeholder {
+    color: transparent;
+}
+
+/*點到input時隱藏placeholder*/
+
+.form_btn {
+    margin-top: 2.5%;
+    width: 100%;
+    text-align: center;
+}
+
+.form_btn .btn {
+    margin: 20px 20px;
+    background-color: transparent;
+    color: gold;
+    font-size: 16px;
+    border: 1px solid gold;
+    border-radius: 10px;
+    padding: 8px;
+    outline: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.form_btn .btn:hover {
+    background-color: gold;
+    color: black;
+}
+a{
+    width: 100%;
+    text-decoration: none;
+}
+.card {
+    margin-top: 1%;
+    width: 96%;
+    display: flex;
+    background-color: black;
+    padding: 2%;
+}
+.card:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.card .message_img {
+    width: 30%; 
+    float: left;
+}
+
+.card .text_block {
+    margin-left: 2%;
+    color: gold;
+    float: left;
+}
+
+.card .text_block .title {
+    margin: 0;
+    font-size: 30px;
+}
+
+.card .text_block .time,
+.card .text_block .inside_text {
+    margin-top: 5%;
+    margin-bottom: 2%;
+}

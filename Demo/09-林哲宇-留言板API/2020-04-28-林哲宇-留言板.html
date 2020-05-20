@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+           
+    <link rel="stylesheet" href="./留言板樣式.css">
+    
+</head>
+
+<body>
+    <div class="message_contain">
+
+        <h1 class="title">XX留言板</h1>
+
+        <form action="" method="POST">
+            <input id="" type="hidden" name="date">
+            <div class="form_subarea">
+                <label for="#title" class="label_style">標題</label>
+                <input id="title" class="input_style" type="text" name="title" placeholder="請輸入標題" required>
+            </div>
+            <div class="form_subarea">
+                <label for="#content" class="label_style">內容</label>
+                <textarea id="content" name="content" class="input_style" cols="30" rows="10"
+                    placeholder="請輸入內容"></textarea>
+            </div>
+            <div class="form_subarea">
+                <label for="#href" class="label_style">超連結</label>
+                <input id="href" class="input_style" type="text" name="href" placeholder="請輸入超連結" required>
+            </div>
+            <div class="form_subarea">
+                <label for="#image_url" class="label_style">圖片連結</label>
+                <input id="image_url" class="input_style" type="text" name="image_url" placeholder="請輸入圖片連結" required>
+            </div>
+
+            <div class="form_btn">
+                <div class="btn clear_message">清除內容</div>
+                <div class="btn new_message">新增留言</div>
+            </div>
+        </form>
+    </div>
+
+
+
+    <div class="cards">
+        <!-- <div class="card">
+            <a href="">
+                <img class="message_img"
+                    src="https://www.newshub.co.nz/dam/form-uploaded-images-ordered/2019/08/08/KNOWYOURMEME-sad-cat-crying-1120.JPG"
+                    alt="">
+                <div class="text_block">
+                    <h1 class="title">標題</h1>
+                    <div class="time">時間</div>
+                    <div class="inside_text">內文</div>
+                </div>
+            </a>
+        </div> -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+    <script>
+        fetch("https://ajax-lesson.digipack-develop.com/news") //http://ajax_lesson.digipack-develop.com/news
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                console.log(data);
+                
+                $.each(data,function(index,news){
+                    var original_html = $(".cards").html();
+                    $(".cards").html(`
+                        <div class="card">
+                            <a href="${news.href}">
+                                <div class="img_block">
+                                    <img src="${news.image_url}" alt="" class="message_img">
+                                </div>
+                                <div class="text_block">
+                                    <h1 class="title">${news.title}</h1>
+                                    <div class="time">${news.date}</div>
+                                    <div class="inside_text">${news.content}</div>
+                                </div>
+                            </a>
+                        </div>
+                    ${original_html} `
+                    );  
+                    $('.input_style').val("");
+                })
+            })
+
+        $(".clear_message").click(function(){
+            $('.input_style').val("");
+        });
+
+        $(".new_message").click(function () {
+            // alert("click success")
+            var a_href = $("#href").val();
+            var message_img = $("#image_url").val();
+            // console.log(message_img);
+            var title = $("#title").val();
+            // console.log(title);
+            var inside_text = $("#content").val();
+            // console.log(inside_text);
+
+            var time = new Date();
+            var show_time = time.getFullYear() + "年" + time.getMonth() + "月" + time.getDate() + "日" + time.getHours() + "時" + time.getMinutes() + "分";
+
+            //Json格式進行傳送準備
+            var post_news={
+                "title":title,
+                "content":inside_text,
+                "image_url":message_img,
+                "href":a_href,
+                "date":show_time
+            }
+            $.ajax({
+                url:"https://ajax-lesson.digipack-develop.com/news",      //http://ajax_lesson.digipack-develop.com/news
+                type:"post",
+                data:{
+                    "title":title,
+                    "content":inside_text,
+                    "image_url":message_img,
+                    "href":a_href,
+                    "date":show_time
+                },
+                success:function(res){
+                    var original_html = $(".cards").html();
+                    $(".cards").html(`
+                        <div class="card">
+                            <a href="${a_href}">
+                                <div class="img_block">
+                                    <img src="${message_img}" alt="" class="message_img">
+                                </div>
+                                <div class="text_block">
+                                    <h1 class="title">${title}</h1>
+                                    <div class="time">${show_time}</div>
+                                    <div class="inside_text">${inside_text}</div>
+                                </div>
+                            </a>
+                        </div>
+                    ${original_html} `
+                    );  
+                    $('.input_style').val("");
+                },
+                error:function(res){
+                    console.log(res);
+                }
+            })
+
+        })     
+        
+    </script>
+
+</body>
+
+</html>

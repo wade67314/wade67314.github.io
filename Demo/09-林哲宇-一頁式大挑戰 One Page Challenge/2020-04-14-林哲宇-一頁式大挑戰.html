@@ -1,0 +1,677 @@
+<!-- 2020/04/14 18:25/19:54 -->
+<!-- 2020/04/15 10:16/10:45       11:15/12:00       12:50/-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <style>
+        /* =====================rule_defined_space===================== */
+        * {
+            font-family: "微軟正黑體";
+            /* z-index: 10; */
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background-color: black;
+        }
+
+        .fullpage {
+            max-width: 100%;
+        }
+
+        .frame {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .imgrule {
+            background-position: center;
+            background-size: cover;
+        }
+
+        .mobile_bars_links.active {
+            display: block;
+        }
+
+
+        /* =====================main_code===================== */
+        #page1 {
+            background-color: black;
+        }
+
+        .frame .logo {
+            height: 70px;
+            display: block;
+        }
+
+        #page1 .page1background {
+            
+            background-position: top;
+            width: 100%;
+            height: calc(100vh - 140px);
+            transition-duration: 0.5s;
+        }
+
+        .navbarbtn {
+            background-color: black;
+            width: 100%;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+
+        .navbarbtn ul {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0;
+            padding: 0;
+            margin: auto;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbarbtn ul a {
+            text-decoration: none;
+            color: #F19647;
+            border: solid 2px #F19647;
+            padding: 2px 5px;
+            border-radius: 5px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        /* .navbarbtn ul a:hover {
+            animation: 2.5s shake 1;
+        } */
+
+        .navbarbtn ul li:hover {
+            animation: 2.5s shake 1;
+            transform-origin: 50% 0;
+        }
+
+        @keyframes shake {
+            10% {
+                transform: skewX(-6deg) rotate(6deg);
+            }
+
+            15% {
+                transform: skewX(7deg) rotate(-7deg);
+            }
+
+            20% {
+                transform: skewX(-6.5deg) rotate(6.5deg);
+            }
+
+            25% {
+                transform: skewX(6.5deg) rotate(-6.5deg);
+            }
+
+            30% {
+                transform: skewX(-5deg) rotate(5deg);
+            }
+
+            35% {
+                transform: skewX(5deg) rotate(-5deg);
+            }
+
+            40% {
+                transform: skewX(-2.5deg) rotate(2.5deg);
+            }
+
+            45% {
+                transform: skewX(2.5deg) rotate(2.5deg);
+            }
+
+            50% {
+                transform: skewX(0deg) rotate(0deg);
+            }
+
+            100% {
+                transform: skewX(0deg) rotate(0deg);
+            }
+        }
+
+        .navbarbtn .mobile_bars {
+            color: #F19647;
+            font-size: 28px;
+            display: none;
+        }
+
+        .mobile_bars_links {
+            display: none;
+            width: 144px;
+            background-color: rgba(0, 0, 0, 0.9);
+            border-radius: 10px;
+            position: fixed;
+            top: 68px;
+            left: calc(100% - 152.5px);
+            z-index: 999;
+            padding: 5px 0 10px 0;
+        }
+
+        .mobile_bars_links .close_button {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 0 5px;
+            margin: 0 auto;
+            display: table;
+            color: #F19647;
+            border: solid 1px #F19647;
+            border-radius: 5px;
+        }
+
+        .mobile_bars_links .close_button:hover {
+            color: #5286B0;
+            border-color: #5286B0;
+        }
+
+        .mobile_bars_links ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            margin: 0 auto;
+            display: table;
+        }
+
+        .mobile_bars_links ul li {
+            margin: 8px 0;
+        }
+
+        .mobile_bars_links ul a {
+            text-decoration: none;
+            font-size: 28px;
+            font-weight: bold;
+            color: #F19647;
+        }
+
+        .mobile_bars_links ul a:hover {
+            color: #5286B0;
+        }
+
+        hr {
+            border-color: #5286B0;
+        }
+
+        #page2 {
+            background-color: black;
+            background-repeat: no-repeat;
+        }
+
+        #page2 .frame {
+            padding: 200px 0;
+            border: unset;
+        }
+
+        #page2 .frame .contain {
+            max-width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #page2 .frame .contain .block {
+            width: calc((100% - 30px)/3);
+            background-color: #F19647;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #page2 .frame .contain .block .imgL {
+            width: 100%;
+            background-color: sienna;
+        }
+
+        #page2 .frame .contain .block .imgL:hover {
+            transition: all ease-out 2s;
+            transform: scale(1.05, 1.05);
+        }
+
+        #page2 .frame .contain .block .imgM {
+            width: 100%;
+            background-color: sienna;
+        }
+
+        #page2 .frame .contain .block .imgM:hover {
+            transition: all ease-out 2s;
+            transform: scale(1.05, 1.05);
+        }
+
+        #page2 .frame .contain .block .imgR {
+            width: 100%;
+            background-color: sienna;
+        }
+
+        #page2 .frame .contain .block .imgR:hover {
+            transition: all ease-out 2s;
+            transform: scale(1.05, 1.05);
+        }
+
+        #page2 .frame .contain .block h3 {
+            margin: 20px 30px;
+        }
+
+        #page2 .frame .contain .block p {
+            text-align: justify;
+            margin: 20px 30px;
+            line-height: 1.5;
+            letter-spacing: 3px;
+        }
+
+        #page3 {
+            display: flex;
+        }
+
+        #page3 .block {
+            max-width: calc(50% - 20%);
+            padding: 20% 10%;
+        }
+
+        #page3 .L {
+
+            background-position: right;
+        }
+
+        #page3 .R {
+
+            background-position: left;
+        }
+
+        #page3 .L p {
+            margin: 0;
+            font-size: 22px;
+            text-align: justify;
+            color: #F19647;
+        }
+
+        #page3 .R p {
+            margin: 0;
+            font-size: 22px;
+            text-align: justify;
+            color: #5286B0;
+        }
+
+        #page4 {
+            height: 100vh;
+        }
+
+        #page4 .page4_video {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: fixed;
+            z-index: -999;
+            height: 100%;
+        }
+
+        #page5 {
+            background-color: blue;
+        }
+
+        #page5 .frame {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: center;
+            padding: 200px 20px;
+
+        }
+
+        #page5 .frame .block {
+            width: 550px;
+            height: 320px;
+            margin-bottom: 20px;
+        }
+
+        #page5 .frame .a {
+            background-color: #F19647;
+            border-radius: 10px;
+            overflow: hidden;
+            transition-duration: 1s;
+        }
+
+        #page5 .frame .a:hover {
+            transition: all ease-out 1s;
+            transform: scale(1.05, 1.05);
+
+        }
+
+        #page5 .frame .b {
+            color: #F19647;
+            font-size: 18px;
+            text-align: justify;
+            letter-spacing: 2px;
+            line-height: 36px;
+        }
+
+        #page5 .frame .c {
+            color: #F19647;
+            font-size: 18px;
+            text-align: justify;
+            letter-spacing: 2px;
+            line-height: 36px;
+        }
+
+        #page5 .frame .d {
+            color: #F19647;
+
+            border-radius: 10px;
+            overflow: hidden;
+            transition-duration: 1s;
+        }
+
+        #page5 .frame .d:hover {
+            transition: all ease-out 1s;
+            transform: scale(1.05, 1.05);
+        }
+
+        #footer {
+            width: 100%;
+            height: 50px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #footer p {
+            margin: 0;
+            color: white;
+            align-self: center;
+        }
+
+        @media screen and (max-width: 1280px) {
+            #page3 {
+                background-image: url("./img/page3L.jpg");
+                background-size: cover;
+                background-position: left;
+            }
+
+            #page3 .block {
+                max-width: 50%;
+            }
+
+            #page3 .L {
+                background-image: unset;
+            }
+
+            #page3 .R {
+                background-image: unset;
+            }
+
+            #page3 .L p {
+                color: #5286B0;
+                font-size: 20px;
+            }
+
+            #page3 .R p {
+                color: #F19647;
+                font-size: 20px;
+            }
+
+            #page5 .frame .block {
+                max-width: 45%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .frame .logo {
+                margin: 0 auto;
+            }
+
+            #page1 .page1background {
+                height: calc(100vh - 137px);
+            }
+
+            .navbarbtn ul a {
+                display: none;
+            }
+
+            .navbarbtn .mobile_bars {
+                display: block;
+                margin-left: calc(100% - 54.5px);
+            }
+
+            #page2 {
+                background-image: unset;
+            }
+
+            #page2 .frame {
+                padding: 0;
+            }
+
+            #page2 .frame .contain {
+                max-width: 100%;
+                display: unset;
+            }
+
+            #page2 .frame .contain .block {
+                width: 100%;
+            }
+
+            #page2 .frame .contain .block .imgL {
+                background-position: top;
+            }
+
+            #page2 .frame .contain .block .imgM {
+                background-position: top;
+            }
+
+            #page2 .frame .contain .block .imgR {
+                background-position: center;
+            }
+
+            #page2 .frame .contain .block h3 {
+                margin: 0;
+                margin: 0 auto;
+                display: table;
+            }
+
+            #page2 .frame .contain .block p {
+                font-size: 15px;
+                margin: 10px 30px;
+                line-height: 1.3;
+            }
+
+            #page3 {
+                flex-wrap: wrap;
+                background-position: center;
+            }
+
+            #page3 .block {
+                max-width: 100%;
+                padding: 20% 10%;
+            }
+
+            #page3 .L p {
+                color: #F19647;
+            }
+
+            #page3 .R p {
+                color: #5286B0;
+            }
+
+            #page5 .frame {
+                padding: 200px 20px;
+            }
+
+            #page5 .frame .b,
+            #page5 .frame .c {
+                line-height: 28px;
+            }
+
+            #page5 .frame .a:hover,
+            #page5 .frame .d:hover {
+                transition: unset;
+                transform: unset;
+            }
+        }
+
+        @media screen and (max-width: 375px) {
+            #page1 .page1background {
+                height: calc(100vh - 137px);
+            }
+
+            #page3 .block {
+                padding: 70px 30px;
+            }
+
+            #page5 .frame {
+                display: block;
+                padding: 0;
+                width: 90%;
+                padding-top: 10px;
+            }
+
+            #page5 .frame .block {
+                max-width: 100%;
+                height: 200px;
+                margin: 0;
+                padding: 0;
+
+            }
+
+            #page5 .frame .b,
+            #page5 .frame .c {
+                line-height: 24px;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="page1" class="fullpage imgrule">
+        <div class="frame">
+            <img src="./img/logo.jpg" alt="" class="logo">
+        </div>
+        <div class="page1background imgrule" style="background-image: url('./img/banner.jpg');"></div>
+    </section>
+
+    <nav class="navbarbtn">
+        <ul>
+            <li><a href="#page1">１９１７</a></li>
+            <li><a href="#page2">主要演員</a></li>
+            <li><a href="#page3">劇情簡介</a></li>
+            <li><a href="#page4">一鏡到底</a></li>
+            <li><a href="#page5">幕後人員</a></li>
+        </ul>
+        <div class="mobile_bars">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="mobile_bars_links">
+        <ul>
+            <li><a href="#page1">１９１７</a></li>
+            <hr>
+            <li><a href="#page2">主要演員</a></li>
+            <hr>
+            <li><a href="#page3">劇情簡介</a></li>
+            <hr>
+            <li><a href="#page4">一鏡到底</a></li>
+            <hr>
+            <li><a href="#page5">幕後人員</a></li>
+        </ul>
+        <span class="close_button">X</span>
+    </div>
+
+    <section id="page2" class="fullpage imgrule" style="background-image: url('./img/page2.gif');">
+        <div class="frame">
+            <div class="contain">
+                <div class="block L">
+                    <img class="imgL" src="./img/actor1.jpg" alt="">
+                    <h3>斯科菲爾德 (George Mackay)</h3>
+                    <p>英國士兵，布雷克的戰友，是一個有點笨拙的男孩，和戰友一起被選去完成一項艱難的任務。因為前面是寸步難行的敵人鋒線、戰壕，和不到24小時的時間，斯科菲爾德從開始的抱怨，到出於友情的應承，最後決定負重前行，最終歷經磨難，穿越重重障礙，完成了不可能完成的任務。
+                    </p>
+                </div>
+                <div class="block M">
+                    <img class="imgM" src="./img/actor2.jpg" alt="">
+                    <h3>布雷克 (Dean Charles)</h3>
+                    <p>英國士兵，在戰鬥進入最激烈之際，布雷克被佈置緊急任務，傳遞重要情報，任務相當艱鉅，要穿到德軍防線後方，向英軍傳達一條緊急命令，取消原定對德軍興登堡防線攻擊計劃，原因是德軍已經設計了陷阱。這關係到幾千名英軍士兵的生命，還包括在前線的哥哥。
+                    </p>
+                </div>
+                <div class="block R">
+                    <img class="imgR" src="./img/actor3.jpg" alt="">
+                    <h3>麥肯齊 (Benedict Cumberbatch)</h3>
+                    <p>「戰場上，最後站著的人才是贏家。」</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="page3" class="fullpage">
+        <div class="block L imgrule" style="background-image: url('./img/page3L.jpg');">
+            <p>第一次世界大戰進入最激烈之際，兩名年輕的英國士兵斯科菲爾德以及布雷克受到指派，執行一場看似不可能的任務。他們必須和時間賽跑，冒險進入敵區傳遞一個重要訊息，試圖阻止一場對數百名士兵的致命攻擊 －
+                其中包括布雷克的親兄弟。</p>
+        </div>
+        <div class="block R imgrule" style="background-image: url('./img/page3R.jpg');">
+            <p>電影開場的8分鐘，我們跟在主角的背後，看著每個不知名的士兵，整軍列隊、搬運砲火、清理槍枝、洗衣做飯⋯，或是緊抱著武器、倚靠在牆上閉目養神。完全不需要旁白或對話。整部作品的鏡頭永遠都在兩位主角小兵的身上，看著他們捨命穿越戰場、永遠只專注著前方⋯我們的眼神會不自覺的「搜索著」兩人身邊可能存在的危險，時時刻刻都膽顫心驚！
+            </p>
+        </div>
+    </section>
+
+    <section id="page4" class="fullpage imgrule">
+        <video class="page4_video" loop="true" autoplay="autoplay" muted="true">
+            <source type="video/mp4" src="./img/run1080p.mp4">
+            </source>
+        </video>
+    </section>
+
+    <section id="page5" class="fullpage imgrule" style="background-image: url('./img/page5background.jpg');">
+        <div class="frame">
+            <div class="block a imgrule" style="background-image: url('./img/page5blocka.jpg');"></div>
+
+            <div class="block b">
+                <p>
+                    導演山姆曼德斯的祖父在第一次世界大戰中是英國軍隊的准下士，祖父常常憶起他在服役時所遇見的人事物，山姆曼德斯將這些小故事匯集成了《1917》的劇本。
+                </p>
+            </div>
+            <div class="block c">
+                <p>
+                    傳奇攝影大師羅傑狄金斯(Roger Deakins)曾14次入圍奧斯卡，《1917》是他的第15部入圍作品。《1917》在金球獎拿下了最佳戲劇類影片和最佳導演，更在第92屆奧斯卡金像獎獲得10項提名。
+                </p>
+            </div>
+            <div class="block d imgrule" style="background-image: url('./img/page5blockd.jpg');"></div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <p>看片有風險，電影有好有壞，觀看前應詳閱公開說明書</p>
+    </section>
+
+    <script>
+        var press_bars_button = document.querySelector(".mobile_bars");
+        console.log(press_bars_button);
+
+        var show_mobile_bars_links = document.querySelector(".mobile_bars_links");
+        console.log(show_mobile_bars_links);
+
+        var close_button_action = document.querySelector(".close_button");
+        console.log(close_button_action);
+
+        press_bars_button.addEventListener("click", function () {
+            show_mobile_bars_links.classList.add("active");
+            // alert("開");
+        });
+
+        close_button_action.addEventListener("click", function () {
+            show_mobile_bars_links.classList.remove("active");
+            // alert("關");
+        });
+    </script>
+</body>
+
+</html>

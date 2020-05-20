@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab_btns {
+            display: flex;
+        }
+
+        .tab_btns .tab_btn {
+            position: relative;
+            width: 115px;
+            height: 70px;
+            line-height: 90px;
+            text-align: center;
+            background: linear-gradient(165deg, transparent 30%, #98927c 30%);
+            color: #f2eee2;
+	    cursor:pointer;	
+        }
+
+        .tab_btns .tab_btn:hover,.tab_btns .tab_btn.color_active{
+            background: linear-gradient(165deg, transparent 30%,#f2eee2 30%);
+            color: #98927c;
+        }
+
+        .tab_btns .tab_btn:before{
+            content: "";
+            position: absolute;
+            z-index: 11;
+            left: 100%;
+            top: -100%;
+            height: 70px;
+            line-height: 90px;
+            width: 0;
+            border-bottom: 70px solid rgba(0, 0, 0, 0.1);
+            border-right: 7px solid transparent;
+        }
+
+        .text_area {
+            max-width: 450px;
+            background-color: #f2eee2;
+            padding: 0px 20px;
+            text-align: justify;
+            color: #98927C
+        }
+
+        .text_area h1{
+            margin: 0;
+            padding-top: 16px;
+        }
+
+        .text_area p{
+            padding-bottom: 16px;
+        }
+
+        .text_area.hide_active {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab_btns">
+        <div class="tab_btn color_active">Tab1</div>
+        <div class="tab_btn">Tab2</div>
+        <div class="tab_btn">Tab3</div>
+        <div class="tab_btn">Tab4</div>
+    </div>
+
+    <div class="text_area">
+        <h1>Tab1</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio nostrum ipsum nulla earum incidunt eveniet
+            maxime atque veritatis quaerat officiis, quibusdam culpa odit iure distinctio tempora neque aut eaque.
+            Itaque quaerat officia cum, omnis labore libero? Nemo necessitatibus repellat veritatis vel quae obcaecati
+            ipsa fuga ducimus similique mollitia! Ex, ducimus.</p>
+    </div>
+    <div class="text_area">
+        <h1>Tab2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus natus ipsam, sit facere ab, tenetur
+            consectetur eaque pariatur voluptatibus consequuntur ipsum deleniti vitae explicabo aliquam illum veniam
+            provident ullam suscipit? Repellat sit, nemo magnam ab labore, cum iusto dolor error asperiores consequuntur
+            quo, eveniet quis!</p>
+    </div>
+    <div class="text_area">
+        <h1>Tab3</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti beatae assumenda praesentium eos eius sit
+            dolore ad delectus officiis? Quis adipisci, aut ipsam sint magnam corrupti molestiae? Quas numquam
+            obcaecati, totam rem vero voluptatem porro distinctio modi nihil eaque molestias facilis id ea non debitis
+            nam tempora. Unde veritatis deleniti eligendi maiores eius hic nemo.</p>
+    </div>
+    <div class="text_area">
+        <h1>Tab4</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ipsa placeat, maxime hic natus iusto deserunt totam cupiditate cum non delectus doloremque impedit blanditiis, vero neque! Deserunt, blanditiis rerum iusto atque quas excepturi mollitia fugiat at distinctio consequatur ipsum quia!</p>
+    </div>
+
+    <script>
+        var choose_tab_btn = document.querySelectorAll(".tab_btn");
+        var choose_text_area = document.querySelectorAll(".text_area");
+
+
+        for (let i = 1; i < choose_text_area.length; i++) {                     
+                choose_text_area[i].classList.add("hide_active");
+        };
+
+        for (let index = 0; index < choose_tab_btn.length; index++) {
+            const click_btn = choose_tab_btn[index];
+            click_btn.addEventListener("click", function () {
+                remove_block();
+                choose_text_area[index].classList.remove("hide_active");
+                choose_tab_btn[index].classList.add("color_active")
+            });
+        };
+
+        function remove_block() {
+            for (let i = 0; i < choose_text_area.length; i++) {                     
+                choose_text_area[i].classList.add("hide_active");
+                choose_tab_btn[i].classList.remove("color_active")
+            };
+        };
+
+    </script>
+
+</body>
+
+</html>
