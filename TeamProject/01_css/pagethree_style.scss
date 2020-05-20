@@ -584,11 +584,11 @@ footer {
         .ball{
             position: absolute;
             z-index: 3;
-            top: -130%;
+            top: -100%;
             left: 21%;
             width: 10%;
             img {
-                width: 80%;
+                width: 55%;
                 /* width: 10vw; */
                 animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
                 animation: ball_updown_roate 3s infinite alternate;
@@ -813,13 +813,13 @@ footer {
     right: 0px;
     bottom: 210px;
     z-index: 10;
-    width: 5%;
+    width: 70px;
     @media (max-width: 1000px){
         width: 50px;
     }
     @media (max-width: 768px){
         width: 40px;
-        bottom: 215px;                       
+        // bottom: 210px;                       
     } 
     // @media (max-width: 375px){
     //     width: 40px;
@@ -840,21 +840,17 @@ footer {
     right: 0px;
     bottom: 100px;
     z-index: 10;
-    width: 5%;
+    width: 70px;
     @media (max-width: 1100px){
-        bottom: 145px;
+
     }
     @media (max-width: 1000px){
+        bottom: 120px;
         width: 50px;
     }
     @media (max-width: 768px){
+        bottom: 150px;
         width: 40px;
-    }
-    @media (max-width: 520px){
-        bottom: 140px;                       
-    }
-    @media (max-width: 375px){
-        bottom: 165px;                       
     }
     &:hover{
         // box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);

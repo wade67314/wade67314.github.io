@@ -618,13 +618,13 @@ footer .grass_group .updown_bottom {
 footer .ball {
   position: absolute;
   z-index: 3;
-  top: -130%;
+  top: -100%;
   left: 21%;
   width: 10%;
 }
 
 footer .ball img {
-  width: 80%;
+  width: 55%;
   /* width: 10vw; */
   -webkit-animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
           animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -942,7 +942,7 @@ footer .roate_windmill .windmill_stick {
   right: 0px;
   bottom: 210px;
   z-index: 10;
-  width: 5%;
+  width: 70px;
 }
 
 @media (max-width: 1000px) {
@@ -954,7 +954,6 @@ footer .roate_windmill .windmill_stick {
 @media (max-width: 768px) {
   .illstration_map {
     width: 40px;
-    bottom: 215px;
   }
 }
 
@@ -977,36 +976,20 @@ footer .roate_windmill .windmill_stick {
   right: 0px;
   bottom: 100px;
   z-index: 10;
-  width: 5%;
-}
-
-@media (max-width: 1100px) {
-  .illstration_contact {
-    bottom: 145px;
-  }
+  width: 70px;
 }
 
 @media (max-width: 1000px) {
   .illstration_contact {
+    bottom: 120px;
     width: 50px;
   }
 }
 
 @media (max-width: 768px) {
   .illstration_contact {
+    bottom: 150px;
     width: 40px;
-  }
-}
-
-@media (max-width: 520px) {
-  .illstration_contact {
-    bottom: 140px;
-  }
-}
-
-@media (max-width: 375px) {
-  .illstration_contact {
-    bottom: 165px;
   }
 }
 
