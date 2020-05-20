@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>服務項目-滿果國際托嬰中心</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167181968-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-167181968-1');
+    </script>
+
     <link rel="stylesheet" href="./01_css/pagetwo_service.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- 手機版navbar -->
@@ -24,8 +34,10 @@
     <!-- topfixed_address -->
     <div class="contentT">
         <div class="textT">
-        <i class="fas fa-map-marked-alt icon_AT"></i><p>臺中市豐原區北陽一街31號</p>
-        <i class="fas fa-phone-alt icon_pT"></i><p>04-25252785</p>
+            <i class="fas fa-map-marked-alt icon_AT"></i>
+            <p>臺中市豐原區北陽一街31號</p>
+            <i class="fas fa-phone-alt icon_pT"></i>
+            <p>04-25252785</p>
         </div>
     </div>
 
@@ -39,7 +51,8 @@
         <p class="bar_text">Menu</p>
     </div>
     <!-- navitems_insidebar -->
-    <div class="navitems_insidebar display_none" style="background-image: url(./03_img/00_homepage/bg_insidenavbar.jpg)">
+    <div class="navitems_insidebar display_none"
+        style="background-image: url(./03_img/00_homepage/bg_insidenavbar.jpg)">
         <img src="./03_img/00_homepage/logo.png" alt="">
         <ul>
             <li><a class="ripple" href="./homepage.html">首頁</a></li>
@@ -58,8 +71,8 @@
     <!-- navbar_nav_jump-in -->
     <nav class="nav_jump-in">
         <a href="./homepage.html" style="text-decoration: none;">
-        <img class="logo" src="./03_img/02_p2/nav_logo.svg" alt=""></a>
-         </a>   
+            <img class="logo" src="./03_img/02_p2/nav_logo.svg" alt=""></a>
+        </a>
         <div class="nav_button container">
             <a href="./pageone_about.html" style="text-decoration: none;">
                 <div class="button">
@@ -67,7 +80,7 @@
                         <h1>關於滿果</h1>
                         <h2>about us</h2>
                     </div>
-                    
+
                     <div class="button_img button_img_about" alt=""
                         style="background-image: url(./03_img/02_p2/nav_img_batton_about.png);"></div>
                 </div>
@@ -107,7 +120,7 @@
             </a>
         </div>
     </nav>
-    
+
 
     <nav class="page_one_nav">
         <div class="navbar01" style="background-image: url(./03_img/02_p2/navbar.png);">
@@ -280,8 +293,9 @@
                     <img src="./03_img/02_p2/illstration10.png" alt="" class="illstration_picture">
                 </div>
 
-                <a href="./pagethree_contact.html#sec_3" style="text-align: center;"><img class="title_visit" src="./03_img/02_p2/title_visit.png" alt=""
-                    data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"></a>
+                <a href="./pagethree_contact.html#sec_3" style="text-align: center;"><img class="title_visit"
+                        src="./03_img/02_p2/title_visit.png" alt="" data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic" data-aos-duration="2000"></a>
 
             </div>
         </div>
@@ -368,7 +382,7 @@
     <script>
         AOS.init({
             disable: "mobile"
-              // accepts following values: 'phone', 'tablet', 'mobile
+            // accepts following values: 'phone', 'tablet', 'mobile
         });
 
         $(window).on("load", function () {
@@ -376,24 +390,24 @@
             $(".loader-wrapper").delay(1000).fadeOut("slow");
         });
 
-        function listener (e) {
+        function listener(e) {
             e.preventDefault();
             if ($(window).scrollTop() > 300 && window.innerWidth > 1740) {
-                document.querySelector(".nav_jump-in").style.display="flex";
-                document.querySelector(".page_one_nav").style.display="none";
+                document.querySelector(".nav_jump-in").style.display = "flex";
+                document.querySelector(".page_one_nav").style.display = "none";
             }
-            else if(window.innerWidth < 1740){
-                document.querySelector(".page_one_nav").style.display="none";
-                document.querySelector(".nav_jump-in").style.display="none";
-            }   
+            else if (window.innerWidth < 1740) {
+                document.querySelector(".page_one_nav").style.display = "none";
+                document.querySelector(".nav_jump-in").style.display = "none";
+            }
             else {
-                document.querySelector(".nav_jump-in").style.display="none";
-                document.querySelector(".page_one_nav").style.display="block";
+                document.querySelector(".nav_jump-in").style.display = "none";
+                document.querySelector(".page_one_nav").style.display = "block";
             }
         }
         $(window).scroll(listener);
         $(window).resize(listener);
-    
+
         var scrollTop = $(window).scrollTop()
 
         if (scrollTop >= 1500) {
@@ -416,11 +430,11 @@
 
         });
 
-        document.querySelector(".btt").onmouseenter=function(){
-            document.querySelector(".btt").setAttribute("src","./03_img/01_p1/backtotop-hover.png");
+        document.querySelector(".btt").onmouseenter = function () {
+            document.querySelector(".btt").setAttribute("src", "./03_img/01_p1/backtotop-hover.png");
         };
-        document.querySelector(".btt").onmouseleave=function(){
-            document.querySelector(".btt").setAttribute("src","./03_img/01_p1/backtotop.png");
+        document.querySelector(".btt").onmouseleave = function () {
+            document.querySelector(".btt").setAttribute("src", "./03_img/01_p1/backtotop.png");
         };
 
 

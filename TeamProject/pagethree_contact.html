@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>聯絡我們-滿果國際托嬰中心</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167181968-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-167181968-1');
+    </script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
@@ -17,7 +27,7 @@
     <link rel="stylesheet" href="./01_css/topfixed_address.css">
     <link rel="stylesheet" href="./01_css/loader.css">
 
-    
+
 </head>
 
 <body>
@@ -28,8 +38,10 @@
     <!-- topfixed_address -->
     <div class="contentT">
         <div class="textT">
-        <i class="fas fa-map-marked-alt icon_AT"></i><p>臺中市豐原區北陽一街31號</p>
-        <i class="fas fa-phone-alt icon_pT"></i><p>04-25252785</p>
+            <i class="fas fa-map-marked-alt icon_AT"></i>
+            <p>臺中市豐原區北陽一街31號</p>
+            <i class="fas fa-phone-alt icon_pT"></i>
+            <p>04-25252785</p>
         </div>
     </div>
 
@@ -43,7 +55,8 @@
         <p class="bar_text">Menu</p>
     </div>
     <!-- navitems_insidebar -->
-    <div class="navitems_insidebar display_none" style="background-image: url(./03_img/00_homepage/bg_insidenavbar.jpg)">
+    <div class="navitems_insidebar display_none"
+        style="background-image: url(./03_img/00_homepage/bg_insidenavbar.jpg)">
         <img src="./03_img/00_homepage/logo.png" alt="">
         <ul>
             <li><a class="ripple" href="./homepage.html">首頁</a></li>
@@ -92,7 +105,7 @@
     </nav>
 
 
-    
+
     <!-- navbar_nav_jump-in -->
     <nav class="nav_jump-in">
         <a href="./homepage.html" style="text-decoration: none;">
@@ -145,7 +158,7 @@
             </a>
         </div>
     </nav>
-    
+
 
     <!-- 連絡我們內容區 -->
     <div id="sec_1">
@@ -183,7 +196,7 @@
     <div id="sec_3">
         <div class="container">
             <div class="form_area">
-                <form >
+                <form>
                     <div class="form_row1" style="text-align:center">
                         <label for="title">
                             <h2>請填寫以下表單內容</h2><br>
@@ -300,19 +313,19 @@
             $(".loader-wrapper").delay(1000).fadeOut("slow");
         });
 
-        function listener (e) {
+        function listener(e) {
             e.preventDefault();
             if ($(window).scrollTop() > 300 && window.innerWidth > 1740) {
-                document.querySelector(".nav_jump-in").style.display="flex";
-                document.querySelector(".page_one_nav").style.display="none";
+                document.querySelector(".nav_jump-in").style.display = "flex";
+                document.querySelector(".page_one_nav").style.display = "none";
             }
-            else if(window.innerWidth < 1740){
-                document.querySelector(".page_one_nav").style.display="none";
-                document.querySelector(".nav_jump-in").style.display="none";
-            }   
+            else if (window.innerWidth < 1740) {
+                document.querySelector(".page_one_nav").style.display = "none";
+                document.querySelector(".nav_jump-in").style.display = "none";
+            }
             else {
-                document.querySelector(".nav_jump-in").style.display="none";
-                document.querySelector(".page_one_nav").style.display="block";
+                document.querySelector(".nav_jump-in").style.display = "none";
+                document.querySelector(".page_one_nav").style.display = "block";
             }
         }
         $(window).scroll(listener);
@@ -340,12 +353,12 @@
 
         });
 
-        
-        $(".checkweb").click(function(){
+
+        $(".checkweb").click(function () {
             var path = window.location.pathname;
             var page = path.split("/").pop();
-            console.log( page );
-            if(page=="pagethree_contact.html"){
+            console.log(page);
+            if (page == "pagethree_contact.html") {
                 document.querySelector("body").classList.remove("overflow_hidden")
                 setTimeout(function () {
                     document.querySelector(".navitems_insidebar").classList.add("display_none");
@@ -356,15 +369,15 @@
                 gsap.fromTo(".navitems_insidebar", { opacity: 1 }, { opacity: 0, duration: 1 });
             }
         })
-        
 
-        document.querySelector(".btt").onmouseenter=function(){
-            document.querySelector(".btt").setAttribute("src","./03_img/01_p1/backtotop-hover.png");
+
+        document.querySelector(".btt").onmouseenter = function () {
+            document.querySelector(".btt").setAttribute("src", "./03_img/01_p1/backtotop-hover.png");
         };
-        document.querySelector(".btt").onmouseleave=function(){
-            document.querySelector(".btt").setAttribute("src","./03_img/01_p1/backtotop.png");
+        document.querySelector(".btt").onmouseleave = function () {
+            document.querySelector(".btt").setAttribute("src", "./03_img/01_p1/backtotop.png");
         };
-        
+
     </script>
 
 </body>

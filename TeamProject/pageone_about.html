@@ -5,14 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>關於我們-滿果國際托嬰中心</title>
-    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167181968-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-167181968-1');
+    </script>
+
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="./01_css/pageone_style.css">
     <link rel="stylesheet" href="./01_css/mobilebar_insidenav.css">
     <link rel="stylesheet" href="./01_css/topfixed_address.css">
     <link rel="stylesheet" href="./01_css/loader.css">
-    
+
 </head>
 
 <body>
@@ -22,8 +31,10 @@
     <!-- topfixed_address -->
     <div class="contentT">
         <div class="textT">
-        <i class="fas fa-map-marked-alt icon_AT"></i><p>臺中市豐原區北陽一街31號</p>
-        <i class="fas fa-phone-alt icon_pT"></i><p>04-25252785</p>
+            <i class="fas fa-map-marked-alt icon_AT"></i>
+            <p>臺中市豐原區北陽一街31號</p>
+            <i class="fas fa-phone-alt icon_pT"></i>
+            <p>04-25252785</p>
         </div>
     </div>
     <div class="contentT2">
@@ -36,7 +47,8 @@
         <p class="bar_text">Menu</p>
     </div>
     <!-- navitems_insidebar -->
-    <div class="navitems_insidebar display_none" style="background-image: url(./03_img/00_homepage/bg_insidenavbar.jpg)">
+    <div class="navitems_insidebar display_none"
+        style="background-image: url(./03_img/00_homepage/bg_insidenavbar.jpg)">
         <img src="./03_img/00_homepage/logo.png" alt="">
         <ul>
             <li><a class="ripple" href="./homepage.html">首頁</a></li>
@@ -58,7 +70,7 @@
     <nav class="nav_jump-in">
         <a href="./homepage.html">
             <img class="logo" src="./03_img/01_p1/nav_logo.svg" alt=""></a>
-         </a>   
+        </a>
         <div class="nav_button container">
             <a href="./pageone_about.html" style="text-decoration: none;">
                 <div class="button">
@@ -66,7 +78,7 @@
                         <h1>關於滿果</h1>
                         <h2>about us</h2>
                     </div>
-                    
+
                     <div class="button_img button_img_about" alt=""
                         style="background-image: url(./03_img/01_p1/nav_img_batton_about.png);"></div>
                 </div>
@@ -111,7 +123,8 @@
     <nav class="page_one_nav">
         <div class="navbar01" style="background-image: url(./03_img/01_p1/nav_wave.png);">
             <a href="./homepage.html">
-            <div class="logo" style="background-image: url(./03_img/01_p1/logo.png);"></div></a>
+                <div class="logo" style="background-image: url(./03_img/01_p1/logo.png);"></div>
+            </a>
 
             <div class="circles">
                 <a href="./pagetwo_service.html" style="text-decoration: none;color: #fff;">
@@ -211,12 +224,12 @@
 
         <div class="book">
             <a href="./pagethree_contact.html#sec_3">
-            <img class="page_one_button_book" src="./03_img/01_p1/title_visit.png" alt=""></a>
+                <img class="page_one_button_book" src="./03_img/01_p1/title_visit.png" alt=""></a>
         </div>
     </section>
 
     <!-- footer -->
-<!-- intrinsic -->
+    <!-- intrinsic -->
     <footer>
 
         <div class="grass_group">
@@ -225,16 +238,16 @@
             <img src="./03_img/02_p2/grass-15.png" alt="" class="updown_3">
             <div class="updown_bottom"></div>
 
-            
+
             <div class="ball">
                 <img src="./03_img/01_p1/ball.png" alt="" class="ballp">
             </div>
             <div class="roate_windmill">
                 <img class="windmill" src="./03_img/02_p2/windmill.png" alt="">
-                
+
                 <img src="./03_img/02_p2/windmill_stick01.png" alt="" class="windmill_stick">
             </div>
-            
+
         </div>
 
         <div class="footer_text">
@@ -264,11 +277,11 @@
     </footer>
 
     <!-- fixed-button -->
-    <a class="butoon_fixed" href="#top" >
+    <a class="butoon_fixed" href="#top">
         <img src="./03_img/01_p1/backtotop.png" alt="" class="btt">
     </a>
 
-    <div class="button_map_add_contact" >
+    <div class="button_map_add_contact">
 
         <a class="butoon_fixed" href="./pagethree_contact.html#sec_2">
             <img src="./03_img/02_p2/illstration_map.png" alt="" class="illstration_map">
@@ -291,36 +304,36 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
-    
+
 
 
 
     <script>
-        
+
         $(window).on("load", function () {
             $(window).resize();
             $(".loader-wrapper").delay(1000).fadeOut("slow");
         });
-    
 
-        function listener (e) {
+
+        function listener(e) {
             e.preventDefault();
             if ($(window).scrollTop() > 300 && window.innerWidth > 1740) {
-                document.querySelector(".nav_jump-in").style.display="flex";
-                document.querySelector(".page_one_nav").style.display="none";
+                document.querySelector(".nav_jump-in").style.display = "flex";
+                document.querySelector(".page_one_nav").style.display = "none";
             }
-            else if(window.innerWidth < 1740){
-                document.querySelector(".page_one_nav").style.display="none";
-                document.querySelector(".nav_jump-in").style.display="none";
-            }   
+            else if (window.innerWidth < 1740) {
+                document.querySelector(".page_one_nav").style.display = "none";
+                document.querySelector(".nav_jump-in").style.display = "none";
+            }
             else {
-                document.querySelector(".nav_jump-in").style.display="none";
-                document.querySelector(".page_one_nav").style.display="block";
+                document.querySelector(".nav_jump-in").style.display = "none";
+                document.querySelector(".page_one_nav").style.display = "block";
             }
         }
         $(window).scroll(listener);
         $(window).resize(listener);
-        
+
 
 
 
@@ -347,11 +360,11 @@
         });
 
 
-        document.querySelector(".btt").onmouseenter=function(){
-            document.querySelector(".btt").setAttribute("src","./03_img/01_p1/backtotop-hover.png");
+        document.querySelector(".btt").onmouseenter = function () {
+            document.querySelector(".btt").setAttribute("src", "./03_img/01_p1/backtotop-hover.png");
         };
-        document.querySelector(".btt").onmouseleave=function(){
-            document.querySelector(".btt").setAttribute("src","./03_img/01_p1/backtotop.png");
+        document.querySelector(".btt").onmouseleave = function () {
+            document.querySelector(".btt").setAttribute("src", "./03_img/01_p1/backtotop.png");
         };
     </script>
 </body>
