@@ -30,13 +30,13 @@
               <a class="nav-link" href="#page1">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#page2">about</a>
+              <a class="nav-link" href="#page2">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#page3">picture</a>
+              <a class="nav-link" href="#page3">Picture</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#page4">about2</a>
+              <a class="nav-link" href="#page4">About2</a>
             </li>
         </div>
       </div>
@@ -64,7 +64,7 @@
     <div class="container ">
       <h1 class="">石川祐希（いしかわ ゆうき）</h1>
       <div class="row ">
-        <div class="col">
+        <div class="col-12 col-sm-12 col-md-4">
           <div class="card">
             <img src="https://img.sportsv.net/img/photo/image/5/13105/aspect-MzTCEEDRhl-400xauto.jpg"
               class="card-img-top" alt="...">
@@ -75,7 +75,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-12 col-sm-6 col-md-4">
           <div class="card">
             <img src="https://pbs.twimg.com/profile_images/1201367298553942019/yJlZc69e_400x400.jpg"
               class="card-img-top" alt="...">
@@ -87,7 +87,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-12 col-sm-6 col-md-4">
           <div class="card">
             <img src="https://i.pinimg.com/originals/00/c9/96/00c99622c945eea64c73fb83f0521a9f.jpg" class="card-img-top"
               alt="...">
@@ -106,7 +106,7 @@
 
   <section id="page3"
     style="background-image: url(https://amd.c.yimg.jp/amd/20200326-00010004-thedigest-000-2-view.jpg);">
-    <h1>picture</h1>
+    <h1>Picture</h1>
   </section>
 
   <section id="page4">
@@ -141,9 +141,9 @@
   <div class="btn">TOP</div>
 
 
-
-  <script src="https://code.jquery.com/jquery-3.5.0.min.js"
-    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
@@ -156,6 +156,9 @@
 
   <script>
     var swiper = new Swiper('.swiper-container', {
+      autoplay: {
+        delay: 3000,
+      },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
